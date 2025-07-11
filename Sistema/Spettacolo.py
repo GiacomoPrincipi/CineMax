@@ -58,7 +58,7 @@ class Spettacolo():
        self.setData(self, data)
        self.setOrarioInizio(self, orarioInizio)
        self.setOrarioFine(self, orarioFine)
-       self.setDurara(self, durata)
+       self.setDurata(self, durata)
 
 
     def setTitolo(self, titolo):
@@ -71,7 +71,7 @@ class Spettacolo():
         self.genere = genere
 
     
-    def setSpettacolo(self, sala):
+    def setSala(self, sala):
 
         self.sala = sala
 
