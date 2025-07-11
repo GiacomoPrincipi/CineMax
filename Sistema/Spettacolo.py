@@ -41,23 +41,23 @@ class Spettacolo():
        self.setOrarioFine(self, orarioFine)
        self.setDurata(self, durata)
 
-    def setTitolo(self, titolo):
+    def setTitolo(self, titolo: string):
         self.titolo = titolo
 
-    def setGenere(self, genere):
+    def setGenere(self, genere: string):
         self.genere = genere
     
-    def setSala(self, sala):
+    def setSala(self, sala: int):
         self.sala = sala
 
-    def setData(self, data):
+    def setData(self, data: Data):
         self.data = data
 
-    def setOrarioInizio(self, orarioInizio):
+    def setOrarioInizio(self, orarioInizio: Ora):
         self.orarioInizio = orarioInizio
 
-    def setOrarioFine(self, orarioFine):
+    def setOrarioFine(self, orarioFine: Ora):
         self.orarioFine = orarioFine
 
-    def setDurata(self, durata):
+    def setDurata(self, durata: int):
         self.durata = durata
