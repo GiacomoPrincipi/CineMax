@@ -1,5 +1,5 @@
 class Amministratore(Utente):
-    def __init__(self, matricola):
+    def __init__(self, nome, cognome, dataNascita, email, telefono, password, matricola):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
         self.matricola = matricola
 
