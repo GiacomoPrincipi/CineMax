@@ -3,11 +3,6 @@ class Biglietto:
         self.Spettacolo = spettacolo
         self.tipo = tipo
         self.posto = posto
-        
-    def create(self, prezzo: float, ridotto: bool, spettacolo: Spettacolo, tipo: str, posto: int):
-        self.spettacolo = spettacolo
-        self.tipo = tipo
-        self.posto = posto
 
     def getInfoBiglietto(self):
         return {self.Spettacolo, self.tipo, self.posto}
@@ -27,7 +22,7 @@ class Biglietto:
         self.setPosto(self,posto)
 
     def setSpettacolo(self, spettacolo: Spettacolo):
-        self.spettacolo = spettacolo
+        self.Spettacolo = spettacolo
 
     def setTipo(self, tipo: str):
         self.tipo = tipo
