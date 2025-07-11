@@ -1,3 +1,5 @@
+from abc import abstractmethod
+
 class Articolo():
     def __init__(self, prezzo, disponibile):
         self.prezzo = prezzo
@@ -5,19 +7,23 @@ class Articolo():
 
     def getInfoArticolo(self):
         return {self.prezzo, self.disponibile}
-
+    
+    @abstractmethod
     def getPrezzo(self):
-        return self.prezzo
-
+        pass
+        
+    @abstractmethod
     def getDisponibile(self):
-        return self.disponibile
-      
+        pass
+
     def setInfoArticolo(self, prezzo, disponibile):
         self.setPrezzo(self, prezzo)
         self.setDisponibile(self, disponibile)
 
+    @abstractmethod
     def setPrezzo(self, prezzo):
-        self.prezzo = prezzo
+        pass
 
+    @abstractmethod
     def setDisponibile(self, disponibile):
-        self.disponibile = disponibile
+        pass
