@@ -1,4 +1,4 @@
-class Articolo:
+class Articolo():
     def __init__(self,prezzo,disponibile):
         self.prezzo = prezzo
         self.disponibile = disponibile
