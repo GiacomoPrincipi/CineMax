@@ -19,5 +19,5 @@ class Articolo():
     def setPrezzo(self, prezzo):
         self.prezzo = prezzo
 
-    def setTipo(self, disponibile):
+    def setDisponibile(self, disponibile):
         self.disponibile = disponibile
