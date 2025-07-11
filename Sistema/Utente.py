@@ -1,4 +1,4 @@
-class Spettacolo():
+class Utente():
     def __init__(self, nome, cognome, dataNascita, email, telefono, password):
         self.nome = nome
         self.cognome = cognome
@@ -36,20 +36,20 @@ class Spettacolo():
        self.setTelefono(self, telefono)
        self.setPassword(self, password)
 
-    def setNome(self, nome: string):
+    def setNome(self, nome):
         self.nome = nome
 
-    def setCognome(self, cognome: string):
+    def setCognome(self, cognome):
         self.cognome = cognome
     
-    def setDataNascita(self, dataNascita: Data):
+    def setDataNascita(self, dataNascita):
         self.dataNascita = dataNascita
 
-    def setEmail(self, email: string):
+    def setEmail(self, email):
         self.email = email
 
-    def setTelefono(self, telefono: int):
+    def setTelefono(self, telefono):
         self.telefono = telefono
 
-    def setPassword(self, password: string):
+    def setPassword(self, password):
         self.password = password
