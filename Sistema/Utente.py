@@ -1,3 +1,5 @@
+from abc import abstractmethod
+
 class Utente():
     def __init__(self, nome, cognome, dataNascita, email, telefono, password):
         self.nome = nome
@@ -10,23 +12,29 @@ class Utente():
     def getInfoUtente(self):
         return {self.nome, self.cognome, self.dataNascita, self.email, self.telefono, self.password}
 
+    @abstractmethod
     def getNome(self):
-        return self.nome
-    
+        pass
+
+    @abstractmethod
     def getCognome(self):
-        return self.cognome
-    
+        pass
+
+    @abstractmethod
     def getDataNascita(self):
         return self.dataNascita
-    
+
+    @abstractmethod
     def getEmail(self):
-        return self.email
-    
+        pass
+
+    @abstractmethod
     def getTelefono(self):
-        return self.telefono
-    
+        pass
+
+    @abstractmethod
     def getPassword(self):
-        return self.password
+        pass
     
     def setInfoUtente(self, nome, cognome, dataNascita, email, telefono, password):
        self.setNome(self, nome)
@@ -36,20 +44,26 @@ class Utente():
        self.setTelefono(self, telefono)
        self.setPassword(self, password)
 
+    @abstractmethod
     def setNome(self, nome):
-        self.nome = nome
+        pass
 
+    @abstractmethod
     def setCognome(self, cognome):
-        self.cognome = cognome
-    
+        pass
+
+    @abstractmethod
     def setDataNascita(self, dataNascita):
-        self.dataNascita = dataNascita
+        pass
 
+    @abstractmethod
     def setEmail(self, email):
-        self.email = email
+        pass
 
+    @abstractmethod
     def setTelefono(self, telefono):
-        self.telefono = telefono
+        pass
 
+    @abstractmethod
     def setPassword(self, password):
-        self.password = password
+        pass
