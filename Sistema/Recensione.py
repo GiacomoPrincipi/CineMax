@@ -31,17 +31,17 @@ class Recensione():
        self.setStelle(self, stelle)
        self.setTesto(self, testo)
 
-    def setCliente(self, cliente: Cliente):
+    def setCliente(self, cliente):
         self.cliente = cliente
 
-    def setData(self, data: Data):
+    def setData(self, data):
         self.data = data
 
-    def setOra(self, ora: Ora):
+    def setOra(self, ora):
         self.ora = ora
 
-    def setStelle(self, stelle: int):
+    def setStelle(self, stelle):
         self.articolo = articolo
 
-    def setTesto(self, testo: string):
+    def setTesto(self, testo):
         self.testo = testo
