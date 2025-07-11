@@ -16,8 +16,8 @@ class Articolo():
         self.setPrezzo(self, prezzo)
         self.setDisponibile(self, disponibile)
 
-    def setPrezzo(self, prezzo: float):
+    def setPrezzo(self, prezzo):
         self.prezzo = prezzo
 
-    def setTipo(self, disponibile: bool):
+    def setTipo(self, disponibile):
         self.disponibile = disponibile
