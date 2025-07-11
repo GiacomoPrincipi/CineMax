@@ -1,4 +1,4 @@
-class Biglietto:
+class Biglietto():
     def __init__(self,spettacolo,tipo,posto):
         self.Spettacolo = spettacolo
         self.tipo = tipo
