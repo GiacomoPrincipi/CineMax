@@ -8,7 +8,7 @@ class Prodotto(Articolo):
     def getInfoProdotto(self):
         return {self.prezzo, self.disponibile, self.nome, self.ingredienti, self.allergeni}
 
-     def getPrezzo(self):
+    def getPrezzo(self):
         return self.prezzo
 
     def getDisponibile(self):
