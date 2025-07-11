@@ -26,7 +26,7 @@ class Spettacolo():
     def getOrarioInizio(self):
         return self.orarioInizio
     
-    def gerOrarioFine(self):
+    def getOrarioFine(self):
         return self.orarioFine
     
     def getDurata(self):
