@@ -28,32 +28,28 @@ class Spettacolo():
     def getPassword(self):
         return self.password
     
-    def setInfoSpettacolo(self, titolo, genere, sala, data, orarioInizio, orarioFine, durata):
-       self.setTitolo(self, titolo)
-       self.setGenere(self, genere)
-       self.setSala(self, sala)
-       self.setData(self, data)
-       self.setOrarioInizio(self, orarioInizio)
-       self.setOrarioFine(self, orarioFine)
-       self.setDurata(self, durata)
+    def setInfoUtente(self, nome, cognome, dataNascita, email, telefono, password):
+       self.setNome(self, nome)
+       self.setCognome(self, cognome)
+       self.setDataNascita(self, dataNascita)
+       self.setEmail(self, email)
+       self.setTelefono(self, telefono)
+       self.setPassword(self, password)
 
-    def setTitolo(self, titolo: string):
-        self.titolo = titolo
+    def setNome(self, nome: string):
+        self.nome = nome
 
-    def setGenere(self, genere: string):
-        self.genere = genere
+    def setCognome(self, cognome: string):
+        self.cognome = cognome
     
-    def setSala(self, sala: int):
-        self.sala = sala
+    def setDataNascita(self, dataNascita: Data):
+        self.dataNascita = dataNascita
 
-    def setData(self, data: Data):
-        self.data = data
+    def setEmail(self, email: string):
+        self.email = email
 
-    def setOrarioInizio(self, orarioInizio: Ora):
-        self.orarioInizio = orarioInizio
+    def setTelefono(self, telefono: int):
+        self.telefono = telefono
 
-    def setOrarioFine(self, orarioFine: Ora):
-        self.orarioFine = orarioFine
-
-    def setDurata(self, durata: int):
-        self.durata = durata
+    def setPassword(self, password: string):
+        self.password = password
