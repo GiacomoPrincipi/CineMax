@@ -13,8 +13,8 @@ class Articolo():
         return self.disponibile
       
     def setInfoArticolo(self, prezzo, disponibile):
-        self.setPrezzo(self,Prezzo)
-        self.setDisponibile(self,disponibile)
+        self.setPrezzo(self, prezzo)
+        self.setDisponibile(self, disponibile)
 
     def setPrezzo(self, prezzo: float):
         self.prezzo = prezzo
