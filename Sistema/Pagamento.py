@@ -36,20 +36,20 @@ class Pagamento():
        self.setTipo(self, tipo)
        self.setImporto(self, importo)
 
-    def setCliente(self, cliente: Cliente):
+    def setCliente(self, cliente):
         self.cliente = cliente
 
-    def setData(self, data: Data):
+    def setData(self, data):
         self.data = data
 
-    def setOra(self, ora: Ora):
+    def setOra(self, ora):
         self.ora = ora
 
-    def setArticolo(self, articolo: Articolo):
+    def setArticolo(self, articolo):
         self.articolo = articolo
 
-    def setTipo(self, tipo: string):
+    def setTipo(self, tipo):
         self.tipo = tipo
 
-    def setImporto(self, importo: float):
+    def setImporto(self, importo):
         self.importo = importo
