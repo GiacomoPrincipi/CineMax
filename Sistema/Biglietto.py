@@ -1,5 +1,5 @@
 class Biglietto():
-    def __init__(self,spettacolo,tipo,posto):
+    def __init__(self, spettacolo, tipo, posto):
         self.Spettacolo = spettacolo
         self.tipo = tipo
         self.posto = posto
@@ -17,14 +17,14 @@ class Biglietto():
         return self.posto
 
     def setInfoBiglietto(self, spettacolo, tipo, posto):
-        self.setSpettacolo(self,spettacolo)
-        self.setTipo(self,tipo)
-        self.setPosto(self,posto)
+        self.setSpettacolo(self, spettacolo)
+        self.setTipo(self, tipo)
+        self.setPosto(self, posto)
 
     def setSpettacolo(self, spettacolo: Spettacolo):
         self.Spettacolo = spettacolo
 
-    def setTipo(self, tipo: str):
+    def setTipo(self, tipo: string):
         self.tipo = tipo
 
     def setPosto(self, posto: int):
