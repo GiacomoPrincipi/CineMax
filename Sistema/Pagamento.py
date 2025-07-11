@@ -1,63 +1,55 @@
-class Spettacolo():
-    def __init__(self, titolo, genere, sala, data, orarioInizio, orarioFine, durata):
-        self.titolo = titolo
-        self.genere = genere
-        self.sala = sala
+class Pagamento():
+    def __init__(self, cliente, data, ora, articolo, tipo, importo):
+        self.cliente = cliente
         self.data = data
-        self.orarioInizio = orarioInizio
-        self.orarioFine = orarioFine
-        self.durata = durata
+        self.ora = ora
+        self.articolo = articolo
+        self.tipo = tipo
+        self.importo = importo
+        
+    def getInfoPagamento(self):
+        return {self.cliente, self.data, self.ora, self.articolo, self.tipo, self.importo}
 
-    def getInfoSpettacolo(self):
-        return {self.titolo, self.genere, self.sala, self.data, self.orarioInizio, self.orarioFine, self.durata}
-
-    def getTitolo(self):
-        return self.titolo
+    def getCliente(self):
+        return self.cliente
     
-    def getGenere(self):
-        return self.genere
-    
-    def getSala(self):
-        return self.sala
-
     def getData(self):
         return self.data
     
-    def getOrarioInizio(self):
-        return self.orarioInizio
-    
-    def gerOrarioFine(self):
-        return self.orarioFine
-    
-    def getDurata(self):
-        return self.durata
+    def getOra(self):
+        return self.ora
 
-    def setInfoSpettacolo(self, titolo, genere, sala, data, orarioInizio, orarioFine, durata):
-       self.setTitolo(self, titolo)
-       self.setGenere(self, genere)
-       self.setSala(self, sala)
+    def getArticolo(self):
+        return self.articolo
+    
+    def getTipo(self):
+        return self.tipo
+    
+    def gerImporto(self):
+        return self.importo
+    
+    def setInfoPagamento(self, cliente, data, ora, articolo, tipo, importo):
+       self.setCliente(self, cliente)
        self.setData(self, data)
-       self.setOrarioInizio(self, orarioInizio)
-       self.setOrarioFine(self, orarioFine)
-       self.setDurata(self, durata)
+       self.setOra(self, ora)
+       self.setArticolo(self, articolo)
+       self.setTipo(self, tipo)
+       self.setImporto(self, importo)
 
-    def setTitolo(self, titolo):
-        self.titolo = titolo
-
-    def setGenere(self, genere):
-        self.genere = genere
-
-    def setSala(self, sala):
-        self.sala = sala
+    def setCliente(self, cliente):
+        self.cliente = cliente
 
     def setData(self, data):
         self.data = data
 
-    def setOrarioInizio(self, orarioInizio):
-        self.orarioInizio = orarioInizio
+    def setOra(self, ora):
+        self.ora = ora
 
-    def setOrarioFine(self, orarioFine):
-        self.orarioFine = orarioFine
+    def setArticolo(self, articolo):
+        self.articolo = articolo
 
-    def setDurata(self, durata):
-        self.durata = durata
+    def setTipo(self, tipo):
+        self.tipo = tipo
+
+    def setImporto(self, importo):
+        self.importo = importo
