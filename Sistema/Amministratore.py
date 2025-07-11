@@ -7,16 +7,9 @@ class Amministratore():
 
     def getMatricola(self):
         return self.matricola
-
-    def getDisponibile(self):
-        return self.disponibile
       
-    def setInfoArticolo(self, prezzo, disponibile):
-        self.setPrezzo(self,Prezzo)
-        self.setDisponibile(self,disponibile)
-
-    def setPrezzo(self, prezzo: float):
-        self.prezzo = prezzo
-
-    def setTipo(self, disponibile: bool):
-        self.disponibile = disponibile
+    def setInfoAmministratore(self, matricola):
+        self.setMatricola(self, matricola)
+        
+    def setMatricola(self, matricola: string):
+        self.matricola = matricola
