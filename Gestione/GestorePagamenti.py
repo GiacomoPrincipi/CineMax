@@ -1,3 +1,5 @@
+from Sistema.Pagamento import Pagamento
+
 import os.path
 import pickle
 
@@ -25,7 +27,7 @@ class GestorePagamenti():
         listaPagamenti = self.caricaDatiPagamenti()
         listaPagamentiCliente = []
         for pagamento in listaPagamenti:
-            if pagamento.cliente == cliente:
+            if pagamento.getCliente() == cliente:
                 listaPagamentiCliente.append(pagamento)
         return listaPagamentiCliente
     
@@ -33,4 +35,3 @@ class GestorePagamenti():
         listaPagamenti = self.caricaDatiPagamenti()
         listaPagamenti.append(pagamento)
         self.salvaDatiPagamenti(listaPagamenti)
-

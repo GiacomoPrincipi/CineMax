@@ -30,5 +30,5 @@ class GestoreAmministratori():
     def rimuoviAmministratore(self, listaAmministratori, amministratore):
         listaAmministratori = self.caricaDatiAmministratori()
         listaAmministratori.remove(amministratore)
-        self.salvaDatiClienti(listaAmministratori)
+        self.salvaDatiAmministratori(listaAmministratori)
         del amministratore

@@ -1,3 +1,5 @@
+from Sistema.Biglietto import Biglietto
+
 import os.path
 import pickle
 
@@ -25,7 +27,7 @@ class GestoreBiglietti():
         listaBiglietti = self.caricaDatiBiglietti()
         listaBigliettiSpettacolo = []
         for biglietto in listaBiglietti:
-            if biglietto.spettacolo == spettacolo:
+            if biglietto.getSpettacolo() == spettacolo:
                 listaBigliettiSpettacolo.append(biglietto)
         return listaBigliettiSpettacolo
     
@@ -45,4 +47,4 @@ class GestoreBiglietti():
         listaBiglietti = self.caricaDatiBiglietti()
         for biglietto in listaBiglietti:
             if biglietto == bigliettoDaControllare:
-                return biglietto.disponibile
+                biglietto.getDisponibile()

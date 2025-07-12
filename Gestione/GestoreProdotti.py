@@ -1,3 +1,5 @@
+from Sistema.Prodotto import Prodotto
+
 import os.path
 import pickle
 
@@ -37,4 +39,4 @@ class GestoreProdotti():
         listaProdotti = self.caricaDatiProdotti()
         for prodotto in listaProdotti:
             if prodotto == prodottoDaControllare:
-                return prodotto.disponibile
+                return prodotto.getDisponibile()

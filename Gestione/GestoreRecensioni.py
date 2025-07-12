@@ -1,3 +1,5 @@
+from Sistema.Recensione import Recensione
+
 import os.path
 import pickle
 
@@ -25,7 +27,7 @@ class GestoreRecensioni():
         listaRecensioni = self.caricaDatiRecensioni()
         listaRecensioniCliente = []
         for recensione in listaRecensioni:
-            if recensione.cliente == cliente:
+            if recensione.getCliente() == cliente:
                 listaRecensioniCliente.append(recensione)
         return listaRecensioniCliente
     
@@ -40,4 +42,3 @@ class GestoreRecensioni():
         listaRecensioni.remove(recensione)
         self.salvaDatiRecensioni(listaRecensioni)
         del recensione
-

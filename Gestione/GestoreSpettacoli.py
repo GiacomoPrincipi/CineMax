@@ -32,4 +32,3 @@ class GestoreSpettacoli():
         listaSpettacoli.remove(spettacolo)
         self.salvaDatiSpettacoli(listaSpettacoli)
         del spettacolo
-
