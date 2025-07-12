@@ -1,4 +1,5 @@
 class Spettacolo():
+    
     def __init__(self, titolo, genere, sala, data, orarioInizio, orarioFine, durata):
         self.titolo = titolo
         self.genere = genere

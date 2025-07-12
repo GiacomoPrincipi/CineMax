@@ -1,6 +1,7 @@
 from abc import abstractmethod
 
 class Articolo():
+    
     def __init__(self, prezzo, disponibile):
         self.prezzo = prezzo
         self.disponibile = disponibile

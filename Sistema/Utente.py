@@ -1,6 +1,7 @@
 from abc import abstractmethod
 
 class Utente():
+    
     def __init__(self, nome, cognome, dataNascita, email, telefono, password):
         self.nome = nome
         self.cognome = cognome

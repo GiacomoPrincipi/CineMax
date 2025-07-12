@@ -27,7 +27,7 @@ class GestoreRecensioni():
         listaRecensioni = self.caricaDatiRecensioni()
         listaRecensioniCliente = []
         for recensione in listaRecensioni:
-            if recensione.getCliente() == cliente:
+            if  recensione.getCliente() == cliente:
                 listaRecensioniCliente.append(recensione)
         return listaRecensioniCliente
     

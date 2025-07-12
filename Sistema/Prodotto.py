@@ -1,6 +1,7 @@
 from Sistema.Articolo import Articolo
 
 class Prodotto(Articolo):
+    
     def __init__(self, prezzo, disponibile, nome, ingredienti, allergeni):
         super().__init__(prezzo, disponibile)
         self.nome = nome

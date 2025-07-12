@@ -38,5 +38,5 @@ class GestoreProdotti():
     def controlloDisponibilità(self, prodottoDaControllare):
         listaProdotti = self.caricaDatiProdotti()
         for prodotto in listaProdotti:
-            if prodotto == prodottoDaControllare:
-                return prodotto.getDisponibile()
+            if prodottoDaControllare == prodotto:
+                return prodottoDaControllare.getDisponibile()

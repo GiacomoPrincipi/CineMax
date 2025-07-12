@@ -46,5 +46,5 @@ class GestoreBiglietti():
     def controlloDisponibilità(self, bigliettoDaControllare):
         listaBiglietti = self.caricaDatiBiglietti()
         for biglietto in listaBiglietti:
-            if biglietto == bigliettoDaControllare:
-                biglietto.getDisponibile()
+            if bigliettoDaControllare == biglietto:
+                bigliettoDaControllare.getDisponibile()

@@ -1,4 +1,5 @@
 class Pagamento():
+    
     def __init__(self, cliente, data, ora, articolo, tipo, importo):
         self.cliente = cliente
         self.data = data

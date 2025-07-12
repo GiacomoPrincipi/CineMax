@@ -1,4 +1,5 @@
 class Recensione():
+
     def __init__(self, cliente, data, ora, stelle, testo):
         self.cliente = cliente
         self.data = data
@@ -41,7 +42,7 @@ class Recensione():
         self.ora = ora
 
     def setStelle(self, stelle):
-        self.articolo = articolo
+        self.stelle = stelle
 
     def setTesto(self, testo):
         self.testo = testo
