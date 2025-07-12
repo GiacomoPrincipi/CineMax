@@ -22,7 +22,7 @@ class GestoreBiglietti():
         return listaBiglietti
     
     def getListaBigliettiSpettacolo(self, spettacolo):
-        listaBiglietti = self.caricaBiglietti()
+        listaBiglietti = self.caricaDatiBiglietti()
         listaBigliettiSpettacolo = []
         for biglietto in listaBiglietti:
             if biglietto.spettacolo == spettacolo:
