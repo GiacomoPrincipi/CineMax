@@ -1,3 +1,5 @@
+from Sistema.Utente import Utente
+
 class Cliente(Utente):
     def __init__(self, nome, cognome, dataNascita, email, telefono, password, codiceFiscale, punti):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
