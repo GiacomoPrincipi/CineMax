@@ -44,3 +44,15 @@ class Prodotto(Articolo):
 
     def setAllergeni(self, allergeni):
         self.allergeni = allergeni
+
+    def aggiungiIngrediente(self, ingrediente):
+        self.ingredienti.append(ingrediente)
+
+    def rimuoviIngrediente(self, ingrediente):
+        self.ingredienti.remove(ingrediente)
+
+    def aggiungiAllergene(self, allergene):
+        self.allergeni.append(allergene)
+
+    def rimuoviAllergene(self, allergene):
+        self.allergeni.remove(allergene)
