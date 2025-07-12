@@ -21,7 +21,7 @@ class GestoreProdotti():
         listaProdotti = self.caricaDatiProdotti()
         return listaProdotti
     
-    def inserisciProdottto(self, listaProdotti, prodotto):
+    def inserisciProdotto(self, listaProdotti, prodotto):
         listaProdotti = self.caricaDatiProdotti()
         listaProdotti.append(prodotto)
         self.salvaDatiProdotti(listaProdotti)
