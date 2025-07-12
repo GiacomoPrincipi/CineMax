@@ -1,3 +1,5 @@
+from Sistema.Articolo import Articolo
+
 class Biglietto(Articolo):
     def __init__(self, prezzo, disponibile, spettacolo, tipo, posto):
         super().__init__(prezzo, disponibile)
