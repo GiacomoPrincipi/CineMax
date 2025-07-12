@@ -1,3 +1,5 @@
+from Sistema.Utente import Utente
+
 class Amministratore(Utente):
     def __init__(self, nome, cognome, dataNascita, email, telefono, password, matricola):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
@@ -34,7 +36,7 @@ class Amministratore(Utente):
        self.setEmail(self, email)
        self.setTelefono(self, telefono)
        self.setPassword(self, password)
-        self.setMatricola(self, matricola)
+       self.setMatricola(self, matricola)
 
     def setNome(self, nome):
         self.nome = nome
