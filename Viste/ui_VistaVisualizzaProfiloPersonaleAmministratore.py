@@ -15,7 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
+    QWidget)
 
 class Ui_VistaVisualizzaProfiloPersonaleAmministratore(object):
     def setupUi(self, VistaVisualizzaProfiloPersonaleAmministratore):
@@ -123,6 +124,19 @@ class Ui_VistaVisualizzaProfiloPersonaleAmministratore(object):
         self.labelTelefonoAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
+        self.pushButtonModifica = QPushButton(VistaVisualizzaProfiloPersonaleAmministratore)
+        self.pushButtonModifica.setObjectName(u"pushButtonModifica")
+        self.pushButtonModifica.setGeometry(QRect(670, 450, 91, 29))
+        self.pushButtonModifica.setStyleSheet(u"QPushButton {\n"
+"    background-color: #961E00;\n"
+"    color: #FF3C00;\n"
+"    border: 2px solid #501400;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #C83200;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaProfiloPersonaleAmministratore)
 
@@ -145,5 +159,6 @@ class Ui_VistaVisualizzaProfiloPersonaleAmministratore(object):
         self.labelEmailAmministratore.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleAmministratore", u"Amministratore@gmail.com", None))
         self.labelTelefono.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleAmministratore", u"Telefono:", None))
         self.labelTelefonoAmministratore.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleAmministratore", u"3333333333", None))
+        self.pushButtonModifica.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleAmministratore", u"Modifica", None))
     # retranslateUi
 

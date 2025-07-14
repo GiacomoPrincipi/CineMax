@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaHomeCliente</class>
+ <widget class="QWidget" name="VistaHomeCliente">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>790</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Area Riservata Cliente - CineMax</string>
+  </property>
+  <widget class="QPushButton" name="pushButtonSpettacoli">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Spettacoli</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Sfondo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>90</y>
+     <width>791</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background: qlineargradient(
+        x1: 0, y1: 1,
+        x2: 0, y2: 0,
+		stop: 0 #321E00,
+        stop: 1 #643C00
+    );
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBarra">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>791</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background: qlineargradient(
+        x1: 0, y1: 1,
+        x2: 0, y2: 0,
+        stop: 0 #965A00,
+        stop: 1 #B46E00
+    );
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelProfiloButtonCliente">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>10</y>
+     <width>63</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Immagini/profiloButtonCliente.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelProfiloCliente">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>70</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #502800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Profilo</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLogoutCliente">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #502800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelLogoutButtonCliente">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>63</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Immagini/LogoutButtonCliente.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonProdotti">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>160</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Prodotti</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonPagamenti">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>290</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Pagamenti</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonRecensioni">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>290</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Recensioni</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTitolo">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>511</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #502800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Area Riservata Cliente</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>Sfondo</zorder>
+  <zorder>pushButtonSpettacoli</zorder>
+  <zorder>labelBarra</zorder>
+  <zorder>labelProfiloButtonCliente</zorder>
+  <zorder>labelProfiloCliente</zorder>
+  <zorder>labelLogoutCliente</zorder>
+  <zorder>labelLogoutButtonCliente</zorder>
+  <zorder>pushButtonProdotti</zorder>
+  <zorder>pushButtonPagamenti</zorder>
+  <zorder>pushButtonRecensioni</zorder>
+  <zorder>labelTitolo</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

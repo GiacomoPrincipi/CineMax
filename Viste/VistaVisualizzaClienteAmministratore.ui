@@ -206,7 +206,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCodiceFiscasleAmministratore">
+  <widget class="QLabel" name="labelCodiceFiscaleCliente">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -326,9 +326,9 @@
   <widget class="QLabel" name="labelPuntiCliente">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>380</y>
-     <width>101</width>
+     <width>81</width>
      <height>20</height>
     </rect>
    </property>

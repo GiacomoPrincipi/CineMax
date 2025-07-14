@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaVisualizzaProdottiCliente</class>
+ <widget class="QWidget" name="VistaVisualizzaProdottiCliente">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>790</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Prodotti - CineMax</string>
+  </property>
+  <widget class="QLabel" name="Sfondo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>90</y>
+     <width>791</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background: qlineargradient(
+        x1: 0, y1: 1,
+        x2: 0, y2: 0,
+                stop: 0 #321E00,
+        stop: 1 #643C00
+    );
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTitolo">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>201</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #502800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prodotti</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelIndietroButtonCliente">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>10</y>
+     <width>63</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Immagini/IndietroButtonCliente.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QListView" name="listViewProdotti">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>731</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListView {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+}
+
+QListView::item:selected {
+    background-color: #C86400;
+    color: #FF7800;
+}
+
+QListView::item:hover {
+    background-color: #C86400;
+}</string>
+   </property>
+  </widget>
+  <widget class="QScrollBar" name="verticalScrollBarProdotti">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>120</y>
+     <width>21</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QScrollBar:vertical {
+        background: #B46E00;
+        border: 2px solid #190E00;
+    border-radius: 4px;
+        width: 15px;
+        margin: 5px;
+}
+
+QScrollBar::handle:vertical {
+        background: #965A00;
+        min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+        background: #C86400;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        background: none;
+        border: none;
+            }</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelBarra">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>791</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background: qlineargradient(
+        x1: 0, y1: 1,
+        x2: 0, y2: 0,
+        stop: 0 #965A00,
+        stop: 1 #B46E00
+    );
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>labelBarra</zorder>
+  <zorder>Sfondo</zorder>
+  <zorder>labelTitolo</zorder>
+  <zorder>labelIndietroButtonCliente</zorder>
+  <zorder>listViewProdotti</zorder>
+  <zorder>verticalScrollBarProdotti</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

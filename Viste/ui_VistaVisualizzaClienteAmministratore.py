@@ -92,10 +92,10 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelCodiceFiscasleAmministratore = QLabel(VistaVisualizzaClienteAmministratore)
-        self.labelCodiceFiscasleAmministratore.setObjectName(u"labelCodiceFiscasleAmministratore")
-        self.labelCodiceFiscasleAmministratore.setGeometry(QRect(40, 200, 131, 20))
-        self.labelCodiceFiscasleAmministratore.setStyleSheet(u"QLabel {\n"
+        self.labelCodiceFiscaleCliente = QLabel(VistaVisualizzaClienteAmministratore)
+        self.labelCodiceFiscaleCliente.setObjectName(u"labelCodiceFiscaleCliente")
+        self.labelCodiceFiscaleCliente.setGeometry(QRect(40, 200, 131, 20))
+        self.labelCodiceFiscaleCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelEmail = QLabel(VistaVisualizzaClienteAmministratore)
@@ -133,7 +133,7 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPuntiCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
-        self.labelPuntiCliente.setGeometry(QRect(30, 380, 101, 20))
+        self.labelPuntiCliente.setGeometry(QRect(40, 380, 81, 20))
         self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
@@ -263,7 +263,7 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelNomeCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente", None))
         self.labelCognomeCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente", None))
         self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Codice Fiscale:", None))
-        self.labelCodiceFiscasleAmministratore.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"00000000000000", None))
+        self.labelCodiceFiscaleCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"00000000000000", None))
         self.labelEmail.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Email:", None))
         self.labelEmailCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente@gmail.com", None))
         self.labelTelefono.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Telefono:", None))

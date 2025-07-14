@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaVisualizzaRecensioneAmministratore</class>
- <widget class="QWidget" name="VistaVisualizzaRecensioneAmministratore">
+ <class>VistaModificaProfiloPersonaleCliente</class>
+ <widget class="QWidget" name="VistaModificaProfiloPersonaleCliente">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Recensione - CineMax</string>
+   <string>Modifica Profilo Personale - CineMax</string>
   </property>
   <widget class="QLabel" name="Sfondo">
    <property name="geometry">
@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+                stop: 0 #321E00,
+        stop: 1 #643C00
     );
 }</string>
    </property>
@@ -41,7 +41,26 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCliente">
+  <widget class="QLabel" name="labelProfiloCliente">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>121</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Immagini/profiloButtonCliente.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelNome">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -52,11 +71,11 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Cliente:</string>
+    <string>Nome:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -67,7 +86,7 @@
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>291</width>
+     <width>441</width>
      <height>71</height>
     </rect>
    </property>
@@ -80,75 +99,59 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C8B400;
 }</string>
    </property>
    <property name="text">
-    <string>Recensione</string>
+    <string>Modifica Profilo Personale</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonAmministratore">
+  <widget class="QLabel" name="labelCognome">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>20</y>
-     <width>63</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Immagini/HomeButtonAmministratore.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelData">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>330</x>
+     <y>100</y>
      <width>81</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Data:</string>
+    <string>Cognome:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDataRecensione">
+  <widget class="QLabel" name="labelCodiceFiscale">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>200</y>
-     <width>91</width>
+     <y>180</y>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #962D00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>14/07/2025</string>
+    <string>Codice Fiscale:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelStelle">
+  <widget class="QLabel" name="labelEmail">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -159,178 +162,234 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Stelle:</string>
+    <string>Email:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelStelleRecensione">
+  <widget class="QLabel" name="labelTelefono">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Telefono:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPunti">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>360</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonConferma">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>450</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Conferma</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditEmail">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>260</y>
-     <width>41</width>
-     <height>20</height>
+     <width>251</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #962D00;
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
 }</string>
-   </property>
-   <property name="text">
-    <string>n/5</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOra">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>180</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Ora:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOraRecensione">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>200</y>
-     <width>51</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #962D00;
-}</string>
-   </property>
-   <property name="text">
-    <string>00:00</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelIndietroButtonAmministratore">
-   <property name="geometry">
-    <rect>
-     <x>620</x>
-     <y>20</y>
-     <width>63</width>
-     <height>61</height>
-    </rect>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>Immagini/IndietroButtonAmministratore.png</pixmap>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPunti">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>71</width>
+     <height>26</height>
+    </rect>
    </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelButtonCliente">
+  <widget class="QLineEdit" name="lineEditNome">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>120</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Immagini/profiloButtonAmministratore.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelProfiloAmministratore">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>50</y>
      <width>121</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Immagini/RecensioneIconAmministratore.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelTesto">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>180</y>
-     <width>81</width>
-     <height>20</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
 }</string>
    </property>
    <property name="text">
-    <string>Testo:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTestoRecensione">
+  <widget class="QLineEdit" name="lineEditCognome">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>200</y>
-     <width>401</width>
-     <height>201</height>
+     <x>330</x>
+     <y>120</y>
+     <width>171</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-	background-color: #EB7864;
-    color: #962D00;
-	border: 1px solid #8C463C;
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
     border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditCodiceFiscale">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditTelefono">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>121</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonAnnulla">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>450</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
 }
 
+QPushButton:hover {
+    background-color: #C86400;
+}
 </string>
    </property>
    <property name="text">
-    <string>Siete Fantastici</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
-   </property>
-   <property name="wordWrap">
-    <bool>true</bool>
+    <string>Annulla</string>
    </property>
   </widget>
  </widget>
