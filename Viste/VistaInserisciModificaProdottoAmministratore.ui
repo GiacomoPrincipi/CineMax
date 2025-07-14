@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaInserisciModificaProdottoAmministratore</class>
+ <widget class="QWidget" name="VistaInserisciModificaProdottoAmministratore">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>790</width>
+    <height>499</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inserisci/Modifica Prodotto - CineMax</string>
+  </property>
+  <widget class="QLabel" name="Sfondo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>791</width>
+     <height>501</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background: qlineargradient(
+        x1: 0, y1: 1,
+        x2: 0, y2: 0,
+        stop: 0 #320F00,
+        stop: 1 #641E00
+    );
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelIconaFotoAmministratore">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>131</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Immagini/IconaFotoAmministratore.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelNome">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Nome:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTitoloPrincipale">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>30</y>
+     <width>351</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Variable</family>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>&quot;Azione&quot; + Prodotto</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelIngredienti">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ingredienti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDisponibile">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>360</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Disponibilità:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAllergeni">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>240</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Allergeni:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzo">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prezzo:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNome">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>171</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPrezzo">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxDisponibile">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>76</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #320F00;
+	color: #962D00;
+    border: 1px solid #190700;
+	border-radius: 4px;
+    selection-background-color: #C83200;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #C83200;
+}</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene1">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+	    background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+	    background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Allergene1</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+	    background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+	    background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Allergene1</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene3">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+	    background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+	    background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Allergene1</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene4">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+	    background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+	    background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Allergene1</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene5">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+	    background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+	    background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Allergene1</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditIngredienti">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>451</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonConferma">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>450</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #961E00;
+    color: #FF3C00;
+    border: 2px solid #501400;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C83200;
+}</string>
+   </property>
+   <property name="text">
+    <string>Conferma</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonAnnulla">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>450</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #961E00;
+    color: #FF3C00;
+    border: 2px solid #501400;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C83200;
+}</string>
+   </property>
+   <property name="text">
+    <string>Annulla</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
