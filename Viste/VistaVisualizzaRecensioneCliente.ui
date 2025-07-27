@@ -69,7 +69,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonCliente">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -109,7 +109,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDataPagamento">
+  <widget class="QLabel" name="labelDataRecensione">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -124,10 +124,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>14/07/2025</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTipo">
+  <widget class="QLabel" name="labelStelle">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -148,7 +148,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTipoPagamento">
+  <widget class="QLabel" name="labelStelleRecensione">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -163,7 +163,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>n/5</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelOra">
@@ -187,7 +187,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelOraPagamento">
+  <widget class="QLabel" name="labelOraRecensione">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -202,10 +202,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>00:00</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonCliente">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -224,7 +224,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloCliente">
+  <widget class="QLabel" name="labelIconaProfilo">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -264,7 +264,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTestoPagamento">
+  <widget class="QLabel" name="labelTestoRecensione">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -284,7 +284,7 @@
 </string>
    </property>
    <property name="text">
-    <string>Siete Fantastici</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
@@ -319,6 +319,13 @@ QPushButton:hover {
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -69,7 +69,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonCliente">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -86,70 +86,6 @@
    </property>
    <property name="scaledContents">
     <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QListView" name="listViewSpettacoli">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>731</width>
-     <height>351</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QListView {
-    background-color: #321E00;
-    color: #965A00;
-    border: 1px solid #190E00;
-    border-radius: 4px;
-}
-
-QListView::item:selected {
-    background-color: #C86400;
-    color: #FF7800;
-}
-
-QListView::item:hover {
-    background-color: #C86400;
-}</string>
-   </property>
-  </widget>
-  <widget class="QScrollBar" name="verticalScrollBarSpettacoli">
-   <property name="geometry">
-    <rect>
-     <x>740</x>
-     <y>120</y>
-     <width>21</width>
-     <height>351</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QScrollBar:vertical {
-        background: #B46E00;
-        border: 2px solid #190E00;
-    border-radius: 4px;
-        width: 15px;
-        margin: 5px;
-}
-
-QScrollBar::handle:vertical {
-        background: #965A00;
-        min-height: 20px;
-    border-radius: 4px;
-}
-
-QScrollBar::handle:vertical:hover {
-        background: #C86400;
-}
-
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-        background: none;
-        border: none;
-            }</string>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Orientation::Vertical</enum>
    </property>
   </widget>
   <widget class="QLabel" name="labelBarra">
@@ -175,13 +111,132 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
     <string/>
    </property>
   </widget>
+  <widget class="QTableView" name="tableViewSpettacoli">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>731</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+QTableView:focus {
+    outline: none;
+}
+
+QHeaderView::section {
+    background-color: #5A3400;
+    color: #C87800;
+    border: 1px solid #3B1C00;
+	border-left: none;
+    border-right: none;
+	text-align: left;
+    padding: 3px;
+}
+
+QTableView::item {
+	border: 1px solid #190E00;
+    border-left: none;
+    border-right: none;
+	border-bottom: none;
+}
+
+QTableView::item:selected {
+    background-color: #C86400;
+    color: #FF7800;
+}
+
+QTableView QScrollBar:vertical {
+        background: #B46E00;
+        border: 2px solid #190E00;
+        border-radius: 4px;
+        width: 21px;
+        margin: 5px;
+}
+
+QTableView QScrollBar::handle:vertical {
+	background: #965A00;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QTableView QScrollBar::handle:vertical:hover {
+     background: #C86400;
+}
+
+QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	background: none;
+    border: none;
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+   </property>
+   <property name="tabKeyNavigation">
+    <bool>false</bool>
+   </property>
+   <property name="showDropIndicator" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="dragDropOverwriteMode">
+    <bool>false</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <property name="cornerButtonEnabled">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>25</number>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>25</number>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+  </widget>
   <zorder>labelBarra</zorder>
   <zorder>Sfondo</zorder>
   <zorder>labelTitolo</zorder>
-  <zorder>labelIndietroButtonCliente</zorder>
-  <zorder>listViewSpettacoli</zorder>
-  <zorder>verticalScrollBarSpettacoli</zorder>
+  <zorder>labelIndietroButton</zorder>
+  <zorder>tableViewSpettacoli</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

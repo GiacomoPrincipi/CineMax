@@ -41,7 +41,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIconaFotoAmministratore">
+  <widget class="QLabel" name="labelIconaFoto">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -109,7 +109,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonAmministratore">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -164,7 +164,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Film</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelGenereSpettacolo">
@@ -182,7 +182,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Fantasia</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelOrarioInizio">
@@ -221,7 +221,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>00:00</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelSala">
@@ -260,7 +260,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>1</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelData">
@@ -299,10 +299,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>13/07/2025</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonAmministratore">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -357,7 +357,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>02:00</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelDurata">
@@ -396,7 +396,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>120 miuti</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButtonModifica">
@@ -424,7 +424,131 @@ QPushButton:hover {
     <string>Modifica</string>
    </property>
   </widget>
+  <widget class="QLabel" name="labelStato">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>100</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Stato:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelStatoSpettacolo">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>120</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzo">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>220</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prezzo:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>290</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string> Prezzo in punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoSpettacolo">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>240</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoSpettacolo_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>310</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
