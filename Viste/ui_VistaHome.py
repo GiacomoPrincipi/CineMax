@@ -28,7 +28,7 @@ class Ui_VistaHome(object):
         self.labelTitolo.setGeometry(QRect(210, 70, 371, 71))
         font = QFont()
         font.setFamilies([u"Segoe UI Variable"])
-        font.setPointSize(20)
+        font.setPointSize(26)
         font.setBold(True)
         self.labelTitolo.setFont(font)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
@@ -42,7 +42,7 @@ class Ui_VistaHome(object):
         font1.setPointSize(11)
         self.labelSottotitolo.setFont(font1)
         self.labelSottotitolo.setStyleSheet(u"QLabel {\n"
-"    color: #CCCCCC;\n"
+"    color: #AFAFAF;\n"
 "}")
         self.labelSottotitolo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.pushButtonAmministratore = QPushButton(VistaHome)
@@ -50,7 +50,7 @@ class Ui_VistaHome(object):
         self.pushButtonAmministratore.setGeometry(QRect(320, 240, 161, 41))
         self.pushButtonAmministratore.setStyleSheet(u"QPushButton {\n"
 "    background-color: #969696;\n"
-"    color: #FFFFFF;\n"
+"    color: #EEEEEE;\n"
 "    border: 2px solid #555555;\n"
 "    border-radius: 6px;\n"
 "}\n"
@@ -68,7 +68,7 @@ class Ui_VistaHome(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #323232,\n"
+"        stop: 0 #191919,\n"
 "        stop: 1 #646464\n"
 "    );\n"
 "}")
@@ -77,7 +77,7 @@ class Ui_VistaHome(object):
         self.pushButtonCliente.setGeometry(QRect(320, 320, 161, 41))
         self.pushButtonCliente.setStyleSheet(u"QPushButton {\n"
 "    background-color: #969696;\n"
-"    color: #FFFFFF;\n"
+"    color: #EEEEEE;\n"
 "    border: 2px solid #555555;\n"
 "    border-radius: 6px;\n"
 "}\n"

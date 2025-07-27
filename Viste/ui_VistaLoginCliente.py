@@ -18,23 +18,25 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaLoginCliente(object):
     def setupUi(self, VistaLoginCliente):
         if not VistaLoginCliente.objectName():
             VistaLoginCliente.setObjectName(u"VistaLoginCliente")
         VistaLoginCliente.resize(790, 499)
-        self.label = QLabel(VistaLoginCliente)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(30, 20, 241, 71))
+        self.labelTitolo = QLabel(VistaLoginCliente)
+        self.labelTitolo.setObjectName(u"labelTitolo")
+        self.labelTitolo.setGeometry(QRect(30, 20, 241, 71))
         font = QFont()
         font.setFamilies([u"Segoe UI Variable"])
         font.setPointSize(20)
         font.setBold(True)
-        self.label.setFont(font)
-        self.label.setStyleSheet(u"QLabel {\n"
+        self.labelTitolo.setFont(font)
+        self.labelTitolo.setStyleSheet(u"QLabel {\n"
 "    color: #C8B400;\n"
 "}")
-        self.label.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.pushButtonAccedi = QPushButton(VistaLoginCliente)
         self.pushButtonAccedi.setObjectName(u"pushButtonAccedi")
         self.pushButtonAccedi.setGeometry(QRect(420, 310, 91, 29))
@@ -92,10 +94,10 @@ class Ui_VistaLoginCliente(object):
         self.labelPassword.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
-        self.pushButtonRecuperoCredenziali = QPushButton(VistaLoginCliente)
-        self.pushButtonRecuperoCredenziali.setObjectName(u"pushButtonRecuperoCredenziali")
-        self.pushButtonRecuperoCredenziali.setGeometry(QRect(610, 450, 161, 29))
-        self.pushButtonRecuperoCredenziali.setStyleSheet(u"QPushButton {\n"
+        self.pushButtonRecuperoPassword = QPushButton(VistaLoginCliente)
+        self.pushButtonRecuperoPassword.setObjectName(u"pushButtonRecuperoPassword")
+        self.pushButtonRecuperoPassword.setGeometry(QRect(610, 450, 161, 29))
+        self.pushButtonRecuperoPassword.setStyleSheet(u"QPushButton {\n"
 "    background-color: #963C00;\n"
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
@@ -120,21 +122,45 @@ class Ui_VistaLoginCliente(object):
 "    );\n"
 "}")
         self.Sfondo.setScaledContents(False)
-        self.labelIndietroButtonCliente = QLabel(VistaLoginCliente)
-        self.labelIndietroButtonCliente.setObjectName(u"labelIndietroButtonCliente")
-        self.labelIndietroButtonCliente.setGeometry(QRect(700, 20, 63, 61))
-        self.labelIndietroButtonCliente.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
-        self.labelIndietroButtonCliente.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaLoginCliente)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setScaledContents(True)
+        self.labelErroreEmail = QLabel(VistaLoginCliente)
+        self.labelErroreEmail.setObjectName(u"labelErroreEmail")
+        self.labelErroreEmail.setGeometry(QRect(520, 200, 191, 20))
+        self.labelErroreEmail.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErroreEmail.setScaledContents(False)
+        self.labelErrorePassword = QLabel(VistaLoginCliente)
+        self.labelErrorePassword.setObjectName(u"labelErrorePassword")
+        self.labelErrorePassword.setGeometry(QRect(520, 270, 151, 20))
+        self.labelErrorePassword.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelRecuperoPassword = QLabel(VistaLoginCliente)
+        self.labelRecuperoPassword.setObjectName(u"labelRecuperoPassword")
+        self.labelRecuperoPassword.setGeometry(QRect(390, 450, 211, 31))
+        self.labelRecuperoPassword.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelRecuperoPassword.setScaledContents(False)
+        self.labelRecuperoPassword.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.Sfondo.raise_()
-        self.label.raise_()
+        self.labelTitolo.raise_()
         self.pushButtonAccedi.raise_()
         self.pushButtonRegistrati.raise_()
         self.lineEditEmail.raise_()
         self.lineEditPassword.raise_()
         self.labelEmail.raise_()
         self.labelPassword.raise_()
-        self.pushButtonRecuperoCredenziali.raise_()
-        self.labelIndietroButtonCliente.raise_()
+        self.pushButtonRecuperoPassword.raise_()
+        self.labelIndietroButton.raise_()
+        self.labelErroreEmail.raise_()
+        self.labelErrorePassword.raise_()
+        self.labelRecuperoPassword.raise_()
 
         self.retranslateUi(VistaLoginCliente)
 
@@ -143,15 +169,18 @@ class Ui_VistaLoginCliente(object):
 
     def retranslateUi(self, VistaLoginCliente):
         VistaLoginCliente.setWindowTitle(QCoreApplication.translate("VistaLoginCliente", u"Login Cliente - CineMax", None))
-        self.label.setText(QCoreApplication.translate("VistaLoginCliente", u"Login Cliente", None))
+        self.labelTitolo.setText(QCoreApplication.translate("VistaLoginCliente", u"Login Cliente", None))
         self.pushButtonAccedi.setText(QCoreApplication.translate("VistaLoginCliente", u"Accedi", None))
         self.pushButtonRegistrati.setText(QCoreApplication.translate("VistaLoginCliente", u"Registrati", None))
         self.lineEditEmail.setText("")
         self.lineEditPassword.setText("")
-        self.labelEmail.setText(QCoreApplication.translate("VistaLoginCliente", u"Email", None))
-        self.labelPassword.setText(QCoreApplication.translate("VistaLoginCliente", u"Password", None))
-        self.pushButtonRecuperoCredenziali.setText(QCoreApplication.translate("VistaLoginCliente", u"Recupero Password", None))
+        self.labelEmail.setText(QCoreApplication.translate("VistaLoginCliente", u"Email:", None))
+        self.labelPassword.setText(QCoreApplication.translate("VistaLoginCliente", u"Password:", None))
+        self.pushButtonRecuperoPassword.setText(QCoreApplication.translate("VistaLoginCliente", u"Recupero Password", None))
         self.Sfondo.setText("")
-        self.labelIndietroButtonCliente.setText("")
+        self.labelIndietroButton.setText("")
+        self.labelErroreEmail.setText("")
+        self.labelErrorePassword.setText("")
+        self.labelRecuperoPassword.setText("")
     # retranslateUi
 

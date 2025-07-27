@@ -15,8 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QListView, QScrollBar,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QSizePolicy, QTableView, QWidget)
+
+from clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaSpettacoliCliente(object):
     def setupUi(self, VistaVisualizzaSpettacoliCliente):
@@ -49,55 +51,11 @@ class Ui_VistaVisualizzaSpettacoliCliente(object):
 "    color: #502800;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelIndietroButtonCliente = QLabel(VistaVisualizzaSpettacoliCliente)
-        self.labelIndietroButtonCliente.setObjectName(u"labelIndietroButtonCliente")
-        self.labelIndietroButtonCliente.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButtonCliente.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
-        self.labelIndietroButtonCliente.setScaledContents(True)
-        self.listViewSpettacoli = QListView(VistaVisualizzaSpettacoliCliente)
-        self.listViewSpettacoli.setObjectName(u"listViewSpettacoli")
-        self.listViewSpettacoli.setGeometry(QRect(30, 120, 731, 351))
-        self.listViewSpettacoli.setStyleSheet(u"QListView {\n"
-"    background-color: #321E00;\n"
-"    color: #965A00;\n"
-"    border: 1px solid #190E00;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"QListView::item:selected {\n"
-"    background-color: #C86400;\n"
-"    color: #FF7800;\n"
-"}\n"
-"\n"
-"QListView::item:hover {\n"
-"    background-color: #C86400;\n"
-"}")
-        self.verticalScrollBarSpettacoli = QScrollBar(VistaVisualizzaSpettacoliCliente)
-        self.verticalScrollBarSpettacoli.setObjectName(u"verticalScrollBarSpettacoli")
-        self.verticalScrollBarSpettacoli.setGeometry(QRect(740, 120, 21, 351))
-        self.verticalScrollBarSpettacoli.setStyleSheet(u"QScrollBar:vertical {\n"
-"        background: #B46E00;\n"
-"        border: 2px solid #190E00;\n"
-"    border-radius: 4px;\n"
-"        width: 15px;\n"
-"        margin: 5px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"        background: #965A00;\n"
-"        min-height: 20px;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"        background: #C86400;\n"
-"}\n"
-"\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"        background: none;\n"
-"        border: none;\n"
-"            }")
-        self.verticalScrollBarSpettacoli.setOrientation(Qt.Orientation.Vertical)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaSpettacoliCliente)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaSpettacoliCliente)
         self.labelBarra.setObjectName(u"labelBarra")
         self.labelBarra.setGeometry(QRect(0, 0, 791, 91))
@@ -109,12 +67,86 @@ class Ui_VistaVisualizzaSpettacoliCliente(object):
 "        stop: 1 #B46E00\n"
 "    );\n"
 "}")
+        self.tableViewSpettacoli = QTableView(VistaVisualizzaSpettacoliCliente)
+        self.tableViewSpettacoli.setObjectName(u"tableViewSpettacoli")
+        self.tableViewSpettacoli.setGeometry(QRect(30, 120, 731, 351))
+        self.tableViewSpettacoli.setStyleSheet(u"QTableView {\n"
+"    background-color: #321E00;\n"
+"    color: #965A00;\n"
+"    border: 1px solid #190E00;\n"
+"    border-radius: 4px;\n"
+"    font-size: 11px;\n"
+"}\n"
+"\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A3400;\n"
+"    color: #C87800;\n"
+"    border: 1px solid #3B1C00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190E00;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C86400;\n"
+"    color: #FF7800;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"        background: #B46E00;\n"
+"        border: 2px solid #190E00;\n"
+"        border-radius: 4px;\n"
+"        width: 21px;\n"
+"        margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #965A00;\n"
+"    min-height: 20px;\n"
+"    border-radiu"
+                        "s: 4px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical:hover {\n"
+"     background: #C86400;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewSpettacoli.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewSpettacoli.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewSpettacoli.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewSpettacoli.setTabKeyNavigation(False)
+        self.tableViewSpettacoli.setProperty(u"showDropIndicator", False)
+        self.tableViewSpettacoli.setDragDropOverwriteMode(False)
+        self.tableViewSpettacoli.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewSpettacoli.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewSpettacoli.setShowGrid(False)
+        self.tableViewSpettacoli.setCornerButtonEnabled(False)
+        self.tableViewSpettacoli.horizontalHeader().setHighlightSections(False)
+        self.tableViewSpettacoli.verticalHeader().setVisible(False)
+        self.tableViewSpettacoli.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewSpettacoli.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewSpettacoli.verticalHeader().setHighlightSections(False)
         self.labelBarra.raise_()
         self.Sfondo.raise_()
         self.labelTitolo.raise_()
-        self.labelIndietroButtonCliente.raise_()
-        self.listViewSpettacoli.raise_()
-        self.verticalScrollBarSpettacoli.raise_()
+        self.labelIndietroButton.raise_()
+        self.tableViewSpettacoli.raise_()
 
         self.retranslateUi(VistaVisualizzaSpettacoliCliente)
 
@@ -125,7 +157,7 @@ class Ui_VistaVisualizzaSpettacoliCliente(object):
         VistaVisualizzaSpettacoliCliente.setWindowTitle(QCoreApplication.translate("VistaVisualizzaSpettacoliCliente", u"Spettacoli - CineMax", None))
         self.Sfondo.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoliCliente", u"Spettacoli", None))
-        self.labelIndietroButtonCliente.setText("")
+        self.labelIndietroButton.setText("")
         self.labelBarra.setText("")
     # retranslateUi
 

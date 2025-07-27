@@ -18,6 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
     QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaProdottoAmministratore(object):
     def setupUi(self, VistaVisualizzaProdottoAmministratore):
         if not VistaVisualizzaProdottoAmministratore.objectName():
@@ -37,11 +39,11 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelIconaFotoAmministratore = QLabel(VistaVisualizzaProdottoAmministratore)
-        self.labelIconaFotoAmministratore.setObjectName(u"labelIconaFotoAmministratore")
-        self.labelIconaFotoAmministratore.setGeometry(QRect(30, 30, 131, 131))
-        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
-        self.labelIconaFotoAmministratore.setScaledContents(True)
+        self.labelIconaFoto = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelIconaFoto.setObjectName(u"labelIconaFoto")
+        self.labelIconaFoto.setGeometry(QRect(30, 30, 131, 131))
+        self.labelIconaFoto.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
+        self.labelIconaFoto.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaProdottoAmministratore)
         self.labelNome.setObjectName(u"labelNome")
         self.labelNome.setGeometry(QRect(180, 100, 63, 20))
@@ -49,23 +51,23 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelNome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelTitoloPrincipale = QLabel(VistaVisualizzaProdottoAmministratore)
-        self.labelTitoloPrincipale.setObjectName(u"labelTitoloPrincipale")
-        self.labelTitoloPrincipale.setGeometry(QRect(180, 30, 291, 71))
+        self.labelTitolo = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelTitolo.setObjectName(u"labelTitolo")
+        self.labelTitolo.setGeometry(QRect(180, 30, 291, 71))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Variable"])
         font1.setPointSize(20)
         font1.setBold(True)
-        self.labelTitoloPrincipale.setFont(font1)
-        self.labelTitoloPrincipale.setStyleSheet(u"QLabel {\n"
+        self.labelTitolo.setFont(font1)
+        self.labelTitolo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
-        self.labelTitoloPrincipale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaProdottoAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelIngredienti = QLabel(VistaVisualizzaProdottoAmministratore)
         self.labelIngredienti.setObjectName(u"labelIngredienti")
         self.labelIngredienti.setGeometry(QRect(40, 180, 81, 20))
@@ -124,11 +126,11 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
         self.labelPrezzoProdotto.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaProdottoAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.pushButtonModifica = QPushButton(VistaVisualizzaProdottoAmministratore)
         self.pushButtonModifica.setObjectName(u"pushButtonModifica")
         self.pushButtonModifica.setGeometry(QRect(670, 450, 91, 29))
@@ -142,6 +144,19 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
+        self.labelPrezzoPunti = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
+        self.labelPrezzoPunti.setGeometry(QRect(190, 300, 121, 20))
+        self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPrezzoPuntiProdotto = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelPrezzoPuntiProdotto.setObjectName(u"labelPrezzoPuntiProdotto")
+        self.labelPrezzoPuntiProdotto.setGeometry(QRect(190, 320, 81, 20))
+        self.labelPrezzoPuntiProdotto.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaProdottoAmministratore)
 
@@ -151,20 +166,22 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
     def retranslateUi(self, VistaVisualizzaProdottoAmministratore):
         VistaVisualizzaProdottoAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prodotto - CineMax", None))
         self.Sfondo.setText("")
-        self.labelIconaFotoAmministratore.setText("")
+        self.labelIconaFoto.setText("")
         self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Nome:", None))
-        self.labelTitoloPrincipale.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prodotto", None))
-        self.labelHomeButtonAmministratore.setText("")
+        self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prodotto", None))
+        self.labelHomeButton.setText("")
         self.labelIngredienti.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Ingredienti:", None))
-        self.labelNomeProdotto.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prodotto", None))
-        self.labelIngredientiProdotto.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Ingrediente1, Ingradiente2", None))
+        self.labelNomeProdotto.setText("")
+        self.labelIngredientiProdotto.setText("")
         self.labelDisponibile.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Disponibilit\u00e0:", None))
-        self.labelDisponibileProdotto.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"si", None))
+        self.labelDisponibileProdotto.setText("")
         self.labelAllergeni.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Allergeni:", None))
-        self.labelAllergeniProdotto.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Allergene1, Allergene2, Allergene3", None))
+        self.labelAllergeniProdotto.setText("")
         self.labelPrezzo.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prezzo:", None))
-        self.labelPrezzoProdotto.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"00,00 $", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelPrezzoProdotto.setText("")
+        self.labelIndietroButton.setText("")
         self.pushButtonModifica.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Modifica", None))
+        self.labelPrezzoPunti.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prezzo in Punti:", None))
+        self.labelPrezzoPuntiProdotto.setText("")
     # retranslateUi
 

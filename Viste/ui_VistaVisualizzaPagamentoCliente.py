@@ -17,6 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaPagamentoCliente(object):
     def setupUi(self, VistaVisualizzaPagamentoCliente):
         if not VistaVisualizzaPagamentoCliente.objectName():
@@ -36,11 +38,11 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
 "        stop: 1 #643C00\n"
 "    );\n"
 "}")
-        self.labelRicevutaIconCliente = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelRicevutaIconCliente.setObjectName(u"labelRicevutaIconCliente")
-        self.labelRicevutaIconCliente.setGeometry(QRect(20, 20, 151, 151))
-        self.labelRicevutaIconCliente.setPixmap(QPixmap(u"Immagini/RicevutaIconCliente.png"))
-        self.labelRicevutaIconCliente.setScaledContents(True)
+        self.labelIconaRicevuta = QLabel(VistaVisualizzaPagamentoCliente)
+        self.labelIconaRicevuta.setObjectName(u"labelIconaRicevuta")
+        self.labelIconaRicevuta.setGeometry(QRect(20, 20, 151, 151))
+        self.labelIconaRicevuta.setPixmap(QPixmap(u"Immagini/RicevutaIconCliente.png"))
+        self.labelIconaRicevuta.setScaledContents(True)
         self.labelTitolo = QLabel(VistaVisualizzaPagamentoCliente)
         self.labelTitolo.setObjectName(u"labelTitolo")
         self.labelTitolo.setGeometry(QRect(180, 30, 291, 71))
@@ -53,18 +55,18 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
 "    color: #C8B400;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonCliente = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelHomeButtonCliente.setObjectName(u"labelHomeButtonCliente")
-        self.labelHomeButtonCliente.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonCliente.setPixmap(QPixmap(u"Immagini/HomeButtonCliente.png"))
-        self.labelHomeButtonCliente.setScaledContents(True)
-        self.labelArticolo = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelArticolo.setObjectName(u"labelArticolo")
-        self.labelArticolo.setGeometry(QRect(180, 100, 81, 20))
-        self.labelArticolo.setStyleSheet(u"QLabel {\n"
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaPagamentoCliente)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonCliente.png"))
+        self.labelHomeButton.setScaledContents(True)
+        self.labelNome = QLabel(VistaVisualizzaPagamentoCliente)
+        self.labelNome.setObjectName(u"labelNome")
+        self.labelNome.setGeometry(QRect(180, 100, 141, 20))
+        self.labelNome.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
-        self.labelArticolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelNome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelData = QLabel(VistaVisualizzaPagamentoCliente)
         self.labelData.setObjectName(u"labelData")
         self.labelData.setGeometry(QRect(40, 180, 81, 20))
@@ -117,16 +119,17 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
         self.labelOraPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
-        self.labelIndietroButtonCliente = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelIndietroButtonCliente.setObjectName(u"labelIndietroButtonCliente")
-        self.labelIndietroButtonCliente.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonCliente.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
-        self.labelIndietroButtonCliente.setScaledContents(True)
-        self.labelButtonArticolo = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelButtonArticolo.setObjectName(u"labelButtonArticolo")
-        self.labelButtonArticolo.setGeometry(QRect(180, 120, 51, 51))
-        self.labelButtonArticolo.setPixmap(QPixmap(u"Immagini/IconaFotoCliente.png"))
-        self.labelButtonArticolo.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaPagamentoCliente)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setScaledContents(True)
+        self.labelNomePagamento = QLabel(VistaVisualizzaPagamentoCliente)
+        self.labelNomePagamento.setObjectName(u"labelNomePagamento")
+        self.labelNomePagamento.setGeometry(QRect(180, 120, 231, 20))
+        self.labelNomePagamento.setStyleSheet(u"QLabel {\n"
+"    color: #965A00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaPagamentoCliente)
 
@@ -136,19 +139,19 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
     def retranslateUi(self, VistaVisualizzaPagamentoCliente):
         VistaVisualizzaPagamentoCliente.setWindowTitle(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Pagamento - CineMax", None))
         self.Sfondo.setText("")
-        self.labelRicevutaIconCliente.setText("")
+        self.labelIconaRicevuta.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Pagamento", None))
-        self.labelHomeButtonCliente.setText("")
-        self.labelArticolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Articolo:", None))
+        self.labelHomeButton.setText("")
+        self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Nome Articolo:", None))
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Data:", None))
-        self.labelDataPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"14/07/2025", None))
+        self.labelDataPagamento.setText("")
         self.labelTipo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Tipo:", None))
-        self.labelTipoPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Punti", None))
+        self.labelTipoPagamento.setText("")
         self.labelImporto.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Importo:", None))
-        self.labelImportoPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"00,00 $", None))
+        self.labelImportoPagamento.setText("")
         self.labelOra.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Ora:", None))
-        self.labelOraPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"00:00", None))
-        self.labelIndietroButtonCliente.setText("")
-        self.labelButtonArticolo.setText("")
+        self.labelOraPagamento.setText("")
+        self.labelIndietroButton.setText("")
+        self.labelNomePagamento.setText("")
     # retranslateUi
 

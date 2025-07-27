@@ -130,6 +130,46 @@ class Ui_VistaAcquistoProdottoCliente(object):
 "QComboBox QAbstractItemView::item:hover {\n"
 "    background-color: #C86400;\n"
 "}")
+        self.labelErroreTipoPagamento = QLabel(VistaAcquistoProdottoCliente)
+        self.labelErroreTipoPagamento.setObjectName(u"labelErroreTipoPagamento")
+        self.labelErroreTipoPagamento.setGeometry(QRect(130, 200, 191, 20))
+        self.labelErroreTipoPagamento.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErroreTipoPagamento.setScaledContents(False)
+        self.labelPrezzoPunti = QLabel(VistaAcquistoProdottoCliente)
+        self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
+        self.labelPrezzoPunti.setGeometry(QRect(190, 240, 91, 20))
+        self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C87800;\n"
+"}")
+        self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPrezzoPuntiProdotto = QLabel(VistaAcquistoProdottoCliente)
+        self.labelPrezzoPuntiProdotto.setObjectName(u"labelPrezzoPuntiProdotto")
+        self.labelPrezzoPuntiProdotto.setGeometry(QRect(190, 260, 71, 20))
+        self.labelPrezzoPuntiProdotto.setStyleSheet(u"QLabel {\n"
+"    color: #965A00;\n"
+"}")
+        self.labelErrorePuntiInsufficenti = QLabel(VistaAcquistoProdottoCliente)
+        self.labelErrorePuntiInsufficenti.setObjectName(u"labelErrorePuntiInsufficenti")
+        self.labelErrorePuntiInsufficenti.setGeometry(QRect(200, 320, 191, 20))
+        self.labelErrorePuntiInsufficenti.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErrorePuntiInsufficenti.setScaledContents(False)
+        self.labelPunti = QLabel(VistaAcquistoProdottoCliente)
+        self.labelPunti.setObjectName(u"labelPunti")
+        self.labelPunti.setGeometry(QRect(40, 290, 81, 20))
+        self.labelPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C87800;\n"
+"}")
+        self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPuntiCliente = QLabel(VistaAcquistoProdottoCliente)
+        self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
+        self.labelPuntiCliente.setGeometry(QRect(40, 310, 71, 20))
+        self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
+"    color: #965A00;\n"
+"}")
 
         self.retranslateUi(VistaAcquistoProdottoCliente)
 
@@ -146,6 +186,12 @@ class Ui_VistaAcquistoProdottoCliente(object):
         self.labelPrezzo.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"Prezzo:", None))
         self.pushButtonAcquista.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"Acquista", None))
         self.pushButtonAnnulla.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"Annulla", None))
-        self.labelPrezzoProdotto.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"00,00 $", None))
+        self.labelPrezzoProdotto.setText("")
+        self.labelErroreTipoPagamento.setText("")
+        self.labelPrezzoPunti.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"Prezzo Punti:", None))
+        self.labelPrezzoPuntiProdotto.setText("")
+        self.labelErrorePuntiInsufficenti.setText("")
+        self.labelPunti.setText(QCoreApplication.translate("VistaAcquistoProdottoCliente", u"Saldo Punti:", None))
+        self.labelPuntiCliente.setText("")
     # retranslateUi
 

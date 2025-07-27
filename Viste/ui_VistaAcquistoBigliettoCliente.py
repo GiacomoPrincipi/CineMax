@@ -164,6 +164,53 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "QComboBox QAbstractItemView::item:hover {\n"
 "    background-color: #C86400;\n"
 "}")
+        self.labelPrezzoPunti = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
+        self.labelPrezzoPunti.setGeometry(QRect(180, 360, 121, 20))
+        self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C87800;\n"
+"}")
+        self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPrezzoPuntiBiglietto = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelPrezzoPuntiBiglietto.setObjectName(u"labelPrezzoPuntiBiglietto")
+        self.labelPrezzoPuntiBiglietto.setGeometry(QRect(180, 380, 71, 20))
+        self.labelPrezzoPuntiBiglietto.setStyleSheet(u"QLabel {\n"
+"    color: #965A00;\n"
+"}")
+        self.labelErroreTipo = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelErroreTipo.setObjectName(u"labelErroreTipo")
+        self.labelErroreTipo.setGeometry(QRect(130, 260, 191, 20))
+        self.labelErroreTipo.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErroreTipo.setScaledContents(False)
+        self.labelErroreTipoPagamento = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelErroreTipoPagamento.setObjectName(u"labelErroreTipoPagamento")
+        self.labelErroreTipoPagamento.setGeometry(QRect(130, 320, 191, 20))
+        self.labelErroreTipoPagamento.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErroreTipoPagamento.setScaledContents(False)
+        self.labelPunti = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelPunti.setObjectName(u"labelPunti")
+        self.labelPunti.setGeometry(QRect(40, 420, 81, 20))
+        self.labelPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C87800;\n"
+"}")
+        self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPuntiCliente = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
+        self.labelPuntiCliente.setGeometry(QRect(40, 440, 71, 20))
+        self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
+"    color: #965A00;\n"
+"}")
+        self.labelErrorePuntiInsufficenti = QLabel(VistaAcquistoBigliettoCliente)
+        self.labelErrorePuntiInsufficenti.setObjectName(u"labelErrorePuntiInsufficenti")
+        self.labelErrorePuntiInsufficenti.setGeometry(QRect(190, 440, 191, 20))
+        self.labelErrorePuntiInsufficenti.setStyleSheet(u"QLabel {\n"
+"    color: #FFFF00;\n"
+"}")
+        self.labelErrorePuntiInsufficenti.setScaledContents(False)
 
         self.retranslateUi(VistaAcquistoBigliettoCliente)
 
@@ -181,7 +228,14 @@ class Ui_VistaAcquistoBigliettoCliente(object):
         self.labelPrezzo.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"Prezzo:", None))
         self.pushButtonAcquista.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"Acquista", None))
         self.pushButtonAnnulla.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"Annulla", None))
-        self.labelPostoBiglietto.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"12", None))
-        self.labelPrezzoBiglietto.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"00,00 $", None))
+        self.labelPostoBiglietto.setText("")
+        self.labelPrezzoBiglietto.setText("")
+        self.labelPrezzoPunti.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"Prezzo Punti:", None))
+        self.labelPrezzoPuntiBiglietto.setText("")
+        self.labelErroreTipo.setText("")
+        self.labelErroreTipoPagamento.setText("")
+        self.labelPunti.setText(QCoreApplication.translate("VistaAcquistoBigliettoCliente", u"Saldo Punti:", None))
+        self.labelPuntiCliente.setText("")
+        self.labelErrorePuntiInsufficenti.setText("")
     # retranslateUi
 

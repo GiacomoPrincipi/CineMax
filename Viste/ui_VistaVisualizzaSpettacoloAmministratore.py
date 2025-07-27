@@ -18,6 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
     QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaSpettacoloAmministratore(object):
     def setupUi(self, VistaVisualizzaSpettacoloAmministratore):
         if not VistaVisualizzaSpettacoloAmministratore.objectName():
@@ -37,11 +39,11 @@ class Ui_VistaVisualizzaSpettacoloAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelIconaFotoAmministratore = QLabel(VistaVisualizzaSpettacoloAmministratore)
-        self.labelIconaFotoAmministratore.setObjectName(u"labelIconaFotoAmministratore")
-        self.labelIconaFotoAmministratore.setGeometry(QRect(30, 30, 131, 131))
-        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
-        self.labelIconaFotoAmministratore.setScaledContents(True)
+        self.labelIconaFoto = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelIconaFoto.setObjectName(u"labelIconaFoto")
+        self.labelIconaFoto.setGeometry(QRect(30, 30, 131, 131))
+        self.labelIconaFoto.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
+        self.labelIconaFoto.setScaledContents(True)
         self.labelTitolo = QLabel(VistaVisualizzaSpettacoloAmministratore)
         self.labelTitolo.setObjectName(u"labelTitolo")
         self.labelTitolo.setGeometry(QRect(180, 100, 63, 20))
@@ -61,11 +63,11 @@ class Ui_VistaVisualizzaSpettacoloAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTitoloPrincipale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaSpettacoloAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelGenere = QLabel(VistaVisualizzaSpettacoloAmministratore)
         self.labelGenere.setObjectName(u"labelGenere")
         self.labelGenere.setGeometry(QRect(40, 180, 81, 20))
@@ -124,11 +126,11 @@ class Ui_VistaVisualizzaSpettacoloAmministratore(object):
         self.labelDataSpettacolo.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaSpettacoloAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelOrarioFine = QLabel(VistaVisualizzaSpettacoloAmministratore)
         self.labelOrarioFine.setObjectName(u"labelOrarioFine")
         self.labelOrarioFine.setGeometry(QRect(170, 360, 101, 20))
@@ -168,6 +170,45 @@ class Ui_VistaVisualizzaSpettacoloAmministratore(object):
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
+        self.labelStato = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelStato.setObjectName(u"labelStato")
+        self.labelStato.setGeometry(QRect(520, 100, 111, 20))
+        self.labelStato.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelStato.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelStatoSpettacolo = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelStatoSpettacolo.setObjectName(u"labelStatoSpettacolo")
+        self.labelStatoSpettacolo.setGeometry(QRect(520, 120, 101, 20))
+        self.labelStatoSpettacolo.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.labelPrezzo = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelPrezzo.setObjectName(u"labelPrezzo")
+        self.labelPrezzo.setGeometry(QRect(370, 220, 101, 20))
+        self.labelPrezzo.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelPrezzo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPrezzoPunti = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
+        self.labelPrezzoPunti.setGeometry(QRect(370, 290, 101, 20))
+        self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelPrezzoSpettacolo = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelPrezzoSpettacolo.setObjectName(u"labelPrezzoSpettacolo")
+        self.labelPrezzoSpettacolo.setGeometry(QRect(370, 240, 131, 20))
+        self.labelPrezzoSpettacolo.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.labelPrezzoSpettacolo_2 = QLabel(VistaVisualizzaSpettacoloAmministratore)
+        self.labelPrezzoSpettacolo_2.setObjectName(u"labelPrezzoSpettacolo_2")
+        self.labelPrezzoSpettacolo_2.setGeometry(QRect(370, 310, 131, 20))
+        self.labelPrezzoSpettacolo_2.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaSpettacoloAmministratore)
 
@@ -177,24 +218,30 @@ class Ui_VistaVisualizzaSpettacoloAmministratore(object):
     def retranslateUi(self, VistaVisualizzaSpettacoloAmministratore):
         VistaVisualizzaSpettacoloAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Spettacolo - CineMax", None))
         self.Sfondo.setText("")
-        self.labelIconaFotoAmministratore.setText("")
+        self.labelIconaFoto.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Titolo:", None))
         self.labelTitoloPrincipale.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Spettacolo", None))
-        self.labelHomeButtonAmministratore.setText("")
+        self.labelHomeButton.setText("")
         self.labelGenere.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Genere:", None))
-        self.labelTitoloSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Film", None))
-        self.labelGenereSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Fantasia", None))
+        self.labelTitoloSpettacolo.setText("")
+        self.labelGenereSpettacolo.setText("")
         self.labelOrarioInizio.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Orario Inizio:", None))
-        self.labelOrarioInizioSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"00:00", None))
+        self.labelOrarioInizioSpettacolo.setText("")
         self.labelSala.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Sala:", None))
-        self.labelSalaSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"1", None))
+        self.labelSalaSpettacolo.setText("")
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Data:", None))
-        self.labelDataSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"13/07/2025", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelDataSpettacolo.setText("")
+        self.labelIndietroButton.setText("")
         self.labelOrarioFine.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Orario Fine:", None))
-        self.labelOrarioFineSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"02:00", None))
+        self.labelOrarioFineSpettacolo.setText("")
         self.labelDurata.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Durata:", None))
-        self.labelDurataSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"120 miuti", None))
+        self.labelDurataSpettacolo.setText("")
         self.pushButtonModifica.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Modifica", None))
+        self.labelStato.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Stato:", None))
+        self.labelStatoSpettacolo.setText("")
+        self.labelPrezzo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u"Prezzo:", None))
+        self.labelPrezzoPunti.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloAmministratore", u" Prezzo in punti:", None))
+        self.labelPrezzoSpettacolo.setText("")
+        self.labelPrezzoSpettacolo_2.setText("")
     # retranslateUi
 

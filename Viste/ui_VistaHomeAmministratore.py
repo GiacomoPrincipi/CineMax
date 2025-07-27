@@ -18,6 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
     QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaHomeAmministratore(object):
     def setupUi(self, VistaHomeAmministratore):
         if not VistaHomeAmministratore.objectName():
@@ -65,30 +67,30 @@ class Ui_VistaHomeAmministratore(object):
 "        stop: 1 #B43700\n"
 "    );\n"
 "}")
-        self.labelProfiloButtonAmministratore = QLabel(VistaHomeAmministratore)
-        self.labelProfiloButtonAmministratore.setObjectName(u"labelProfiloButtonAmministratore")
-        self.labelProfiloButtonAmministratore.setGeometry(QRect(710, 10, 63, 61))
-        self.labelProfiloButtonAmministratore.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
-        self.labelProfiloButtonAmministratore.setScaledContents(True)
-        self.labelProfiloAmministratore = QLabel(VistaHomeAmministratore)
-        self.labelProfiloAmministratore.setObjectName(u"labelProfiloAmministratore")
-        self.labelProfiloAmministratore.setGeometry(QRect(710, 70, 63, 20))
-        self.labelProfiloAmministratore.setStyleSheet(u"QLabel {\n"
+        self.labelProfiloButton = ClickableLabel(VistaHomeAmministratore)
+        self.labelProfiloButton.setObjectName(u"labelProfiloButton")
+        self.labelProfiloButton.setGeometry(QRect(710, 10, 63, 61))
+        self.labelProfiloButton.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfiloButton.setScaledContents(True)
+        self.labelProfilo = QLabel(VistaHomeAmministratore)
+        self.labelProfilo.setObjectName(u"labelProfilo")
+        self.labelProfilo.setGeometry(QRect(710, 70, 63, 20))
+        self.labelProfilo.setStyleSheet(u"QLabel {\n"
 "    color: #501400;\n"
 "}")
-        self.labelProfiloAmministratore.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.labelLogoutAmministratore = QLabel(VistaHomeAmministratore)
-        self.labelLogoutAmministratore.setObjectName(u"labelLogoutAmministratore")
-        self.labelLogoutAmministratore.setGeometry(QRect(20, 70, 63, 20))
-        self.labelLogoutAmministratore.setStyleSheet(u"QLabel {\n"
+        self.labelProfilo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelLogout = QLabel(VistaHomeAmministratore)
+        self.labelLogout.setObjectName(u"labelLogout")
+        self.labelLogout.setGeometry(QRect(20, 70, 63, 20))
+        self.labelLogout.setStyleSheet(u"QLabel {\n"
 "    color: #501400;\n"
 "}")
-        self.labelLogoutAmministratore.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.labelLogoutButtonAmministratore = QLabel(VistaHomeAmministratore)
-        self.labelLogoutButtonAmministratore.setObjectName(u"labelLogoutButtonAmministratore")
-        self.labelLogoutButtonAmministratore.setGeometry(QRect(20, 10, 63, 61))
-        self.labelLogoutButtonAmministratore.setPixmap(QPixmap(u"Immagini/LogoutButtonAmministratore.png"))
-        self.labelLogoutButtonAmministratore.setScaledContents(True)
+        self.labelLogout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelLogoutButton = ClickableLabel(VistaHomeAmministratore)
+        self.labelLogoutButton.setObjectName(u"labelLogoutButton")
+        self.labelLogoutButton.setGeometry(QRect(20, 10, 63, 61))
+        self.labelLogoutButton.setPixmap(QPixmap(u"Immagini/LogoutButtonAmministratore.png"))
+        self.labelLogoutButton.setScaledContents(True)
         self.labelBackup = QLabel(VistaHomeAmministratore)
         self.labelBackup.setObjectName(u"labelBackup")
         self.labelBackup.setGeometry(QRect(710, 460, 63, 20))
@@ -96,11 +98,11 @@ class Ui_VistaHomeAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelBackup.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.labelBackupButtonAmministratore = QLabel(VistaHomeAmministratore)
-        self.labelBackupButtonAmministratore.setObjectName(u"labelBackupButtonAmministratore")
-        self.labelBackupButtonAmministratore.setGeometry(QRect(710, 390, 63, 61))
-        self.labelBackupButtonAmministratore.setPixmap(QPixmap(u"Immagini/IconaBackupAmministratore.png"))
-        self.labelBackupButtonAmministratore.setScaledContents(True)
+        self.labelBackupButton = ClickableLabel(VistaHomeAmministratore)
+        self.labelBackupButton.setObjectName(u"labelBackupButton")
+        self.labelBackupButton.setGeometry(QRect(710, 390, 63, 61))
+        self.labelBackupButton.setPixmap(QPixmap(u"Immagini/IconaBackupAmministratore.png"))
+        self.labelBackupButton.setScaledContents(True)
         self.pushButtonProdotti = QPushButton(VistaHomeAmministratore)
         self.pushButtonProdotti.setObjectName(u"pushButtonProdotti")
         self.pushButtonProdotti.setGeometry(QRect(410, 140, 201, 101))
@@ -143,11 +145,11 @@ class Ui_VistaHomeAmministratore(object):
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
-        self.pushButtonClientiRegistroCassa = QPushButton(VistaHomeAmministratore)
-        self.pushButtonClientiRegistroCassa.setObjectName(u"pushButtonClientiRegistroCassa")
-        self.pushButtonClientiRegistroCassa.setGeometry(QRect(180, 380, 201, 61))
-        self.pushButtonClientiRegistroCassa.setFont(font)
-        self.pushButtonClientiRegistroCassa.setStyleSheet(u"QPushButton {\n"
+        self.pushButtonRegistroCassa = QPushButton(VistaHomeAmministratore)
+        self.pushButtonRegistroCassa.setObjectName(u"pushButtonRegistroCassa")
+        self.pushButtonRegistroCassa.setGeometry(QRect(180, 380, 201, 61))
+        self.pushButtonRegistroCassa.setFont(font)
+        self.pushButtonRegistroCassa.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
 "    border: 2px solid #501400;\n"
@@ -157,11 +159,11 @@ class Ui_VistaHomeAmministratore(object):
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
-        self.pushButtonClientiRecensioni = QPushButton(VistaHomeAmministratore)
-        self.pushButtonClientiRecensioni.setObjectName(u"pushButtonClientiRecensioni")
-        self.pushButtonClientiRecensioni.setGeometry(QRect(410, 380, 201, 61))
-        self.pushButtonClientiRecensioni.setFont(font)
-        self.pushButtonClientiRecensioni.setStyleSheet(u"QPushButton {\n"
+        self.pushButtonRecensioni = QPushButton(VistaHomeAmministratore)
+        self.pushButtonRecensioni.setObjectName(u"pushButtonRecensioni")
+        self.pushButtonRecensioni.setGeometry(QRect(410, 380, 201, 61))
+        self.pushButtonRecensioni.setFont(font)
+        self.pushButtonRecensioni.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
 "    border: 2px solid #501400;\n"
@@ -186,17 +188,17 @@ class Ui_VistaHomeAmministratore(object):
         self.Sfondo.raise_()
         self.pushButtonSpettacoli.raise_()
         self.labelBarra.raise_()
-        self.labelProfiloButtonAmministratore.raise_()
-        self.labelProfiloAmministratore.raise_()
-        self.labelLogoutAmministratore.raise_()
-        self.labelLogoutButtonAmministratore.raise_()
+        self.labelProfiloButton.raise_()
+        self.labelProfilo.raise_()
+        self.labelLogout.raise_()
+        self.labelLogoutButton.raise_()
         self.labelBackup.raise_()
-        self.labelBackupButtonAmministratore.raise_()
+        self.labelBackupButton.raise_()
         self.pushButtonProdotti.raise_()
         self.pushButtonClienti.raise_()
         self.pushButtonAmministratori.raise_()
-        self.pushButtonClientiRegistroCassa.raise_()
-        self.pushButtonClientiRecensioni.raise_()
+        self.pushButtonRegistroCassa.raise_()
+        self.pushButtonRecensioni.raise_()
         self.labelTitolo.raise_()
 
         self.retranslateUi(VistaHomeAmministratore)
@@ -209,17 +211,17 @@ class Ui_VistaHomeAmministratore(object):
         self.pushButtonSpettacoli.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Spettacoli", None))
         self.Sfondo.setText("")
         self.labelBarra.setText("")
-        self.labelProfiloButtonAmministratore.setText("")
-        self.labelProfiloAmministratore.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Profilo", None))
-        self.labelLogoutAmministratore.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Logout", None))
-        self.labelLogoutButtonAmministratore.setText("")
+        self.labelProfiloButton.setText("")
+        self.labelProfilo.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Profilo", None))
+        self.labelLogout.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Logout", None))
+        self.labelLogoutButton.setText("")
         self.labelBackup.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Backup", None))
-        self.labelBackupButtonAmministratore.setText("")
+        self.labelBackupButton.setText("")
         self.pushButtonProdotti.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Prodotti", None))
         self.pushButtonClienti.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Clienti", None))
         self.pushButtonAmministratori.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Amministratori", None))
-        self.pushButtonClientiRegistroCassa.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Registo Cassa", None))
-        self.pushButtonClientiRecensioni.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Recensioni", None))
+        self.pushButtonRegistroCassa.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Registo Cassa", None))
+        self.pushButtonRecensioni.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Recensioni", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaHomeAmministratore", u"Area Riservata Amministratore", None))
     # retranslateUi
 

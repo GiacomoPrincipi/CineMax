@@ -15,8 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QListView, QScrollBar,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QSizePolicy, QTableView, QWidget)
+
+from clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaRecensioniAmministratore(object):
     def setupUi(self, VistaVisualizzaRecensioniAmministratore):
@@ -49,56 +51,11 @@ class Ui_VistaVisualizzaRecensioniAmministratore(object):
 "    color: #501400;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaRecensioniAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
-        self.listViewRecensioni = QListView(VistaVisualizzaRecensioniAmministratore)
-        self.listViewRecensioni.setObjectName(u"listViewRecensioni")
-        self.listViewRecensioni.setGeometry(QRect(30, 120, 731, 351))
-        self.listViewRecensioni.setStyleSheet(u"QListView {\n"
-"        background-color: #320F00;\n"
-"    color: #962D00;\n"
-"    border: 1px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        font-size: 11px;\n"
-"}\n"
-"\n"
-"QListView::item:selected {\n"
-"    background-color: #C83200;\n"
-"    color: #FF3C00;\n"
-"}\n"
-"\n"
-"QListView::item:hover {\n"
-"    background-color: #C83200;\n"
-"}")
-        self.verticalScrollBarRecensioni = QScrollBar(VistaVisualizzaRecensioniAmministratore)
-        self.verticalScrollBarRecensioni.setObjectName(u"verticalScrollBarRecensioni")
-        self.verticalScrollBarRecensioni.setGeometry(QRect(740, 120, 21, 351))
-        self.verticalScrollBarRecensioni.setStyleSheet(u"QScrollBar:vertical {\n"
-"        background: #B43700;\n"
-"        border: 2px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        width: 15px;\n"
-"        margin: 5px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"        background: #962D00;\n"
-"        min-height: 20px;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"        background: #C83200;\n"
-"}\n"
-"\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"        background: none;\n"
-"        border: none;\n"
-"            }")
-        self.verticalScrollBarRecensioni.setOrientation(Qt.Orientation.Vertical)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaRecensioniAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaRecensioniAmministratore)
         self.labelBarra.setObjectName(u"labelBarra")
         self.labelBarra.setGeometry(QRect(0, 0, 791, 91))
@@ -110,12 +67,86 @@ class Ui_VistaVisualizzaRecensioniAmministratore(object):
 "        stop: 1 #B43700\n"
 "    );\n"
 "}")
+        self.tableViewRecensioni = QTableView(VistaVisualizzaRecensioniAmministratore)
+        self.tableViewRecensioni.setObjectName(u"tableViewRecensioni")
+        self.tableViewRecensioni.setGeometry(QRect(30, 120, 731, 351))
+        self.tableViewRecensioni.setStyleSheet(u"QTableView {\n"
+"    background-color: #320F00;\n"
+"    color: #962D00;\n"
+"    border: 1px solid #190700;\n"
+"    border-radius: 4px;\n"
+"	font-size: 11px;\n"
+"}\n"
+"\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A1A00;\n"
+"    color: #C83C00;\n"
+"    border: 1px solid #3B0E00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190700;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C83200;\n"
+"    color: #FF3C00;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"	background: #B43700;\n"
+"	border: 2px solid #190700;\n"
+"    border-radius: 4px;\n"
+"    width: 21px;\n"
+"    margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #962D00;\n"
+"    min-height: 20px;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTable"
+                        "View QScrollBar::handle:vertical:hover {\n"
+"    background: #C83200;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewRecensioni.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewRecensioni.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewRecensioni.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewRecensioni.setTabKeyNavigation(False)
+        self.tableViewRecensioni.setProperty(u"showDropIndicator", False)
+        self.tableViewRecensioni.setDragDropOverwriteMode(False)
+        self.tableViewRecensioni.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewRecensioni.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewRecensioni.setShowGrid(False)
+        self.tableViewRecensioni.setCornerButtonEnabled(False)
+        self.tableViewRecensioni.horizontalHeader().setHighlightSections(False)
+        self.tableViewRecensioni.verticalHeader().setVisible(False)
+        self.tableViewRecensioni.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewRecensioni.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewRecensioni.verticalHeader().setHighlightSections(False)
         self.labelBarra.raise_()
         self.Sfondo.raise_()
         self.labelTitolo.raise_()
-        self.labelIndietroButtonAmministratore.raise_()
-        self.listViewRecensioni.raise_()
-        self.verticalScrollBarRecensioni.raise_()
+        self.labelIndietroButton.raise_()
+        self.tableViewRecensioni.raise_()
 
         self.retranslateUi(VistaVisualizzaRecensioniAmministratore)
 
@@ -126,7 +157,7 @@ class Ui_VistaVisualizzaRecensioniAmministratore(object):
         VistaVisualizzaRecensioniAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaRecensioniAmministratore", u"Recensioni - CineMax", None))
         self.Sfondo.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaRecensioniAmministratore", u"Recensioni", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelIndietroButton.setText("")
         self.labelBarra.setText("")
     # retranslateUi
 

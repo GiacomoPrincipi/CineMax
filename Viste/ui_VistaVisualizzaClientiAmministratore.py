@@ -15,8 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QListView, QScrollBar,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QSizePolicy, QTableView, QWidget)
+
+from clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaClientiAmministratore(object):
     def setupUi(self, VistaVisualizzaClientiAmministratore):
@@ -49,56 +51,11 @@ class Ui_VistaVisualizzaClientiAmministratore(object):
 "    color: #501400;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaClientiAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
-        self.listViewClienti = QListView(VistaVisualizzaClientiAmministratore)
-        self.listViewClienti.setObjectName(u"listViewClienti")
-        self.listViewClienti.setGeometry(QRect(30, 120, 731, 351))
-        self.listViewClienti.setStyleSheet(u"QListView {\n"
-"        background-color: #320F00;\n"
-"    color: #962D00;\n"
-"    border: 1px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        font-size: 11px;\n"
-"}\n"
-"\n"
-"QListView::item:selected {\n"
-"    background-color: #C83200;\n"
-"    color: #FF3C00;\n"
-"}\n"
-"\n"
-"QListView::item:hover {\n"
-"    background-color: #C83200;\n"
-"}")
-        self.verticalScrollBarClienti = QScrollBar(VistaVisualizzaClientiAmministratore)
-        self.verticalScrollBarClienti.setObjectName(u"verticalScrollBarClienti")
-        self.verticalScrollBarClienti.setGeometry(QRect(740, 120, 21, 351))
-        self.verticalScrollBarClienti.setStyleSheet(u"QScrollBar:vertical {\n"
-"        background: #B43700;\n"
-"        border: 2px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        width: 15px;\n"
-"        margin: 5px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical {\n"
-"        background: #962D00;\n"
-"        min-height: 20px;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"QScrollBar::handle:vertical:hover {\n"
-"        background: #C83200;\n"
-"}\n"
-"\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"        background: none;\n"
-"        border: none;\n"
-"            }")
-        self.verticalScrollBarClienti.setOrientation(Qt.Orientation.Vertical)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaClientiAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaClientiAmministratore)
         self.labelBarra.setObjectName(u"labelBarra")
         self.labelBarra.setGeometry(QRect(0, 0, 791, 91))
@@ -110,12 +67,86 @@ class Ui_VistaVisualizzaClientiAmministratore(object):
 "        stop: 1 #B43700\n"
 "    );\n"
 "}")
+        self.tableViewClienti = QTableView(VistaVisualizzaClientiAmministratore)
+        self.tableViewClienti.setObjectName(u"tableViewClienti")
+        self.tableViewClienti.setGeometry(QRect(30, 120, 731, 351))
+        self.tableViewClienti.setStyleSheet(u"QTableView {\n"
+"    background-color: #320F00;\n"
+"    color: #962D00;\n"
+"    border: 1px solid #190700;\n"
+"    border-radius: 4px;\n"
+"	font-size: 11px;\n"
+"}\n"
+"\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A1A00;\n"
+"    color: #C83C00;\n"
+"    border: 1px solid #3B0E00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190700;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C83200;\n"
+"    color: #FF3C00;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"	background: #B43700;\n"
+"	border: 2px solid #190700;\n"
+"    border-radius: 4px;\n"
+"    width: 21px;\n"
+"    margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #962D00;\n"
+"    min-height: 20px;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTable"
+                        "View QScrollBar::handle:vertical:hover {\n"
+"    background: #C83200;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewClienti.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewClienti.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewClienti.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewClienti.setTabKeyNavigation(False)
+        self.tableViewClienti.setProperty(u"showDropIndicator", False)
+        self.tableViewClienti.setDragDropOverwriteMode(False)
+        self.tableViewClienti.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewClienti.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewClienti.setShowGrid(False)
+        self.tableViewClienti.setCornerButtonEnabled(False)
+        self.tableViewClienti.horizontalHeader().setHighlightSections(False)
+        self.tableViewClienti.verticalHeader().setVisible(False)
+        self.tableViewClienti.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewClienti.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewClienti.verticalHeader().setHighlightSections(False)
         self.labelBarra.raise_()
         self.Sfondo.raise_()
         self.labelTitolo.raise_()
-        self.labelIndietroButtonAmministratore.raise_()
-        self.listViewClienti.raise_()
-        self.verticalScrollBarClienti.raise_()
+        self.labelIndietroButton.raise_()
+        self.tableViewClienti.raise_()
 
         self.retranslateUi(VistaVisualizzaClientiAmministratore)
 
@@ -126,7 +157,7 @@ class Ui_VistaVisualizzaClientiAmministratore(object):
         VistaVisualizzaClientiAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaClientiAmministratore", u"Clienti - CineMax", None))
         self.Sfondo.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaClientiAmministratore", u"Clienti", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelIndietroButton.setText("")
         self.labelBarra.setText("")
     # retranslateUi
 

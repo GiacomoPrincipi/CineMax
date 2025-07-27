@@ -17,6 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaPagamentoAmministratore(object):
     def setupUi(self, VistaVisualizzaPagamentoAmministratore):
         if not VistaVisualizzaPagamentoAmministratore.objectName():
@@ -36,14 +38,14 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelRicevutaIconAmministratore = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelRicevutaIconAmministratore.setObjectName(u"labelRicevutaIconAmministratore")
-        self.labelRicevutaIconAmministratore.setGeometry(QRect(20, 20, 151, 151))
-        self.labelRicevutaIconAmministratore.setPixmap(QPixmap(u"Immagini/RicevutaIconAmministratore.png"))
-        self.labelRicevutaIconAmministratore.setScaledContents(True)
+        self.labelRicevutaIcon = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelRicevutaIcon.setObjectName(u"labelRicevutaIcon")
+        self.labelRicevutaIcon.setGeometry(QRect(20, 20, 151, 151))
+        self.labelRicevutaIcon.setPixmap(QPixmap(u"Immagini/RicevutaIconAmministratore.png"))
+        self.labelRicevutaIcon.setScaledContents(True)
         self.labelCliente = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelCliente.setObjectName(u"labelCliente")
-        self.labelCliente.setGeometry(QRect(180, 100, 63, 20))
+        self.labelCliente.setGeometry(QRect(180, 100, 161, 20))
         self.labelCliente.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
@@ -60,14 +62,14 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelArticolo = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelArticolo.setObjectName(u"labelArticolo")
-        self.labelArticolo.setGeometry(QRect(330, 100, 81, 20))
+        self.labelArticolo.setGeometry(QRect(380, 100, 121, 20))
         self.labelArticolo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
@@ -124,21 +126,23 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelOraPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
-        self.labelButtonCliente = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelButtonCliente.setObjectName(u"labelButtonCliente")
-        self.labelButtonCliente.setGeometry(QRect(180, 120, 51, 51))
-        self.labelButtonCliente.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
-        self.labelButtonCliente.setScaledContents(True)
-        self.labelButtonArticolo = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelButtonArticolo.setObjectName(u"labelButtonArticolo")
-        self.labelButtonArticolo.setGeometry(QRect(330, 120, 51, 51))
-        self.labelButtonArticolo.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
-        self.labelButtonArticolo.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
+        self.labelCodiceFiscalePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelCodiceFiscalePagamento.setObjectName(u"labelCodiceFiscalePagamento")
+        self.labelCodiceFiscalePagamento.setGeometry(QRect(180, 120, 91, 20))
+        self.labelCodiceFiscalePagamento.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.labelNomePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelNomePagamento.setObjectName(u"labelNomePagamento")
+        self.labelNomePagamento.setGeometry(QRect(380, 120, 281, 20))
+        self.labelNomePagamento.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaPagamentoAmministratore)
 
@@ -148,21 +152,21 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
     def retranslateUi(self, VistaVisualizzaPagamentoAmministratore):
         VistaVisualizzaPagamentoAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Pagamento - CineMax", None))
         self.Sfondo.setText("")
-        self.labelRicevutaIconAmministratore.setText("")
-        self.labelCliente.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Cliente:", None))
+        self.labelRicevutaIcon.setText("")
+        self.labelCliente.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Codice Fiscale Cliente:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Pagamento", None))
-        self.labelHomeButtonAmministratore.setText("")
-        self.labelArticolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Articolo:", None))
+        self.labelHomeButton.setText("")
+        self.labelArticolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Nome Articolo:", None))
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Data:", None))
-        self.labelDataPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"14/07/2025", None))
+        self.labelDataPagamento.setText("")
         self.labelTipo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Tipo:", None))
-        self.labelTipoPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Punti", None))
+        self.labelTipoPagamento.setText("")
         self.labelImporto.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Importo:", None))
-        self.labelImportoPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"00,00 $", None))
+        self.labelImportoPagamento.setText("")
         self.labelOra.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Ora:", None))
-        self.labelOraPagamento.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"00:00", None))
-        self.labelIndietroButtonAmministratore.setText("")
-        self.labelButtonCliente.setText("")
-        self.labelButtonArticolo.setText("")
+        self.labelOraPagamento.setText("")
+        self.labelIndietroButton.setText("")
+        self.labelCodiceFiscalePagamento.setText("")
+        self.labelNomePagamento.setText("")
     # retranslateUi
 

@@ -17,6 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaRecensioneAmministratore(object):
     def setupUi(self, VistaVisualizzaRecensioneAmministratore):
         if not VistaVisualizzaRecensioneAmministratore.objectName():
@@ -36,13 +38,13 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelCliente = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelCliente.setObjectName(u"labelCliente")
-        self.labelCliente.setGeometry(QRect(180, 100, 63, 20))
-        self.labelCliente.setStyleSheet(u"QLabel {\n"
+        self.labelCodiceFiscale = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelCodiceFiscale.setObjectName(u"labelCodiceFiscale")
+        self.labelCodiceFiscale.setGeometry(QRect(180, 100, 161, 20))
+        self.labelCodiceFiscale.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
-        self.labelCliente.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTitolo = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelTitolo.setObjectName(u"labelTitolo")
         self.labelTitolo.setGeometry(QRect(180, 30, 291, 71))
@@ -55,11 +57,11 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelData = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelData.setObjectName(u"labelData")
         self.labelData.setGeometry(QRect(40, 180, 81, 20))
@@ -67,23 +69,23 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelDataPagamento = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelDataPagamento.setObjectName(u"labelDataPagamento")
-        self.labelDataPagamento.setGeometry(QRect(40, 200, 91, 20))
-        self.labelDataPagamento.setStyleSheet(u"QLabel {\n"
+        self.labelDataRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelDataRecensione.setObjectName(u"labelDataRecensione")
+        self.labelDataRecensione.setGeometry(QRect(40, 200, 91, 20))
+        self.labelDataRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelTipo = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelTipo.setObjectName(u"labelTipo")
-        self.labelTipo.setGeometry(QRect(40, 240, 81, 20))
-        self.labelTipo.setStyleSheet(u"QLabel {\n"
+        self.labelStelle = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelStelle.setObjectName(u"labelStelle")
+        self.labelStelle.setGeometry(QRect(40, 240, 81, 20))
+        self.labelStelle.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
-        self.labelTipo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelTipoPagamento = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelTipoPagamento.setObjectName(u"labelTipoPagamento")
-        self.labelTipoPagamento.setGeometry(QRect(40, 260, 41, 20))
-        self.labelTipoPagamento.setStyleSheet(u"QLabel {\n"
+        self.labelStelle.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelStelleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelStelleRecensione.setObjectName(u"labelStelleRecensione")
+        self.labelStelleRecensione.setGeometry(QRect(40, 260, 41, 20))
+        self.labelStelleRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelOra = QLabel(VistaVisualizzaRecensioneAmministratore)
@@ -93,27 +95,22 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelOra.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelOraPagamento = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelOraPagamento.setObjectName(u"labelOraPagamento")
-        self.labelOraPagamento.setGeometry(QRect(180, 200, 51, 20))
-        self.labelOraPagamento.setStyleSheet(u"QLabel {\n"
+        self.labelOraRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelOraRecensione.setObjectName(u"labelOraRecensione")
+        self.labelOraRecensione.setGeometry(QRect(180, 200, 51, 20))
+        self.labelOraRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
-        self.labelButtonCliente = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelButtonCliente.setObjectName(u"labelButtonCliente")
-        self.labelButtonCliente.setGeometry(QRect(180, 120, 51, 51))
-        self.labelButtonCliente.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
-        self.labelButtonCliente.setScaledContents(True)
-        self.labelProfiloAmministratore = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelProfiloAmministratore.setObjectName(u"labelProfiloAmministratore")
-        self.labelProfiloAmministratore.setGeometry(QRect(40, 50, 121, 121))
-        self.labelProfiloAmministratore.setPixmap(QPixmap(u"Immagini/RecensioneIconAmministratore.png"))
-        self.labelProfiloAmministratore.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
+        self.labelRecensioneIcon = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelRecensioneIcon.setObjectName(u"labelRecensioneIcon")
+        self.labelRecensioneIcon.setGeometry(QRect(40, 50, 121, 121))
+        self.labelRecensioneIcon.setPixmap(QPixmap(u"Immagini/RecensioneIconAmministratore.png"))
+        self.labelRecensioneIcon.setScaledContents(True)
         self.labelTesto = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelTesto.setObjectName(u"labelTesto")
         self.labelTesto.setGeometry(QRect(290, 180, 81, 20))
@@ -121,10 +118,10 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTesto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelTestoPagamento = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelTestoPagamento.setObjectName(u"labelTestoPagamento")
-        self.labelTestoPagamento.setGeometry(QRect(290, 200, 401, 201))
-        self.labelTestoPagamento.setStyleSheet(u"QLabel {\n"
+        self.labelTestoRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelTestoRecensione.setObjectName(u"labelTestoRecensione")
+        self.labelTestoRecensione.setGeometry(QRect(290, 200, 401, 201))
+        self.labelTestoRecensione.setStyleSheet(u"QLabel {\n"
 "	background-color: #EB7864;\n"
 "    color: #962D00;\n"
 "	border: 1px solid #8C463C;\n"
@@ -132,8 +129,14 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "}\n"
 "\n"
 "")
-        self.labelTestoPagamento.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
-        self.labelTestoPagamento.setWordWrap(True)
+        self.labelTestoRecensione.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
+        self.labelTestoRecensione.setWordWrap(True)
+        self.labelCodiceFiscaleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelCodiceFiscaleRecensione.setObjectName(u"labelCodiceFiscaleRecensione")
+        self.labelCodiceFiscaleRecensione.setGeometry(QRect(180, 130, 131, 20))
+        self.labelCodiceFiscaleRecensione.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaRecensioneAmministratore)
 
@@ -143,19 +146,19 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
     def retranslateUi(self, VistaVisualizzaRecensioneAmministratore):
         VistaVisualizzaRecensioneAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione - CineMax", None))
         self.Sfondo.setText("")
-        self.labelCliente.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Cliente:", None))
+        self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Codice Fiscale Cliente:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione", None))
-        self.labelHomeButtonAmministratore.setText("")
+        self.labelHomeButton.setText("")
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Data:", None))
-        self.labelDataPagamento.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"14/07/2025", None))
-        self.labelTipo.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Stelle:", None))
-        self.labelTipoPagamento.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"n/5", None))
+        self.labelDataRecensione.setText("")
+        self.labelStelle.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Stelle:", None))
+        self.labelStelleRecensione.setText("")
         self.labelOra.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Ora:", None))
-        self.labelOraPagamento.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"00:00", None))
-        self.labelIndietroButtonAmministratore.setText("")
-        self.labelButtonCliente.setText("")
-        self.labelProfiloAmministratore.setText("")
+        self.labelOraRecensione.setText("")
+        self.labelIndietroButton.setText("")
+        self.labelRecensioneIcon.setText("")
         self.labelTesto.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Testo:", None))
-        self.labelTestoPagamento.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"ciao io sono claudio e volevo dire che siete fantastici top top top", None))
+        self.labelTestoRecensione.setText("")
+        self.labelCodiceFiscaleRecensione.setText("")
     # retranslateUi
 

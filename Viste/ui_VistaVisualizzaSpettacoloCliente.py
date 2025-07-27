@@ -15,7 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QPushButton, QSizePolicy, QTableView,
+    QWidget)
+
+from clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaSpettacoloCliente(object):
     def setupUi(self, VistaVisualizzaSpettacoloCliente):
@@ -36,11 +40,11 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
 "        stop: 1 #643C00\n"
 "    );\n"
 "}")
-        self.labelIconaFotoCliente = QLabel(VistaVisualizzaSpettacoloCliente)
-        self.labelIconaFotoCliente.setObjectName(u"labelIconaFotoCliente")
-        self.labelIconaFotoCliente.setGeometry(QRect(30, 30, 131, 131))
-        self.labelIconaFotoCliente.setPixmap(QPixmap(u"Immagini/IconaFotoCliente.png"))
-        self.labelIconaFotoCliente.setScaledContents(True)
+        self.labelIconaFoto = QLabel(VistaVisualizzaSpettacoloCliente)
+        self.labelIconaFoto.setObjectName(u"labelIconaFoto")
+        self.labelIconaFoto.setGeometry(QRect(30, 30, 131, 131))
+        self.labelIconaFoto.setPixmap(QPixmap(u"Immagini/IconaFotoCliente.png"))
+        self.labelIconaFoto.setScaledContents(True)
         self.labelTitolo = QLabel(VistaVisualizzaSpettacoloCliente)
         self.labelTitolo.setObjectName(u"labelTitolo")
         self.labelTitolo.setGeometry(QRect(180, 100, 63, 20))
@@ -60,11 +64,11 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
 "    color: #C8B400;\n"
 "}")
         self.labelTitoloPrincipale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonCliente = QLabel(VistaVisualizzaSpettacoloCliente)
-        self.labelHomeButtonCliente.setObjectName(u"labelHomeButtonCliente")
-        self.labelHomeButtonCliente.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonCliente.setPixmap(QPixmap(u"Immagini/HomeButtonCliente.png"))
-        self.labelHomeButtonCliente.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaSpettacoloCliente)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonCliente.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelGenere = QLabel(VistaVisualizzaSpettacoloCliente)
         self.labelGenere.setObjectName(u"labelGenere")
         self.labelGenere.setGeometry(QRect(40, 180, 81, 20))
@@ -123,11 +127,11 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
         self.labelDataSpettacolo.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
-        self.labelIndietroButtonCliente = QLabel(VistaVisualizzaSpettacoloCliente)
-        self.labelIndietroButtonCliente.setObjectName(u"labelIndietroButtonCliente")
-        self.labelIndietroButtonCliente.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonCliente.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
-        self.labelIndietroButtonCliente.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaSpettacoloCliente)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelOrarioFine = QLabel(VistaVisualizzaSpettacoloCliente)
         self.labelOrarioFine.setObjectName(u"labelOrarioFine")
         self.labelOrarioFine.setGeometry(QRect(170, 360, 101, 20))
@@ -154,6 +158,124 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
         self.labelDurataSpettacolo.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
+        self.pushButtonAcquista = QPushButton(VistaVisualizzaSpettacoloCliente)
+        self.pushButtonAcquista.setObjectName(u"pushButtonAcquista")
+        self.pushButtonAcquista.setGeometry(QRect(620, 390, 91, 29))
+        self.pushButtonAcquista.setStyleSheet(u"QPushButton {\n"
+"    background-color: #963C00;\n"
+"    color: #FF7800;\n"
+"    border: 2px solid #502800;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #C86400;\n"
+"}\n"
+"")
+        self.tableViewBiglietti = QTableView(VistaVisualizzaSpettacoloCliente)
+        self.tableViewBiglietti.setObjectName(u"tableViewBiglietti")
+        self.tableViewBiglietti.setGeometry(QRect(340, 200, 411, 241))
+        self.tableViewBiglietti.setStyleSheet(u"QTableView {\n"
+"    background-color: #321E00;\n"
+"    color: #965A00;\n"
+"    border: 1px solid #190E00;\n"
+"    border-radius: 4px;\n"
+"    font-size: 11px;\n"
+"}\n"
+"\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A3400;\n"
+"    color: #C87800;\n"
+"    border: 1px solid #3B1C00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190E00;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C86400;\n"
+"    color: #FF7800;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"        background: #B46E00;\n"
+"        border: 2px solid #190E00;\n"
+"        border-radius: 4px;\n"
+"        width: 21px;\n"
+"        margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #965A00;\n"
+"    min-height: 20px;\n"
+"    border-radiu"
+                        "s: 4px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical:hover {\n"
+"     background: #C86400;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewBiglietti.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewBiglietti.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewBiglietti.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewBiglietti.setTabKeyNavigation(False)
+        self.tableViewBiglietti.setProperty(u"showDropIndicator", False)
+        self.tableViewBiglietti.setDragDropOverwriteMode(False)
+        self.tableViewBiglietti.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewBiglietti.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewBiglietti.setShowGrid(False)
+        self.tableViewBiglietti.setCornerButtonEnabled(False)
+        self.tableViewBiglietti.horizontalHeader().setHighlightSections(False)
+        self.tableViewBiglietti.verticalHeader().setVisible(False)
+        self.tableViewBiglietti.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewBiglietti.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewBiglietti.verticalHeader().setHighlightSections(False)
+        self.labelBiglietti = QLabel(VistaVisualizzaSpettacoloCliente)
+        self.labelBiglietti.setObjectName(u"labelBiglietti")
+        self.labelBiglietti.setGeometry(QRect(340, 180, 81, 20))
+        self.labelBiglietti.setStyleSheet(u"QLabel {\n"
+"    color: #C87800;\n"
+"}")
+        self.labelBiglietti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.Sfondo.raise_()
+        self.labelIconaFoto.raise_()
+        self.labelTitolo.raise_()
+        self.labelTitoloPrincipale.raise_()
+        self.labelHomeButton.raise_()
+        self.labelGenere.raise_()
+        self.labelTitoloSpettacolo.raise_()
+        self.labelGenereSpettacolo.raise_()
+        self.labelOrarioInizio.raise_()
+        self.labelOrarioInizioSpettacolo.raise_()
+        self.labelSala.raise_()
+        self.labelSalaSpettacolo.raise_()
+        self.labelData.raise_()
+        self.labelDataSpettacolo.raise_()
+        self.labelIndietroButton.raise_()
+        self.labelOrarioFine.raise_()
+        self.labelOrarioFineSpettacolo.raise_()
+        self.labelDurata.raise_()
+        self.labelDurataSpettacolo.raise_()
+        self.tableViewBiglietti.raise_()
+        self.pushButtonAcquista.raise_()
+        self.labelBiglietti.raise_()
 
         self.retranslateUi(VistaVisualizzaSpettacoloCliente)
 
@@ -163,23 +285,25 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
     def retranslateUi(self, VistaVisualizzaSpettacoloCliente):
         VistaVisualizzaSpettacoloCliente.setWindowTitle(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Spettacolo - CineMax", None))
         self.Sfondo.setText("")
-        self.labelIconaFotoCliente.setText("")
+        self.labelIconaFoto.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Titolo:", None))
         self.labelTitoloPrincipale.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Spettacolo", None))
-        self.labelHomeButtonCliente.setText("")
+        self.labelHomeButton.setText("")
         self.labelGenere.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Genere:", None))
-        self.labelTitoloSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Film", None))
-        self.labelGenereSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Fantasia", None))
+        self.labelTitoloSpettacolo.setText("")
+        self.labelGenereSpettacolo.setText("")
         self.labelOrarioInizio.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Orario Inizio:", None))
-        self.labelOrarioInizioSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"00:00", None))
+        self.labelOrarioInizioSpettacolo.setText("")
         self.labelSala.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Sala:", None))
-        self.labelSalaSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"1", None))
+        self.labelSalaSpettacolo.setText("")
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Data:", None))
-        self.labelDataSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"13/07/2025", None))
-        self.labelIndietroButtonCliente.setText("")
+        self.labelDataSpettacolo.setText("")
+        self.labelIndietroButton.setText("")
         self.labelOrarioFine.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Orario Fine:", None))
-        self.labelOrarioFineSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"02:00", None))
+        self.labelOrarioFineSpettacolo.setText("")
         self.labelDurata.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Durata:", None))
-        self.labelDurataSpettacolo.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"120 miuti", None))
+        self.labelDurataSpettacolo.setText("")
+        self.pushButtonAcquista.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Acquista", None))
+        self.labelBiglietti.setText(QCoreApplication.translate("VistaVisualizzaSpettacoloCliente", u"Biglietti:", None))
     # retranslateUi
 

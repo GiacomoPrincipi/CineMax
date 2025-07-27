@@ -15,8 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QListView, QScrollBar,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QSizePolicy, QTableView, QWidget)
+
+from clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaClienteAmministratore(object):
     def setupUi(self, VistaVisualizzaClienteAmministratore):
@@ -37,11 +39,11 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelProfiloAmministratore = QLabel(VistaVisualizzaClienteAmministratore)
-        self.labelProfiloAmministratore.setObjectName(u"labelProfiloAmministratore")
-        self.labelProfiloAmministratore.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfiloAmministratore.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
-        self.labelProfiloAmministratore.setScaledContents(True)
+        self.labelProfilo = QLabel(VistaVisualizzaClienteAmministratore)
+        self.labelProfilo.setObjectName(u"labelProfilo")
+        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelNome.setObjectName(u"labelNome")
         self.labelNome.setGeometry(QRect(180, 100, 63, 20))
@@ -61,11 +63,11 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaClienteAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaClienteAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelCognome = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelCognome.setObjectName(u"labelCognome")
         self.labelCognome.setGeometry(QRect(330, 100, 81, 20))
@@ -107,7 +109,7 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelEmailCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelEmailCliente.setObjectName(u"labelEmailCliente")
-        self.labelEmailCliente.setGeometry(QRect(40, 260, 251, 20))
+        self.labelEmailCliente.setGeometry(QRect(40, 260, 191, 20))
         self.labelEmailCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
@@ -137,49 +139,11 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaClienteAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
-        self.listViewPagamenti = QListView(VistaVisualizzaClienteAmministratore)
-        self.listViewPagamenti.setObjectName(u"listViewPagamenti")
-        self.listViewPagamenti.setGeometry(QRect(260, 200, 461, 111))
-        self.listViewPagamenti.setStyleSheet(u"QListView {\n"
-"        background-color: #320F00;\n"
-"    color: #962D00;\n"
-"    border: 1px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        font-size: 11px;\n"
-"}\n"
-"\n"
-"QListView::item:selected {\n"
-"    background-color: #C83200;\n"
-"    color: #FF3C00;\n"
-"}\n"
-"\n"
-"QListView::item:hover {\n"
-"    background-color: #C83200;\n"
-"}")
-        self.listViewRecensioni = QListView(VistaVisualizzaClienteAmministratore)
-        self.listViewRecensioni.setObjectName(u"listViewRecensioni")
-        self.listViewRecensioni.setGeometry(QRect(260, 350, 461, 111))
-        self.listViewRecensioni.setStyleSheet(u"QListView {\n"
-"        background-color: #320F00;\n"
-"    color: #962D00;\n"
-"    border: 1px solid #190700;\n"
-"    border-radius: 4px;\n"
-"        font-size: 11px;\n"
-"}\n"
-"\n"
-"QListView::item:selected {\n"
-"    background-color: #C83200;\n"
-"    color: #FF3C00;\n"
-"}\n"
-"\n"
-"QListView::item:hover {\n"
-"    background-color: #C83200;\n"
-"}")
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaClienteAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
         self.labelPagamenti = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelPagamenti.setObjectName(u"labelPagamenti")
         self.labelPagamenti.setGeometry(QRect(260, 180, 111, 20))
@@ -194,58 +158,169 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelRecensioni.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.verticalScrollBarPagamenti = QScrollBar(VistaVisualizzaClienteAmministratore)
-        self.verticalScrollBarPagamenti.setObjectName(u"verticalScrollBarPagamenti")
-        self.verticalScrollBarPagamenti.setGeometry(QRect(700, 200, 21, 111))
-        self.verticalScrollBarPagamenti.setStyleSheet(u"QScrollBar:vertical {\n"
-"        background: #B43700;\n"
-"        border: 2px solid #190700;\n"
+        self.labelDataNascita = QLabel(VistaVisualizzaClienteAmministratore)
+        self.labelDataNascita.setObjectName(u"labelDataNascita")
+        self.labelDataNascita.setGeometry(QRect(480, 100, 111, 20))
+        self.labelDataNascita.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelDataNascitaCliente = QLabel(VistaVisualizzaClienteAmministratore)
+        self.labelDataNascitaCliente.setObjectName(u"labelDataNascitaCliente")
+        self.labelDataNascitaCliente.setGeometry(QRect(480, 120, 101, 20))
+        self.labelDataNascitaCliente.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.tableViewPagamentiCliente = QTableView(VistaVisualizzaClienteAmministratore)
+        self.tableViewPagamentiCliente.setObjectName(u"tableViewPagamentiCliente")
+        self.tableViewPagamentiCliente.setGeometry(QRect(260, 200, 461, 111))
+        self.tableViewPagamentiCliente.setStyleSheet(u"QTableView {\n"
+"    background-color: #320F00;\n"
+"    color: #962D00;\n"
+"    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"        width: 15px;\n"
-"        margin: 5px;\n"
+"	font-size: 11px;\n"
 "}\n"
 "\n"
-"QScrollBar::handle:vertical {\n"
-"        background: #962D00;\n"
-"        min-height: 20px;\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A1A00;\n"
+"    color: #C83C00;\n"
+"    border: 1px solid #3B0E00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190700;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C83200;\n"
+"    color: #FF3C00;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"	background: #B43700;\n"
+"	border: 2px solid #190700;\n"
+"    border-radius: 4px;\n"
+"    width: 21px;\n"
+"    margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #962D00;\n"
+"    min-height: 20px;\n"
 "    border-radius: 4px;\n"
 "}\n"
 "\n"
-"QScrollBar::handle:vertical:hover {\n"
-"        background: #C83200;\n"
+"QTable"
+                        "View QScrollBar::handle:vertical:hover {\n"
+"    background: #C83200;\n"
 "}\n"
 "\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"        background: none;\n"
-"        border: none;\n"
-"            }")
-        self.verticalScrollBarPagamenti.setOrientation(Qt.Orientation.Vertical)
-        self.verticalScrollBarRecensioni = QScrollBar(VistaVisualizzaClienteAmministratore)
-        self.verticalScrollBarRecensioni.setObjectName(u"verticalScrollBarRecensioni")
-        self.verticalScrollBarRecensioni.setGeometry(QRect(700, 350, 21, 111))
-        self.verticalScrollBarRecensioni.setStyleSheet(u"QScrollBar:vertical {\n"
-"        background: #B43700;\n"
-"        border: 2px solid #190700;\n"
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewPagamentiCliente.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewPagamentiCliente.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewPagamentiCliente.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewPagamentiCliente.setTabKeyNavigation(False)
+        self.tableViewPagamentiCliente.setProperty(u"showDropIndicator", False)
+        self.tableViewPagamentiCliente.setDragDropOverwriteMode(False)
+        self.tableViewPagamentiCliente.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewPagamentiCliente.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewPagamentiCliente.setShowGrid(False)
+        self.tableViewPagamentiCliente.setCornerButtonEnabled(False)
+        self.tableViewPagamentiCliente.horizontalHeader().setHighlightSections(False)
+        self.tableViewPagamentiCliente.verticalHeader().setVisible(False)
+        self.tableViewPagamentiCliente.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewPagamentiCliente.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewPagamentiCliente.verticalHeader().setHighlightSections(False)
+        self.tableViewRecensioniCliente = QTableView(VistaVisualizzaClienteAmministratore)
+        self.tableViewRecensioniCliente.setObjectName(u"tableViewRecensioniCliente")
+        self.tableViewRecensioniCliente.setGeometry(QRect(260, 350, 461, 111))
+        self.tableViewRecensioniCliente.setStyleSheet(u"QTableView {\n"
+"    background-color: #320F00;\n"
+"    color: #962D00;\n"
+"    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"        width: 15px;\n"
-"        margin: 5px;\n"
+"	font-size: 11px;\n"
 "}\n"
 "\n"
-"QScrollBar::handle:vertical {\n"
-"        background: #962D00;\n"
-"        min-height: 20px;\n"
+"QTableView:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QHeaderView::section {\n"
+"    background-color: #5A1A00;\n"
+"    color: #C83C00;\n"
+"    border: 1px solid #3B0E00;\n"
+"	border-left: none;\n"
+"    border-right: none;\n"
+"	text-align: left;\n"
+"    padding: 3px;\n"
+"}\n"
+"\n"
+"QTableView::item {\n"
+"	border: 1px solid #190700;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
+"	border-bottom: none;\n"
+"}\n"
+"\n"
+"QTableView::item:selected {\n"
+"    background-color: #C83200;\n"
+"    color: #FF3C00;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar:vertical {\n"
+"	background: #B43700;\n"
+"	border: 2px solid #190700;\n"
+"    border-radius: 4px;\n"
+"    width: 21px;\n"
+"    margin: 5px;\n"
+"}\n"
+"\n"
+"QTableView QScrollBar::handle:vertical {\n"
+"	background: #962D00;\n"
+"    min-height: 20px;\n"
 "    border-radius: 4px;\n"
 "}\n"
 "\n"
-"QScrollBar::handle:vertical:hover {\n"
-"        background: #C83200;\n"
+"QTable"
+                        "View QScrollBar::handle:vertical:hover {\n"
+"    background: #C83200;\n"
 "}\n"
 "\n"
-"QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
-"        background: none;\n"
-"        border: none;\n"
-"            }")
-        self.verticalScrollBarRecensioni.setOrientation(Qt.Orientation.Vertical)
+"QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}")
+        self.tableViewRecensioniCliente.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOn)
+        self.tableViewRecensioniCliente.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.tableViewRecensioniCliente.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableViewRecensioniCliente.setTabKeyNavigation(False)
+        self.tableViewRecensioniCliente.setProperty(u"showDropIndicator", False)
+        self.tableViewRecensioniCliente.setDragDropOverwriteMode(False)
+        self.tableViewRecensioniCliente.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.tableViewRecensioniCliente.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.tableViewRecensioniCliente.setShowGrid(False)
+        self.tableViewRecensioniCliente.setCornerButtonEnabled(False)
+        self.tableViewRecensioniCliente.horizontalHeader().setHighlightSections(False)
+        self.tableViewRecensioniCliente.verticalHeader().setVisible(False)
+        self.tableViewRecensioniCliente.verticalHeader().setMinimumSectionSize(25)
+        self.tableViewRecensioniCliente.verticalHeader().setDefaultSectionSize(25)
+        self.tableViewRecensioniCliente.verticalHeader().setHighlightSections(False)
 
         self.retranslateUi(VistaVisualizzaClienteAmministratore)
 
@@ -255,23 +330,25 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
     def retranslateUi(self, VistaVisualizzaClienteAmministratore):
         VistaVisualizzaClienteAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente - CineMax", None))
         self.Sfondo.setText("")
-        self.labelProfiloAmministratore.setText("")
+        self.labelProfilo.setText("")
         self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Nome:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Profilo Cliente", None))
-        self.labelHomeButtonAmministratore.setText("")
+        self.labelHomeButton.setText("")
         self.labelCognome.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cognome:", None))
-        self.labelNomeCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente", None))
-        self.labelCognomeCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente", None))
+        self.labelNomeCliente.setText("")
+        self.labelCognomeCliente.setText("")
         self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Codice Fiscale:", None))
-        self.labelCodiceFiscaleCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"00000000000000", None))
+        self.labelCodiceFiscaleCliente.setText("")
         self.labelEmail.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Email:", None))
-        self.labelEmailCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Cliente@gmail.com", None))
+        self.labelEmailCliente.setText("")
         self.labelTelefono.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Telefono:", None))
-        self.labelTelefonoCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"3333333333", None))
+        self.labelTelefonoCliente.setText("")
         self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Punti:", None))
-        self.labelPuntiCliente.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"000", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelPuntiCliente.setText("")
+        self.labelIndietroButton.setText("")
         self.labelPagamenti.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Pagamenti:", None))
         self.labelRecensioni.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Recensioni:", None))
+        self.labelDataNascita.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Data di Nascita:", None))
+        self.labelDataNascitaCliente.setText("")
     # retranslateUi
 

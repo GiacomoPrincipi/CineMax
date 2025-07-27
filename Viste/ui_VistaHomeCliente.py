@@ -18,6 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
     QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaHomeCliente(object):
     def setupUi(self, VistaHomeCliente):
         if not VistaHomeCliente.objectName():
@@ -66,30 +68,30 @@ class Ui_VistaHomeCliente(object):
 "        stop: 1 #B46E00\n"
 "    );\n"
 "}")
-        self.labelProfiloButtonCliente = QLabel(VistaHomeCliente)
-        self.labelProfiloButtonCliente.setObjectName(u"labelProfiloButtonCliente")
-        self.labelProfiloButtonCliente.setGeometry(QRect(710, 10, 63, 61))
-        self.labelProfiloButtonCliente.setPixmap(QPixmap(u"Immagini/profiloButtonCliente.png"))
-        self.labelProfiloButtonCliente.setScaledContents(True)
-        self.labelProfiloCliente = QLabel(VistaHomeCliente)
-        self.labelProfiloCliente.setObjectName(u"labelProfiloCliente")
-        self.labelProfiloCliente.setGeometry(QRect(710, 70, 63, 20))
-        self.labelProfiloCliente.setStyleSheet(u"QLabel {\n"
+        self.labelProfiloButton = ClickableLabel(VistaHomeCliente)
+        self.labelProfiloButton.setObjectName(u"labelProfiloButton")
+        self.labelProfiloButton.setGeometry(QRect(710, 10, 63, 61))
+        self.labelProfiloButton.setPixmap(QPixmap(u"Immagini/profiloButtonCliente.png"))
+        self.labelProfiloButton.setScaledContents(True)
+        self.labelProfilo = QLabel(VistaHomeCliente)
+        self.labelProfilo.setObjectName(u"labelProfilo")
+        self.labelProfilo.setGeometry(QRect(710, 70, 63, 20))
+        self.labelProfilo.setStyleSheet(u"QLabel {\n"
 "    color: #502800;\n"
 "}")
-        self.labelProfiloCliente.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.labelLogoutCliente = QLabel(VistaHomeCliente)
-        self.labelLogoutCliente.setObjectName(u"labelLogoutCliente")
-        self.labelLogoutCliente.setGeometry(QRect(20, 70, 63, 20))
-        self.labelLogoutCliente.setStyleSheet(u"QLabel {\n"
+        self.labelProfilo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelLogout = QLabel(VistaHomeCliente)
+        self.labelLogout.setObjectName(u"labelLogout")
+        self.labelLogout.setGeometry(QRect(20, 70, 63, 20))
+        self.labelLogout.setStyleSheet(u"QLabel {\n"
 "    color: #502800;\n"
 "}")
-        self.labelLogoutCliente.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.labelLogoutButtonCliente = QLabel(VistaHomeCliente)
-        self.labelLogoutButtonCliente.setObjectName(u"labelLogoutButtonCliente")
-        self.labelLogoutButtonCliente.setGeometry(QRect(20, 10, 63, 61))
-        self.labelLogoutButtonCliente.setPixmap(QPixmap(u"Immagini/LogoutButtonCliente.png"))
-        self.labelLogoutButtonCliente.setScaledContents(True)
+        self.labelLogout.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelLogoutButton = ClickableLabel(VistaHomeCliente)
+        self.labelLogoutButton.setObjectName(u"labelLogoutButton")
+        self.labelLogoutButton.setGeometry(QRect(20, 10, 63, 61))
+        self.labelLogoutButton.setPixmap(QPixmap(u"Immagini/LogoutButtonCliente.png"))
+        self.labelLogoutButton.setScaledContents(True)
         self.pushButtonProdotti = QPushButton(VistaHomeCliente)
         self.pushButtonProdotti.setObjectName(u"pushButtonProdotti")
         self.pushButtonProdotti.setGeometry(QRect(410, 160, 201, 101))
@@ -150,10 +152,10 @@ class Ui_VistaHomeCliente(object):
         self.Sfondo.raise_()
         self.pushButtonSpettacoli.raise_()
         self.labelBarra.raise_()
-        self.labelProfiloButtonCliente.raise_()
-        self.labelProfiloCliente.raise_()
-        self.labelLogoutCliente.raise_()
-        self.labelLogoutButtonCliente.raise_()
+        self.labelProfiloButton.raise_()
+        self.labelProfilo.raise_()
+        self.labelLogout.raise_()
+        self.labelLogoutButton.raise_()
         self.pushButtonProdotti.raise_()
         self.pushButtonPagamenti.raise_()
         self.pushButtonRecensioni.raise_()
@@ -169,10 +171,10 @@ class Ui_VistaHomeCliente(object):
         self.pushButtonSpettacoli.setText(QCoreApplication.translate("VistaHomeCliente", u"Spettacoli", None))
         self.Sfondo.setText("")
         self.labelBarra.setText("")
-        self.labelProfiloButtonCliente.setText("")
-        self.labelProfiloCliente.setText(QCoreApplication.translate("VistaHomeCliente", u"Profilo", None))
-        self.labelLogoutCliente.setText(QCoreApplication.translate("VistaHomeCliente", u"Logout", None))
-        self.labelLogoutButtonCliente.setText("")
+        self.labelProfiloButton.setText("")
+        self.labelProfilo.setText(QCoreApplication.translate("VistaHomeCliente", u"Profilo", None))
+        self.labelLogout.setText(QCoreApplication.translate("VistaHomeCliente", u"Logout", None))
+        self.labelLogoutButton.setText("")
         self.pushButtonProdotti.setText(QCoreApplication.translate("VistaHomeCliente", u"Prodotti", None))
         self.pushButtonPagamenti.setText(QCoreApplication.translate("VistaHomeCliente", u"Pagamenti", None))
         self.pushButtonRecensioni.setText(QCoreApplication.translate("VistaHomeCliente", u"Recensioni", None))

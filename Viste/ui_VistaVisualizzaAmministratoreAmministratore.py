@@ -17,6 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
 
+from clickablelabel import ClickableLabel
+
 class Ui_VistaVisualizzaAmministratoreAmministratore(object):
     def setupUi(self, VistaVisualizzaAmministratoreAmministratore):
         if not VistaVisualizzaAmministratoreAmministratore.objectName():
@@ -36,11 +38,11 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
 "        stop: 1 #641E00\n"
 "    );\n"
 "}")
-        self.labelProfiloAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
-        self.labelProfiloAmministratore.setObjectName(u"labelProfiloAmministratore")
-        self.labelProfiloAmministratore.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfiloAmministratore.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
-        self.labelProfiloAmministratore.setScaledContents(True)
+        self.labelProfilo = QLabel(VistaVisualizzaAmministratoreAmministratore)
+        self.labelProfilo.setObjectName(u"labelProfilo")
+        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelNome.setObjectName(u"labelNome")
         self.labelNome.setGeometry(QRect(180, 100, 63, 20))
@@ -60,11 +62,11 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelHomeButtonAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
-        self.labelHomeButtonAmministratore.setObjectName(u"labelHomeButtonAmministratore")
-        self.labelHomeButtonAmministratore.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButtonAmministratore.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
-        self.labelHomeButtonAmministratore.setScaledContents(True)
+        self.labelHomeButton = ClickableLabel(VistaVisualizzaAmministratoreAmministratore)
+        self.labelHomeButton.setObjectName(u"labelHomeButton")
+        self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
+        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setScaledContents(True)
         self.labelCognome = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelCognome.setObjectName(u"labelCognome")
         self.labelCognome.setGeometry(QRect(330, 100, 81, 20))
@@ -123,11 +125,24 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
         self.labelTelefonoAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelIndietroButtonAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
-        self.labelIndietroButtonAmministratore.setObjectName(u"labelIndietroButtonAmministratore")
-        self.labelIndietroButtonAmministratore.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButtonAmministratore.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
-        self.labelIndietroButtonAmministratore.setScaledContents(True)
+        self.labelIndietroButton = ClickableLabel(VistaVisualizzaAmministratoreAmministratore)
+        self.labelIndietroButton.setObjectName(u"labelIndietroButton")
+        self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setScaledContents(True)
+        self.labelDataNascita = QLabel(VistaVisualizzaAmministratoreAmministratore)
+        self.labelDataNascita.setObjectName(u"labelDataNascita")
+        self.labelDataNascita.setGeometry(QRect(510, 100, 121, 20))
+        self.labelDataNascita.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelDataNascitaAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
+        self.labelDataNascitaAmministratore.setObjectName(u"labelDataNascitaAmministratore")
+        self.labelDataNascitaAmministratore.setGeometry(QRect(510, 120, 101, 20))
+        self.labelDataNascitaAmministratore.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaAmministratoreAmministratore)
 
@@ -137,19 +152,21 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
     def retranslateUi(self, VistaVisualizzaAmministratoreAmministratore):
         VistaVisualizzaAmministratoreAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Profilo Amministratore - CineMax", None))
         self.Sfondo.setText("")
-        self.labelProfiloAmministratore.setText("")
+        self.labelProfilo.setText("")
         self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Nome:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Profilo Amministratore", None))
-        self.labelHomeButtonAmministratore.setText("")
+        self.labelHomeButton.setText("")
         self.labelCognome.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Cognome:", None))
-        self.labelNomeAmministratore.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Amministratore", None))
-        self.labelCognomeAmministratore.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Amministratore", None))
+        self.labelNomeAmministratore.setText("")
+        self.labelCognomeAmministratore.setText("")
         self.labelMatricola.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Matricola:", None))
-        self.labelMatricolaAmministratore.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"000000", None))
+        self.labelMatricolaAmministratore.setText("")
         self.labelEmail.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Email:", None))
-        self.labelEmailAmministratore.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Amministratore@gmail.com", None))
+        self.labelEmailAmministratore.setText("")
         self.labelTelefono.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Telefono:", None))
-        self.labelTelefonoAmministratore.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"3333333333", None))
-        self.labelIndietroButtonAmministratore.setText("")
+        self.labelTelefonoAmministratore.setText("")
+        self.labelIndietroButton.setText("")
+        self.labelDataNascita.setText(QCoreApplication.translate("VistaVisualizzaAmministratoreAmministratore", u"Data di Nascita:", None))
+        self.labelDataNascitaAmministratore.setText("")
     # retranslateUi
 
