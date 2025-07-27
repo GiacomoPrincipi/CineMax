@@ -2,10 +2,10 @@ from Sistema.Utente import Utente
 
 class Cliente(Utente):
     
-    def __init__(self, nome, cognome, dataNascita, email, telefono, password, codiceFiscale, punti):
+    def __init__(self, nome, cognome, dataNascita, email, telefono, password, codiceFiscale):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
         self.codiceFiscale = codiceFiscale
-        self.punti = punti
+        self.punti = 0
         
     def getInfoCliente(self):
         return {self.nome, self.cognome, self.dataNascita, self.email, self.telefono, self.password, self.codiceFiscale, self.punti}
@@ -35,14 +35,14 @@ class Cliente(Utente):
         return self.punti
     
     def setInfoCliente(self, nome, cognome, dataNascita, email, telefono, password, codiceFiscale, punti):
-       self.setNome(self, nome)
-       self.setCognome(self, cognome)
-       self.setDataNascita(self, dataNascita)
-       self.setEmail(self, email)
-       self.setTelefono(self, telefono)
-       self.setPassword(self, password)
-       self.codiceFiscale(self, codiceFiscale)
-       self.punti(self, punti)
+       self.setNome(nome)
+       self.setCognome(cognome)
+       self.setDataNascita(dataNascita)
+       self.setEmail(email)
+       self.setTelefono(telefono)
+       self.setPassword(password)
+       self.setCodiceFiscale(codiceFiscale)
+       self.setPunti(punti)
 
     def setNome(self, nome):
         self.nome = nome

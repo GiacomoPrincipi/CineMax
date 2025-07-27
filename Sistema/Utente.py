@@ -38,12 +38,12 @@ class Utente():
         pass
     
     def setInfoUtente(self, nome, cognome, dataNascita, email, telefono, password):
-       self.setNome(self, nome)
-       self.setCognome(self, cognome)
-       self.setDataNascita(self, dataNascita)
-       self.setEmail(self, email)
-       self.setTelefono(self, telefono)
-       self.setPassword(self, password)
+       self.setNome(nome)
+       self.setCognome(cognome)
+       self.setDataNascita(dataNascita)
+       self.setEmail(email)
+       self.setTelefono(telefono)
+       self.setPassword(password)
 
     @abstractmethod
     def setNome(self, nome):

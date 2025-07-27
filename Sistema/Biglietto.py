@@ -2,17 +2,24 @@ from Sistema.Articolo import Articolo
 
 class Biglietto(Articolo):
     
-    def __init__(self, prezzo, disponibile, spettacolo, tipo, posto):
-        super().__init__(prezzo, disponibile)
+    def __init__(self, id, prezzo, prezzoPunti, disponibile, spettacolo, tipo, posto):
+        super().__init__(id, prezzo, prezzoPunti, disponibile)
         self.spettacolo = spettacolo
         self.tipo = tipo
         self.posto = posto
+        self.disponibile = True
 
     def getInfoBiglietto(self):
-        return {self.prezzo, self.disponibile, self.spettacolo, self.tipo, self.posto}
+        return {self.id, self.prezzo, self.prezzoPunti, self.disponibile, self.spettacolo, self.tipo, self.posto}
 
+    def getId(self):
+        return self.id
+    
     def getPrezzo(self):
         return self.prezzo
+    
+    def getPrezzoPunti(self):
+        return self.prezzoPunti
 
     def getDisponibile(self):
         return self.disponibile
@@ -26,15 +33,23 @@ class Biglietto(Articolo):
     def getPosto(self):
         return self.posto
 
-    def setInfoBiglietto(self, prezzo, disponibile, spettacolo, tipo, posto):
-        self.setPrezzo(self, prezzo)
-        self.setDisponibile(self, disponibile)
-        self.setSpettacolo(self, spettacolo)
-        self.setTipo(self, tipo)
-        self.setPosto(self, posto)
+    def setInfoBiglietto(self, id, prezzo, prezzoPunti, disponibile, spettacolo, tipo, posto):
+        self.setId(id)
+        self.setPrezzo(prezzo)
+        self.setPrezzoPunti(prezzoPunti)
+        self.setDisponibile(disponibile)
+        self.setSpettacolo(spettacolo)
+        self.setTipo(tipo)
+        self.setPosto(posto)
+    
+    def setId(self, id):
+        self.id = id
 
     def setPrezzo(self, prezzo):
         self.prezzo = prezzo
+
+    def setPrezzoPunti(self, prezzoPunti):
+        self.prezzoPunti = prezzoPunti
 
     def setDisponibile(self, disponibile):
         self.disponibile = disponibile

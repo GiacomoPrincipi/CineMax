@@ -3,32 +3,41 @@ import pickle
 
 class GestoreClienti():
 
-    def __init__(self, listaClienti):
-        self.listaClienti = listaClienti
+    def __init__(self):
+        self.listaClienti = self.caricaDatiClienti()
 
     def caricaDatiClienti(self):
-        listaDatiClienti = []
-        if os.path.isfile('Dati/DatiClienti.pickle'):
-            with open('Dati/DatiClienti.pickle', 'rb') as file:
-                listaDatiClienti = pickle.load(file)
-        return listaDatiClienti
+        try:
+            if os.path.isfile('Dati/DatiClienti.pickle'):
+                with open('Dati/DatiClienti.pickle', 'rb') as file:
+                    return pickle.load(file)
+        except(EOFError): return []
 
-    def salvaDatiClienti(self, listaClienti):
+    def salvaDatiClienti(self):
         with open('Dati/DatiClienti.pickle', 'wb') as file:
-            pickle.dump(listaClienti, file)
+            pickle.dump(self.listaClienti, file)
 
     def getListaClienti(self):
-        listaClienti = self.caricaDatiClienti()
-        return listaClienti
+        return self.listaClienti
     
-    def inserisciCliente(self, listaClienti, cliente):
-        listaClienti = self.caricaDatiClienti()
-        listaClienti.append(cliente)
-        self.salvaDatiClienti(listaClienti)
+    def getCliente(self, email):
+        for cliente in self.listaClienti:
+            if email == cliente.getEmail():
+                return cliente
+        return None
+    
+    def inserisciCliente(self, cliente):
+        self.listaClienti.append(cliente)
+        self.salvaDatiClienti()
     
 
-    def rimuoviCliente(self, listaClienti, cliente):
-        listaClienti = self.caricaDatiClienti()
-        listaClienti.remove(cliente)
-        self.salvaDatiClienti(listaClienti)
+    def rimuoviCliente(self, cliente):
+        self.listaClienti.remove(cliente)
+        self.salvaDatiClienti()
         del cliente
+
+    def controlloCodiceFiscale(self, codiceFiscale):
+        for cliente in self.listaClienti:
+            if cliente.getCodiceFiscale() == codiceFiscale:
+                return False
+        return True

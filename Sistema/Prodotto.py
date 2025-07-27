@@ -2,17 +2,23 @@ from Sistema.Articolo import Articolo
 
 class Prodotto(Articolo):
     
-    def __init__(self, prezzo, disponibile, nome, ingredienti, allergeni):
-        super().__init__(prezzo, disponibile)
+    def __init__(self, id, prezzo, prezzoPunti, disponibile, nome, ingredienti, allergeni):
+        super().__init__(id, prezzo, prezzoPunti, disponibile)
         self.nome = nome
         self.ingredienti = ingredienti
         self.allergeni = allergeni
 
     def getInfoProdotto(self):
-        return {self.prezzo, self.disponibile, self.nome, self.ingredienti, self.allergeni}
+        return {self.id, self.prezzo, self.prezzoPunti, self.disponibile, self.nome, self.ingredienti, self.allergeni}
 
+    def getId(self):
+        return self.id
+    
     def getPrezzo(self):
         return self.prezzo
+    
+    def getPrezzoPunti(self):
+        return self.prezzoPunti
 
     def getDisponibile(self):
         return self.disponibile
@@ -26,15 +32,23 @@ class Prodotto(Articolo):
     def getAllergeni(self):
         return self.allergeni
 
-    def setInfoProdotto(self, prezzo, disponibile, nome, ingredienti, allergeni):
-        self.setPrezzo(self, prezzo)
-        self.setDisponibile(self, disponibile)
-        self.setNome(self, nome)
-        self.setIngredienti(self, ingredienti)
-        self.setAllergeni(self, allergeni)
+    def setInfoProdotto(self, id, prezzo, prezzoPunti, disponibile, nome, ingredienti, allergeni):
+        self.setId(id)
+        self.setPrezzo(prezzo)
+        self.setPrezzoPunti(prezzoPunti)
+        self.setDisponibile(disponibile)
+        self.setNome(nome)
+        self.setIngredienti(ingredienti)
+        self.setAllergeni(allergeni)
+
+    def setId(self, id):
+        self.id = id
 
     def setPrezzo(self, prezzo):
         self.prezzo = prezzo
+
+    def setPrezzoPunti(self, prezzoPunti):
+        self.prezzoPunti = prezzoPunti
 
     def setDisponibile(self, disponibile):
         self.disponibile = disponibile
@@ -59,3 +73,8 @@ class Prodotto(Articolo):
 
     def rimuoviAllergene(self, allergene):
         self.allergeni.remove(allergene)
+
+    def getTestoDisponibile(self):
+        if self.getDisponibile() == True:
+            return "Si"
+        else: return "No"

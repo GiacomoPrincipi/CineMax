@@ -5,46 +5,54 @@ import pickle
 
 class GestoreBiglietti():
 
-    def __init__(self, listaBiglietti):
-        self.listaBiglietti = listaBiglietti
+    def __init__(self):
+        self.listaBiglietti = self.caricaDatiBiglietti()
 
     def caricaDatiBiglietti(self):
-        listaDatiBiglietti = []
-        if os.path.isfile('Dati/DatiBiglietti.pickle'):
-            with open('Dati/DatiBiglietti.pickle', 'rb') as file:
-                listaDatiBiglietti = pickle.load(file)
-        return listaDatiBiglietti
+        try:
+            if os.path.isfile('Dati/DatiBiglietti.pickle'):
+                with open('Dati/DatiBiglietti.pickle', 'rb') as file:
+                    return pickle.load(file)
+        except(EOFError): return []
 
-    def salvaDatiBiglietti(self, listaBiglietti):
+    def salvaDatiBiglietti(self):
         with open('Dati/DatiBiglietti.pickle', 'wb') as file:
-            pickle.dump(listaBiglietti, file)
+            pickle.dump(self.listaBiglietti, file)
 
     def getListaBiglietti(self):
-        listaBiglietti = self.caricaDatiBiglietti()
-        return listaBiglietti
+        return self.listaBiglietti
     
     def getListaBigliettiSpettacolo(self, spettacolo):
-        listaBiglietti = self.caricaDatiBiglietti()
         listaBigliettiSpettacolo = []
-        for biglietto in listaBiglietti:
+        for biglietto in self.listaBiglietti:
             if biglietto.getSpettacolo() == spettacolo:
                 listaBigliettiSpettacolo.append(biglietto)
         return listaBigliettiSpettacolo
     
-    def inserisciBiglietto(self, listaBiglietti, biglietto):
-        listaBiglietti = self.caricaDatiBiglietti()
-        listaBiglietti.append(biglietto)
-        self.salvaDatiBiglietti(listaBiglietti)
+    def getListaBigliettiDisponibiliSpettacolo(self, spettacolo):
+        listaBigliettiDisponibiliSpettacolo = []
+        for biglietto in self.listaBiglietti:
+            if biglietto.getSpettacolo().getId() == spettacolo.getId():
+                if biglietto.getDisponibile() == True:
+                    listaBigliettiDisponibiliSpettacolo.append(biglietto)
+        return listaBigliettiDisponibiliSpettacolo
     
-
-    def rimuoviBiglietto(self, listaBiglietti, biglietto):
-        listaBiglietti = self.caricaDatiBiglietti()
-        listaBiglietti.remove(biglietto)
-        self.salvaDatiBiglietti(listaBiglietti)
+    def inserisciBiglietto(self, biglietto):
+        self.listaBiglietti.append(biglietto)
+        self.salvaDatiBiglietti()
+    
+    def rimuoviBiglietto(self, biglietto):
+        self.listaBiglietti.remove(biglietto)
+        self.salvaDatiBiglietti()
         del biglietto
 
-    def controlloDisponibilità(self, bigliettoDaControllare):
-        listaBiglietti = self.caricaDatiBiglietti()
-        for biglietto in listaBiglietti:
-            if bigliettoDaControllare == biglietto:
-                bigliettoDaControllare.getDisponibile()
+    def generaIdBiglietto(self):
+        idMassimo = 0
+        if self.listaBiglietti == []:
+            return "B00001"
+        else: 
+            for recensione in self.listaBiglietti:
+                if int(recensione.getId()[1:]) > idMassimo:
+                    idMassimo = int(recensione.getId()[1:])
+            return f"P{idMassimo + 1:05d}"
+

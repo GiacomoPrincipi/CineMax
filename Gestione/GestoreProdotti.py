@@ -5,38 +5,45 @@ import pickle
 
 class GestoreProdotti():
 
-    def __init__(self, listaProdotti):
-        self.listaProdotti = listaProdotti
+    def __init__(self):
+        self.listaProdotti = self.caricaDatiProdotti()
 
     def caricaDatiProdotti(self):
-        listaDatiProdotti = []
-        if os.path.isfile('Dati/DatiProdotti.pickle'):
-            with open('Dati/DatiProdotti.pickle', 'rb') as file:
-                listaDatiProdotti = pickle.load(file)
-        return listaDatiProdotti
+        try:
+            if os.path.isfile('Dati/DatiProdotti.pickle'):
+                with open('Dati/DatiProdotti.pickle', 'rb') as file:
+                    return pickle.load(file)
+        except(EOFError): return []
 
-    def salvaDatiProdotti(self, listaProdotti):
+    def salvaDatiProdotti(self):
         with open('Dati/DatiProdotti.pickle', 'wb') as file:
-            pickle.dump(listaProdotti, file)
+            pickle.dump(self.listaProdotti, file)
 
     def getListaProdotti(self):
-        listaProdotti = self.caricaDatiProdotti()
-        return listaProdotti
+        return self.listaProdotti
     
-    def inserisciProdotto(self, listaProdotti, prodotto):
-        listaProdotti = self.caricaDatiProdotti()
-        listaProdotti.append(prodotto)
-        self.salvaDatiProdotti(listaProdotti)
+    def getListaProdottiDisponibili(self):
+        listaProdottiDisponibili = []
+        for prodotto in self.listaProdotti:
+            if prodotto.getDisponibile() == True:
+                listaProdottiDisponibili.append(prodotto)
+        return listaProdottiDisponibili
     
-
-    def rimuoviProdotto(self, listaProdotti, prodotto):
-        listaProdotti = self.caricaDatiProdotti()
-        listaProdotti.remove(prodotto)
-        self.salvaDatiProdotti(listaProdotti)
+    def inserisciProdotto(self, prodotto):
+        self.listaProdotti.append(prodotto)
+        self.salvaDatiProdotti()
+    
+    def rimuoviProdotto(self, prodotto):
+        self.listaProdotti.remove(prodotto)
+        self.salvaDatiProdotti()
         del prodotto
 
-    def controlloDisponibilità(self, prodottoDaControllare):
-        listaProdotti = self.caricaDatiProdotti()
-        for prodotto in listaProdotti:
-            if prodottoDaControllare == prodotto:
-                return prodottoDaControllare.getDisponibile()
+    def generaIdProdotto(self):
+        idMassimo = 0
+        if self.listaProdotti == []:
+            return "PR00001"
+        else: 
+            for prodotto in self.listaProdotti:
+                if int(prodotto.getId()[2:]) > idMassimo:
+                    idMassimo = int(prodotto.getId()[2:])
+            return f"PR{idMassimo + 1:05d}"

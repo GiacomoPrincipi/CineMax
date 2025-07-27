@@ -5,40 +5,46 @@ import pickle
 
 class GestoreRecensioni():
 
-    def __init__(self, listaRecensioni):
-        self.listaRecensioni = listaRecensioni
+    def __init__(self):
+        self.listaRecensioni = self.caricaDatiRecensioni()
 
     def caricaDatiRecensioni(self):
-        listaDatiRecensioni = []
-        if os.path.isfile('Dati/DatiRecensioni.pickle'):
-            with open('Dati/DatiRecensioni.pickle', 'rb') as file:
-                listaDatiRecensioni = pickle.load(file)
-        return listaDatiRecensioni
+        try:
+            if os.path.isfile('Dati/DatiRecensioni.pickle'):
+                with open('Dati/DatiRecensioni.pickle', 'rb') as file:
+                    return pickle.load(file)
+        except(EOFError): return []
 
-    def salvaDatiRecensioni(self, listaRecensioni):
+    def salvaDatiRecensioni(self):
         with open('Dati/DatiRecensioni.pickle', 'wb') as file:
-            pickle.dump(listaRecensioni, file)
+            pickle.dump(self.listaRecensioni, file)
 
     def getListaRecensioni(self):
-        listaRecensioni = self.caricaDatiRecensioni()
-        return listaRecensioni
+        return self.listaRecensioni
     
     def getListaRecensioniCliente(self, cliente):
-        listaRecensioni = self.caricaDatiRecensioni()
         listaRecensioniCliente = []
-        for recensione in listaRecensioni:
-            if  recensione.getCliente() == cliente:
+        for recensione in self.listaRecensioni:
+            if  recensione.getCliente().getCodiceFiscale() == cliente.getCodiceFiscale():
                 listaRecensioniCliente.append(recensione)
         return listaRecensioniCliente
     
-    def inserisciRecensione(self, listaRecensioni, recensione):
-        listaRecensioni = self.caricaDatiRecensioni()
-        listaRecensioni.append(recensione)
-        self.salvaDatiRecensioni(listaRecensioni)
+    def inserisciRecensione(self, recensione):
+        self.listaRecensioni.append(recensione)
+        self.salvaDatiRecensioni()
     
 
-    def rimuoviRecensione(self, listaRecensioni, recensione):
-        listaRecensioni = self.caricaDatiRecensioni()
-        listaRecensioni.remove(recensione)
-        self.salvaDatiRecensioni(listaRecensioni)
+    def rimuoviRecensione(self, recensione):
+        self.listaRecensioni.remove(recensione)
+        self.salvaDatiRecensioni()
         del recensione
+
+    def generaIdRecensione(self):
+        idMassimo = 0
+        if self.listaRecensioni == []:
+            return "R00001"
+        else: 
+            for recensione in self.listaRecensioni:
+                if int(recensione.getId()[1:]) > idMassimo:
+                    idMassimo = int(recensione.getId()[1:])
+            return f"R{idMassimo + 1:05d}"

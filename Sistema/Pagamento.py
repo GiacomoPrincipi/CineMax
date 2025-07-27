@@ -1,18 +1,23 @@
 class Pagamento():
     
-    def __init__(self, cliente, data, ora, articolo, tipo, importo):
+    def __init__(self, cliente, id, data, ora, articolo, tipo, importo, importoPunti):
         self.cliente = cliente
+        self.id = id
         self.data = data
         self.ora = ora
         self.articolo = articolo
         self.tipo = tipo
         self.importo = importo
+        self.importoPunti = importoPunti
         
     def getInfoPagamento(self):
-        return {self.cliente, self.data, self.ora, self.articolo, self.tipo, self.importo}
+        return {self.cliente, self.id, self.data, self.ora, self.articolo, self.tipo, self.importo, self.importoPunti}
 
     def getCliente(self):
         return self.cliente
+    
+    def getId(self):
+        return self.id
     
     def getData(self):
         return self.data
@@ -26,19 +31,27 @@ class Pagamento():
     def getTipo(self):
         return self.tipo
     
-    def gerImporto(self):
+    def getImporto(self):
         return self.importo
     
-    def setInfoPagamento(self, cliente, data, ora, articolo, tipo, importo):
-       self.setCliente(self, cliente)
-       self.setData(self, data)
-       self.setOra(self, ora)
-       self.setArticolo(self, articolo)
-       self.setTipo(self, tipo)
-       self.setImporto(self, importo)
+    def getImportoPunti(self):
+        return self.importoPunti
+    
+    def setInfoPagamento(self, cliente, id, data, ora, articolo, tipo, importo, importoPunti):
+       self.setCliente(cliente)
+       self.setId(id)
+       self.setData(data)
+       self.setOra(ora)
+       self.setArticolo(articolo)
+       self.setTipo(tipo)
+       self.setImporto(importo)
+       self.setImportoPunti(importoPunti)
 
     def setCliente(self, cliente):
         self.cliente = cliente
+
+    def setId(self, id):
+        self.id = id
 
     def setData(self, data):
         self.data = data
@@ -54,3 +67,6 @@ class Pagamento():
 
     def setImporto(self, importo):
         self.importo = importo
+
+    def setImportoPunti(self, importoPunti):
+        self.importoPunti = importoPunti

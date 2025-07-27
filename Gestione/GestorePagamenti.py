@@ -5,33 +5,40 @@ import pickle
 
 class GestorePagamenti():
 
-    def __init__(self, listaPagamenti):
-        self.listaPagamenti = listaPagamenti
+    def __init__(self):
+        self.listaPagamenti = self.caricaDatiPagamenti()
 
     def caricaDatiPagamenti(self):
-        listaDatiPagamenti = []
-        if os.path.isfile('Dati/DatiPagamenti.pickle'):
-            with open('Dati/DatiPagamenti.pickle', 'rb') as file:
-                listaDatiPagamenti = pickle.load(file)
-        return listaDatiPagamenti
+        try:
+            if os.path.isfile('Dati/DatiPagamenti.pickle'):
+                with open('Dati/DatiPagamenti.pickle', 'rb') as file:
+                    return pickle.load(file)
+        except(EOFError): return []
 
-    def salvaDatiPagamenti(self, listaPagamenti):
+    def salvaDatiPagamenti(self):
         with open('Dati/DatiPagamenti.pickle', 'wb') as file:
-            pickle.dump(listaPagamenti, file)
+            pickle.dump(self.listaPagamenti, file)
 
     def getListaPagamenti(self):
-        listaPagamenti = self.caricaDatiPagamenti()
-        return listaPagamenti
+        return self.listaPagamenti
     
     def getListaPagamentiCliente(self, cliente):
-        listaPagamenti = self.caricaDatiPagamenti()
         listaPagamentiCliente = []
-        for pagamento in listaPagamenti:
-            if pagamento.getCliente() == cliente:
+        for pagamento in self.listaPagamenti:
+            if pagamento.getCliente().getCodiceFiscale() == cliente.getCodiceFiscale():
                 listaPagamentiCliente.append(pagamento)
         return listaPagamentiCliente
     
-    def inserisciPagamento(self, listaPagamenti, pagamento):
-        listaPagamenti = self.caricaDatiPagamenti()
-        listaPagamenti.append(pagamento)
-        self.salvaDatiPagamenti(listaPagamenti)
+    def inserisciPagamento(self, pagamento):
+        self.listaPagamenti.append(pagamento)
+        self.salvaDatiPagamenti()
+
+    def generaIdPagamento(self):
+        idMassimo = 0
+        if self.listaPagamenti == []:
+            return "P00001"
+        else: 
+            for pagamento in self.listaPagamenti:
+                if int(pagamento.getId()[1:]) > idMassimo:
+                    idMassimo = int(pagamento.getId()[1:])
+            return f"P{idMassimo + 1:05d}"

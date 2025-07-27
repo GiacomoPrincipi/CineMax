@@ -31,13 +31,13 @@ class Amministratore(Utente):
         return self.matricola
       
     def setInfoAmministratore(self, nome, cognome, dataNascita, email, telefono, password, matricola):
-       self.setNome(self, nome)
-       self.setCognome(self, cognome)
-       self.setDataNascita(self, dataNascita)
-       self.setEmail(self, email)
-       self.setTelefono(self, telefono)
-       self.setPassword(self, password)
-       self.setMatricola(self, matricola)
+       self.setNome(nome)
+       self.setCognome(cognome)
+       self.setDataNascita(dataNascita)
+       self.setEmail(email)
+       self.setTelefono(telefono)
+       self.setPassword(password)
+       self.setMatricola(matricola)
 
     def setNome(self, nome):
         self.nome = nome
