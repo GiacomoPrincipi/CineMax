@@ -41,7 +41,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelRicevutaIconCliente">
+  <widget class="QLabel" name="labelIconaRicevuta">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -88,7 +88,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonCliente">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -107,12 +107,12 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelArticolo">
+  <widget class="QLabel" name="labelNome">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>100</y>
-     <width>81</width>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>
@@ -122,7 +122,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Articolo:</string>
+    <string>Nome Articolo:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -164,7 +164,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>14/07/2025</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelTipo">
@@ -203,7 +203,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Punti</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelImporto">
@@ -242,7 +242,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>00,00 $</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelOra">
@@ -281,10 +281,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>00:00</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonCliente">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -303,26 +303,32 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelButtonArticolo">
+  <widget class="QLabel" name="labelNomePagamento">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>120</y>
-     <width>51</width>
-     <height>51</height>
+     <width>231</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>Immagini/IconaFotoCliente.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

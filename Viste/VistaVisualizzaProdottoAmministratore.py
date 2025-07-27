@@ -1,17 +1,37 @@
-import sys
-
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QWidget
 from ui_VistaVisualizzaProdottoAmministratore import Ui_VistaVisualizzaProdottoAmministratore
 
 class VistaVisualizzaProdottoAmministratore(QWidget):
-    def __init__(self, parent = None):
+    def __init__(self, statoLogin, goVistaHomeAmministratore, goVistaVisualizzaProdottiAmministratore, goVistaModificaProdottoAmministratore, parent = None):
         super().__init__(parent)
         self.ui = Ui_VistaVisualizzaProdottoAmministratore()
         self.ui.setupUi(self)
 
+        self.statoLogin = statoLogin
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    widget = VistaVisualizzaProdottoAmministratore()
-    widget.show()
-    sys.exit(app.exec())
+        self.goVistaModificaProdottoAmministratore = goVistaModificaProdottoAmministratore
+
+        self.ui.labelHomeButton.clicked.connect(goVistaHomeAmministratore)
+        self.ui.labelIndietroButton.clicked.connect(goVistaVisualizzaProdottiAmministratore)
+        self.ui.pushButtonModifica.clicked.connect(self.modifica)
+
+    def showEvent(self, event):
+        super().showEvent(event)
+
+        prodottoAmministratore = self.prodottoAmministratore
+
+        ingredienti = ", ".join(prodottoAmministratore.getIngredienti())
+
+        allergeni = ", ".join(prodottoAmministratore.getAllergeni())
+
+        self.ui.labelNomeProdotto.setText(prodottoAmministratore.getNome())
+        self.ui.labelIngredientiProdotto.setText(ingredienti)
+        self.ui.labelAllergeniProdotto.setText(allergeni)
+        self.ui.labelPrezzoProdotto.setText(f"{prodottoAmministratore.getPrezzo()} €")
+        self.ui.labelPrezzoPuntiProdotto.setText(f"{prodottoAmministratore.getPrezzoPunti()} punti")
+        self.ui.labelDisponibileProdotto.setText(prodottoAmministratore.getTestoDisponibile())
+
+    def modifica(self):
+        prodottoAmministratore = self.prodottoAmministratore
+
+        self.goVistaModificaProdottoAmministratore(prodottoAmministratore)

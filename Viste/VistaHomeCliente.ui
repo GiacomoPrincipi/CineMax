@@ -96,7 +96,7 @@ QPushButton:hover {
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloButtonCliente">
+  <widget class="ClickableLabel" name="labelProfiloButton">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -115,7 +115,7 @@ QPushButton:hover {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloCliente">
+  <widget class="QLabel" name="labelProfilo">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -136,7 +136,7 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLogoutCliente">
+  <widget class="QLabel" name="labelLogout">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -157,7 +157,7 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLogoutButtonCliente">
+  <widget class="ClickableLabel" name="labelLogoutButton">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -303,15 +303,22 @@ QPushButton:hover {
   <zorder>Sfondo</zorder>
   <zorder>pushButtonSpettacoli</zorder>
   <zorder>labelBarra</zorder>
-  <zorder>labelProfiloButtonCliente</zorder>
-  <zorder>labelProfiloCliente</zorder>
-  <zorder>labelLogoutCliente</zorder>
-  <zorder>labelLogoutButtonCliente</zorder>
+  <zorder>labelProfiloButton</zorder>
+  <zorder>labelProfilo</zorder>
+  <zorder>labelLogout</zorder>
+  <zorder>labelLogoutButton</zorder>
   <zorder>pushButtonProdotti</zorder>
   <zorder>pushButtonPagamenti</zorder>
   <zorder>pushButtonRecensioni</zorder>
   <zorder>labelTitolo</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

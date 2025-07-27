@@ -25,7 +25,7 @@
    <property name="font">
     <font>
      <family>Segoe UI Variable</family>
-     <pointsize>20</pointsize>
+     <pointsize>26</pointsize>
      <bold>true</bold>
     </font>
    </property>
@@ -57,7 +57,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #CCCCCC;
+    color: #AFAFAF;
 }</string>
    </property>
    <property name="text">
@@ -79,7 +79,7 @@
    <property name="styleSheet">
     <string notr="true">QPushButton {
     background-color: #969696;
-    color: #FFFFFF;
+    color: #EEEEEE;
     border: 2px solid #555555;
     border-radius: 6px;
 }
@@ -111,7 +111,7 @@ QPushButton:hover {
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #323232,
+        stop: 0 #191919,
         stop: 1 #646464
     );
 }</string>
@@ -132,7 +132,7 @@ QPushButton:hover {
    <property name="styleSheet">
     <string notr="true">QPushButton {
     background-color: #969696;
-    color: #FFFFFF;
+    color: #EEEEEE;
     border: 2px solid #555555;
     border-radius: 6px;
 }

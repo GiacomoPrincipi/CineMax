@@ -41,7 +41,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloAmministratore">
+  <widget class="QLabel" name="labelProfilo">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -109,7 +109,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonAmministratore">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -164,7 +164,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Amministratore</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelCognomeAmministratore">
@@ -182,7 +182,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Amministratore</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelMatricola">
@@ -221,7 +221,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>000000</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelEmail">
@@ -260,7 +260,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Amministratore@gmail.com</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelTelefono">
@@ -299,10 +299,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>3333333333</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonAmministratore">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -321,7 +321,53 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="labelDataNascita">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>100</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Data di Nascita:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDataNascitaAmministratore">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>120</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

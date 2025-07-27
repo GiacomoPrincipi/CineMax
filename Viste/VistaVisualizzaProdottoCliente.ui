@@ -41,7 +41,7 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIconaFotoCliente">
+  <widget class="QLabel" name="labelIconaFoto">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -109,7 +109,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonCliente">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -164,7 +164,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Prodotto</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelIngredientiProdotto">
@@ -182,46 +182,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Ingrediente1, Ingradiente2</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelDisponibile">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>360</y>
-     <width>101</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C87800;
-}</string>
-   </property>
-   <property name="text">
-    <string>Disponibilità:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelDisponibileProdotto">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>380</y>
-     <width>31</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #965A00;
-}</string>
-   </property>
-   <property name="text">
-    <string>si</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelAllergeni">
@@ -260,7 +221,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Allergene1, Allergene2, Allergene3</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelPrezzo">
@@ -299,10 +260,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>00,00 $</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonCliente">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -321,7 +282,79 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="labelPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>300</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prezzo in Punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoPuntiProdotto">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>320</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonAcquista">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>440</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Acquista</string>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

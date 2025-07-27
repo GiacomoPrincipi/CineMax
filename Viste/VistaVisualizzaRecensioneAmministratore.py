@@ -1,17 +1,24 @@
-import sys
-
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QWidget
 from ui_VistaVisualizzaRecensioneAmministratore import Ui_VistaVisualizzaRecensioneAmministratore
 
 class VistaVisualizzaRecensioneAmministratore(QWidget):
-    def __init__(self, parent = None):
+    def __init__(self, statoLogin, goVistaHomeAmministratore, goVistaVisualizzaRecensioniAmministratore, parent = None):
         super().__init__(parent)
         self.ui = Ui_VistaVisualizzaRecensioneAmministratore()
         self.ui.setupUi(self)
 
+        self.statoLogin = statoLogin
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    widget = VistaVisualizzaRecensioneAmministratore()
-    widget.show()
-    sys.exit(app.exec())
+        self.ui.labelHomeButton.clicked.connect(goVistaHomeAmministratore)
+        self.ui.labelIndietroButton.clicked.connect(goVistaVisualizzaRecensioniAmministratore)
+
+    def showEvent(self, event):
+        super().showEvent(event)
+
+        recensioneAmministratore = self.recensioneAmministratore
+
+        self.ui.labelCodiceFiscaleRecensione.setText(recensioneAmministratore.getCliente().getCodiceFiscale())
+        self.ui.labelDataRecensione.setText(recensioneAmministratore.getData().toString("dd/MM/yyyy"))
+        self.ui.labelOraRecensione.setText(recensioneAmministratore.getOra().toString("HH:mm:ss"))
+        self.ui.labelStelleRecensione.setText(f"{recensioneAmministratore.getStelle()}/5")
+        self.ui.labelTestoRecensione.setText(recensioneAmministratore.getTesto())

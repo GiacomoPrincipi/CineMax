@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaInserisciAmministratoreAmministratore</class>
- <widget class="QWidget" name="VistaInserisciAmministratoreAmministratore">
+ <class>VistaInserisciSpettacoloAmministratore</class>
+ <widget class="QWidget" name="VistaInserisciSpettacoloAmministratore">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Inserisci Amministratore - CineMax</string>
+   <string>Inserisci Spettacolo - CineMax</string>
   </property>
   <widget class="QLabel" name="Sfondo">
    <property name="geometry">
@@ -41,26 +41,26 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfilo">
+  <widget class="QLabel" name="labelIconaFotoAmministratore">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>30</y>
-     <width>121</width>
-     <height>121</height>
+     <width>131</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/profiloButtonAmministratore.png</pixmap>
+    <pixmap>Immagini/IconaFotoAmministratore.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelNome">
+  <widget class="QLabel" name="labelTitolo">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -75,18 +75,18 @@
 }</string>
    </property>
    <property name="text">
-    <string>Nome:</string>
+    <string>Titolo:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTitolo">
+  <widget class="QLabel" name="labelTitoloPrincipale">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>431</width>
+     <width>411</width>
      <height>71</height>
     </rect>
    </property>
@@ -103,34 +103,13 @@
 }</string>
    </property>
    <property name="text">
-    <string>Inserisci Amministratore</string>
+    <string>Inserisci Spettacolo</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCognome">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>100</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Cognome:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelMatricola">
+  <widget class="QLabel" name="labelGenere">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -145,13 +124,34 @@
 }</string>
    </property>
    <property name="text">
-    <string>Matricola:</string>
+    <string>Genere:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelEmail">
+  <widget class="QLabel" name="labelOrarioInizio">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>360</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Orario Inizio:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSala">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -166,13 +166,13 @@
 }</string>
    </property>
    <property name="text">
-    <string>Email:</string>
+    <string>Sala:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTelefono">
+  <widget class="QLabel" name="labelData">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -187,18 +187,60 @@
 }</string>
    </property>
    <property name="text">
-    <string>Telefono:</string>
+    <string>Data:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditEmail">
+  <widget class="QLabel" name="labelOrarioFine">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>350</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Orario Fine:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDurata">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>260</y>
-     <width>231</width>
+     <y>420</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Durata:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditTitolo">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>291</width>
      <height>26</height>
     </rect>
    </property>
@@ -214,11 +256,11 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditTelefono">
+  <widget class="QLineEdit" name="lineEditGenere">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>330</y>
+     <y>200</y>
      <width>111</width>
      <height>26</height>
     </rect>
@@ -235,54 +277,12 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditMatricola">
+  <widget class="QLineEdit" name="lineEditDurata">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>200</y>
-     <width>81</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditNome">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>120</y>
-     <width>131</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditCognome">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>120</y>
-     <width>191</width>
+     <y>440</y>
+     <width>51</width>
      <height>26</height>
     </rect>
    </property>
@@ -348,32 +348,41 @@ QPushButton:hover {
     <string>Annulla</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDataNascita">
+  <widget class="QComboBox" name="comboBoxSala">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>100</y>
-     <width>121</width>
-     <height>20</height>
+     <x>40</x>
+     <y>260</y>
+     <width>76</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
+    <string notr="true">QComboBox {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #320F00;
+	color: #962D00;
+    border: 1px solid #190700;
+	border-radius: 4px;
+    selection-background-color: #C83200;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #C83200;
 }</string>
    </property>
-   <property name="text">
-    <string>Data di Nascita:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
   </widget>
-  <widget class="QDateEdit" name="dateEditDataNascita">
+  <widget class="QDateEdit" name="dateEditData">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>120</y>
+     <x>40</x>
+     <y>320</y>
      <width>110</width>
      <height>26</height>
     </rect>
@@ -413,7 +422,7 @@ QDateEdit:focus {
    </property>
    <property name="maximumDateTime">
     <datetime>
-     <hour>16</hour>
+     <hour>14</hour>
      <minute>59</minute>
      <second>59</second>
      <year>2050</year>
@@ -423,7 +432,7 @@ QDateEdit:focus {
    </property>
    <property name="minimumDateTime">
     <datetime>
-     <hour>19</hour>
+     <hour>17</hour>
      <minute>0</minute>
      <second>0</second>
      <year>1949</year>
@@ -432,95 +441,63 @@ QDateEdit:focus {
     </datetime>
    </property>
   </widget>
-  <widget class="QLabel" name="labelPassword">
+  <widget class="QTimeEdit" name="timeEditOrarioInizio">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>390</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Password:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditPassword">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>410</y>
-     <width>191</width>
+     <y>380</y>
+     <width>118</width>
      <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit {
+    <string notr="true">QTimeEdit {
     background-color: #320F00;
     color: #962D00;
     border: 1px solid #190700;
     border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelConfermaPassword">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>390</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Conferma Password:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+	transition: border-color 1.5s ease;
+}
+
+QTimeEdit:focus {
+	border-color:#FF3C00;
+	transition: border-color 1.5s ease;
+}
+
+</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditConfermaPassword">
+  <widget class="QTimeEdit" name="timeEditOrarioFine">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>410</y>
-     <width>191</width>
+     <x>340</x>
+     <y>380</y>
+     <width>118</width>
      <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit {
+    <string notr="true">QTimeEdit {
     background-color: #320F00;
     color: #962D00;
     border: 1px solid #190700;
     border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
+	transition: border-color 1.5s ease;
+}
+
+QTimeEdit:focus {
+	border-color:#FF3C00;
+	transition: border-color 1.5s ease;
+}
+
+</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreNome">
+  <widget class="QLabel" name="labelErroreTitolo">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>150</y>
+     <x>490</x>
+     <y>120</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -537,32 +514,11 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreCognome">
+  <widget class="QLabel" name="labelErroreGenere">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreDataNascita">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>150</y>
+     <x>170</x>
+     <y>200</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -579,10 +535,10 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreEmail">
+  <widget class="QLabel" name="labelErroreSala">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>130</x>
      <y>260</y>
      <width>121</width>
      <height>20</height>
@@ -600,12 +556,12 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreTelefono">
+  <widget class="QLabel" name="labelErroreData">
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>330</y>
-     <width>211</width>
+     <y>320</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
@@ -621,19 +577,14 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErrorePassword2">
+  <widget class="QLabel" name="labelErroreOrarioInizio">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>360</y>
-     <width>681</width>
+     <x>170</x>
+     <y>380</y>
+     <width>121</width>
      <height>20</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>7</pointsize>
-    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
@@ -647,33 +598,12 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErrorePassword">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>390</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string notr="true"/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreConfermaPassword">
+  <widget class="QLabel" name="labelErroreOrarioFine">
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>390</y>
-     <width>221</width>
+     <y>380</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
@@ -689,12 +619,138 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreMatricola">
+  <widget class="QLabel" name="labelErroreDurata">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>200</y>
-     <width>151</width>
+     <x>110</x>
+     <y>440</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FF0000
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzo">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>210</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prezzo:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPrezzo">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>230</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>270</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string> Prezzo in punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>290</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelErrorePrezzo">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>230</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FF0000
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelErrorePrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>290</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaVisualizzaPagamentoAmministratore</class>
- <widget class="QWidget" name="VistaVisualizzaPagamentoAmministratore">
+ <class>VistaVisualizzaProfiloPersonaleCliente</class>
+ <widget class="QWidget" name="VistaVisualizzaProfiloPersonaleCliente">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Pagamento - CineMax</string>
+   <string>Profilo Personale - CineMax</string>
   </property>
   <widget class="QLabel" name="Sfondo">
    <property name="geometry">
@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+		stop: 0 #321E00,
+        stop: 1 #643C00
     );
 }</string>
    </property>
@@ -41,41 +41,41 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelRicevutaIcon">
+  <widget class="QLabel" name="labelProfilo">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>151</width>
-     <height>151</height>
+     <x>40</x>
+     <y>30</y>
+     <width>121</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/RicevutaIconAmministratore.png</pixmap>
+    <pixmap>Immagini/profiloButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCliente">
+  <widget class="QLabel" name="labelNome">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>100</y>
-     <width>161</width>
+     <width>63</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Codice Fiscale Cliente:</string>
+    <string>Nome:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -99,17 +99,17 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C8B400;
 }</string>
    </property>
    <property name="text">
-    <string>Pagamento</string>
+    <string>Profilo Personale</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="ClickableLabel" name="labelHomeButton">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -122,238 +122,320 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/HomeButtonAmministratore.png</pixmap>
+    <pixmap>Immagini/IndietroButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelArticolo">
+  <widget class="QLabel" name="labelCognome">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>330</x>
      <y>100</y>
-     <width>121</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Nome Articolo:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelData">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>180</y>
      <width>81</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Data:</string>
+    <string>Cognome:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDataPagamento">
+  <widget class="QLabel" name="labelNomeCliente">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
-     <width>91</width>
+     <x>180</x>
+     <y>130</y>
+     <width>131</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #962D00;
+    color: #965A00;
 }</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTipo">
+  <widget class="QLabel" name="labelCognomeCliente">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
-     <width>81</width>
+     <x>330</x>
+     <y>130</y>
+     <width>181</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #965A00;
 }</string>
    </property>
    <property name="text">
-    <string>Tipo:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTipoPagamento">
+  <widget class="QLabel" name="labelCodiceFiscale">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>260</y>
+     <y>180</y>
      <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #962D00;
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Codice Fiscale:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCodiceFiscaleCliente">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>210</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
 }</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelImporto">
+  <widget class="QLabel" name="labelEmail">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>300</y>
+     <y>250</y>
      <width>81</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Importo:</string>
+    <string>Email:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelImportoPagamento">
+  <widget class="QLabel" name="labelEmailCliente">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>280</y>
+     <width>251</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTelefono">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>320</y>
-     <width>91</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #962D00;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelOra">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>180</y>
      <width>81</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #C87800;
 }</string>
    </property>
    <property name="text">
-    <string>Ora:</string>
+    <string>Telefono:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelOraPagamento">
+  <widget class="QLabel" name="labelTelefonoCliente">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>200</y>
-     <width>51</width>
+     <x>40</x>
+     <y>350</y>
+     <width>101</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #962D00;
+    color: #965A00;
 }</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="ClickableLabel" name="labelIndietroButton">
+  <widget class="QLabel" name="labelPassword">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>20</y>
-     <width>63</width>
-     <height>61</height>
+     <x>40</x>
+     <y>390</y>
+     <width>81</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Password:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPasswordCliente">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>420</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
+}</string>
    </property>
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>Immagini/IndietroButtonAmministratore.png</pixmap>
+  </widget>
+  <widget class="QPushButton" name="pushButtonModifica">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>450</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
    </property>
-   <property name="scaledContents">
-    <bool>true</bool>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Modifica</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCodiceFiscalePagamento">
+  <widget class="QLabel" name="labelDataNascita">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>100</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Data di Nascita:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDataNascitaCliente">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>130</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #965A00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPunti">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>120</y>
+     <y>390</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C87800;
+}</string>
+   </property>
+   <property name="text">
+    <string>Punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPuntiCliente">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>420</y>
      <width>91</width>
      <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #962D00;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelNomePagamento">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>120</y>
-     <width>281</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #962D00;
+    color: #965A00;
 }</string>
    </property>
    <property name="text">

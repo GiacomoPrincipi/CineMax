@@ -41,12 +41,12 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCliente">
+  <widget class="QLabel" name="labelCodiceFiscale">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>100</y>
-     <width>63</width>
+     <width>161</width>
      <height>20</height>
     </rect>
    </property>
@@ -56,7 +56,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>Cliente:</string>
+    <string>Codice Fiscale Cliente:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
@@ -90,7 +90,7 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelHomeButtonAmministratore">
+  <widget class="ClickableLabel" name="labelHomeButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -145,7 +145,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>14/07/2025</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelStelle">
@@ -184,7 +184,7 @@
 }</string>
    </property>
    <property name="text">
-    <string>n/5</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelOra">
@@ -223,10 +223,10 @@
 }</string>
    </property>
    <property name="text">
-    <string>00:00</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonAmministratore">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>620</x>
@@ -245,26 +245,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelButtonCliente">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>120</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Immagini/profiloButtonAmministratore.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelProfiloAmministratore">
+  <widget class="QLabel" name="labelRecensioneIcon">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -324,7 +305,7 @@
 </string>
    </property>
    <property name="text">
-    <string>Siete Fantastici</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
@@ -333,7 +314,32 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="labelCodiceFiscaleRecensione">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

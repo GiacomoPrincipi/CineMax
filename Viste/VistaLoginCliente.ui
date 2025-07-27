@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Login Cliente - CineMax</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelTitolo">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -149,7 +149,7 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Email</string>
+    <string>Email:</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelPassword">
@@ -167,10 +167,10 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Password</string>
+    <string>Password:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButtonRecuperoCredenziali">
+  <widget class="QPushButton" name="pushButtonRecuperoPassword">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -226,7 +226,7 @@ QPushButton:hover {
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelIndietroButtonCliente">
+  <widget class="ClickableLabel" name="labelIndietroButton">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -245,17 +245,90 @@ QPushButton:hover {
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="labelErroreEmail">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>200</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FFFF00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelErrorePassword">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>270</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FFFF00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelRecuperoPassword">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>450</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FFFF00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
   <zorder>Sfondo</zorder>
-  <zorder>label</zorder>
+  <zorder>labelTitolo</zorder>
   <zorder>pushButtonAccedi</zorder>
   <zorder>pushButtonRegistrati</zorder>
   <zorder>lineEditEmail</zorder>
   <zorder>lineEditPassword</zorder>
   <zorder>labelEmail</zorder>
   <zorder>labelPassword</zorder>
-  <zorder>pushButtonRecuperoCredenziali</zorder>
-  <zorder>labelIndietroButtonCliente</zorder>
+  <zorder>pushButtonRecuperoPassword</zorder>
+  <zorder>labelIndietroButton</zorder>
+  <zorder>labelErroreEmail</zorder>
+  <zorder>labelErrorePassword</zorder>
+  <zorder>labelRecuperoPassword</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

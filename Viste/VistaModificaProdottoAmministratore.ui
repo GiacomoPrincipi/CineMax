@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaInserisciAmministratoreAmministratore</class>
- <widget class="QWidget" name="VistaInserisciAmministratoreAmministratore">
+ <class>VistaModificaProdottoAmministratore</class>
+ <widget class="QWidget" name="VistaModificaProdottoAmministratore">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Inserisci Amministratore - CineMax</string>
+   <string>Modifica Prodotto - CineMax</string>
   </property>
   <widget class="QLabel" name="Sfondo">
    <property name="geometry">
@@ -41,20 +41,20 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfilo">
+  <widget class="QLabel" name="labelIconaFotoAmministratore">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>30</y>
-     <width>121</width>
-     <height>121</height>
+     <width>131</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/profiloButtonAmministratore.png</pixmap>
+    <pixmap>Immagini/IconaFotoAmministratore.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -81,12 +81,12 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTitolo">
+  <widget class="QLabel" name="labelTitoloPrincipale">
    <property name="geometry">
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>431</width>
+     <width>351</width>
      <height>71</height>
     </rect>
    </property>
@@ -103,34 +103,13 @@
 }</string>
    </property>
    <property name="text">
-    <string>Inserisci Amministratore</string>
+    <string>Modifica Prodotto</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelCognome">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>100</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Cognome:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelMatricola">
+  <widget class="QLabel" name="labelIngredienti">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -145,13 +124,34 @@
 }</string>
    </property>
    <property name="text">
-    <string>Matricola:</string>
+    <string>Ingredienti:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelEmail">
+  <widget class="QLabel" name="labelDisponibile">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>360</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Disponibilità:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAllergeni">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -166,13 +166,13 @@
 }</string>
    </property>
    <property name="text">
-    <string>Email:</string>
+    <string>Allergeni:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTelefono">
+  <widget class="QLabel" name="labelPrezzo">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -187,18 +187,18 @@
 }</string>
    </property>
    <property name="text">
-    <string>Telefono:</string>
+    <string>Prezzo:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditEmail">
+  <widget class="QLineEdit" name="lineEditNome">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
-     <width>231</width>
+     <x>180</x>
+     <y>120</y>
+     <width>171</width>
      <height>26</height>
     </rect>
    </property>
@@ -214,32 +214,11 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditTelefono">
+  <widget class="QLineEdit" name="lineEditPrezzo">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>330</y>
-     <width>111</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditMatricola">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>200</y>
+     <y>320</y>
      <width>81</width>
      <height>26</height>
     </rect>
@@ -256,33 +235,217 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditNome">
+  <widget class="QComboBox" name="comboBoxDisponibile">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>120</y>
-     <width>131</width>
+     <x>40</x>
+     <y>380</y>
+     <width>76</width>
      <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit {
+    <string notr="true">QComboBox {
     background-color: #320F00;
     color: #962D00;
     border: 1px solid #190700;
     border-radius: 4px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #320F00;
+        color: #962D00;
+    border: 1px solid #190700;
+        border-radius: 4px;
+    selection-background-color: #C83200;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #C83200;
 }</string>
    </property>
-   <property name="text">
-    <string/>
-   </property>
   </widget>
-  <widget class="QLineEdit" name="lineEditCognome">
+  <widget class="QCheckBox" name="checkBoxAllergene1">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>120</y>
-     <width>191</width>
+     <x>40</x>
+     <y>260</y>
+     <width>91</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+        color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Latticini</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>260</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+        color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Glutine</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+        color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Frutta a guscio</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene4">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+        color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Pesce</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxAllergene6">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>260</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+        color: #962D00;
+}
+
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Uova</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditIngredienti">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>451</width>
      <height>26</height>
     </rect>
    </property>
@@ -348,179 +511,46 @@ QPushButton:hover {
     <string>Annulla</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDataNascita">
+  <widget class="QCheckBox" name="checkBoxAllergene5">
    <property name="geometry">
     <rect>
-     <x>580</x>
-     <y>100</y>
-     <width>121</width>
-     <height>20</height>
+     <x>520</x>
+     <y>260</y>
+     <width>71</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Data di Nascita:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QDateEdit" name="dateEditDataNascita">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>120</y>
-     <width>110</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QDateEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-	transition: border-color 1.5s ease;
+    <string notr="true">QCheckBox {
+        color: #962D00;
 }
 
-QDateEdit:focus {
-	border-color:#FF3C00;
-	transition: border-color 1.5s ease;
+QCheckBox::indicator {
+    background-color: #320F00;
+    border: 1px solid #190700;
+    border-radius: 4px;
 }
+
+QCheckBox::indicator:hover {
+            background-color: #C83200;
+}
+
+QCheckBox::indicator:checked {
+            background-color: #C83200;
+}
+
 
 </string>
    </property>
-   <property name="dateTime">
-    <datetime>
-     <hour>22</hour>
-     <minute>0</minute>
-     <second>0</second>
-     <year>1950</year>
-     <month>1</month>
-     <day>1</day>
-    </datetime>
-   </property>
-   <property name="time">
-    <time>
-     <hour>22</hour>
-     <minute>0</minute>
-     <second>0</second>
-    </time>
-   </property>
-   <property name="maximumDateTime">
-    <datetime>
-     <hour>16</hour>
-     <minute>59</minute>
-     <second>59</second>
-     <year>2050</year>
-     <month>12</month>
-     <day>12</day>
-    </datetime>
-   </property>
-   <property name="minimumDateTime">
-    <datetime>
-     <hour>19</hour>
-     <minute>0</minute>
-     <second>0</second>
-     <year>1949</year>
-     <month>12</month>
-     <day>31</day>
-    </datetime>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelPassword">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>390</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
    <property name="text">
-    <string>Password:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditPassword">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>410</y>
-     <width>191</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelConfermaPassword">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>390</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #C83C00;
-}</string>
-   </property>
-   <property name="text">
-    <string>Conferma Password:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditConfermaPassword">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>410</y>
-     <width>191</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit {
-    background-color: #320F00;
-    color: #962D00;
-    border: 1px solid #190700;
-    border-radius: 4px;
-}</string>
-   </property>
-   <property name="text">
-    <string/>
+    <string>Soia</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelErroreNome">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>150</y>
+     <x>360</x>
+     <y>120</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -537,12 +567,12 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreCognome">
+  <widget class="QLabel" name="labelErroreIngredienti">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>151</width>
+     <x>500</x>
+     <y>200</y>
+     <width>161</width>
      <height>20</height>
     </rect>
    </property>
@@ -558,143 +588,96 @@ QDateEdit:focus {
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelErroreDataNascita">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>150</y>
-     <width>121</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreEmail">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>260</y>
-     <width>121</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreTelefono">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>330</y>
-     <width>211</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErrorePassword2">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>360</y>
-     <width>681</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>7</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErrorePassword">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>390</y>
-     <width>141</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string notr="true"/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreConfermaPassword">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>390</y>
-     <width>221</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    color: #FF0000
-}</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelErroreMatricola">
+  <widget class="QLabel" name="labelErrorePrezzo">
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>200</y>
-     <width>151</width>
+     <y>320</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FF0000
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelErroreDisponibile">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>380</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #FF0000
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>300</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Prezzo in Punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>320</y>
+     <width>81</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelErrorePrezzoPunti">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>320</y>
+     <width>161</width>
      <height>20</height>
     </rect>
    </property>

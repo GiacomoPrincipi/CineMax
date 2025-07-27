@@ -95,7 +95,7 @@ QPushButton:hover {
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloButtonAmministratore">
+  <widget class="ClickableLabel" name="labelProfiloButton">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -114,7 +114,7 @@ QPushButton:hover {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="labelProfiloAmministratore">
+  <widget class="QLabel" name="labelProfilo">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -135,7 +135,7 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLogoutAmministratore">
+  <widget class="QLabel" name="labelLogout">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -156,7 +156,7 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLogoutButtonAmministratore">
+  <widget class="ClickableLabel" name="labelLogoutButton">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -196,7 +196,7 @@ QPushButton:hover {
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelBackupButtonAmministratore">
+  <widget class="ClickableLabel" name="labelBackupButton">
    <property name="geometry">
     <rect>
      <x>710</x>
@@ -308,7 +308,7 @@ QPushButton:hover {
     <string>Amministratori</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButtonClientiRegistroCassa">
+  <widget class="QPushButton" name="pushButtonRegistroCassa">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -339,7 +339,7 @@ QPushButton:hover {
     <string>Registo Cassa</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButtonClientiRecensioni">
+  <widget class="QPushButton" name="pushButtonRecensioni">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -401,19 +401,26 @@ QPushButton:hover {
   <zorder>Sfondo</zorder>
   <zorder>pushButtonSpettacoli</zorder>
   <zorder>labelBarra</zorder>
-  <zorder>labelProfiloButtonAmministratore</zorder>
-  <zorder>labelProfiloAmministratore</zorder>
-  <zorder>labelLogoutAmministratore</zorder>
-  <zorder>labelLogoutButtonAmministratore</zorder>
+  <zorder>labelProfiloButton</zorder>
+  <zorder>labelProfilo</zorder>
+  <zorder>labelLogout</zorder>
+  <zorder>labelLogoutButton</zorder>
   <zorder>labelBackup</zorder>
-  <zorder>labelBackupButtonAmministratore</zorder>
+  <zorder>labelBackupButton</zorder>
   <zorder>pushButtonProdotti</zorder>
   <zorder>pushButtonClienti</zorder>
   <zorder>pushButtonAmministratori</zorder>
-  <zorder>pushButtonClientiRegistroCassa</zorder>
-  <zorder>pushButtonClientiRecensioni</zorder>
+  <zorder>pushButtonRegistroCassa</zorder>
+  <zorder>pushButtonRecensioni</zorder>
   <zorder>labelTitolo</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

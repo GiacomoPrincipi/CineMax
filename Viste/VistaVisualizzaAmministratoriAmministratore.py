@@ -1,17 +1,45 @@
-import sys
-
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtGui import QStandardItemModel, QStandardItem
+from PySide6.QtCore import Qt
 from ui_VistaVisualizzaAmministratoriAmministratore import Ui_VistaVisualizzaAmministratoriAmministratore
+from Gestione.GestoreAmministratori import GestoreAmministratori
 
 class VistaVisualizzaAmministratoriAmministratore(QWidget):
-    def __init__(self, parent = None):
+    def __init__(self, statoLogin, goVistaHomeAmministratore, goVistaVisualizzaAmministratoreAmministratore, goVistaInserisciAmministratoreAmministratore, parent = None):
         super().__init__(parent)
         self.ui = Ui_VistaVisualizzaAmministratoriAmministratore()
         self.ui.setupUi(self)
 
+        self.statoLogin = statoLogin
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    widget = VistaVisualizzaAmministratoriAmministratore()
-    widget.show()
-    sys.exit(app.exec())
+        self.goVistaVisualizzaAmministratoreAmministratore = goVistaVisualizzaAmministratoreAmministratore
+
+        self.ui.labelIndietroButton.clicked.connect(goVistaHomeAmministratore)
+        self.ui.pushButtonInserisci.clicked.connect(goVistaInserisciAmministratoreAmministratore)
+
+        self.ui.tableViewAmministratori.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.ui.tableViewAmministratori.horizontalHeader().setFixedHeight(25)
+        self.ui.tableViewAmministratori.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+
+    def showEvent(self, event):
+        super().showEvent(event)
+
+        gestoreAmministratori = GestoreAmministratori()
+
+        self.modelloTabella = QStandardItemModel()
+        self.modelloTabella.setHorizontalHeaderLabels(["Nome:", "Cognome:", "Matricola:"])
+
+        for amministratore in gestoreAmministratori.getListaAmministratori():
+            self.modelloTabella.appendRow([QStandardItem(amministratore.getNome()), QStandardItem(amministratore.getCognome()), QStandardItem(amministratore.getMatricola())])
+
+        self.ui.tableViewAmministratori.setModel(self.modelloTabella)
+        self.ui.tableViewAmministratori.doubleClicked.connect(self.apriAmministratore)
+
+    def apriAmministratore(self):
+
+        gestoreAmministratori = GestoreAmministratori()
+
+        riga = self.ui.tableViewAmministratori.selectionModel().currentIndex().row()
+        amministratoreAmministratore = gestoreAmministratori.getListaAmministratori()[riga]
+
+        self.goVistaVisualizzaAmministratoreAmministratore(amministratoreAmministratore)
