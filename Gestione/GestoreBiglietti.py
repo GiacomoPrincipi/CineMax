@@ -1,5 +1,3 @@
-from Sistema.Biglietto import Biglietto
-
 import os.path
 import pickle
 
@@ -55,4 +53,10 @@ class GestoreBiglietti():
                 if int(recensione.getId()[1:]) > idMassimo:
                     idMassimo = int(recensione.getId()[1:])
             return f"P{idMassimo + 1:05d}"
+        
+    def aggiornaDisponibileBiglietti(self):
+        for biglietto in self.getListaBiglietti():
+            if not biglietto.getSpettacolo().getStato():
+                biglietto.setDisponibile(False)
+        self.salvaDatiBiglietti()
 

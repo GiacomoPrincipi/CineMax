@@ -1,5 +1,3 @@
-from Sistema.Prodotto import Prodotto
-
 import os.path
 import pickle
 

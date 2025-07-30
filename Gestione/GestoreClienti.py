@@ -34,7 +34,6 @@ class GestoreClienti():
     def rimuoviCliente(self, cliente):
         self.listaClienti.remove(cliente)
         self.salvaDatiClienti()
-        del cliente
 
     def controlloCodiceFiscale(self, codiceFiscale):
         for cliente in self.listaClienti:

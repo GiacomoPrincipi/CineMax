@@ -1,5 +1,3 @@
-from Sistema.Recensione import Recensione
-
 import os.path
 import pickle
 

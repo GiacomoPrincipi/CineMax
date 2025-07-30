@@ -1,7 +1,6 @@
-from Sistema import Cliente
-from Sistema import Amministratore
-
 from email.message import EmailMessage
+import re
+import dns.resolver
 import smtplib
 import random
 import string
@@ -90,6 +89,22 @@ class GestoreAutenticazione():
                 maiuscola = True
             if carattere in simboliIdonei:
                 simbolo = True
+            if carattere  == " ":
+                return False
         
         if numero and maiuscola and simbolo: return True
+        else: return False
+
+    @staticmethod
+    def controlloStrutturaEmail(email):
+        struttura = r"^[\w\.-]+@([\w\-]+\.[\w\-]+)$"
+        compatibile = re.match(struttura, email)
+        if not compatibile:
+            return False
+
+        dominio = compatibile.group(1)
+        try:
+            dns.resolver.resolve(dominio, 'MX')
+            return True
+        except: return False
         

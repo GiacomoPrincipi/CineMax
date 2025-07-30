@@ -36,8 +36,12 @@ class GestoreAmministratori():
         self.salvaDatiAmministratori()
         del amministratore
 
-    def controlloMatricola(self, matricola):
-        for amministratore in self.listaAmministratori:
-            if amministratore.getMatricola() == matricola:
-                return False
-        return True
+    def generaMatricolaAmministratore(self):
+        idMassimo = 0
+        if self.listaAmministratori == []:
+            return "A0001"
+        else: 
+            for amministratore in self.listaAmministratori:
+                if int(amministratore.getMatricola()[1:]) > idMassimo:
+                    idMassimo = int(amministratore.getMatricola()[1:])
+            return f"A{idMassimo + 1:04d}"

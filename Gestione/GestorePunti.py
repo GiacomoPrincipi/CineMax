@@ -1,5 +1,3 @@
-from Sistema.Cliente import Cliente
-
 class GestorePunti():
 
     @staticmethod
@@ -26,5 +24,5 @@ class GestorePunti():
 
     @staticmethod
     def calcoloPunti(prezzo):
-        punti = round(prezzo * 10)
+        punti = int(prezzo * 100)
         return punti

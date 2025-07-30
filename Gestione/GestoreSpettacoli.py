@@ -51,6 +51,16 @@ class GestoreSpettacoli():
         
     def aggiornaStatoSpettacoli(self):
         for spettacolo in self.getListaSpettacoli():
-            if spettacolo.getData() >= QDate.currentDate():
-                    if spettacolo.getOrarioInizio() >= QTime.currentTime():
-                            spettacolo.setStato(False)
+            if spettacolo.getData() < QDate.currentDate():
+                spettacolo.setStato(False)
+            elif spettacolo.getData() == QDate.currentDate() and spettacolo.getOrarioInizio() < QTime.currentTime():
+                spettacolo.setStato(False)
+        self.salvaDatiSpettacoli()
+
+    def controlloSpettacoliIntersecati(self, sala, data, orarioInizio, orarioFine):
+        for spettacolo in self.getListaSpettacoliAttivi():
+            if spettacolo.getSala() == sala:
+                if spettacolo.getData() == data:
+                    if spettacolo.getOrarioFine() > orarioInizio and orarioFine > spettacolo.getOrarioInizio():
+                        return True
+        return False

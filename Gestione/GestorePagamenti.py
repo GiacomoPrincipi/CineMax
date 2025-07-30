@@ -1,5 +1,3 @@
-from Sistema.Pagamento import Pagamento
-
 import os.path
 import pickle
 
