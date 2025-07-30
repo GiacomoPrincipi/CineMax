@@ -6,6 +6,9 @@ class Amministratore(Utente):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
         self.matricola = matricola
 
+    def __eq__(self, amministratore):
+        return isinstance(amministratore, Amministratore) and self.getMatricola() == amministratore.getMatricola()
+
     def getInfoAmministratore(self):
         return {self.nome, self.cognome, self.dataNascita, self.email, self.telefono, self.password, self.matricola}
 

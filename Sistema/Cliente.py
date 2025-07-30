@@ -6,6 +6,9 @@ class Cliente(Utente):
         super().__init__(nome, cognome, dataNascita, email, telefono, password)
         self.codiceFiscale = codiceFiscale
         self.punti = 0
+
+    def __eq__(self, cliente):
+        return isinstance(cliente, Cliente) and self.getCodiceFiscale() == cliente.getCodiceFiscale()
         
     def getInfoCliente(self):
         return {self.nome, self.cognome, self.dataNascita, self.email, self.telefono, self.password, self.codiceFiscale, self.punti}

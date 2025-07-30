@@ -7,6 +7,9 @@ class Prodotto(Articolo):
         self.nome = nome
         self.ingredienti = ingredienti
         self.allergeni = allergeni
+    
+    def __eq__(self, prodotto):
+        return isinstance(prodotto, Prodotto) and self.getId() == prodotto.getId()
 
     def getInfoProdotto(self):
         return {self.id, self.prezzo, self.prezzoPunti, self.disponibile, self.nome, self.ingredienti, self.allergeni}

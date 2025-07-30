@@ -9,6 +9,9 @@ class Biglietto(Articolo):
         self.posto = posto
         self.disponibile = True
 
+    def __eq__(self, biglietto):
+        return isinstance(biglietto, Biglietto) and self.getId() == biglietto.getId()
+
     def getInfoBiglietto(self):
         return {self.id, self.prezzo, self.prezzoPunti, self.disponibile, self.spettacolo, self.tipo, self.posto}
 

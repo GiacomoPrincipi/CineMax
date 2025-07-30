@@ -8,6 +8,9 @@ class Recensione():
         self.stelle = stelle
         self.testo = testo
       
+    def __eq__(self, recensione):
+        return isinstance(recensione, Recensione) and self.getId() == recensione.getId()
+      
     def getInfoRecensione(self):
         return {self.cliente, self.id, self.data, self.ora, self.stelle, self.testo}
 

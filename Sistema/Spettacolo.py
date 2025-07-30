@@ -11,6 +11,9 @@ class Spettacolo():
         self.durata = durata
         self.stato = True
 
+    def __eq__(self, spettacolo):
+        return isinstance(spettacolo, Spettacolo) and self.getId() == spettacolo.getId()
+
     def getInfoSpettacolo(self):
         return {self.titolo, self.id, self.genere, self.sala, self.data, self.orarioInizio, self.orarioFine, self.durata, self.stato}
 
