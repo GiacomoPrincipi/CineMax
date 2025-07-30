@@ -47,16 +47,21 @@ class VistaInserisciProdottoAmministratore(QWidget):
         self.ui.labelErrorePrezzoPunti.setText("")
         self.ui.labelErroreDisponibile.setText("")
 
-        nome = self.ui.lineEditNome.text()
+        nome = self.ui.lineEditNome.text().title()
         ingredienti = self.ui.lineEditIngredienti.text().split(",")
-        ingradienti = [ingrediente.strip() for ingrediente in ingredienti]
+        ingredienti = [ingrediente.strip().capitalize() for ingrediente in ingredienti]
         allergeni = []
         ListaCheckBox = [self.ui.checkBoxAllergene1, self.ui.checkBoxAllergene2, self.ui.checkBoxAllergene3, self.ui.checkBoxAllergene4, self.ui.checkBoxAllergene5, self.ui.checkBoxAllergene6]
         for checkBox in ListaCheckBox:
             if checkBox.isChecked():
                 allergeni.append(checkBox.text())
-        prezzo = float(self.ui.lineEditPrezzo.text())
-        prezzoPunti = int(self.ui.lineEditPrezzoPunti.text())
+        prezzo = self.ui.lineEditPrezzo.text()
+        prezzoPunti = self.ui.lineEditPrezzoPunti.text()
+        try:
+            float(prezzo)
+            formatoPrezzo = False
+        except ValueError:
+            formatoPrezzo = True
         if self.ui.comboBoxDisponibile.currentText() == "Si":
             disponibile = True
         if self.ui.comboBoxDisponibile.currentText() == "No":
@@ -66,18 +71,43 @@ class VistaInserisciProdottoAmministratore(QWidget):
 
         id = gestoreProdotti.generaIdProdotto()
 
-        if nome == "" or ingredienti == [] or prezzo == "" or prezzoPunti == ""  or self.ui.comboBoxDisponibile.currentIndex() == 0:
-            if nome == "":
-                self.ui.labelErroreNome.setText("Inserisci il nome!")
-            if self.ui.lineEditIngredienti.text() == "":
-                self.ui.labelErroreIngredienti.setText("Inserisci gli ingredienti!")
-            if prezzo == "":
-                self.ui.labelErrorePrezzo.setText("Inserisci il prezzo!")
-            if prezzoPunti == "":
-                self.ui.labelErrorePrezzoPunti.setText("Inserisci il prezzo in punti!")
-            if self.ui.comboBoxDisponibile.currentIndex() == 0:
-                self.ui.labelErroreDisponibile.setText("Inserisci la disponibilità!")
-            return
+        esito = False
+
+        if nome == "":
+            self.ui.labelErroreNome.setText("Inserisci il nome!")
+            esito = True
+        elif nome.isdigit():
+            self.ui.labelErroreNome.setText("Nome non valido!")
+            esito = True
+        if self.ui.lineEditIngredienti.text() == "":
+            self.ui.labelErroreIngredienti.setText("Inserisci gli ingredienti!")
+            esito = True
+        if prezzo == "":
+            self.ui.labelErrorePrezzo.setText("Inserisci il prezzo!")
+            esito = True
+        elif "," in prezzo:
+            self.ui.labelErrorePrezzo.setText("Formato non valido!")
+            esito = True
+        elif "." not in prezzo and not prezzo.isdigit():
+            self.ui.labelErrorePrezzo.setText("Prezzo non valido!")
+            esito = True
+        elif formatoPrezzo:
+            self.ui.labelErrorePrezzo.setText("Prezzo non valido!")
+            esito = True
+        if prezzoPunti == "":
+            self.ui.labelErrorePrezzoPunti.setText("Inserisci il prezzo in punti!")
+            esito = True
+        elif not prezzoPunti.isdigit():
+            self.ui.labelErrorePrezzoPunti.setText("Prezzo non valido!")
+            esito = True
+        if self.ui.comboBoxDisponibile.currentIndex() == 0:
+            self.ui.labelErroreDisponibile.setText("Inserisci la disponibilità!")
+            esito = True
+
+        if esito: return
+
+        prezzo = "{:.2f}".format(float(prezzo))
+        prezzoPunti = int(prezzoPunti)
 
         prodotto = Prodotto(id, prezzo, prezzoPunti, disponibile, nome, ingredienti, allergeni)
         gestoreProdotti.inserisciProdotto(prodotto)

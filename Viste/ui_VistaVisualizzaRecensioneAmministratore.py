@@ -15,7 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QTextBrowser,
+    QWidget)
 
 from clickablelabel import ClickableLabel
 
@@ -34,8 +35,8 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelCodiceFiscale = QLabel(VistaVisualizzaRecensioneAmministratore)
@@ -54,88 +55,107 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelHomeButton = ClickableLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelHomeButton.setObjectName(u"labelHomeButton")
         self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setPixmap(QPixmap(u"Viste/Immagini/HomeButtonAmministratore.png"))
         self.labelHomeButton.setScaledContents(True)
         self.labelData = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelData.setObjectName(u"labelData")
-        self.labelData.setGeometry(QRect(40, 180, 81, 20))
+        self.labelData.setGeometry(QRect(30, 190, 81, 20))
         self.labelData.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelDataRecensione.setObjectName(u"labelDataRecensione")
-        self.labelDataRecensione.setGeometry(QRect(40, 200, 91, 20))
+        self.labelDataRecensione.setGeometry(QRect(30, 220, 91, 20))
         self.labelDataRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelStelle = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelStelle.setObjectName(u"labelStelle")
-        self.labelStelle.setGeometry(QRect(40, 240, 81, 20))
+        self.labelStelle.setGeometry(QRect(30, 260, 81, 20))
         self.labelStelle.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelStelle.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelStelleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelStelleRecensione.setObjectName(u"labelStelleRecensione")
-        self.labelStelleRecensione.setGeometry(QRect(40, 260, 41, 20))
+        self.labelStelleRecensione.setGeometry(QRect(30, 290, 51, 20))
         self.labelStelleRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelOra = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelOra.setObjectName(u"labelOra")
-        self.labelOra.setGeometry(QRect(180, 180, 81, 20))
+        self.labelOra.setGeometry(QRect(180, 190, 81, 20))
         self.labelOra.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelOra.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelOraRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelOraRecensione.setObjectName(u"labelOraRecensione")
-        self.labelOraRecensione.setGeometry(QRect(180, 200, 51, 20))
+        self.labelOraRecensione.setGeometry(QRect(180, 220, 91, 20))
         self.labelOraRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelRecensioneIcon = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelRecensioneIcon.setObjectName(u"labelRecensioneIcon")
-        self.labelRecensioneIcon.setGeometry(QRect(40, 50, 121, 121))
-        self.labelRecensioneIcon.setPixmap(QPixmap(u"Immagini/RecensioneIconAmministratore.png"))
+        self.labelRecensioneIcon.setGeometry(QRect(40, 40, 121, 121))
+        self.labelRecensioneIcon.setPixmap(QPixmap(u"Viste/Immagini/RecensioneIconAmministratore.png"))
         self.labelRecensioneIcon.setScaledContents(True)
         self.labelTesto = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelTesto.setObjectName(u"labelTesto")
-        self.labelTesto.setGeometry(QRect(290, 180, 81, 20))
+        self.labelTesto.setGeometry(QRect(290, 190, 81, 20))
         self.labelTesto.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelTesto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelTestoRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelTestoRecensione.setObjectName(u"labelTestoRecensione")
-        self.labelTestoRecensione.setGeometry(QRect(290, 200, 401, 201))
-        self.labelTestoRecensione.setStyleSheet(u"QLabel {\n"
-"	background-color: #EB7864;\n"
-"    color: #962D00;\n"
-"	border: 1px solid #8C463C;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"")
-        self.labelTestoRecensione.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
-        self.labelTestoRecensione.setWordWrap(True)
         self.labelCodiceFiscaleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelCodiceFiscaleRecensione.setObjectName(u"labelCodiceFiscaleRecensione")
         self.labelCodiceFiscaleRecensione.setGeometry(QRect(180, 130, 131, 20))
         self.labelCodiceFiscaleRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
+"}")
+        self.textBrowserTesto = QTextBrowser(VistaVisualizzaRecensioneAmministratore)
+        self.textBrowserTesto.setObjectName(u"textBrowserTesto")
+        self.textBrowserTesto.setGeometry(QRect(290, 220, 401, 192))
+        self.textBrowserTesto.setStyleSheet(u"QTextBrowser {\n"
+"    background-color: #320F00;\n"
+"    color: #962D00;\n"
+"    border: 1px solid #190700;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar:vertical {\n"
+"	background: #B43700;\n"
+"	border: 2px solid #190700;\n"
+"    border-radius: 4px;\n"
+"    width: 21px;\n"
+"    margin: 5px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::handle:vertical {\n"
+"	background: #962D00;\n"
+"    min-height: 20px;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::handle:vertical:hover {\n"
+"    background: #C83200;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
 "}")
 
         self.retranslateUi(VistaVisualizzaRecensioneAmministratore)
@@ -158,7 +178,6 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
         self.labelIndietroButton.setText("")
         self.labelRecensioneIcon.setText("")
         self.labelTesto.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Testo:", None))
-        self.labelTestoRecensione.setText("")
         self.labelCodiceFiscaleRecensione.setText("")
     # retranslateUi
 

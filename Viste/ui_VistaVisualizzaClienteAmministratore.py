@@ -35,14 +35,14 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelProfilo = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfilo.setGeometry(QRect(30, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Viste/Immagini/ProfiloButtonAmministratore.png"))
         self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelNome.setObjectName(u"labelNome")
@@ -60,13 +60,13 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelHomeButton = ClickableLabel(VistaVisualizzaClienteAmministratore)
         self.labelHomeButton.setObjectName(u"labelHomeButton")
         self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setPixmap(QPixmap(u"Viste/Immagini/HomeButtonAmministratore.png"))
         self.labelHomeButton.setScaledContents(True)
         self.labelCognome = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelCognome.setObjectName(u"labelCognome")
@@ -77,72 +77,72 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelCognome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelNomeCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelNomeCliente.setObjectName(u"labelNomeCliente")
-        self.labelNomeCliente.setGeometry(QRect(180, 120, 131, 20))
+        self.labelNomeCliente.setGeometry(QRect(180, 130, 131, 20))
         self.labelNomeCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelCognomeCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelCognomeCliente.setObjectName(u"labelCognomeCliente")
-        self.labelCognomeCliente.setGeometry(QRect(330, 120, 131, 20))
+        self.labelCognomeCliente.setGeometry(QRect(330, 130, 171, 20))
         self.labelCognomeCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelCodiceFiscale = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelCodiceFiscale.setObjectName(u"labelCodiceFiscale")
-        self.labelCodiceFiscale.setGeometry(QRect(40, 180, 111, 20))
+        self.labelCodiceFiscale.setGeometry(QRect(30, 180, 111, 20))
         self.labelCodiceFiscale.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelCodiceFiscaleCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelCodiceFiscaleCliente.setObjectName(u"labelCodiceFiscaleCliente")
-        self.labelCodiceFiscaleCliente.setGeometry(QRect(40, 200, 131, 20))
+        self.labelCodiceFiscaleCliente.setGeometry(QRect(30, 210, 131, 20))
         self.labelCodiceFiscaleCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelEmail = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelEmail.setObjectName(u"labelEmail")
-        self.labelEmail.setGeometry(QRect(40, 240, 81, 20))
+        self.labelEmail.setGeometry(QRect(30, 250, 81, 20))
         self.labelEmail.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelEmailCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelEmailCliente.setObjectName(u"labelEmailCliente")
-        self.labelEmailCliente.setGeometry(QRect(40, 260, 191, 20))
+        self.labelEmailCliente.setGeometry(QRect(30, 280, 191, 20))
         self.labelEmailCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelTelefono = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelTelefono.setObjectName(u"labelTelefono")
-        self.labelTelefono.setGeometry(QRect(40, 300, 81, 20))
+        self.labelTelefono.setGeometry(QRect(30, 320, 81, 20))
         self.labelTelefono.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelTelefono.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTelefonoCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelTelefonoCliente.setObjectName(u"labelTelefonoCliente")
-        self.labelTelefonoCliente.setGeometry(QRect(40, 320, 101, 20))
+        self.labelTelefonoCliente.setGeometry(QRect(30, 350, 101, 20))
         self.labelTelefonoCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelPunti = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelPunti.setObjectName(u"labelPunti")
-        self.labelPunti.setGeometry(QRect(40, 360, 81, 20))
+        self.labelPunti.setGeometry(QRect(30, 400, 81, 20))
         self.labelPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPuntiCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
-        self.labelPuntiCliente.setGeometry(QRect(40, 380, 81, 20))
+        self.labelPuntiCliente.setGeometry(QRect(30, 430, 81, 20))
         self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaClienteAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelPagamenti = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelPagamenti.setObjectName(u"labelPagamenti")
@@ -153,27 +153,27 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelPagamenti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelRecensioni = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelRecensioni.setObjectName(u"labelRecensioni")
-        self.labelRecensioni.setGeometry(QRect(260, 330, 111, 20))
+        self.labelRecensioni.setGeometry(QRect(260, 320, 111, 20))
         self.labelRecensioni.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelRecensioni.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataNascita = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelDataNascita.setObjectName(u"labelDataNascita")
-        self.labelDataNascita.setGeometry(QRect(480, 100, 111, 20))
+        self.labelDataNascita.setGeometry(QRect(520, 100, 111, 20))
         self.labelDataNascita.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataNascitaCliente = QLabel(VistaVisualizzaClienteAmministratore)
         self.labelDataNascitaCliente.setObjectName(u"labelDataNascitaCliente")
-        self.labelDataNascitaCliente.setGeometry(QRect(480, 120, 101, 20))
+        self.labelDataNascitaCliente.setGeometry(QRect(520, 130, 101, 20))
         self.labelDataNascitaCliente.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.tableViewPagamentiCliente = QTableView(VistaVisualizzaClienteAmministratore)
         self.tableViewPagamentiCliente.setObjectName(u"tableViewPagamentiCliente")
-        self.tableViewPagamentiCliente.setGeometry(QRect(260, 200, 461, 111))
+        self.tableViewPagamentiCliente.setGeometry(QRect(260, 210, 501, 101))
         self.tableViewPagamentiCliente.setStyleSheet(u"QTableView {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -248,7 +248,7 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.tableViewPagamentiCliente.verticalHeader().setHighlightSections(False)
         self.tableViewRecensioniCliente = QTableView(VistaVisualizzaClienteAmministratore)
         self.tableViewRecensioniCliente.setObjectName(u"tableViewRecensioniCliente")
-        self.tableViewRecensioniCliente.setGeometry(QRect(260, 350, 461, 111))
+        self.tableViewRecensioniCliente.setGeometry(QRect(260, 350, 501, 111))
         self.tableViewRecensioniCliente.setStyleSheet(u"QTableView {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"

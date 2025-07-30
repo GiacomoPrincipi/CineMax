@@ -36,8 +36,8 @@ class Ui_VistaVisualizzaAmministratoriAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelTitolo = QLabel(VistaVisualizzaAmministratoriAmministratore)
@@ -49,13 +49,13 @@ class Ui_VistaVisualizzaAmministratoriAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #501400;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaAmministratoriAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaAmministratoriAmministratore)
         self.labelBarra.setObjectName(u"labelBarra")
@@ -64,9 +64,13 @@ class Ui_VistaVisualizzaAmministratoriAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #962D00,\n"
-"        stop: 1 #B43700\n"
+"        stop: 0 #961E00,\n"
+"        stop: 1 #B42100\n"
 "    );\n"
+"    border: 1px solid #D7320C;\n"
+"    border-top: none;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
 "}")
         self.pushButtonInserisci = QPushButton(VistaVisualizzaAmministratoriAmministratore)
         self.pushButtonInserisci.setObjectName(u"pushButtonInserisci")
@@ -76,6 +80,10 @@ class Ui_VistaVisualizzaAmministratoriAmministratore(object):
 "    color: #FF3C00;\n"
 "    border: 2px solid #501400;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -156,8 +164,8 @@ class Ui_VistaVisualizzaAmministratoriAmministratore(object):
         self.tableViewAmministratori.verticalHeader().setMinimumSectionSize(25)
         self.tableViewAmministratori.verticalHeader().setDefaultSectionSize(25)
         self.tableViewAmministratori.verticalHeader().setHighlightSections(False)
-        self.labelBarra.raise_()
         self.Sfondo.raise_()
+        self.labelBarra.raise_()
         self.labelTitolo.raise_()
         self.labelIndietroButton.raise_()
         self.tableViewAmministratori.raise_()

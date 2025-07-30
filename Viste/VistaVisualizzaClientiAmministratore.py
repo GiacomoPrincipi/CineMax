@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from ui_VistaVisualizzaClientiAmministratore import Ui_VistaVisualizzaClientiAmministratore
@@ -19,17 +19,20 @@ class VistaVisualizzaClientiAmministratore(QWidget):
         self.ui.tableViewClienti.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewClienti.horizontalHeader().setFixedHeight(25)
         self.ui.tableViewClienti.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.ui.tableViewClienti.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def showEvent(self, event):
         super().showEvent(event)
 
+        self.ui.tableViewClienti.verticalScrollBar().setValue(self.ui.tableViewClienti.verticalScrollBar().minimum())
+
         gestoreClienti = GestoreClienti()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Nome:", "Cognome:", "Codice Fiscale:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Codice Fiscale:", "Nome:", "Cognome:", "Data di Nascita:", "Email:", "Telefono:"])
 
         for cliente in gestoreClienti.getListaClienti():
-            self.modelloTabella.appendRow([QStandardItem(cliente.getNome()), QStandardItem(cliente.getCognome()), QStandardItem(cliente.getCodiceFiscale())])
+            self.modelloTabella.appendRow([QStandardItem(cliente.getCodiceFiscale()), QStandardItem(cliente.getNome()), QStandardItem(cliente.getCognome()), QStandardItem(cliente.getDataNascita().toString("dd/MM/yyyy")), QStandardItem(cliente.getEmail()), QStandardItem(cliente.getTelefono())])
 
         self.ui.tableViewClienti.setModel(self.modelloTabella)
         self.ui.tableViewClienti.doubleClicked.connect(self.apriCliente)

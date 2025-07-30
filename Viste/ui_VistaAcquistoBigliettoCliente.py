@@ -33,14 +33,14 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"                stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelIconaFotoCliente = QLabel(VistaAcquistoBigliettoCliente)
         self.labelIconaFotoCliente.setObjectName(u"labelIconaFotoCliente")
-        self.labelIconaFotoCliente.setGeometry(QRect(40, 30, 121, 121))
-        self.labelIconaFotoCliente.setPixmap(QPixmap(u"Immagini/IconaFotoCliente.png"))
+        self.labelIconaFotoCliente.setGeometry(QRect(30, 30, 131, 131))
+        self.labelIconaFotoCliente.setPixmap(QPixmap(u"Viste/Immagini/IconaFotoCliente.png"))
         self.labelIconaFotoCliente.setScaledContents(True)
         self.labelTitolo = QLabel(VistaAcquistoBigliettoCliente)
         self.labelTitolo.setObjectName(u"labelTitolo")
@@ -51,33 +51,33 @@ class Ui_VistaAcquistoBigliettoCliente(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C8B400;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPosto = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPosto.setObjectName(u"labelPosto")
-        self.labelPosto.setGeometry(QRect(40, 180, 111, 20))
+        self.labelPosto.setGeometry(QRect(180, 100, 61, 20))
         self.labelPosto.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelPosto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTipo = QLabel(VistaAcquistoBigliettoCliente)
         self.labelTipo.setObjectName(u"labelTipo")
-        self.labelTipo.setGeometry(QRect(40, 240, 81, 20))
+        self.labelTipo.setGeometry(QRect(30, 190, 81, 20))
         self.labelTipo.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTipo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTipoPagamento = QLabel(VistaAcquistoBigliettoCliente)
         self.labelTipoPagamento.setObjectName(u"labelTipoPagamento")
-        self.labelTipoPagamento.setGeometry(QRect(40, 300, 171, 20))
+        self.labelTipoPagamento.setGeometry(QRect(30, 260, 171, 20))
         self.labelTipoPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTipoPagamento.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPrezzo = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPrezzo.setObjectName(u"labelPrezzo")
-        self.labelPrezzo.setGeometry(QRect(40, 360, 81, 20))
+        self.labelPrezzo.setGeometry(QRect(30, 330, 81, 20))
         self.labelPrezzo.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
@@ -90,6 +90,10 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -106,25 +110,29 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
 "}\n"
 "")
         self.labelPostoBiglietto = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPostoBiglietto.setObjectName(u"labelPostoBiglietto")
-        self.labelPostoBiglietto.setGeometry(QRect(40, 200, 51, 20))
+        self.labelPostoBiglietto.setGeometry(QRect(180, 130, 51, 20))
         self.labelPostoBiglietto.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelPrezzoBiglietto = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPrezzoBiglietto.setObjectName(u"labelPrezzoBiglietto")
-        self.labelPrezzoBiglietto.setGeometry(QRect(40, 380, 71, 20))
+        self.labelPrezzoBiglietto.setGeometry(QRect(30, 360, 91, 20))
         self.labelPrezzoBiglietto.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.comboBoxTipo = QComboBox(VistaAcquistoBigliettoCliente)
         self.comboBoxTipo.setObjectName(u"comboBoxTipo")
-        self.comboBoxTipo.setGeometry(QRect(40, 260, 76, 26))
+        self.comboBoxTipo.setGeometry(QRect(30, 220, 76, 26))
         self.comboBoxTipo.setStyleSheet(u"QComboBox {\n"
 "    background-color: #321E00;\n"
 "    color: #965A00;\n"
@@ -145,7 +153,7 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "}")
         self.comboBoxTipoPagamento = QComboBox(VistaAcquistoBigliettoCliente)
         self.comboBoxTipoPagamento.setObjectName(u"comboBoxTipoPagamento")
-        self.comboBoxTipoPagamento.setGeometry(QRect(40, 320, 76, 26))
+        self.comboBoxTipoPagamento.setGeometry(QRect(30, 290, 76, 26))
         self.comboBoxTipoPagamento.setStyleSheet(u"QComboBox {\n"
 "    background-color: #321E00;\n"
 "    color: #965A00;\n"
@@ -166,47 +174,47 @@ class Ui_VistaAcquistoBigliettoCliente(object):
 "}")
         self.labelPrezzoPunti = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
-        self.labelPrezzoPunti.setGeometry(QRect(180, 360, 121, 20))
+        self.labelPrezzoPunti.setGeometry(QRect(180, 330, 121, 20))
         self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPrezzoPuntiBiglietto = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPrezzoPuntiBiglietto.setObjectName(u"labelPrezzoPuntiBiglietto")
-        self.labelPrezzoPuntiBiglietto.setGeometry(QRect(180, 380, 71, 20))
+        self.labelPrezzoPuntiBiglietto.setGeometry(QRect(180, 360, 111, 20))
         self.labelPrezzoPuntiBiglietto.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelErroreTipo = QLabel(VistaAcquistoBigliettoCliente)
         self.labelErroreTipo.setObjectName(u"labelErroreTipo")
-        self.labelErroreTipo.setGeometry(QRect(130, 260, 191, 20))
+        self.labelErroreTipo.setGeometry(QRect(120, 220, 191, 20))
         self.labelErroreTipo.setStyleSheet(u"QLabel {\n"
 "    color: #FFFF00;\n"
 "}")
         self.labelErroreTipo.setScaledContents(False)
         self.labelErroreTipoPagamento = QLabel(VistaAcquistoBigliettoCliente)
         self.labelErroreTipoPagamento.setObjectName(u"labelErroreTipoPagamento")
-        self.labelErroreTipoPagamento.setGeometry(QRect(130, 320, 191, 20))
+        self.labelErroreTipoPagamento.setGeometry(QRect(120, 290, 191, 20))
         self.labelErroreTipoPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #FFFF00;\n"
 "}")
         self.labelErroreTipoPagamento.setScaledContents(False)
         self.labelPunti = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPunti.setObjectName(u"labelPunti")
-        self.labelPunti.setGeometry(QRect(40, 420, 81, 20))
+        self.labelPunti.setGeometry(QRect(30, 400, 81, 20))
         self.labelPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPuntiCliente = QLabel(VistaAcquistoBigliettoCliente)
         self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
-        self.labelPuntiCliente.setGeometry(QRect(40, 440, 71, 20))
+        self.labelPuntiCliente.setGeometry(QRect(30, 430, 71, 20))
         self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelErrorePuntiInsufficenti = QLabel(VistaAcquistoBigliettoCliente)
         self.labelErrorePuntiInsufficenti.setObjectName(u"labelErrorePuntiInsufficenti")
-        self.labelErrorePuntiInsufficenti.setGeometry(QRect(190, 440, 191, 20))
+        self.labelErrorePuntiInsufficenti.setGeometry(QRect(110, 430, 191, 20))
         self.labelErrorePuntiInsufficenti.setStyleSheet(u"QLabel {\n"
 "    color: #FFFF00;\n"
 "}")

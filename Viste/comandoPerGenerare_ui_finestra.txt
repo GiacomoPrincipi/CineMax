@@ -1,3 +1,1 @@
-cd C:\Users\hp\Desktop\CineMax-main\CineMax-main\Viste
-
-pyside6-uic finestra.ui -o ui_finestra.py
+pyside6-uic Vista.ui -o ui_Vista.py

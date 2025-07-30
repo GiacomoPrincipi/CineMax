@@ -34,7 +34,7 @@ class Ui_VistaLoginAmministratore(object):
         font.setBold(True)
         self.labelTitolo.setFont(font)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.pushButtonAccedi = QPushButton(VistaLoginAmministratore)
@@ -45,6 +45,10 @@ class Ui_VistaLoginAmministratore(object):
 "    color: #FF3C00;\n"
 "    border: 2px solid #501400;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -90,6 +94,10 @@ class Ui_VistaLoginAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
@@ -103,14 +111,14 @@ class Ui_VistaLoginAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaLoginAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelErroreEmail = QLabel(VistaLoginAmministratore)
         self.labelErroreEmail.setObjectName(u"labelErroreEmail")
@@ -157,8 +165,8 @@ class Ui_VistaLoginAmministratore(object):
         self.pushButtonAccedi.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Accedi", None))
         self.lineEditEmail.setText("")
         self.lineEditPassword.setText("")
-        self.labelEmail.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Email", None))
-        self.labelPassword.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Password", None))
+        self.labelEmail.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Email:", None))
+        self.labelPassword.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Password:", None))
         self.pushButtonRecuperoPassword.setText(QCoreApplication.translate("VistaLoginAmministratore", u"Recupero Password", None))
         self.Sfondo.setText("")
         self.labelIndietroButton.setText("")

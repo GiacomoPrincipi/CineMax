@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-		stop: 0 #321E00,
-        stop: 1 #643C00
+		stop: 0 #211400,
+        stop: 1 #7D4B00
     );
 }</string>
    </property>
@@ -86,7 +86,7 @@
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>291</width>
+     <width>181</width>
      <height>71</height>
     </rect>
    </property>
@@ -99,7 +99,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C8B400;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -131,8 +131,8 @@
   <widget class="QLabel" name="labelIngredienti">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -153,7 +153,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>120</y>
+     <y>130</y>
      <width>221</width>
      <height>20</height>
     </rect>
@@ -170,8 +170,8 @@
   <widget class="QLabel" name="labelIngredientiProdotto">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>220</y>
      <width>511</width>
      <height>20</height>
     </rect>
@@ -188,8 +188,8 @@
   <widget class="QLabel" name="labelAllergeni">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>260</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -209,8 +209,8 @@
   <widget class="QLabel" name="labelAllergeniProdotto">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
+     <x>30</x>
+     <y>290</y>
      <width>401</width>
      <height>20</height>
     </rect>
@@ -227,8 +227,8 @@
   <widget class="QLabel" name="labelPrezzo">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>300</y>
+     <x>30</x>
+     <y>330</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -248,8 +248,8 @@
   <widget class="QLabel" name="labelPrezzoProdotto">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>320</y>
+     <x>30</x>
+     <y>360</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -285,8 +285,8 @@
   <widget class="QLabel" name="labelPrezzoPunti">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>300</y>
+     <x>180</x>
+     <y>330</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -306,9 +306,9 @@
   <widget class="QLabel" name="labelPrezzoPuntiProdotto">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>320</y>
-     <width>111</width>
+     <x>180</x>
+     <y>360</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
@@ -336,6 +336,10 @@
     color: #FF7800;
     border: 2px solid #502800;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {

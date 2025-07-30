@@ -32,25 +32,26 @@ class VistaLoginAmministratore(QWidget):
         self.ui.labelErroreEmail.setText("")
         self.ui.labelErrorePassword.setText("")
 
-        email = self.ui.lineEditEmail.text()
+        email = self.ui.lineEditEmail.text().lower()
         password = self.ui.lineEditPassword.text()
 
-        if email == "" or password == "":
-            if email == "":
-                self.ui.labelErroreEmail.setText("Inserisci l'email!")
-            elif "@" not in email:
-                self.ui.labelErroreEmail.setText("Email non Valida!")
-            if password == "":
-                self.ui.labelErrorePassword.setText("Inserisci la password!")
-            return
+        esito = False
 
-        if "@" not in email:
+        if email == "":
+            self.ui.labelErroreEmail.setText("Inserisci l'email!")
+            esito = True
+        elif not GestoreAutenticazione.controlloStrutturaEmail(email):
             self.ui.labelErroreEmail.setText("Email non Valida!")
-            return
+            esito = True
+        if password == "":
+            self.ui.labelErrorePassword.setText("Inserisci la password!")
+            esito = True
+
+        if esito: return
 
         gestoreAmministratori = GestoreAmministratori()
 
-        esito = GestoreAutenticazione.controlloEmail(gestoreAmministratori.listaAmministratori, email)
+        esito = GestoreAutenticazione.controlloEmail(gestoreAmministratori.getListaAmministratori(), email)
         if esito:
             amministratore = gestoreAmministratori.getAmministratore(email)
             self.statoLogin.loginAmministratore(amministratore)
@@ -73,18 +74,22 @@ class VistaLoginAmministratore(QWidget):
         self.ui.labelErrorePassword.setText("")
         self.ui.labelRecuperoPassword.setText("")
 
-        email = self.ui.lineEditEmail.text()
+        email = self.ui.lineEditEmail.text().lower()
+
+        esito = False
 
         if email == "":
             self.ui.labelErroreEmail.setText("Inserisci l'email!")
-            return
-        elif "@" not in email:
+            esito = True
+        elif not GestoreAutenticazione.controlloStrutturaEmail(email):
             self.ui.labelErroreEmail.setText("Email non Valida!")
-            return
+            esito = True
+
+        if esito: return
 
         gestoreAmministratori = GestoreAmministratori()
 
-        esito = GestoreAutenticazione.controlloEmail(gestoreAmministratori.listaAmministratori, email)
+        esito = GestoreAutenticazione.controlloEmail(gestoreAmministratori.getListaAmministratori(), email)
         if esito:
             amministratore = gestoreAmministratori.getAmministratore(email)
             GestoreAutenticazione.invioEmailRecuperoPassword(amministratore)

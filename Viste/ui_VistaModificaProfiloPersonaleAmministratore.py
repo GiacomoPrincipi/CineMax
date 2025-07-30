@@ -33,14 +33,14 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelProfilo = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfilo.setGeometry(QRect(30, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Viste/Immagini/profiloButtonAmministratore.png"))
         self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelNome.setObjectName(u"labelNome")
@@ -58,7 +58,7 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelCognome = QLabel(VistaModificaProfiloPersonaleAmministratore)
@@ -70,28 +70,28 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
         self.labelCognome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataNascita = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelDataNascita.setObjectName(u"labelDataNascita")
-        self.labelDataNascita.setGeometry(QRect(560, 100, 121, 20))
+        self.labelDataNascita.setGeometry(QRect(520, 100, 121, 20))
         self.labelDataNascita.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelEmail = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelEmail.setObjectName(u"labelEmail")
-        self.labelEmail.setGeometry(QRect(40, 260, 81, 20))
+        self.labelEmail.setGeometry(QRect(30, 250, 81, 20))
         self.labelEmail.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTelefono = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelTelefono.setObjectName(u"labelTelefono")
-        self.labelTelefono.setGeometry(QRect(40, 340, 81, 20))
+        self.labelTelefono.setGeometry(QRect(30, 320, 81, 20))
         self.labelTelefono.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelTelefono.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditEmail = QLineEdit(VistaModificaProfiloPersonaleAmministratore)
         self.lineEditEmail.setObjectName(u"lineEditEmail")
-        self.lineEditEmail.setGeometry(QRect(40, 290, 231, 26))
+        self.lineEditEmail.setGeometry(QRect(30, 280, 251, 26))
         self.lineEditEmail.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -100,7 +100,7 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "}")
         self.lineEditTelefono = QLineEdit(VistaModificaProfiloPersonaleAmministratore)
         self.lineEditTelefono.setObjectName(u"lineEditTelefono")
-        self.lineEditTelefono.setGeometry(QRect(40, 370, 111, 26))
+        self.lineEditTelefono.setGeometry(QRect(30, 350, 101, 26))
         self.lineEditTelefono.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -118,7 +118,7 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "}")
         self.lineEditCognome = QLineEdit(VistaModificaProfiloPersonaleAmministratore)
         self.lineEditCognome.setObjectName(u"lineEditCognome")
-        self.lineEditCognome.setGeometry(QRect(330, 130, 191, 26))
+        self.lineEditCognome.setGeometry(QRect(330, 130, 171, 26))
         self.lineEditCognome.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -127,7 +127,7 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "}")
         self.pushButtonConferma = QPushButton(VistaModificaProfiloPersonaleAmministratore)
         self.pushButtonConferma.setObjectName(u"pushButtonConferma")
-        self.pushButtonConferma.setGeometry(QRect(680, 450, 91, 29))
+        self.pushButtonConferma.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonConferma.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -135,12 +135,16 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.pushButtonAnnulla = QPushButton(VistaModificaProfiloPersonaleAmministratore)
         self.pushButtonAnnulla.setObjectName(u"pushButtonAnnulla")
-        self.pushButtonAnnulla.setGeometry(QRect(570, 450, 91, 29))
+        self.pushButtonAnnulla.setGeometry(QRect(560, 440, 91, 29))
         self.pushButtonAnnulla.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -148,32 +152,36 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.labelMatricola = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelMatricola.setObjectName(u"labelMatricola")
-        self.labelMatricola.setGeometry(QRect(40, 180, 81, 20))
+        self.labelMatricola.setGeometry(QRect(30, 180, 81, 20))
         self.labelMatricola.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelMatricola.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelMatricolaAmministratore = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelMatricolaAmministratore.setObjectName(u"labelMatricolaAmministratore")
-        self.labelMatricolaAmministratore.setGeometry(QRect(40, 210, 81, 20))
+        self.labelMatricolaAmministratore.setGeometry(QRect(30, 210, 111, 20))
         self.labelMatricolaAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelPassword = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelPassword.setObjectName(u"labelPassword")
-        self.labelPassword.setGeometry(QRect(40, 420, 81, 20))
+        self.labelPassword.setGeometry(QRect(30, 400, 81, 20))
         self.labelPassword.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPassword.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditPassword = QLineEdit(VistaModificaProfiloPersonaleAmministratore)
         self.lineEditPassword.setObjectName(u"lineEditPassword")
-        self.lineEditPassword.setGeometry(QRect(40, 450, 191, 26))
+        self.lineEditPassword.setGeometry(QRect(30, 430, 191, 26))
         self.lineEditPassword.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -182,14 +190,14 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "}")
         self.labelConfermaPassword = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelConfermaPassword.setObjectName(u"labelConfermaPassword")
-        self.labelConfermaPassword.setGeometry(QRect(250, 420, 141, 20))
+        self.labelConfermaPassword.setGeometry(QRect(260, 400, 141, 20))
         self.labelConfermaPassword.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelConfermaPassword.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditConfermaPassword = QLineEdit(VistaModificaProfiloPersonaleAmministratore)
         self.lineEditConfermaPassword.setObjectName(u"lineEditConfermaPassword")
-        self.lineEditConfermaPassword.setGeometry(QRect(250, 450, 191, 26))
+        self.lineEditConfermaPassword.setGeometry(QRect(260, 430, 191, 26))
         self.lineEditConfermaPassword.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -198,25 +206,20 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
 "}")
         self.dateEditDataNascita = QDateEdit(VistaModificaProfiloPersonaleAmministratore)
         self.dateEditDataNascita.setObjectName(u"dateEditDataNascita")
-        self.dateEditDataNascita.setGeometry(QRect(560, 130, 110, 26))
+        self.dateEditDataNascita.setGeometry(QRect(520, 130, 110, 26))
         self.dateEditDataNascita.setStyleSheet(u"QDateEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
 "    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"	transition: border-color 1.5s ease;\n"
 "}\n"
 "\n"
-"QDateEdit:focus {\n"
-"	border-color:#FF3C00;\n"
-"	transition: border-color 1.5s ease;\n"
-"}\n"
 "\n"
 "")
         self.dateEditDataNascita.setDateTime(QDateTime(QDate(1950, 1, 1), QTime(22, 0, 0)))
         self.dateEditDataNascita.setTime(QTime(22, 0, 0))
-        self.dateEditDataNascita.setMaximumDateTime(QDateTime(QDate(2050, 12, 12), QTime(18, 59, 59)))
-        self.dateEditDataNascita.setMinimumDateTime(QDateTime(QDate(1949, 12, 31), QTime(21, 0, 0)))
+        self.dateEditDataNascita.setMaximumDateTime(QDateTime(QDate(2050, 12, 12), QTime(16, 59, 59)))
+        self.dateEditDataNascita.setMinimumDateTime(QDateTime(QDate(1949, 12, 31), QTime(19, 0, 0)))
         self.labelErroreNome = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErroreNome.setObjectName(u"labelErroreNome")
         self.labelErroreNome.setGeometry(QRect(180, 160, 121, 20))
@@ -233,28 +236,28 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
         self.labelErroreCognome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreDataNascita = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErroreDataNascita.setObjectName(u"labelErroreDataNascita")
-        self.labelErroreDataNascita.setGeometry(QRect(560, 160, 121, 20))
+        self.labelErroreDataNascita.setGeometry(QRect(520, 160, 121, 20))
         self.labelErroreDataNascita.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreEmail = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErroreEmail.setObjectName(u"labelErroreEmail")
-        self.labelErroreEmail.setGeometry(QRect(280, 290, 121, 20))
+        self.labelErroreEmail.setGeometry(QRect(290, 280, 121, 20))
         self.labelErroreEmail.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreTelefono = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErroreTelefono.setObjectName(u"labelErroreTelefono")
-        self.labelErroreTelefono.setGeometry(QRect(160, 370, 211, 20))
+        self.labelErroreTelefono.setGeometry(QRect(150, 350, 211, 20))
         self.labelErroreTelefono.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreTelefono.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErrorePassword = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErrorePassword.setObjectName(u"labelErrorePassword")
-        self.labelErrorePassword.setGeometry(QRect(110, 420, 141, 20))
+        self.labelErrorePassword.setGeometry(QRect(30, 460, 141, 20))
         self.labelErrorePassword.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
@@ -262,14 +265,14 @@ class Ui_VistaModificaProfiloPersonaleAmministratore(object):
         self.labelErrorePassword.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreConfermaPassword = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErroreConfermaPassword.setObjectName(u"labelErroreConfermaPassword")
-        self.labelErroreConfermaPassword.setGeometry(QRect(390, 420, 221, 20))
+        self.labelErroreConfermaPassword.setGeometry(QRect(260, 460, 221, 20))
         self.labelErroreConfermaPassword.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreConfermaPassword.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErrorePassword2 = QLabel(VistaModificaProfiloPersonaleAmministratore)
         self.labelErrorePassword2.setObjectName(u"labelErrorePassword2")
-        self.labelErrorePassword2.setGeometry(QRect(40, 400, 681, 20))
+        self.labelErrorePassword2.setGeometry(QRect(30, 380, 681, 20))
         font2 = QFont()
         font2.setPointSize(7)
         self.labelErrorePassword2.setFont(font2)

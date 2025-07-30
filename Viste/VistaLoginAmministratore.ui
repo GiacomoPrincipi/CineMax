@@ -31,7 +31,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #D7320C;
 }</string>
    </property>
    <property name="text">
@@ -56,6 +56,10 @@
     color: #FF3C00;
     border: 2px solid #501400;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {
@@ -123,7 +127,7 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Email</string>
+    <string>Email:</string>
    </property>
   </widget>
   <widget class="QLabel" name="labelPassword">
@@ -141,7 +145,7 @@ QPushButton:hover {
 }</string>
    </property>
    <property name="text">
-    <string>Password</string>
+    <string>Password:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButtonRecuperoPassword">
@@ -159,6 +163,10 @@ QPushButton:hover {
     color: #FF3C00;
     border: 2px solid #501400;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {
@@ -188,8 +196,8 @@ QPushButton:hover {
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+        stop: 0 #210A00,
+        stop: 1 #7D2100
     );
 }</string>
    </property>

@@ -9,6 +9,8 @@ class VistaVisualizzaPagamentoCliente(QWidget):
         self.ui = Ui_VistaVisualizzaPagamentoCliente()
         self.ui.setupUi(self)
 
+        self.statoLogin = statoLogin
+
         self.ui.labelHomeButton.clicked.connect(goVistaHomeCliente)
         self.ui.labelIndietroButton.clicked.connect(goVistaVisualizzaPagamentiCliente)
 
@@ -23,7 +25,9 @@ class VistaVisualizzaPagamentoCliente(QWidget):
             testo = pagamentoCliente.getArticolo().getNome()
 
         self.ui.labelNomePagamento.setText(testo)
+        self.ui.labelIdPagamento.setText(pagamentoCliente.getId())
         self.ui.labelDataPagamento.setText(pagamentoCliente.getData().toString("dd/MM/yyyy"))
         self.ui.labelOraPagamento.setText(pagamentoCliente.getOra().toString("HH:mm:ss"))
         self.ui.labelTipoPagamento.setText(pagamentoCliente.getTipo())
         self.ui.labelImportoPagamento.setText(f"{pagamentoCliente.getImporto()} €")
+        self.ui.labelImportoPuntiPagamento.setText(f"{pagamentoCliente.getImportoPunti()} Punti")

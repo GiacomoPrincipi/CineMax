@@ -33,8 +33,8 @@ class Ui_VistaInserisciRecensioneCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"                stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelTitolo = QLabel(VistaInserisciRecensioneCliente)
@@ -46,36 +46,40 @@ class Ui_VistaInserisciRecensioneCliente(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C8B400;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTipo = QLabel(VistaInserisciRecensioneCliente)
         self.labelTipo.setObjectName(u"labelTipo")
-        self.labelTipo.setGeometry(QRect(40, 190, 81, 20))
+        self.labelTipo.setGeometry(QRect(30, 190, 81, 20))
         self.labelTipo.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTipo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelProfilo = QLabel(VistaInserisciRecensioneCliente)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(40, 50, 121, 121))
-        self.labelProfilo.setPixmap(QPixmap(u"Immagini/RecensioneIconCliente.png"))
+        self.labelProfilo.setGeometry(QRect(40, 40, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Viste/Immagini/RecensioneIconCliente.png"))
         self.labelProfilo.setScaledContents(True)
         self.labelTesto = QLabel(VistaInserisciRecensioneCliente)
         self.labelTesto.setObjectName(u"labelTesto")
-        self.labelTesto.setGeometry(QRect(220, 190, 81, 20))
+        self.labelTesto.setGeometry(QRect(290, 190, 81, 20))
         self.labelTesto.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTesto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.pushButtonConferma = QPushButton(VistaInserisciRecensioneCliente)
         self.pushButtonConferma.setObjectName(u"pushButtonConferma")
-        self.pushButtonConferma.setGeometry(QRect(670, 450, 91, 29))
+        self.pushButtonConferma.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonConferma.setStyleSheet(u"QPushButton {\n"
 "    background-color: #963C00;\n"
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -84,12 +88,16 @@ class Ui_VistaInserisciRecensioneCliente(object):
 "")
         self.pushButtonAnnulla = QPushButton(VistaInserisciRecensioneCliente)
         self.pushButtonAnnulla.setObjectName(u"pushButtonAnnulla")
-        self.pushButtonAnnulla.setGeometry(QRect(560, 450, 91, 29))
+        self.pushButtonAnnulla.setGeometry(QRect(560, 440, 91, 29))
         self.pushButtonAnnulla.setStyleSheet(u"QPushButton {\n"
 "    background-color: #963C00;\n"
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -98,7 +106,7 @@ class Ui_VistaInserisciRecensioneCliente(object):
 "")
         self.comboBoxStelle = QComboBox(VistaInserisciRecensioneCliente)
         self.comboBoxStelle.setObjectName(u"comboBoxStelle")
-        self.comboBoxStelle.setGeometry(QRect(40, 210, 76, 26))
+        self.comboBoxStelle.setGeometry(QRect(30, 220, 76, 26))
         self.comboBoxStelle.setStyleSheet(u"QComboBox {\n"
 "    background-color: #321E00;\n"
 "    color: #965A00;\n"
@@ -119,23 +127,46 @@ class Ui_VistaInserisciRecensioneCliente(object):
 "}")
         self.textEditTesto = QTextEdit(VistaInserisciRecensioneCliente)
         self.textEditTesto.setObjectName(u"textEditTesto")
-        self.textEditTesto.setGeometry(QRect(220, 210, 401, 201))
+        self.textEditTesto.setGeometry(QRect(290, 220, 401, 191))
         self.textEditTesto.setStyleSheet(u"QTextEdit {\n"
 "    background-color: #321E00;\n"
 "    color: #965A00;\n"
 "    border: 1px solid #190E00;\n"
 "    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextEdit QScrollBar:vertical {\n"
+"        background: #B46E00;\n"
+"        border: 2px solid #190E00;\n"
+"        border-radius: 4px;\n"
+"        width: 21px;\n"
+"        margin: 5px;\n"
+"}\n"
+"\n"
+"QTextEdit QScrollBar::handle:vertical {\n"
+"	background: #965A00;\n"
+"    min-height: 20px;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextEdit QScrollBar::handle:vertical:hover {\n"
+"     background: #C86400;\n"
+"}\n"
+"\n"
+"QTextEdit QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
 "}")
         self.labelErroreStelle = QLabel(VistaInserisciRecensioneCliente)
         self.labelErroreStelle.setObjectName(u"labelErroreStelle")
-        self.labelErroreStelle.setGeometry(QRect(40, 240, 141, 20))
+        self.labelErroreStelle.setGeometry(QRect(30, 250, 141, 20))
         self.labelErroreStelle.setStyleSheet(u"QLabel {\n"
 "    color: #FFFF00;\n"
 "}")
         self.labelErroreStelle.setScaledContents(False)
         self.labelErroreTesto = QLabel(VistaInserisciRecensioneCliente)
         self.labelErroreTesto.setObjectName(u"labelErroreTesto")
-        self.labelErroreTesto.setGeometry(QRect(290, 190, 191, 20))
+        self.labelErroreTesto.setGeometry(QRect(290, 410, 191, 20))
         self.labelErroreTesto.setStyleSheet(u"QLabel {\n"
 "    color: #FFFF00;\n"
 "}")

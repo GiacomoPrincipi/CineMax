@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from ui_VistaVisualizzaProdottoAmministratore import Ui_VistaVisualizzaProdottoAmministratore
+from Gestione.GestoreProdotti import GestoreProdotti
 
 class VistaVisualizzaProdottoAmministratore(QWidget):
     def __init__(self, statoLogin, goVistaHomeAmministratore, goVistaVisualizzaProdottiAmministratore, goVistaModificaProdottoAmministratore, parent = None):
@@ -9,11 +10,13 @@ class VistaVisualizzaProdottoAmministratore(QWidget):
 
         self.statoLogin = statoLogin
 
+        self.goVistaVisualizzaProdottiAmministratore = goVistaVisualizzaProdottiAmministratore
         self.goVistaModificaProdottoAmministratore = goVistaModificaProdottoAmministratore
 
         self.ui.labelHomeButton.clicked.connect(goVistaHomeAmministratore)
         self.ui.labelIndietroButton.clicked.connect(goVistaVisualizzaProdottiAmministratore)
         self.ui.pushButtonModifica.clicked.connect(self.modifica)
+        self.ui.pushButtonElimina.clicked.connect(self.elimina)
 
     def showEvent(self, event):
         super().showEvent(event)
@@ -35,3 +38,11 @@ class VistaVisualizzaProdottoAmministratore(QWidget):
         prodottoAmministratore = self.prodottoAmministratore
 
         self.goVistaModificaProdottoAmministratore(prodottoAmministratore)
+
+    def elimina(self):
+        prodottoAmministratore = self.prodottoAmministratore
+        gestoreProdotti = GestoreProdotti()
+
+        gestoreProdotti.rimuoviProdotto(prodottoAmministratore)
+
+        self.goVistaVisualizzaProdottiAmministratore()

@@ -23,10 +23,10 @@ class VistaModificaRecensioneCliente(QWidget):
     def showEvent(self, event):
         super().showEvent(event)
 
-        recensione = self.recensioneCliente
+        recensioneCliente = self.recensioneCliente
 
-        self.ui.comboBoxStelle.setCurrentText(recensione.getStelle())
-        self.ui.textEditTesto.setText(recensione.getTesto())
+        self.ui.comboBoxStelle.setCurrentText(str(recensioneCliente.getStelle()))
+        self.ui.textEditTesto.setText(recensioneCliente.getTesto())
 
         self.ui.labelErroreStelle.setText("")
         self.ui.labelErroreTesto.setText("")
@@ -43,28 +43,29 @@ class VistaModificaRecensioneCliente(QWidget):
         data = QDate.currentDate()
         ora = QTime.currentTime()
 
-        gestoreRecensioni = GestoreRecensioni()
+        esito = False
 
-        if self.ui.comboBoxStelle.currentIndex() == 0 or testo == "":
-            if self.ui.comboBoxStelle.currentIndex() == 0:
-                self.ui.labelErroreStelle.setText("Inserisci la valutazione!")
-            if testo == "":
-                self.ui.labelErroreTesto.setText("Inserisci il testo!")
+        if self.ui.comboBoxStelle.currentIndex() == 0:
+            self.ui.labelErroreStelle.setText("Inserisci la valutazione!")
+            esito = True
+        if testo == "":
+            self.ui.labelErroreTesto.setText("Inserisci il testo!")
+            esito == True
 
-            return
+        if esito: return
 
-        recensione = self.recensioneCliente
+        stelle = int(stelle)
+        recensioneCliente = self.recensioneCliente
 
-        id = recensione.getId()
+        id = recensioneCliente.getId()
 
         gestoreRecensioni = GestoreRecensioni()
 
         for recensioneNellaLista in gestoreRecensioni.getListaRecensioniCliente(self.statoLogin.clienteAutenticato):
-            if recensione.getId() == recensioneNellaLista.getId():
+            if recensioneCliente.getId() == recensioneNellaLista.getId():
                 recensioneNellaLista.setInfoRecensione(self.statoLogin.clienteAutenticato, id, data, ora, stelle, testo)
-                recensione = recensioneNellaLista
+                recensioneCliente = recensioneNellaLista
 
         gestoreRecensioni.salvaDatiRecensioni()
 
-
-        self.goVistaVisualizzaRecensioneCliente(recensione)
+        self.goVistaVisualizzaRecensioneCliente(recensioneCliente)

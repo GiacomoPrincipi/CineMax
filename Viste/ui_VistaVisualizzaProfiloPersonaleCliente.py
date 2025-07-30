@@ -35,14 +35,14 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"		stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelProfilo = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonCliente.png"))
+        self.labelProfilo.setGeometry(QRect(30, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Viste/Immagini/ProfiloButtonCliente.png"))
         self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelNome.setObjectName(u"labelNome")
@@ -60,13 +60,13 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C8B400;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelCognome = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelCognome.setObjectName(u"labelCognome")
@@ -83,70 +83,74 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
 "}")
         self.labelCognomeCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelCognomeCliente.setObjectName(u"labelCognomeCliente")
-        self.labelCognomeCliente.setGeometry(QRect(330, 130, 181, 20))
+        self.labelCognomeCliente.setGeometry(QRect(330, 130, 171, 20))
         self.labelCognomeCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelCodiceFiscale = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelCodiceFiscale.setObjectName(u"labelCodiceFiscale")
-        self.labelCodiceFiscale.setGeometry(QRect(40, 180, 111, 20))
+        self.labelCodiceFiscale.setGeometry(QRect(30, 180, 111, 20))
         self.labelCodiceFiscale.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelCodiceFiscaleCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelCodiceFiscaleCliente.setObjectName(u"labelCodiceFiscaleCliente")
-        self.labelCodiceFiscaleCliente.setGeometry(QRect(40, 210, 131, 20))
+        self.labelCodiceFiscaleCliente.setGeometry(QRect(30, 210, 131, 20))
         self.labelCodiceFiscaleCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelEmail = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelEmail.setObjectName(u"labelEmail")
-        self.labelEmail.setGeometry(QRect(40, 250, 81, 20))
+        self.labelEmail.setGeometry(QRect(30, 250, 81, 20))
         self.labelEmail.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelEmailCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelEmailCliente.setObjectName(u"labelEmailCliente")
-        self.labelEmailCliente.setGeometry(QRect(40, 280, 251, 20))
+        self.labelEmailCliente.setGeometry(QRect(30, 280, 251, 20))
         self.labelEmailCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelTelefono = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelTelefono.setObjectName(u"labelTelefono")
-        self.labelTelefono.setGeometry(QRect(40, 320, 81, 20))
+        self.labelTelefono.setGeometry(QRect(30, 320, 81, 20))
         self.labelTelefono.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTelefono.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTelefonoCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelTelefonoCliente.setObjectName(u"labelTelefonoCliente")
-        self.labelTelefonoCliente.setGeometry(QRect(40, 350, 101, 20))
+        self.labelTelefonoCliente.setGeometry(QRect(30, 350, 101, 20))
         self.labelTelefonoCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelPassword = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelPassword.setObjectName(u"labelPassword")
-        self.labelPassword.setGeometry(QRect(40, 390, 81, 20))
+        self.labelPassword.setGeometry(QRect(30, 400, 81, 20))
         self.labelPassword.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelPassword.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPasswordCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelPasswordCliente.setObjectName(u"labelPasswordCliente")
-        self.labelPasswordCliente.setGeometry(QRect(40, 420, 121, 20))
+        self.labelPasswordCliente.setGeometry(QRect(30, 430, 121, 20))
         self.labelPasswordCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.pushButtonModifica = QPushButton(VistaVisualizzaProfiloPersonaleCliente)
         self.pushButtonModifica.setObjectName(u"pushButtonModifica")
-        self.pushButtonModifica.setGeometry(QRect(670, 450, 91, 29))
+        self.pushButtonModifica.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonModifica.setStyleSheet(u"QPushButton {\n"
 "    background-color: #963C00;\n"
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -155,29 +159,47 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
 "")
         self.labelDataNascita = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelDataNascita.setObjectName(u"labelDataNascita")
-        self.labelDataNascita.setGeometry(QRect(540, 100, 131, 20))
+        self.labelDataNascita.setGeometry(QRect(520, 100, 131, 20))
         self.labelDataNascita.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelDataNascitaCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelDataNascitaCliente.setObjectName(u"labelDataNascitaCliente")
-        self.labelDataNascitaCliente.setGeometry(QRect(540, 130, 101, 20))
+        self.labelDataNascitaCliente.setGeometry(QRect(520, 130, 101, 20))
         self.labelDataNascitaCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelPunti = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelPunti.setObjectName(u"labelPunti")
-        self.labelPunti.setGeometry(QRect(180, 390, 81, 20))
+        self.labelPunti.setGeometry(QRect(180, 400, 81, 20))
         self.labelPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPuntiCliente = QLabel(VistaVisualizzaProfiloPersonaleCliente)
         self.labelPuntiCliente.setObjectName(u"labelPuntiCliente")
-        self.labelPuntiCliente.setGeometry(QRect(180, 420, 91, 20))
+        self.labelPuntiCliente.setGeometry(QRect(180, 430, 91, 20))
         self.labelPuntiCliente.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
+        self.pushButtonElimina = QPushButton(VistaVisualizzaProfiloPersonaleCliente)
+        self.pushButtonElimina.setObjectName(u"pushButtonElimina")
+        self.pushButtonElimina.setGeometry(QRect(520, 440, 131, 29))
+        self.pushButtonElimina.setStyleSheet(u"QPushButton {\n"
+"    background-color: #963C00;\n"
+"    color: #FF7800;\n"
+"    border: 2px solid #502800;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #C86400;\n"
+"}\n"
+"")
 
         self.retranslateUi(VistaVisualizzaProfiloPersonaleCliente)
 
@@ -207,5 +229,6 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
         self.labelDataNascitaCliente.setText("")
         self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Punti:", None))
         self.labelPuntiCliente.setText("")
+        self.pushButtonElimina.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Elimia account", None))
     # retranslateUi
 

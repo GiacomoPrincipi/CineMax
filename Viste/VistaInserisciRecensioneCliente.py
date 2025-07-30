@@ -42,12 +42,18 @@ class VistaInserisciRecensioneCliente(QWidget):
 
         id = gestoreRecensioni.generaIdRecensione()
 
-        if self.ui.comboBoxStelle.currentIndex() == 0 or testo == "":
-            if self.ui.comboBoxStelle.currentIndex() == 0:
-                self.ui.labelErroreStelle.setText("Inserisci la valutazione!")
-            if testo == "":
-                self.ui.labelErroreTesto.setText("Inserisci il testo!")
-            return
+        esito = False
+
+        if self.ui.comboBoxStelle.currentIndex() == 0:
+            self.ui.labelErroreStelle.setText("Inserisci la valutazione!")
+            esito = True
+        if testo == "":
+            self.ui.labelErroreTesto.setText("Inserisci il testo!")
+            esito = True
+
+        if esito: return
+
+        stelle = int(stelle)
 
         recensione = Recensione(self.statoLogin.clienteAutenticato, id, data, ora, stelle, testo)
         gestoreRecensioni.inserisciRecensione(recensione)

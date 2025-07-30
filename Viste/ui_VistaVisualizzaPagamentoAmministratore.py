@@ -34,18 +34,18 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelRicevutaIcon = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelRicevutaIcon.setObjectName(u"labelRicevutaIcon")
-        self.labelRicevutaIcon.setGeometry(QRect(20, 20, 151, 151))
-        self.labelRicevutaIcon.setPixmap(QPixmap(u"Immagini/RicevutaIconAmministratore.png"))
+        self.labelRicevutaIcon.setGeometry(QRect(10, 10, 171, 171))
+        self.labelRicevutaIcon.setPixmap(QPixmap(u"Viste/Immagini/RicevutaIconAmministratore.png"))
         self.labelRicevutaIcon.setScaledContents(True)
         self.labelCliente = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelCliente.setObjectName(u"labelCliente")
-        self.labelCliente.setGeometry(QRect(180, 100, 161, 20))
+        self.labelCliente.setGeometry(QRect(520, 100, 161, 20))
         self.labelCliente.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
@@ -59,88 +59,114 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelHomeButton = ClickableLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelHomeButton.setObjectName(u"labelHomeButton")
         self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setPixmap(QPixmap(u"Viste/Immagini/HomeButtonAmministratore.png"))
         self.labelHomeButton.setScaledContents(True)
         self.labelArticolo = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelArticolo.setObjectName(u"labelArticolo")
-        self.labelArticolo.setGeometry(QRect(380, 100, 121, 20))
+        self.labelArticolo.setGeometry(QRect(320, 100, 121, 20))
         self.labelArticolo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelArticolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelData = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelData.setObjectName(u"labelData")
-        self.labelData.setGeometry(QRect(40, 180, 81, 20))
+        self.labelData.setGeometry(QRect(30, 190, 81, 20))
         self.labelData.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelDataPagamento.setObjectName(u"labelDataPagamento")
-        self.labelDataPagamento.setGeometry(QRect(40, 200, 91, 20))
+        self.labelDataPagamento.setGeometry(QRect(30, 220, 91, 20))
         self.labelDataPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelTipo = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelTipo.setObjectName(u"labelTipo")
-        self.labelTipo.setGeometry(QRect(40, 240, 81, 20))
+        self.labelTipo.setGeometry(QRect(30, 260, 81, 20))
         self.labelTipo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelTipo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTipoPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelTipoPagamento.setObjectName(u"labelTipoPagamento")
-        self.labelTipoPagamento.setGeometry(QRect(40, 260, 111, 20))
+        self.labelTipoPagamento.setGeometry(QRect(30, 290, 111, 20))
         self.labelTipoPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelImporto = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelImporto.setObjectName(u"labelImporto")
-        self.labelImporto.setGeometry(QRect(40, 300, 81, 20))
+        self.labelImporto.setGeometry(QRect(30, 330, 81, 20))
         self.labelImporto.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelImporto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelImportoPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelImportoPagamento.setObjectName(u"labelImportoPagamento")
-        self.labelImportoPagamento.setGeometry(QRect(40, 320, 91, 20))
+        self.labelImportoPagamento.setGeometry(QRect(30, 360, 91, 20))
         self.labelImportoPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelOra = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelOra.setObjectName(u"labelOra")
-        self.labelOra.setGeometry(QRect(180, 180, 81, 20))
+        self.labelOra.setGeometry(QRect(180, 190, 81, 20))
         self.labelOra.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelOra.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelOraPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelOraPagamento.setObjectName(u"labelOraPagamento")
-        self.labelOraPagamento.setGeometry(QRect(180, 200, 51, 20))
+        self.labelOraPagamento.setGeometry(QRect(180, 220, 51, 20))
         self.labelOraPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelCodiceFiscalePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelCodiceFiscalePagamento.setObjectName(u"labelCodiceFiscalePagamento")
-        self.labelCodiceFiscalePagamento.setGeometry(QRect(180, 120, 91, 20))
+        self.labelCodiceFiscalePagamento.setGeometry(QRect(520, 130, 121, 20))
         self.labelCodiceFiscalePagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelNomePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelNomePagamento.setObjectName(u"labelNomePagamento")
-        self.labelNomePagamento.setGeometry(QRect(380, 120, 281, 20))
+        self.labelNomePagamento.setGeometry(QRect(320, 130, 181, 20))
         self.labelNomePagamento.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.labelImportoPunti = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelImportoPunti.setObjectName(u"labelImportoPunti")
+        self.labelImportoPunti.setGeometry(QRect(180, 330, 131, 20))
+        self.labelImportoPunti.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelImportoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelImportoPuntiPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelImportoPuntiPagamento.setObjectName(u"labelImportoPuntiPagamento")
+        self.labelImportoPuntiPagamento.setGeometry(QRect(180, 360, 91, 20))
+        self.labelImportoPuntiPagamento.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
+        self.labelId = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelId.setObjectName(u"labelId")
+        self.labelId.setGeometry(QRect(180, 100, 161, 20))
+        self.labelId.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelId.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelIdPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelIdPagamento.setObjectName(u"labelIdPagamento")
+        self.labelIdPagamento.setGeometry(QRect(180, 130, 111, 20))
+        self.labelIdPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
 
@@ -168,5 +194,9 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelIndietroButton.setText("")
         self.labelCodiceFiscalePagamento.setText("")
         self.labelNomePagamento.setText("")
+        self.labelImportoPunti.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Importo in Punti:", None))
+        self.labelImportoPuntiPagamento.setText("")
+        self.labelId.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Identificativo:", None))
+        self.labelIdPagamento.setText("")
     # retranslateUi
 

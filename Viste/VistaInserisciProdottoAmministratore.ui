@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+        stop: 0 #210A00,
+        stop: 1 #7D2100
     );
 }</string>
    </property>
@@ -99,7 +99,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #D7320C;
 }</string>
    </property>
    <property name="text">
@@ -112,8 +112,8 @@
   <widget class="QLabel" name="labelIngredienti">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -133,8 +133,8 @@
   <widget class="QLabel" name="labelDisponibile">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>360</y>
+     <x>30</x>
+     <y>400</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -154,8 +154,8 @@
   <widget class="QLabel" name="labelAllergeni">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>260</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -175,8 +175,8 @@
   <widget class="QLabel" name="labelPrezzo">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>300</y>
+     <x>30</x>
+     <y>330</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -197,8 +197,8 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>120</y>
-     <width>171</width>
+     <y>130</y>
+     <width>221</width>
      <height>26</height>
     </rect>
    </property>
@@ -217,8 +217,8 @@
   <widget class="QLineEdit" name="lineEditPrezzo">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>320</y>
+     <x>30</x>
+     <y>360</y>
      <width>81</width>
      <height>26</height>
     </rect>
@@ -238,8 +238,8 @@
   <widget class="QComboBox" name="comboBoxDisponibile">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>380</y>
+     <x>30</x>
+     <y>430</y>
      <width>76</width>
      <height>26</height>
     </rect>
@@ -268,8 +268,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QCheckBox" name="checkBoxAllergene1">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
+     <x>30</x>
+     <y>290</y>
      <width>91</width>
      <height>24</height>
     </rect>
@@ -304,7 +304,7 @@ QCheckBox::indicator:checked {
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>260</y>
+     <y>290</y>
      <width>81</width>
      <height>24</height>
     </rect>
@@ -338,8 +338,8 @@ QCheckBox::indicator:checked {
   <widget class="QCheckBox" name="checkBoxAllergene3">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>260</y>
+     <x>250</x>
+     <y>290</y>
      <width>131</width>
      <height>24</height>
     </rect>
@@ -367,14 +367,14 @@ QCheckBox::indicator:checked {
 </string>
    </property>
    <property name="text">
-    <string>Frutta a guscio</string>
+    <string>Frutta a Guscio</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBoxAllergene4">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>260</y>
+     <x>390</x>
+     <y>290</y>
      <width>71</width>
      <height>24</height>
     </rect>
@@ -408,8 +408,8 @@ QCheckBox::indicator:checked {
   <widget class="QCheckBox" name="checkBoxAllergene5">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>260</y>
+     <x>480</x>
+     <y>290</y>
      <width>61</width>
      <height>24</height>
     </rect>
@@ -443,9 +443,9 @@ QCheckBox::indicator:checked {
   <widget class="QLineEdit" name="lineEditIngredienti">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
-     <width>451</width>
+     <x>30</x>
+     <y>220</y>
+     <width>511</width>
      <height>26</height>
     </rect>
    </property>
@@ -464,8 +464,8 @@ QCheckBox::indicator:checked {
   <widget class="QPushButton" name="pushButtonConferma">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>450</y>
+     <x>670</x>
+     <y>440</y>
      <width>91</width>
      <height>29</height>
     </rect>
@@ -476,6 +476,10 @@ QCheckBox::indicator:checked {
     color: #FF3C00;
     border: 2px solid #501400;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {
@@ -489,8 +493,8 @@ QPushButton:hover {
   <widget class="QPushButton" name="pushButtonAnnulla">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>450</y>
+     <x>560</x>
+     <y>440</y>
      <width>91</width>
      <height>29</height>
     </rect>
@@ -501,6 +505,10 @@ QPushButton:hover {
     color: #FF3C00;
     border: 2px solid #501400;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {
@@ -514,8 +522,8 @@ QPushButton:hover {
   <widget class="QLabel" name="labelPrezzoPunti">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>300</y>
+     <x>260</x>
+     <y>330</y>
      <width>131</width>
      <height>20</height>
     </rect>
@@ -535,8 +543,8 @@ QPushButton:hover {
   <widget class="QLineEdit" name="lineEditPrezzoPunti">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>320</y>
+     <x>260</x>
+     <y>360</y>
      <width>81</width>
      <height>26</height>
     </rect>
@@ -556,8 +564,8 @@ QPushButton:hover {
   <widget class="QCheckBox" name="checkBoxAllergene6">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>260</y>
+     <x>560</x>
+     <y>290</y>
      <width>61</width>
      <height>24</height>
     </rect>
@@ -591,8 +599,8 @@ QCheckBox::indicator:checked {
   <widget class="QLabel" name="labelErroreNome">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>120</y>
+     <x>410</x>
+     <y>130</y>
      <width>121</width>
      <height>20</height>
     </rect>
@@ -633,8 +641,8 @@ QCheckBox::indicator:checked {
   <widget class="QLabel" name="labelErroreDisponibile">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>380</y>
+     <x>120</x>
+     <y>430</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -654,9 +662,9 @@ QCheckBox::indicator:checked {
   <widget class="QLabel" name="labelErrorePrezzo">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>320</y>
-     <width>161</width>
+     <x>120</x>
+     <y>360</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
@@ -675,8 +683,8 @@ QCheckBox::indicator:checked {
   <widget class="QLabel" name="labelErrorePrezzoPunti">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>320</y>
+     <x>350</x>
+     <y>360</y>
      <width>161</width>
      <height>20</height>
     </rect>

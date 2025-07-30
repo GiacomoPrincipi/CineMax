@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-                stop: 0 #321E00,
-        stop: 1 #643C00
+		stop: 0 #211400,
+        stop: 1 #7D4B00
     );
 }</string>
    </property>
@@ -44,10 +44,10 @@
   <widget class="QLabel" name="labelIconaFotoCliente">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>30</y>
-     <width>121</width>
-     <height>121</height>
+     <width>131</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="text">
@@ -78,7 +78,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C8B400;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -112,8 +112,8 @@
   <widget class="QLabel" name="labelTipoPagamento">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>260</y>
      <width>171</width>
      <height>20</height>
     </rect>
@@ -133,8 +133,8 @@
   <widget class="QLabel" name="labelPrezzo">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>330</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -168,6 +168,10 @@
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
 }
@@ -194,6 +198,10 @@ QPushButton:hover {
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
 }
@@ -206,8 +214,8 @@ QPushButton:hover {
   <widget class="QLabel" name="labelPrezzoProdotto">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
+     <x>30</x>
+     <y>360</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -224,8 +232,8 @@ QPushButton:hover {
   <widget class="QComboBox" name="comboBoxTipoPagamento">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>290</y>
      <width>76</width>
      <height>26</height>
     </rect>
@@ -254,8 +262,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelErroreTipoPagamento">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>200</y>
+     <x>120</x>
+     <y>290</y>
      <width>191</width>
      <height>20</height>
     </rect>
@@ -275,8 +283,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelPrezzoPunti">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>240</y>
+     <x>180</x>
+     <y>330</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -296,8 +304,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelPrezzoPuntiProdotto">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>260</y>
+     <x>180</x>
+     <y>360</y>
      <width>71</width>
      <height>20</height>
     </rect>
@@ -314,8 +322,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelErrorePuntiInsufficenti">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>320</y>
+     <x>120</x>
+     <y>430</y>
      <width>191</width>
      <height>20</height>
     </rect>
@@ -335,8 +343,8 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelPunti">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>290</y>
+     <x>30</x>
+     <y>400</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -356,9 +364,9 @@ QComboBox QAbstractItemView::item:hover {
   <widget class="QLabel" name="labelPuntiCliente">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>310</y>
-     <width>71</width>
+     <x>30</x>
+     <y>430</y>
+     <width>81</width>
      <height>20</height>
     </rect>
    </property>

@@ -34,7 +34,7 @@ class Ui_VistaLoginCliente(object):
         font.setBold(True)
         self.labelTitolo.setFont(font)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C8B400;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.pushButtonAccedi = QPushButton(VistaLoginCliente)
@@ -47,9 +47,14 @@ class Ui_VistaLoginCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
-"}")
+"}\n"
+"")
         self.pushButtonRegistrati = QPushButton(VistaLoginCliente)
         self.pushButtonRegistrati.setObjectName(u"pushButtonRegistrati")
         self.pushButtonRegistrati.setGeometry(QRect(280, 310, 93, 31))
@@ -58,6 +63,10 @@ class Ui_VistaLoginCliente(object):
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -104,9 +113,14 @@ class Ui_VistaLoginCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
-"}")
+"}\n"
+"")
         self.Sfondo = QLabel(VistaLoginCliente)
         self.Sfondo.setObjectName(u"Sfondo")
         self.Sfondo.setGeometry(QRect(0, 0, 791, 501))
@@ -117,15 +131,15 @@ class Ui_VistaLoginCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"		stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.Sfondo.setScaledContents(False)
         self.labelIndietroButton = ClickableLabel(VistaLoginCliente)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelErroreEmail = QLabel(VistaLoginCliente)
         self.labelErroreEmail.setObjectName(u"labelErroreEmail")

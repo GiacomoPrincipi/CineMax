@@ -21,5 +21,5 @@ class VistaVisualizzaAmministratoreAmministratore(QWidget):
         self.ui.labelCognomeAmministratore.setText(amministratoreAmministratore.cognome)
         self.ui.labelDataNascitaAmministratore.setText(amministratoreAmministratore.dataNascita.toString("dd/MM/yyyy"))
         self.ui.labelEmailAmministratore.setText(amministratoreAmministratore.email)
-        self.ui.labelTelefonoAmministratore.setText(str(amministratoreAmministratore.telefono))
+        self.ui.labelTelefonoAmministratore.setText(amministratoreAmministratore.telefono)
         self.ui.labelMatricolaAmministratore.setText(amministratoreAmministratore.matricola)

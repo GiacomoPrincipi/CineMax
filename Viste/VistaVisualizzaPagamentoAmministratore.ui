@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+        stop: 0 #210A00,
+        stop: 1 #7D2100
     );
 }</string>
    </property>
@@ -44,10 +44,10 @@
   <widget class="QLabel" name="labelRicevutaIcon">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>151</width>
-     <height>151</height>
+     <x>10</x>
+     <y>10</y>
+     <width>171</width>
+     <height>171</height>
     </rect>
    </property>
    <property name="text">
@@ -63,7 +63,7 @@
   <widget class="QLabel" name="labelCliente">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>520</x>
      <y>100</y>
      <width>161</width>
      <height>20</height>
@@ -99,7 +99,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #D7320C;
 }</string>
    </property>
    <property name="text">
@@ -131,7 +131,7 @@
   <widget class="QLabel" name="labelArticolo">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>320</x>
      <y>100</y>
      <width>121</width>
      <height>20</height>
@@ -152,8 +152,8 @@
   <widget class="QLabel" name="labelData">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -173,8 +173,8 @@
   <widget class="QLabel" name="labelDataPagamento">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>220</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -191,8 +191,8 @@
   <widget class="QLabel" name="labelTipo">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>260</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -212,8 +212,8 @@
   <widget class="QLabel" name="labelTipoPagamento">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
+     <x>30</x>
+     <y>290</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -230,8 +230,8 @@
   <widget class="QLabel" name="labelImporto">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>300</y>
+     <x>30</x>
+     <y>330</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -251,8 +251,8 @@
   <widget class="QLabel" name="labelImportoPagamento">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>320</y>
+     <x>30</x>
+     <y>360</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -270,7 +270,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>180</y>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -291,7 +291,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>200</y>
+     <y>220</y>
      <width>51</width>
      <height>20</height>
     </rect>
@@ -327,9 +327,9 @@
   <widget class="QLabel" name="labelCodiceFiscalePagamento">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>120</y>
-     <width>91</width>
+     <x>520</x>
+     <y>130</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
@@ -345,9 +345,87 @@
   <widget class="QLabel" name="labelNomePagamento">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>120</y>
-     <width>281</width>
+     <x>320</x>
+     <y>130</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelImportoPunti">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>330</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Importo in Punti:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelImportoPuntiPagamento">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>360</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #962D00;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelId">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #C83C00;
+}</string>
+   </property>
+   <property name="text">
+    <string>Identificativo:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelIdPagamento">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>

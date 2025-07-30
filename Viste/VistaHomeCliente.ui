@@ -36,6 +36,10 @@
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
 }
@@ -64,8 +68,8 @@ QPushButton:hover {
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-		stop: 0 #321E00,
-        stop: 1 #643C00
+		stop: 0 #211400,
+        stop: 1 #7D4B00
     );
 }</string>
    </property>
@@ -90,6 +94,10 @@ QPushButton:hover {
         stop: 0 #965A00,
         stop: 1 #B46E00
     );
+    border: 1px solid #AF8C0A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }</string>
    </property>
    <property name="text">
@@ -99,7 +107,7 @@ QPushButton:hover {
   <widget class="ClickableLabel" name="labelProfiloButton">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>700</x>
      <y>10</y>
      <width>63</width>
      <height>61</height>
@@ -109,7 +117,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/profiloButtonCliente.png</pixmap>
+    <pixmap>Immagini/ProfiloButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -118,7 +126,7 @@ QPushButton:hover {
   <widget class="QLabel" name="labelProfilo">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>700</x>
      <y>70</y>
      <width>63</width>
      <height>20</height>
@@ -126,7 +134,7 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #502800;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -147,7 +155,7 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #502800;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -199,6 +207,10 @@ QPushButton:hover {
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
 }
@@ -229,6 +241,10 @@ QPushButton:hover {
     color: #FF7800;
     border: 2px solid #502800;
     border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
 }
 
 QPushButton:hover {
@@ -263,6 +279,10 @@ QPushButton:hover {
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
 }
@@ -290,7 +310,7 @@ QPushButton:hover {
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #502800;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -303,7 +323,6 @@ QPushButton:hover {
   <zorder>Sfondo</zorder>
   <zorder>pushButtonSpettacoli</zorder>
   <zorder>labelBarra</zorder>
-  <zorder>labelProfiloButton</zorder>
   <zorder>labelProfilo</zorder>
   <zorder>labelLogout</zorder>
   <zorder>labelLogoutButton</zorder>
@@ -311,6 +330,7 @@ QPushButton:hover {
   <zorder>pushButtonPagamenti</zorder>
   <zorder>pushButtonRecensioni</zorder>
   <zorder>labelTitolo</zorder>
+  <zorder>labelProfiloButton</zorder>
  </widget>
  <customwidgets>
   <customwidget>

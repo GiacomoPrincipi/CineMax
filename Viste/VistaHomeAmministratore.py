@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from ui_VistaHomeAmministratore import Ui_VistaHomeAmministratore
+from Gestione.GestoreBackup import GestoreBackup
 
 class VistaHomeAmministratore(QWidget):
     def __init__(self, statoLogin, goVistaHome, goVistaVisualizzaProfiloPersonaleAmministratore, goVistaVisualizzaSpettacoliAmministratore, goVistaVisualizzaProdottiAmministratore, goVistaVisualizzaRegistroCassaAmministratore, goVistaVisualizzaRecensioniAmministratore, goVistaVisualizzaAmministratoriAmministratore, goVistaVisualizzaClientiAmministratore, parent = None):
@@ -19,14 +20,24 @@ class VistaHomeAmministratore(QWidget):
         self.ui.pushButtonRecensioni.clicked.connect(goVistaVisualizzaRecensioniAmministratore)
         self.ui.pushButtonClienti.clicked.connect(goVistaVisualizzaClientiAmministratore)
         self.ui.pushButtonAmministratori.clicked.connect(goVistaVisualizzaAmministratoriAmministratore)
-        #self.ui.labelBackupButton.clicked.connect(self.EffettuaBackup)
+        self.ui.labelBackupButton.clicked.connect(self.effettuaBackup)
 
     def showEvent(self, event):
         super().showEvent(event)
 
         amministratore = self.statoLogin.amministratoreAutenticato
 
+        self.ui.labelBackupEffettuato.setText("")
+
     def logout(self):
         self.statoLogin.logoutAmministratore()
         self.goVistaHome()
+
+    def effettuaBackup(self):
+        self.ui.labelBackupEffettuato.setText("")
+
+        GestoreBackup.backupDatiSistema()
+
+        self.ui.labelBackupEffettuato.setText("Effettuato!")
+
 

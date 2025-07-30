@@ -34,25 +34,26 @@ class VistaLoginCliente(QWidget):
         self.ui.labelErroreEmail.setText("")
         self.ui.labelErrorePassword.setText("")
 
-        email = self.ui.lineEditEmail.text()
+        email = self.ui.lineEditEmail.text().lower()
         password = self.ui.lineEditPassword.text()
 
-        if email == "" or password == "":
-            if email == "":
-                self.ui.labelErroreEmail.setText("Inserisci l'email!")
-            elif "@" not in email:
-                self.ui.labelErroreEmail.setText("Email non Valida!")
-            if password == "":
-                self.ui.labelErrorePassword.setText("Inserisci la password!")
-            return
+        esito = False
 
-        if "@" not in email:
+        if email == "":
+            self.ui.labelErroreEmail.setText("Inserisci l'email!")
+            esito = True
+        elif not GestoreAutenticazione.controlloStrutturaEmail(email):
             self.ui.labelErroreEmail.setText("Email non Valida!")
-            return
+            esito = True
+        if password == "":
+            self.ui.labelErrorePassword.setText("Inserisci la password!")
+            esito = True
+
+        if esito: return
 
         gestoreClienti = GestoreClienti()
 
-        esito = GestoreAutenticazione.controlloEmail(gestoreClienti.listaClienti, email)
+        esito = GestoreAutenticazione.controlloEmail(gestoreClienti.getListaClienti(), email)
         if esito:
             cliente = gestoreClienti.getCliente(email)
             self.statoLogin.loginCliente(cliente)
@@ -75,18 +76,22 @@ class VistaLoginCliente(QWidget):
         self.ui.labelErrorePassword.setText("")
         self.ui.labelRecuperoPassword.setText("")
 
-        email = self.ui.lineEditEmail.text()
+        email = self.ui.lineEditEmail.text().lower()
+
+        esito = False
 
         if email == "":
             self.ui.labelErroreEmail.setText("Inserisci l'email!")
-            return
-        elif "@" not in email:
+            esito = True
+        elif not GestoreAutenticazione.controlloStrutturaEmail(email):
             self.ui.labelErroreEmail.setText("Email non Valida!")
-            return
+            esito = True
+
+        if esito: return
 
         gestoreClienti = GestoreClienti()
 
-        esito = GestoreAutenticazione.controlloEmail(gestoreClienti.listaClienti, email)
+        esito = GestoreAutenticazione.controlloEmail(gestoreClienti.getListaClienti(), email)
         if esito:
             cliente = gestoreClienti.getCliente(email)
             GestoreAutenticazione.invioEmailRecuperoPassword(cliente)

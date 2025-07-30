@@ -35,8 +35,8 @@ class Ui_VistaVisualizzaPagamentiCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"                stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelTitolo = QLabel(VistaVisualizzaPagamentiCliente)
@@ -48,13 +48,13 @@ class Ui_VistaVisualizzaPagamentiCliente(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #502800;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaPagamentiCliente)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaPagamentiCliente)
         self.labelBarra.setObjectName(u"labelBarra")
@@ -66,6 +66,10 @@ class Ui_VistaVisualizzaPagamentiCliente(object):
 "        stop: 0 #965A00,\n"
 "        stop: 1 #B46E00\n"
 "    );\n"
+"    border: 1px solid #AF8C0A;\n"
+"    border-top: none;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
 "}")
         self.tableViewPagamenti = QTableView(VistaVisualizzaPagamentiCliente)
         self.tableViewPagamenti.setObjectName(u"tableViewPagamenti")
@@ -142,8 +146,8 @@ class Ui_VistaVisualizzaPagamentiCliente(object):
         self.tableViewPagamenti.verticalHeader().setMinimumSectionSize(25)
         self.tableViewPagamenti.verticalHeader().setDefaultSectionSize(25)
         self.tableViewPagamenti.verticalHeader().setHighlightSections(False)
-        self.labelBarra.raise_()
         self.Sfondo.raise_()
+        self.labelBarra.raise_()
         self.labelTitolo.raise_()
         self.labelIndietroButton.raise_()
         self.tableViewPagamenti.raise_()

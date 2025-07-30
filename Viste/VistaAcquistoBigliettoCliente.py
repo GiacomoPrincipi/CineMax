@@ -6,7 +6,6 @@ from Gestione.GestoreBiglietti import GestoreBiglietti
 from Gestione.GestorePagamenti import GestorePagamenti
 from Gestione.GestorePunti import GestorePunti
 from Sistema.Pagamento import Pagamento
-from Sistema.Biglietto import Biglietto
 
 class VistaAcquistoBigliettoCliente(QWidget):
     def __init__(self, statoLogin, goVistaVisualizzaSpettacoloCliente, goVistaVisualizzaPagamentoCliente, parent = None):
@@ -31,13 +30,13 @@ class VistaAcquistoBigliettoCliente(QWidget):
     def showEvent(self, event):
         super().showEvent(event)
 
-        biglietto = self.bigliettoCliente
+        bigliettoCliente = self.bigliettoCliente
 
-        self.ui.labelPostoBiglietto.setText(str(biglietto.getPosto()))
+        self.ui.labelPostoBiglietto.setText(str(bigliettoCliente.getPosto()))
         self.ui.comboBoxTipo.setCurrentIndex(0)
         self.ui.comboBoxTipoPagamento.setCurrentIndex(0)
-        self.ui.labelPrezzoBiglietto.setText(str(biglietto.getPrezzo()))
-        self.ui.labelPrezzoPuntiBiglietto.setText(str(biglietto.getPrezzoPunti()))
+        self.ui.labelPrezzoBiglietto.setText(str(bigliettoCliente.getPrezzo()))
+        self.ui.labelPrezzoPuntiBiglietto.setText(str(bigliettoCliente.getPrezzoPunti()))
         self.ui.labelPuntiCliente.setText(str(self.statoLogin.clienteAutenticato.getPunti()))
 
         self.ui.labelErroreTipo.setText("")
@@ -58,37 +57,35 @@ class VistaAcquistoBigliettoCliente(QWidget):
         self.ui.labelErroreTipoPagamento.setText("")
         self.ui.labelErrorePuntiInsufficenti.setText("")
 
-        biglietto = self.bigliettoCliente
+        bigliettoCliente = self.bigliettoCliente
 
-        prezzoRidotto = biglietto.getPrezzo() / 2
-        prezzoPuntiRidotto = biglietto.getPrezzoPunti() / 2
+        prezzoRidotto = bigliettoCliente.getPrezzo() / 2
+        prezzoPuntiRidotto = bigliettoCliente.getPrezzoPunti() / 2
 
         esito = False
 
         if self.ui.comboBoxTipo.currentIndex() == 0:
-            self.ui.labelErroreTipo.setText("inserisci il tipo di biglietto!")
+            self.ui.labelErroreTipo.setText("Inserisci il tipo di biglietto!")
             esito = True
 
         if self.ui.comboBoxTipoPagamento.currentIndex() == 0:
-            self.ui.labelErroreTipoPagamento.setText("inserisci il metodo di pagamento!")
+            self.ui.labelErroreTipoPagamento.setText("Inserisci il metodo di pagamento!")
             esito = True
 
         if self.ui.comboBoxTipo.currentText() == "Ridotto":
             if self.ui.comboBoxTipoPagamento.currentText() == "Punti":
                 if not GestorePunti.controlloPuntiPunti(self.statoLogin.clienteAutenticato, prezzoPuntiRidotto):
-                    self.ui.labelErrorePuntiInsufficenti.setText("punti non sufficenti")
+                    self.ui.labelErrorePuntiInsufficenti.setText("Punti non sufficenti!")
                     esito = True
         if self.ui.comboBoxTipo.currentText() == "Adulto":
             if self.ui.comboBoxTipoPagamento.currentText() == "Punti":
-                if not GestorePunti.controlloPunti(self.statoLogin.clienteAutenticato, biglietto):
+                if not GestorePunti.controlloPunti(self.statoLogin.clienteAutenticato, bigliettoCliente):
                     self.ui.labelErrorePuntiInsufficenti.setText("punti non sufficenti")
                     esito = True
 
-        if esito:
-            return
+        if esito: return
 
         gestorePagamenti = GestorePagamenti()
-
         gestoreClienti =  GestoreClienti()
 
         tipo = self.ui.comboBoxTipo.currentText()
@@ -109,17 +106,17 @@ class VistaAcquistoBigliettoCliente(QWidget):
         else:
             if self.ui.comboBoxTipoPagamento.currentText() == "Punti":
                 importo = 0
-                importoPunti = biglietto.getPrezzoPunti()
+                importoPunti = bigliettoCliente.getPrezzoPunti()
                 GestorePunti.rimuoviPunti(self.statoLogin.clienteAutenticato, importoPunti)
             else:
-                importo = biglietto.getPrezzo()
+                importo = bigliettoCliente.getPrezzo()
                 importoPunti = 0
 
-        pagamento = Pagamento(self.statoLogin.clienteAutenticato, id, data, ora, biglietto, tipoPagamento, importo, importoPunti)
+        pagamento = Pagamento(self.statoLogin.clienteAutenticato, id, data, ora, bigliettoCliente, tipoPagamento, importo, importoPunti)
         gestorePagamenti.inserisciPagamento(pagamento)
 
         if self.ui.comboBoxTipoPagamento.currentText() == "Normale":
-            puntiDaAggiungere = GestorePunti.calcoloPunti(biglietto.getPrezzo())
+            puntiDaAggiungere = GestorePunti.calcoloPunti(bigliettoCliente.getPrezzo())
             GestorePunti.aggiungiPunti(self.statoLogin.clienteAutenticato, puntiDaAggiungere)
 
         if self.ui.comboBoxTipoPagamento.currentText() == "Ridotto":
@@ -135,8 +132,8 @@ class VistaAcquistoBigliettoCliente(QWidget):
 
         gestoreBiglietti = GestoreBiglietti()
 
-        for bigliettoNellaLista in gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(biglietto.getSpettacolo()):
-            if bigliettoNellaLista.getId() == biglietto.getId():
+        for bigliettoNellaLista in gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(bigliettoCliente.getSpettacolo()):
+            if bigliettoNellaLista.getId() == bigliettoCliente.getId():
                 bigliettoNellaLista.setTipo(tipo)
                 bigliettoNellaLista.setDisponibile(False)
 

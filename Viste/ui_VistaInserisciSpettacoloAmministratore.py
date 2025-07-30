@@ -34,14 +34,14 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelIconaFotoAmministratore = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelIconaFotoAmministratore.setObjectName(u"labelIconaFotoAmministratore")
         self.labelIconaFotoAmministratore.setGeometry(QRect(30, 30, 131, 131))
-        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
+        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Viste/Immagini/IconaFotoAmministratore.png"))
         self.labelIconaFotoAmministratore.setScaledContents(True)
         self.labelTitolo = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelTitolo.setObjectName(u"labelTitolo")
@@ -59,54 +59,54 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
         font1.setBold(True)
         self.labelTitoloPrincipale.setFont(font1)
         self.labelTitoloPrincipale.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitoloPrincipale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelGenere = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelGenere.setObjectName(u"labelGenere")
-        self.labelGenere.setGeometry(QRect(40, 180, 81, 20))
+        self.labelGenere.setGeometry(QRect(460, 100, 81, 20))
         self.labelGenere.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelGenere.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelOrarioInizio = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelOrarioInizio.setObjectName(u"labelOrarioInizio")
-        self.labelOrarioInizio.setGeometry(QRect(40, 360, 101, 20))
+        self.labelOrarioInizio.setGeometry(QRect(30, 330, 101, 20))
         self.labelOrarioInizio.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelOrarioInizio.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelSala = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelSala.setObjectName(u"labelSala")
-        self.labelSala.setGeometry(QRect(40, 240, 81, 20))
+        self.labelSala.setGeometry(QRect(30, 190, 81, 20))
         self.labelSala.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelSala.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelData = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelData.setObjectName(u"labelData")
-        self.labelData.setGeometry(QRect(40, 300, 81, 20))
+        self.labelData.setGeometry(QRect(30, 260, 81, 20))
         self.labelData.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelOrarioFine = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelOrarioFine.setObjectName(u"labelOrarioFine")
-        self.labelOrarioFine.setGeometry(QRect(340, 350, 101, 20))
+        self.labelOrarioFine.setGeometry(QRect(340, 330, 101, 20))
         self.labelOrarioFine.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelOrarioFine.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDurata = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelDurata.setObjectName(u"labelDurata")
-        self.labelDurata.setGeometry(QRect(40, 420, 101, 20))
+        self.labelDurata.setGeometry(QRect(30, 400, 101, 20))
         self.labelDurata.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelDurata.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditTitolo = QLineEdit(VistaInserisciSpettacoloAmministratore)
         self.lineEditTitolo.setObjectName(u"lineEditTitolo")
-        self.lineEditTitolo.setGeometry(QRect(180, 120, 291, 26))
+        self.lineEditTitolo.setGeometry(QRect(180, 130, 261, 26))
         self.lineEditTitolo.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -115,7 +115,7 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.lineEditGenere = QLineEdit(VistaInserisciSpettacoloAmministratore)
         self.lineEditGenere.setObjectName(u"lineEditGenere")
-        self.lineEditGenere.setGeometry(QRect(40, 200, 111, 26))
+        self.lineEditGenere.setGeometry(QRect(460, 130, 131, 26))
         self.lineEditGenere.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -124,7 +124,7 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.lineEditDurata = QLineEdit(VistaInserisciSpettacoloAmministratore)
         self.lineEditDurata.setObjectName(u"lineEditDurata")
-        self.lineEditDurata.setGeometry(QRect(40, 440, 51, 26))
+        self.lineEditDurata.setGeometry(QRect(30, 430, 51, 26))
         self.lineEditDurata.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -133,7 +133,7 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.pushButtonConferma = QPushButton(VistaInserisciSpettacoloAmministratore)
         self.pushButtonConferma.setObjectName(u"pushButtonConferma")
-        self.pushButtonConferma.setGeometry(QRect(680, 450, 91, 29))
+        self.pushButtonConferma.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonConferma.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -141,12 +141,16 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.pushButtonAnnulla = QPushButton(VistaInserisciSpettacoloAmministratore)
         self.pushButtonAnnulla.setObjectName(u"pushButtonAnnulla")
-        self.pushButtonAnnulla.setGeometry(QRect(570, 450, 91, 29))
+        self.pushButtonAnnulla.setGeometry(QRect(560, 440, 91, 29))
         self.pushButtonAnnulla.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -154,12 +158,16 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.comboBoxSala = QComboBox(VistaInserisciSpettacoloAmministratore)
         self.comboBoxSala.setObjectName(u"comboBoxSala")
-        self.comboBoxSala.setGeometry(QRect(40, 260, 76, 26))
+        self.comboBoxSala.setGeometry(QRect(30, 220, 76, 26))
         self.comboBoxSala.setStyleSheet(u"QComboBox {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -180,118 +188,97 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.dateEditData = QDateEdit(VistaInserisciSpettacoloAmministratore)
         self.dateEditData.setObjectName(u"dateEditData")
-        self.dateEditData.setGeometry(QRect(40, 320, 110, 26))
+        self.dateEditData.setGeometry(QRect(30, 290, 110, 26))
         self.dateEditData.setStyleSheet(u"QDateEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
 "    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"	transition: border-color 1.5s ease;\n"
 "}\n"
-"\n"
-"QDateEdit:focus {\n"
-"	border-color:#FF3C00;\n"
-"	transition: border-color 1.5s ease;\n"
-"}\n"
-"\n"
 "")
         self.dateEditData.setDateTime(QDateTime(QDate(1950, 1, 1), QTime(22, 0, 0)))
         self.dateEditData.setTime(QTime(22, 0, 0))
-        self.dateEditData.setMaximumDateTime(QDateTime(QDate(2050, 12, 12), QTime(14, 59, 59)))
-        self.dateEditData.setMinimumDateTime(QDateTime(QDate(1949, 12, 31), QTime(17, 0, 0)))
+        self.dateEditData.setMaximumDateTime(QDateTime(QDate(2050, 12, 12), QTime(13, 59, 59)))
+        self.dateEditData.setMinimumDateTime(QDateTime(QDate(1949, 12, 31), QTime(16, 0, 0)))
         self.timeEditOrarioInizio = QTimeEdit(VistaInserisciSpettacoloAmministratore)
         self.timeEditOrarioInizio.setObjectName(u"timeEditOrarioInizio")
-        self.timeEditOrarioInizio.setGeometry(QRect(40, 380, 118, 26))
+        self.timeEditOrarioInizio.setGeometry(QRect(30, 360, 118, 26))
         self.timeEditOrarioInizio.setStyleSheet(u"QTimeEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
 "    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"	transition: border-color 1.5s ease;\n"
 "}\n"
-"\n"
-"QTimeEdit:focus {\n"
-"	border-color:#FF3C00;\n"
-"	transition: border-color 1.5s ease;\n"
-"}\n"
-"\n"
 "")
         self.timeEditOrarioFine = QTimeEdit(VistaInserisciSpettacoloAmministratore)
         self.timeEditOrarioFine.setObjectName(u"timeEditOrarioFine")
-        self.timeEditOrarioFine.setGeometry(QRect(340, 380, 118, 26))
+        self.timeEditOrarioFine.setGeometry(QRect(340, 360, 118, 26))
         self.timeEditOrarioFine.setStyleSheet(u"QTimeEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
 "    border: 1px solid #190700;\n"
 "    border-radius: 4px;\n"
-"	transition: border-color 1.5s ease;\n"
 "}\n"
-"\n"
-"QTimeEdit:focus {\n"
-"	border-color:#FF3C00;\n"
-"	transition: border-color 1.5s ease;\n"
-"}\n"
-"\n"
 "")
         self.labelErroreTitolo = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreTitolo.setObjectName(u"labelErroreTitolo")
-        self.labelErroreTitolo.setGeometry(QRect(490, 120, 121, 20))
+        self.labelErroreTitolo.setGeometry(QRect(180, 160, 121, 20))
         self.labelErroreTitolo.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreGenere = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreGenere.setObjectName(u"labelErroreGenere")
-        self.labelErroreGenere.setGeometry(QRect(170, 200, 121, 20))
+        self.labelErroreGenere.setGeometry(QRect(470, 160, 121, 20))
         self.labelErroreGenere.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreGenere.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreSala = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreSala.setObjectName(u"labelErroreSala")
-        self.labelErroreSala.setGeometry(QRect(130, 260, 121, 20))
+        self.labelErroreSala.setGeometry(QRect(120, 220, 121, 20))
         self.labelErroreSala.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreSala.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreData = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreData.setObjectName(u"labelErroreData")
-        self.labelErroreData.setGeometry(QRect(160, 320, 121, 20))
+        self.labelErroreData.setGeometry(QRect(150, 290, 161, 20))
         self.labelErroreData.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreOrarioInizio = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreOrarioInizio.setObjectName(u"labelErroreOrarioInizio")
-        self.labelErroreOrarioInizio.setGeometry(QRect(170, 380, 121, 20))
+        self.labelErroreOrarioInizio.setGeometry(QRect(160, 360, 161, 20))
         self.labelErroreOrarioInizio.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreOrarioInizio.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreOrarioFine = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreOrarioFine.setObjectName(u"labelErroreOrarioFine")
-        self.labelErroreOrarioFine.setGeometry(QRect(460, 380, 121, 20))
+        self.labelErroreOrarioFine.setGeometry(QRect(470, 360, 171, 20))
         self.labelErroreOrarioFine.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreOrarioFine.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreDurata = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErroreDurata.setObjectName(u"labelErroreDurata")
-        self.labelErroreDurata.setGeometry(QRect(110, 440, 121, 20))
+        self.labelErroreDurata.setGeometry(QRect(90, 430, 141, 20))
         self.labelErroreDurata.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreDurata.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPrezzo = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelPrezzo.setObjectName(u"labelPrezzo")
-        self.labelPrezzo.setGeometry(QRect(390, 210, 101, 20))
+        self.labelPrezzo.setGeometry(QRect(340, 190, 101, 20))
         self.labelPrezzo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPrezzo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditPrezzo = QLineEdit(VistaInserisciSpettacoloAmministratore)
         self.lineEditPrezzo.setObjectName(u"lineEditPrezzo")
-        self.lineEditPrezzo.setGeometry(QRect(390, 230, 111, 26))
+        self.lineEditPrezzo.setGeometry(QRect(340, 220, 111, 26))
         self.lineEditPrezzo.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -300,14 +287,14 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.labelPrezzoPunti = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
-        self.labelPrezzoPunti.setGeometry(QRect(390, 270, 101, 20))
+        self.labelPrezzoPunti.setGeometry(QRect(340, 260, 101, 20))
         self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditPrezzoPunti = QLineEdit(VistaInserisciSpettacoloAmministratore)
         self.lineEditPrezzoPunti.setObjectName(u"lineEditPrezzoPunti")
-        self.lineEditPrezzoPunti.setGeometry(QRect(390, 290, 111, 26))
+        self.lineEditPrezzoPunti.setGeometry(QRect(340, 290, 111, 26))
         self.lineEditPrezzoPunti.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -316,14 +303,14 @@ class Ui_VistaInserisciSpettacoloAmministratore(object):
 "}")
         self.labelErrorePrezzo = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErrorePrezzo.setObjectName(u"labelErrorePrezzo")
-        self.labelErrorePrezzo.setGeometry(QRect(510, 230, 121, 20))
+        self.labelErrorePrezzo.setGeometry(QRect(460, 220, 181, 20))
         self.labelErrorePrezzo.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErrorePrezzo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErrorePrezzoPunti = QLabel(VistaInserisciSpettacoloAmministratore)
         self.labelErrorePrezzoPunti.setObjectName(u"labelErrorePrezzoPunti")
-        self.labelErrorePrezzoPunti.setGeometry(QRect(510, 290, 121, 20))
+        self.labelErrorePrezzoPunti.setGeometry(QRect(460, 290, 181, 20))
         self.labelErrorePrezzoPunti.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")

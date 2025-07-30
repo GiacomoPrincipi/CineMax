@@ -20,13 +20,9 @@ class VistaVisualizzaProdottoCliente(QWidget):
 
         prodottoCliente = self.prodottoCliente
 
-        ingredienti = ", ".join(prodottoCliente.getIngredienti())
-
-        allergeni = ", ".join(prodottoCliente.getAllergeni())
-
         self.ui.labelNomeProdotto.setText(prodottoCliente.getNome())
-        self.ui.labelIngredientiProdotto.setText(ingredienti)
-        self.ui.labelAllergeniProdotto.setText(allergeni)
+        self.ui.labelIngredientiProdotto.setText(", ".join(prodottoCliente.getIngredienti()))
+        self.ui.labelAllergeniProdotto.setText(", ".join(prodottoCliente.getAllergeni()))
         self.ui.labelPrezzoProdotto.setText(f"{prodottoCliente.getPrezzo()} €")
         self.ui.labelPrezzoPuntiProdotto.setText(f"{prodottoCliente.getPrezzoPunti()} punti")
 

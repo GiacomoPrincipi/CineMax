@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from ui_VistaVisualizzaAmministratoriAmministratore import Ui_VistaVisualizzaAmministratoriAmministratore
@@ -20,17 +20,20 @@ class VistaVisualizzaAmministratoriAmministratore(QWidget):
         self.ui.tableViewAmministratori.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewAmministratori.horizontalHeader().setFixedHeight(25)
         self.ui.tableViewAmministratori.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.ui.tableViewAmministratori.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def showEvent(self, event):
         super().showEvent(event)
 
+        self.ui.tableViewAmministratori.verticalScrollBar().setValue(self.ui.tableViewAmministratori.verticalScrollBar().minimum())
+
         gestoreAmministratori = GestoreAmministratori()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Nome:", "Cognome:", "Matricola:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Matricola:", "Nome:", "Cognome:","Data di Nascita:", "Email:", "Telefono:"])
 
         for amministratore in gestoreAmministratori.getListaAmministratori():
-            self.modelloTabella.appendRow([QStandardItem(amministratore.getNome()), QStandardItem(amministratore.getCognome()), QStandardItem(amministratore.getMatricola())])
+            self.modelloTabella.appendRow([QStandardItem(amministratore.getMatricola()), QStandardItem(amministratore.getNome()), QStandardItem(amministratore.getCognome()), QStandardItem(amministratore.getDataNascita().toString("dd/MM/yyyy")), QStandardItem(amministratore.getEmail()), QStandardItem(amministratore.getTelefono())])
 
         self.ui.tableViewAmministratori.setModel(self.modelloTabella)
         self.ui.tableViewAmministratori.doubleClicked.connect(self.apriAmministratore)

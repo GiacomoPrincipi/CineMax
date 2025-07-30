@@ -39,6 +39,10 @@ class Ui_VistaHomeCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
 "}\n"
@@ -53,8 +57,8 @@ class Ui_VistaHomeCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"		stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelBarra = QLabel(VistaHomeCliente)
@@ -67,30 +71,34 @@ class Ui_VistaHomeCliente(object):
 "        stop: 0 #965A00,\n"
 "        stop: 1 #B46E00\n"
 "    );\n"
+"    border: 1px solid #AF8C0A;\n"
+"    border-top: none;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
 "}")
         self.labelProfiloButton = ClickableLabel(VistaHomeCliente)
         self.labelProfiloButton.setObjectName(u"labelProfiloButton")
-        self.labelProfiloButton.setGeometry(QRect(710, 10, 63, 61))
-        self.labelProfiloButton.setPixmap(QPixmap(u"Immagini/profiloButtonCliente.png"))
+        self.labelProfiloButton.setGeometry(QRect(700, 10, 63, 61))
+        self.labelProfiloButton.setPixmap(QPixmap(u"Viste/Immagini/ProfiloButtonCliente.png"))
         self.labelProfiloButton.setScaledContents(True)
         self.labelProfilo = QLabel(VistaHomeCliente)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(710, 70, 63, 20))
+        self.labelProfilo.setGeometry(QRect(700, 70, 63, 20))
         self.labelProfilo.setStyleSheet(u"QLabel {\n"
-"    color: #502800;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelProfilo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.labelLogout = QLabel(VistaHomeCliente)
         self.labelLogout.setObjectName(u"labelLogout")
         self.labelLogout.setGeometry(QRect(20, 70, 63, 20))
         self.labelLogout.setStyleSheet(u"QLabel {\n"
-"    color: #502800;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelLogout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.labelLogoutButton = ClickableLabel(VistaHomeCliente)
         self.labelLogoutButton.setObjectName(u"labelLogoutButton")
         self.labelLogoutButton.setGeometry(QRect(20, 10, 63, 61))
-        self.labelLogoutButton.setPixmap(QPixmap(u"Immagini/LogoutButtonCliente.png"))
+        self.labelLogoutButton.setPixmap(QPixmap(u"Viste/Immagini/LogoutButtonCliente.png"))
         self.labelLogoutButton.setScaledContents(True)
         self.pushButtonProdotti = QPushButton(VistaHomeCliente)
         self.pushButtonProdotti.setObjectName(u"pushButtonProdotti")
@@ -101,6 +109,10 @@ class Ui_VistaHomeCliente(object):
 "    color: #FF7800;\n"
 "    border: 2px solid #502800;\n"
 "    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -118,6 +130,10 @@ class Ui_VistaHomeCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
 "}\n"
@@ -133,6 +149,10 @@ class Ui_VistaHomeCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
 "}\n"
@@ -146,13 +166,12 @@ class Ui_VistaHomeCliente(object):
         font2.setBold(True)
         self.labelTitolo.setFont(font2)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #502800;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.Sfondo.raise_()
         self.pushButtonSpettacoli.raise_()
         self.labelBarra.raise_()
-        self.labelProfiloButton.raise_()
         self.labelProfilo.raise_()
         self.labelLogout.raise_()
         self.labelLogoutButton.raise_()
@@ -160,6 +179,7 @@ class Ui_VistaHomeCliente(object):
         self.pushButtonPagamenti.raise_()
         self.pushButtonRecensioni.raise_()
         self.labelTitolo.raise_()
+        self.labelProfiloButton.raise_()
 
         self.retranslateUi(VistaHomeCliente)
 

@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
-    QWidget)
+    QTextBrowser, QWidget)
 
 from clickablelabel import ClickableLabel
 
@@ -35,99 +35,86 @@ class Ui_VistaVisualizzaRecensioneCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"		stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelTitolo = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelTitolo.setObjectName(u"labelTitolo")
-        self.labelTitolo.setGeometry(QRect(180, 30, 291, 71))
+        self.labelTitolo.setGeometry(QRect(180, 30, 221, 71))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Variable"])
         font1.setPointSize(20)
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C8B400;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelHomeButton = ClickableLabel(VistaVisualizzaRecensioneCliente)
         self.labelHomeButton.setObjectName(u"labelHomeButton")
         self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonCliente.png"))
+        self.labelHomeButton.setPixmap(QPixmap(u"Viste/Immagini/HomeButtonCliente.png"))
         self.labelHomeButton.setScaledContents(True)
         self.labelData = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelData.setObjectName(u"labelData")
-        self.labelData.setGeometry(QRect(40, 180, 81, 20))
+        self.labelData.setGeometry(QRect(30, 190, 81, 20))
         self.labelData.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelData.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataRecensione = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelDataRecensione.setObjectName(u"labelDataRecensione")
-        self.labelDataRecensione.setGeometry(QRect(40, 200, 91, 20))
+        self.labelDataRecensione.setGeometry(QRect(30, 220, 91, 20))
         self.labelDataRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelStelle = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelStelle.setObjectName(u"labelStelle")
-        self.labelStelle.setGeometry(QRect(40, 240, 81, 20))
+        self.labelStelle.setGeometry(QRect(30, 260, 81, 20))
         self.labelStelle.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelStelle.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelStelleRecensione = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelStelleRecensione.setObjectName(u"labelStelleRecensione")
-        self.labelStelleRecensione.setGeometry(QRect(40, 260, 41, 20))
+        self.labelStelleRecensione.setGeometry(QRect(30, 290, 51, 20))
         self.labelStelleRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelOra = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelOra.setObjectName(u"labelOra")
-        self.labelOra.setGeometry(QRect(180, 180, 81, 20))
+        self.labelOra.setGeometry(QRect(180, 190, 81, 20))
         self.labelOra.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelOra.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelOraRecensione = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelOraRecensione.setObjectName(u"labelOraRecensione")
-        self.labelOraRecensione.setGeometry(QRect(180, 200, 51, 20))
+        self.labelOraRecensione.setGeometry(QRect(180, 220, 101, 20))
         self.labelOraRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaRecensioneCliente)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelIconaProfilo = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelIconaProfilo.setObjectName(u"labelIconaProfilo")
-        self.labelIconaProfilo.setGeometry(QRect(40, 50, 121, 121))
-        self.labelIconaProfilo.setPixmap(QPixmap(u"Immagini/RecensioneIconCliente.png"))
+        self.labelIconaProfilo.setGeometry(QRect(40, 40, 121, 121))
+        self.labelIconaProfilo.setPixmap(QPixmap(u"Viste/Immagini/RecensioneIconCliente.png"))
         self.labelIconaProfilo.setScaledContents(True)
         self.labelTesto = QLabel(VistaVisualizzaRecensioneCliente)
         self.labelTesto.setObjectName(u"labelTesto")
-        self.labelTesto.setGeometry(QRect(290, 180, 81, 20))
+        self.labelTesto.setGeometry(QRect(290, 190, 81, 20))
         self.labelTesto.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
         self.labelTesto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelTestoRecensione = QLabel(VistaVisualizzaRecensioneCliente)
-        self.labelTestoRecensione.setObjectName(u"labelTestoRecensione")
-        self.labelTestoRecensione.setGeometry(QRect(290, 200, 401, 201))
-        self.labelTestoRecensione.setStyleSheet(u"QLabel {\n"
-"	background-color: #EBF064;\n"
-"	color: #965A00;\n"
-"	border: 1px solid #8C8C3C;\n"
-"    border-radius: 4px;\n"
-"}\n"
-"\n"
-"")
-        self.labelTestoRecensione.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
-        self.labelTestoRecensione.setWordWrap(True)
         self.pushButtonModifica = QPushButton(VistaVisualizzaRecensioneCliente)
         self.pushButtonModifica.setObjectName(u"pushButtonModifica")
-        self.pushButtonModifica.setGeometry(QRect(670, 450, 91, 29))
+        self.pushButtonModifica.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonModifica.setStyleSheet(u"QPushButton {\n"
 "    background-color: #963C00;\n"
 "    color: #FF7800;\n"
@@ -135,9 +122,66 @@ class Ui_VistaVisualizzaRecensioneCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
-"}")
+"}\n"
+"")
+        self.textBrowserTesto = QTextBrowser(VistaVisualizzaRecensioneCliente)
+        self.textBrowserTesto.setObjectName(u"textBrowserTesto")
+        self.textBrowserTesto.setGeometry(QRect(290, 220, 401, 192))
+        self.textBrowserTesto.setStyleSheet(u"QTextBrowser {\n"
+"    background-color: #321E00;\n"
+"    color: #965A00;\n"
+"    border: 1px solid #190E00;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar:vertical {\n"
+"        background: #B46E00;\n"
+"        border: 2px solid #190E00;\n"
+"        border-radius: 4px;\n"
+"        width: 21px;\n"
+"        margin: 5px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::handle:vertical {\n"
+"	background: #965A00;\n"
+"    min-height: 20px;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::handle:vertical:hover {\n"
+"     background: #C86400;\n"
+"}\n"
+"\n"
+"QTextBrowser QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {\n"
+"	background: none;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"")
+        self.pushButtonElimina = QPushButton(VistaVisualizzaRecensioneCliente)
+        self.pushButtonElimina.setObjectName(u"pushButtonElimina")
+        self.pushButtonElimina.setGeometry(QRect(560, 440, 91, 29))
+        self.pushButtonElimina.setStyleSheet(u"QPushButton {\n"
+"    background-color: #963C00;\n"
+"    color: #FF7800;\n"
+"    border: 2px solid #502800;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #C86400;\n"
+"}\n"
+"")
 
         self.retranslateUi(VistaVisualizzaRecensioneCliente)
 
@@ -158,7 +202,7 @@ class Ui_VistaVisualizzaRecensioneCliente(object):
         self.labelIndietroButton.setText("")
         self.labelIconaProfilo.setText("")
         self.labelTesto.setText(QCoreApplication.translate("VistaVisualizzaRecensioneCliente", u"Testo:", None))
-        self.labelTestoRecensione.setText("")
         self.pushButtonModifica.setText(QCoreApplication.translate("VistaVisualizzaRecensioneCliente", u"Modifica", None))
+        self.pushButtonElimina.setText(QCoreApplication.translate("VistaVisualizzaRecensioneCliente", u"Elimina", None))
     # retranslateUi
 

@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from ui_VistaVisualizzaPagamentiCliente import Ui_VistaVisualizzaPagamentiCliente
@@ -21,21 +21,24 @@ class VistaVisualizzaPagamentiCliente(QWidget):
         self.ui.tableViewPagamenti.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewPagamenti.horizontalHeader().setFixedHeight(25)
         self.ui.tableViewPagamenti.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.ui.tableViewPagamenti.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def showEvent(self, event):
         super().showEvent(event)
 
+        self.ui.tableViewPagamenti.verticalScrollBar().setValue(self.ui.tableViewPagamenti.verticalScrollBar().minimum())
+
         gestorePagamenti = GestorePagamenti()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Data:", "Ora:", "Articolo:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Data:", "Ora:", "Articolo:", "Importo:", "Importo Punti:"])
 
         for pagamento in gestorePagamenti.getListaPagamentiCliente(self.statoLogin.clienteAutenticato):
             if isinstance(pagamento.getArticolo(), Biglietto):
                 testo = pagamento.getArticolo().getSpettacolo().getTitolo()
             elif isinstance(pagamento.getArticolo(), Prodotto):
                 testo = pagamento.getArticolo().getNome()
-            self.modelloTabella.appendRow([QStandardItem(QStandardItem(pagamento.getData().toString("dd/MM/yyyy"))), QStandardItem(pagamento.getOra().toString("HH:mm:ss")), QStandardItem(testo)])
+            self.modelloTabella.appendRow([QStandardItem(pagamento.getId()), QStandardItem(pagamento.getData().toString("dd/MM/yyyy")), QStandardItem(pagamento.getOra().toString("HH:mm:ss")), QStandardItem(testo), QStandardItem(f"{pagamento.getImporto()} €"), QStandardItem(f"{pagamento.getImportoPunti()} punti")])
 
         self.ui.tableViewPagamenti.setModel(self.modelloTabella)
         self.ui.tableViewPagamenti.doubleClicked.connect(self.apriPagamento)

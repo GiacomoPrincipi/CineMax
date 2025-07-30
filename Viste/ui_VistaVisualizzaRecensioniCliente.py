@@ -36,8 +36,8 @@ class Ui_VistaVisualizzaRecensioniCliente(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"		stop: 0 #321E00,\n"
-"        stop: 1 #643C00\n"
+"		stop: 0 #211400,\n"
+"        stop: 1 #7D4B00\n"
 "    );\n"
 "}")
         self.labelTitolo = QLabel(VistaVisualizzaRecensioniCliente)
@@ -49,13 +49,13 @@ class Ui_VistaVisualizzaRecensioniCliente(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #502800;\n"
+"    color: #D7AA0C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaRecensioniCliente)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(700, 10, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonCliente.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelBarra = QLabel(VistaVisualizzaRecensioniCliente)
         self.labelBarra.setObjectName(u"labelBarra")
@@ -67,6 +67,10 @@ class Ui_VistaVisualizzaRecensioniCliente(object):
 "        stop: 0 #965A00,\n"
 "        stop: 1 #B46E00\n"
 "    );\n"
+"    border: 1px solid #AF8C0A;\n"
+"    border-top: none;\n"
+"    border-left: none;\n"
+"    border-right: none;\n"
 "}")
         self.pushButtonInserisci = QPushButton(VistaVisualizzaRecensioniCliente)
         self.pushButtonInserisci.setObjectName(u"pushButtonInserisci")
@@ -78,9 +82,14 @@ class Ui_VistaVisualizzaRecensioniCliente(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C86400;\n"
-"}")
+"}\n"
+"")
         self.tableViewRecensioni = QTableView(VistaVisualizzaRecensioniCliente)
         self.tableViewRecensioni.setObjectName(u"tableViewRecensioni")
         self.tableViewRecensioni.setGeometry(QRect(30, 120, 731, 351))
@@ -156,8 +165,8 @@ class Ui_VistaVisualizzaRecensioniCliente(object):
         self.tableViewRecensioni.verticalHeader().setMinimumSectionSize(25)
         self.tableViewRecensioni.verticalHeader().setDefaultSectionSize(25)
         self.tableViewRecensioni.verticalHeader().setHighlightSections(False)
-        self.labelBarra.raise_()
         self.Sfondo.raise_()
+        self.labelBarra.raise_()
         self.labelTitolo.raise_()
         self.labelIndietroButton.raise_()
         self.tableViewRecensioni.raise_()

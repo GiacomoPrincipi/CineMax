@@ -33,14 +33,14 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelIconaFotoAmministratore = QLabel(VistaModificaProdottoAmministratore)
         self.labelIconaFotoAmministratore.setObjectName(u"labelIconaFotoAmministratore")
         self.labelIconaFotoAmministratore.setGeometry(QRect(30, 30, 131, 131))
-        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Immagini/IconaFotoAmministratore.png"))
+        self.labelIconaFotoAmministratore.setPixmap(QPixmap(u"Viste/Immagini/IconaFotoAmministratore.png"))
         self.labelIconaFotoAmministratore.setScaledContents(True)
         self.labelNome = QLabel(VistaModificaProdottoAmministratore)
         self.labelNome.setObjectName(u"labelNome")
@@ -58,40 +58,40 @@ class Ui_VistaModificaProdottoAmministratore(object):
         font1.setBold(True)
         self.labelTitoloPrincipale.setFont(font1)
         self.labelTitoloPrincipale.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitoloPrincipale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelIngredienti = QLabel(VistaModificaProdottoAmministratore)
         self.labelIngredienti.setObjectName(u"labelIngredienti")
-        self.labelIngredienti.setGeometry(QRect(40, 180, 81, 20))
+        self.labelIngredienti.setGeometry(QRect(30, 190, 81, 20))
         self.labelIngredienti.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelIngredienti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDisponibile = QLabel(VistaModificaProdottoAmministratore)
         self.labelDisponibile.setObjectName(u"labelDisponibile")
-        self.labelDisponibile.setGeometry(QRect(40, 360, 101, 20))
+        self.labelDisponibile.setGeometry(QRect(30, 400, 101, 20))
         self.labelDisponibile.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelDisponibile.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelAllergeni = QLabel(VistaModificaProdottoAmministratore)
         self.labelAllergeni.setObjectName(u"labelAllergeni")
-        self.labelAllergeni.setGeometry(QRect(40, 240, 81, 20))
+        self.labelAllergeni.setGeometry(QRect(30, 260, 81, 20))
         self.labelAllergeni.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelAllergeni.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPrezzo = QLabel(VistaModificaProdottoAmministratore)
         self.labelPrezzo.setObjectName(u"labelPrezzo")
-        self.labelPrezzo.setGeometry(QRect(40, 300, 81, 20))
+        self.labelPrezzo.setGeometry(QRect(30, 330, 81, 20))
         self.labelPrezzo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPrezzo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditNome = QLineEdit(VistaModificaProdottoAmministratore)
         self.lineEditNome.setObjectName(u"lineEditNome")
-        self.lineEditNome.setGeometry(QRect(180, 120, 171, 26))
+        self.lineEditNome.setGeometry(QRect(180, 130, 221, 26))
         self.lineEditNome.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -100,7 +100,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "}")
         self.lineEditPrezzo = QLineEdit(VistaModificaProdottoAmministratore)
         self.lineEditPrezzo.setObjectName(u"lineEditPrezzo")
-        self.lineEditPrezzo.setGeometry(QRect(40, 320, 81, 26))
+        self.lineEditPrezzo.setGeometry(QRect(30, 360, 81, 26))
         self.lineEditPrezzo.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -109,7 +109,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "}")
         self.comboBoxDisponibile = QComboBox(VistaModificaProdottoAmministratore)
         self.comboBoxDisponibile.setObjectName(u"comboBoxDisponibile")
-        self.comboBoxDisponibile.setGeometry(QRect(40, 380, 76, 26))
+        self.comboBoxDisponibile.setGeometry(QRect(30, 430, 76, 26))
         self.comboBoxDisponibile.setStyleSheet(u"QComboBox {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -130,7 +130,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "}")
         self.checkBoxAllergene1 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene1.setObjectName(u"checkBoxAllergene1")
-        self.checkBoxAllergene1.setGeometry(QRect(40, 260, 91, 24))
+        self.checkBoxAllergene1.setGeometry(QRect(30, 290, 91, 24))
         self.checkBoxAllergene1.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -153,7 +153,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.checkBoxAllergene2 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene2.setObjectName(u"checkBoxAllergene2")
-        self.checkBoxAllergene2.setGeometry(QRect(140, 260, 71, 24))
+        self.checkBoxAllergene2.setGeometry(QRect(150, 290, 71, 24))
         self.checkBoxAllergene2.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -176,7 +176,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.checkBoxAllergene3 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene3.setObjectName(u"checkBoxAllergene3")
-        self.checkBoxAllergene3.setGeometry(QRect(240, 260, 121, 24))
+        self.checkBoxAllergene3.setGeometry(QRect(250, 290, 121, 24))
         self.checkBoxAllergene3.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -199,7 +199,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.checkBoxAllergene4 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene4.setObjectName(u"checkBoxAllergene4")
-        self.checkBoxAllergene4.setGeometry(QRect(380, 260, 121, 24))
+        self.checkBoxAllergene4.setGeometry(QRect(390, 290, 71, 24))
         self.checkBoxAllergene4.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -222,7 +222,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.checkBoxAllergene6 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene6.setObjectName(u"checkBoxAllergene6")
-        self.checkBoxAllergene6.setGeometry(QRect(620, 260, 121, 24))
+        self.checkBoxAllergene6.setGeometry(QRect(560, 290, 71, 24))
         self.checkBoxAllergene6.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -245,7 +245,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.lineEditIngredienti = QLineEdit(VistaModificaProdottoAmministratore)
         self.lineEditIngredienti.setObjectName(u"lineEditIngredienti")
-        self.lineEditIngredienti.setGeometry(QRect(40, 200, 451, 26))
+        self.lineEditIngredienti.setGeometry(QRect(30, 220, 511, 26))
         self.lineEditIngredienti.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -254,7 +254,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "}")
         self.pushButtonConferma = QPushButton(VistaModificaProdottoAmministratore)
         self.pushButtonConferma.setObjectName(u"pushButtonConferma")
-        self.pushButtonConferma.setGeometry(QRect(680, 450, 91, 29))
+        self.pushButtonConferma.setGeometry(QRect(670, 440, 91, 29))
         self.pushButtonConferma.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -262,12 +262,16 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.pushButtonAnnulla = QPushButton(VistaModificaProdottoAmministratore)
         self.pushButtonAnnulla.setObjectName(u"pushButtonAnnulla")
-        self.pushButtonAnnulla.setGeometry(QRect(570, 450, 91, 29))
+        self.pushButtonAnnulla.setGeometry(QRect(560, 440, 91, 29))
         self.pushButtonAnnulla.setStyleSheet(u"QPushButton {\n"
 "    background-color: #961E00;\n"
 "    color: #FF3C00;\n"
@@ -275,12 +279,16 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "    border-radius: 6px;\n"
 "}\n"
 "\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}\n"
+"\n"
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
         self.checkBoxAllergene5 = QCheckBox(VistaModificaProdottoAmministratore)
         self.checkBoxAllergene5.setObjectName(u"checkBoxAllergene5")
-        self.checkBoxAllergene5.setGeometry(QRect(520, 260, 71, 24))
+        self.checkBoxAllergene5.setGeometry(QRect(480, 290, 71, 24))
         self.checkBoxAllergene5.setStyleSheet(u"QCheckBox {\n"
 "        color: #962D00;\n"
 "}\n"
@@ -303,7 +311,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "")
         self.labelErroreNome = QLabel(VistaModificaProdottoAmministratore)
         self.labelErroreNome.setObjectName(u"labelErroreNome")
-        self.labelErroreNome.setGeometry(QRect(360, 120, 121, 20))
+        self.labelErroreNome.setGeometry(QRect(410, 130, 121, 20))
         self.labelErroreNome.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
@@ -317,28 +325,28 @@ class Ui_VistaModificaProdottoAmministratore(object):
         self.labelErroreIngredienti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErrorePrezzo = QLabel(VistaModificaProdottoAmministratore)
         self.labelErrorePrezzo.setObjectName(u"labelErrorePrezzo")
-        self.labelErrorePrezzo.setGeometry(QRect(130, 320, 161, 20))
+        self.labelErrorePrezzo.setGeometry(QRect(120, 360, 121, 20))
         self.labelErrorePrezzo.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErrorePrezzo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreDisponibile = QLabel(VistaModificaProdottoAmministratore)
         self.labelErroreDisponibile.setObjectName(u"labelErroreDisponibile")
-        self.labelErroreDisponibile.setGeometry(QRect(130, 380, 161, 20))
+        self.labelErroreDisponibile.setGeometry(QRect(120, 430, 161, 20))
         self.labelErroreDisponibile.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
         self.labelErroreDisponibile.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelPrezzoPunti = QLabel(VistaModificaProdottoAmministratore)
         self.labelPrezzoPunti.setObjectName(u"labelPrezzoPunti")
-        self.labelPrezzoPunti.setGeometry(QRect(340, 300, 131, 20))
+        self.labelPrezzoPunti.setGeometry(QRect(260, 330, 131, 20))
         self.labelPrezzoPunti.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelPrezzoPunti.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.lineEditPrezzoPunti = QLineEdit(VistaModificaProdottoAmministratore)
         self.lineEditPrezzoPunti.setObjectName(u"lineEditPrezzoPunti")
-        self.lineEditPrezzoPunti.setGeometry(QRect(340, 320, 81, 26))
+        self.lineEditPrezzoPunti.setGeometry(QRect(260, 360, 81, 26))
         self.lineEditPrezzoPunti.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"
@@ -347,7 +355,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
 "}")
         self.labelErrorePrezzoPunti = QLabel(VistaModificaProdottoAmministratore)
         self.labelErrorePrezzoPunti.setObjectName(u"labelErrorePrezzoPunti")
-        self.labelErrorePrezzoPunti.setGeometry(QRect(430, 320, 161, 20))
+        self.labelErrorePrezzoPunti.setGeometry(QRect(350, 360, 161, 20))
         self.labelErrorePrezzoPunti.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")
@@ -372,7 +380,7 @@ class Ui_VistaModificaProdottoAmministratore(object):
         self.lineEditPrezzo.setText("")
         self.checkBoxAllergene1.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Latticini", None))
         self.checkBoxAllergene2.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Glutine", None))
-        self.checkBoxAllergene3.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Frutta a guscio", None))
+        self.checkBoxAllergene3.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Frutta a Guscio", None))
         self.checkBoxAllergene4.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Pesce", None))
         self.checkBoxAllergene6.setText(QCoreApplication.translate("VistaModificaProdottoAmministratore", u"Uova", None))
         self.lineEditIngredienti.setText("")

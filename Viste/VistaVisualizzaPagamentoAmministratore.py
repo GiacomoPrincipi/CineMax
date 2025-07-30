@@ -26,9 +26,9 @@ class VistaVisualizzaPagamentoAmministratore(QWidget):
 
         self.ui.labelCodiceFiscalePagamento.setText(pagamentoAmministratore.getCliente().getCodiceFiscale())
         self.ui.labelNomePagamento.setText(testo)
+        self.ui.labelIdPagamento.setText(pagamentoAmministratore.getId())
         self.ui.labelDataPagamento.setText(pagamentoAmministratore.getData().toString("dd/MM/yyyy"))
         self.ui.labelOraPagamento.setText(pagamentoAmministratore.getOra().toString("HH:mm:ss"))
         self.ui.labelTipoPagamento.setText(pagamentoAmministratore.getTipo())
         self.ui.labelImportoPagamento.setText(f"{pagamentoAmministratore.getImporto()} €")
-
-
+        self.ui.labelImportoPuntiPagamento.setText(f"{pagamentoAmministratore.getImportoPunti()} Punti")

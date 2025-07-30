@@ -21,8 +21,7 @@ class VistaHomeCliente(QWidget):
     def showEvent(self, event):
         super().showEvent(event)
 
-        cliente = self.statoLogin.clienteAutenticato
-
     def logout(self):
         self.statoLogin.logoutCliente()
+
         self.goVistaHome()

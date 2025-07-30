@@ -26,10 +26,10 @@ class VistaAcquistoProdottoCliente(QWidget):
     def showEvent(self, event):
         super().showEvent(event)
 
-        prodotto = self.prodottoCliente
+        prodottoCliente = self.prodottoCliente
 
-        self.ui.labelPrezzoProdotto.setText(str(prodotto.getPrezzo()))
-        self.ui.labelPrezzoPuntiProdotto.setText(str(prodotto.getPrezzoPunti()))
+        self.ui.labelPrezzoProdotto.setText(str(prodottoCliente.getPrezzo()))
+        self.ui.labelPrezzoPuntiProdotto.setText(str(prodottoCliente.getPrezzoPunti()))
         self.ui.comboBoxTipoPagamento.setCurrentIndex(0)
         self.ui.labelPuntiCliente.setText(str(self.statoLogin.clienteAutenticato.getPunti()))
 
@@ -43,27 +43,24 @@ class VistaAcquistoProdottoCliente(QWidget):
         self.ui.labelErroreTipoPagamento.setText("")
         self.ui.labelErrorePuntiInsufficenti.setText("")
 
-        prodotto = self.prodottoCliente
+        prodottoCliente = self.prodottoCliente
 
         esito = False
 
         if self.ui.comboBoxTipoPagamento.currentIndex() == 0:
-            self.ui.labelErroreTipoPagamento.setText("inserisci il metodo di pagamento!")
+            self.ui.labelErroreTipoPagamento.setText("Inserisci il metodo di pagamento!")
             esito = True
 
 
         if self.ui.comboBoxTipoPagamento.currentText() == "Punti":
-            if not GestorePunti.controlloPunti(self.statoLogin.clienteAutenticato, prodotto):
-                self.ui.labelErrorePuntiInsufficenti.setText("punti non sufficenti")
+            if not GestorePunti.controlloPunti(self.statoLogin.clienteAutenticato, prodottoCliente):
+                self.ui.labelErrorePuntiInsufficenti.setText("Punti non sufficenti!")
                 esito = True
 
 
-        if esito:
-            return
-
+        if esito: return
 
         gestorePagamenti = GestorePagamenti()
-
         gestoreClienti =  GestoreClienti()
 
         id = gestorePagamenti.generaIdPagamento()
@@ -73,17 +70,17 @@ class VistaAcquistoProdottoCliente(QWidget):
 
         if self.ui.comboBoxTipoPagamento.currentText() == "Punti":
             importo = 0
-            importoPunti = prodotto.getPrezzoPunti()
+            importoPunti = prodottoCliente.getPrezzoPunti()
             GestorePunti.rimuoviPunti(self.statoLogin.clienteAutenticato, importoPunti)
         else:
-            importo = prodotto.getPrezzo()
+            importo = prodottoCliente.getPrezzo()
             importoPunti = 0
 
-        pagamento = Pagamento(self.statoLogin.clienteAutenticato, id, data, ora, prodotto, tipo, importo, importoPunti)
+        pagamento = Pagamento(self.statoLogin.clienteAutenticato, id, data, ora, prodottoCliente, tipo, importo, importoPunti)
         gestorePagamenti.inserisciPagamento(pagamento)
 
         if self.ui.comboBoxTipoPagamento.currentText() == "Normale":
-            puntiDaAggiungere = GestorePunti.calcoloPunti(prodotto.getPrezzo())
+            puntiDaAggiungere = GestorePunti.calcoloPunti(prodottoCliente.getPrezzo())
             GestorePunti.aggiungiPunti(self.statoLogin.clienteAutenticato, puntiDaAggiungere)
 
         for clienteNellaLista in gestoreClienti.listaClienti:

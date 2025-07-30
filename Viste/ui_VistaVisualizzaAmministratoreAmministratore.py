@@ -34,14 +34,14 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
 "    background: qlineargradient(\n"
 "        x1: 0, y1: 1,\n"
 "        x2: 0, y2: 0,\n"
-"        stop: 0 #320F00,\n"
-"        stop: 1 #641E00\n"
+"        stop: 0 #210A00,\n"
+"        stop: 1 #7D2100\n"
 "    );\n"
 "}")
         self.labelProfilo = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelProfilo.setObjectName(u"labelProfilo")
-        self.labelProfilo.setGeometry(QRect(40, 30, 121, 121))
-        self.labelProfilo.setPixmap(QPixmap(u"Immagini/profiloButtonAmministratore.png"))
+        self.labelProfilo.setGeometry(QRect(30, 30, 121, 121))
+        self.labelProfilo.setPixmap(QPixmap(u"Viste/Immagini/ProfiloButtonAmministratore.png"))
         self.labelProfilo.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelNome.setObjectName(u"labelNome")
@@ -59,13 +59,13 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
         font1.setBold(True)
         self.labelTitolo.setFont(font1)
         self.labelTitolo.setStyleSheet(u"QLabel {\n"
-"    color: #C83C00;\n"
+"    color: #D7320C;\n"
 "}")
         self.labelTitolo.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelHomeButton = ClickableLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelHomeButton.setObjectName(u"labelHomeButton")
         self.labelHomeButton.setGeometry(QRect(700, 20, 63, 61))
-        self.labelHomeButton.setPixmap(QPixmap(u"Immagini/HomeButtonAmministratore.png"))
+        self.labelHomeButton.setPixmap(QPixmap(u"Viste/Immagini/HomeButtonAmministratore.png"))
         self.labelHomeButton.setScaledContents(True)
         self.labelCognome = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelCognome.setObjectName(u"labelCognome")
@@ -76,70 +76,70 @@ class Ui_VistaVisualizzaAmministratoreAmministratore(object):
         self.labelCognome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelNomeAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelNomeAmministratore.setObjectName(u"labelNomeAmministratore")
-        self.labelNomeAmministratore.setGeometry(QRect(180, 120, 131, 20))
+        self.labelNomeAmministratore.setGeometry(QRect(180, 130, 131, 20))
         self.labelNomeAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelCognomeAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelCognomeAmministratore.setObjectName(u"labelCognomeAmministratore")
-        self.labelCognomeAmministratore.setGeometry(QRect(330, 120, 131, 20))
+        self.labelCognomeAmministratore.setGeometry(QRect(330, 130, 131, 20))
         self.labelCognomeAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelMatricola = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelMatricola.setObjectName(u"labelMatricola")
-        self.labelMatricola.setGeometry(QRect(40, 180, 81, 20))
+        self.labelMatricola.setGeometry(QRect(30, 180, 81, 20))
         self.labelMatricola.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelMatricola.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelMatricolaAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelMatricolaAmministratore.setObjectName(u"labelMatricolaAmministratore")
-        self.labelMatricolaAmministratore.setGeometry(QRect(40, 200, 131, 20))
+        self.labelMatricolaAmministratore.setGeometry(QRect(30, 210, 131, 20))
         self.labelMatricolaAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelEmail = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelEmail.setObjectName(u"labelEmail")
-        self.labelEmail.setGeometry(QRect(40, 240, 81, 20))
+        self.labelEmail.setGeometry(QRect(30, 250, 81, 20))
         self.labelEmail.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelEmail.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelEmailAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelEmailAmministratore.setObjectName(u"labelEmailAmministratore")
-        self.labelEmailAmministratore.setGeometry(QRect(40, 260, 251, 20))
+        self.labelEmailAmministratore.setGeometry(QRect(30, 280, 251, 20))
         self.labelEmailAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelTelefono = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelTelefono.setObjectName(u"labelTelefono")
-        self.labelTelefono.setGeometry(QRect(40, 300, 81, 20))
+        self.labelTelefono.setGeometry(QRect(30, 320, 81, 20))
         self.labelTelefono.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelTelefono.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTelefonoAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelTelefonoAmministratore.setObjectName(u"labelTelefonoAmministratore")
-        self.labelTelefonoAmministratore.setGeometry(QRect(40, 320, 251, 20))
+        self.labelTelefonoAmministratore.setGeometry(QRect(30, 350, 251, 20))
         self.labelTelefonoAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelIndietroButton = ClickableLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelIndietroButton.setObjectName(u"labelIndietroButton")
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
-        self.labelIndietroButton.setPixmap(QPixmap(u"Immagini/IndietroButtonAmministratore.png"))
+        self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonAmministratore.png"))
         self.labelIndietroButton.setScaledContents(True)
         self.labelDataNascita = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelDataNascita.setObjectName(u"labelDataNascita")
-        self.labelDataNascita.setGeometry(QRect(510, 100, 121, 20))
+        self.labelDataNascita.setGeometry(QRect(520, 100, 121, 20))
         self.labelDataNascita.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
         self.labelDataNascita.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelDataNascitaAmministratore = QLabel(VistaVisualizzaAmministratoreAmministratore)
         self.labelDataNascitaAmministratore.setObjectName(u"labelDataNascitaAmministratore")
-        self.labelDataNascitaAmministratore.setGeometry(QRect(510, 120, 101, 20))
+        self.labelDataNascitaAmministratore.setGeometry(QRect(520, 130, 101, 20))
         self.labelDataNascitaAmministratore.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
