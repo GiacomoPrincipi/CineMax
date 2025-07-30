@@ -1,7 +1,7 @@
 import sys
 
 from PySide6.QtWidgets import QApplication
-from VistaPrincipale import VistaPrincipale
+from Viste.VistaPrincipale import VistaPrincipale
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 
 if __name__ == '__main__':
