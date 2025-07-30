@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from ui_VistaVisualizzaRecensioniCliente import Ui_VistaVisualizzaRecensioniCliente
@@ -20,17 +20,20 @@ class VistaVisualizzaRecensioniCliente(QWidget):
         self.ui.tableViewRecensioni.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewRecensioni.horizontalHeader().setFixedHeight(25)
         self.ui.tableViewRecensioni.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.ui.tableViewRecensioni.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def showEvent(self, event):
         super().showEvent(event)
 
+        self.ui.tableViewRecensioni.verticalScrollBar().setValue(self.ui.tableViewRecensioni.verticalScrollBar().minimum())
+
         gestoreRecensioni = GestoreRecensioni()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Data:", "Ora:", "Stelle:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Data:", "Ora:", "Stelle:", "Testo:"])
 
         for recensione in gestoreRecensioni.getListaRecensioniCliente(self.statoLogin.clienteAutenticato):
-            self.modelloTabella.appendRow([QStandardItem(QStandardItem(recensione.getData().toString("dd/MM/yyyy"))), QStandardItem(recensione.getOra().toString("HH:mm:ss")), QStandardItem(str(recensione.getStelle()))])
+            self.modelloTabella.appendRow([QStandardItem(recensione.getData().toString("dd/MM/yyyy")), QStandardItem(recensione.getOra().toString("HH:mm:ss")), QStandardItem(f"{recensione.getStelle()}/5"), QStandardItem(recensione.getTesto())])
 
         self.ui.tableViewRecensioni.setModel(self.modelloTabella)
         self.ui.tableViewRecensioni.doubleClicked.connect(self.apriRecensione)

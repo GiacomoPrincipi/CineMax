@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-		stop: 0 #321E00,
-        stop: 1 #643C00
+		stop: 0 #211400,
+        stop: 1 #7D4B00
     );
 }</string>
    </property>
@@ -59,7 +59,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #502800;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -105,6 +105,10 @@
         stop: 0 #965A00,
         stop: 1 #B46E00
     );
+    border: 1px solid #AF8C0A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }</string>
    </property>
    <property name="text">
@@ -224,11 +228,11 @@ QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
     <bool>false</bool>
    </attribute>
   </widget>
-  <zorder>labelBarra</zorder>
   <zorder>Sfondo</zorder>
-  <zorder>labelTitolo</zorder>
-  <zorder>labelIndietroButton</zorder>
   <zorder>tableViewSpettacoli</zorder>
+  <zorder>labelBarra</zorder>
+  <zorder>labelIndietroButton</zorder>
+  <zorder>labelTitolo</zorder>
  </widget>
  <customwidgets>
   <customwidget>

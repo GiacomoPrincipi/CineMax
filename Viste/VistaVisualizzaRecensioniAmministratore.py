@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QHeaderView
+from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from ui_VistaVisualizzaRecensioniAmministratore import Ui_VistaVisualizzaRecensioniAmministratore
@@ -19,17 +19,20 @@ class VistaVisualizzaRecensioniAmministratore(QWidget):
         self.ui.tableViewRecensioni.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewRecensioni.horizontalHeader().setFixedHeight(25)
         self.ui.tableViewRecensioni.horizontalHeader().setDefaultAlignment(Qt.AlignLeft)
+        self.ui.tableViewRecensioni.setEditTriggers(QAbstractItemView.NoEditTriggers)
 
     def showEvent(self, event):
         super().showEvent(event)
 
+        self.ui.tableViewRecensioni.verticalScrollBar().setValue(self.ui.tableViewRecensioni.verticalScrollBar().minimum())
+
         gestoreRecensioni = GestoreRecensioni()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Cliente:", "Data:", "Ora:", "Stelle:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Cliente:", "Data:", "Ora:", "Stelle:", "Testo:"])
 
         for recensione in gestoreRecensioni.getListaRecensioni():
-            self.modelloTabella.appendRow([QStandardItem(recensione.getCliente().getCodiceFiscale()), QStandardItem(recensione.getData().toString("dd/MM/yyyy")), QStandardItem(recensione.getOra().toString("HH:mm:ss")), QStandardItem(str(recensione.getStelle()))])
+            self.modelloTabella.appendRow([QStandardItem(recensione.getId()), QStandardItem(recensione.getCliente().getCodiceFiscale()), QStandardItem(recensione.getData().toString("dd/MM/yyyy")), QStandardItem(recensione.getOra().toString("HH:mm:ss")), QStandardItem(f"{recensione.getStelle()}/5"), QStandardItem(recensione.getTesto())])
 
         self.ui.tableViewRecensioni.setModel(self.modelloTabella)
         self.ui.tableViewRecensioni.doubleClicked.connect(self.apriRecensione)

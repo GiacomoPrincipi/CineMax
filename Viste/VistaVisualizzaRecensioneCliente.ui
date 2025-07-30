@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-		stop: 0 #321E00,
-        stop: 1 #643C00
+		stop: 0 #211400,
+        stop: 1 #7D4B00
     );
 }</string>
    </property>
@@ -46,7 +46,7 @@
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>291</width>
+     <width>221</width>
      <height>71</height>
     </rect>
    </property>
@@ -59,7 +59,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C8B400;
+    color: #D7AA0C;
 }</string>
    </property>
    <property name="text">
@@ -91,8 +91,8 @@
   <widget class="QLabel" name="labelData">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -112,8 +112,8 @@
   <widget class="QLabel" name="labelDataRecensione">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>220</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -130,8 +130,8 @@
   <widget class="QLabel" name="labelStelle">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>260</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -151,9 +151,9 @@
   <widget class="QLabel" name="labelStelleRecensione">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
-     <width>41</width>
+     <x>30</x>
+     <y>290</y>
+     <width>51</width>
      <height>20</height>
     </rect>
    </property>
@@ -170,7 +170,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>180</y>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -191,8 +191,8 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>200</y>
-     <width>51</width>
+     <y>220</y>
+     <width>101</width>
      <height>20</height>
     </rect>
    </property>
@@ -228,7 +228,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>50</y>
+     <y>40</y>
      <width>121</width>
      <height>121</height>
     </rect>
@@ -247,7 +247,7 @@
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>180</y>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -264,40 +264,11 @@
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTestoRecensione">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>200</y>
-     <width>401</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-	background-color: #EBF064;
-	color: #965A00;
-	border: 1px solid #8C8C3C;
-    border-radius: 4px;
-}
-
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
-   </property>
-   <property name="wordWrap">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButtonModifica">
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>450</y>
+     <y>440</y>
      <width>91</width>
      <height>29</height>
     </rect>
@@ -310,12 +281,90 @@
     border-radius: 6px;
 }
 
+QPushButton:focus {
+    outline: none;
+}
+
 QPushButton:hover {
     background-color: #C86400;
-}</string>
+}
+</string>
    </property>
    <property name="text">
     <string>Modifica</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowserTesto">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>220</y>
+     <width>401</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextBrowser {
+    background-color: #321E00;
+    color: #965A00;
+    border: 1px solid #190E00;
+    border-radius: 4px;
+}
+
+QTextBrowser QScrollBar:vertical {
+        background: #B46E00;
+        border: 2px solid #190E00;
+        border-radius: 4px;
+        width: 21px;
+        margin: 5px;
+}
+
+QTextBrowser QScrollBar::handle:vertical {
+	background: #965A00;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QTextBrowser QScrollBar::handle:vertical:hover {
+     background: #C86400;
+}
+
+QTextBrowser QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	background: none;
+    border: none;
+}
+
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonElimina">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>440</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #963C00;
+    color: #FF7800;
+    border: 2px solid #502800;
+    border-radius: 6px;
+}
+
+QPushButton:focus {
+    outline: none;
+}
+
+QPushButton:hover {
+    background-color: #C86400;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Elimina</string>
    </property>
   </widget>
  </widget>

@@ -16,8 +16,8 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
 
         self.ui.labelHomeButton.clicked.connect(goVistaHomeCliente)
         self.ui.labelIndietroButton.clicked.connect(goVistaVisualizzaSpettacoliCliente)
-        self.ui.pushButtonAcquista.clicked.connect(self.apriBiglietto)
-        self.ui.pushButtonAcquista.setEnabled(False)
+        self.ui.pushButtonApri.clicked.connect(self.apriBiglietto)
+        self.ui.pushButtonApri.setEnabled(False)
 
         self.ui.tableViewBiglietti.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.tableViewBiglietti.horizontalHeader().setFixedHeight(25)
@@ -27,7 +27,9 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
     def showEvent(self, event):
         super().showEvent(event)
 
-        self.ui.pushButtonAcquista.setEnabled(False)
+        self.ui.tableViewBiglietti.verticalScrollBar().setValue(self.ui.tableViewBiglietti.verticalScrollBar().minimum())
+
+        self.ui.pushButtonApri.setEnabled(False)
 
         spettacoloCliente = self.spettacoloCliente
         gestoreBiglietti = GestoreBiglietti()
@@ -41,7 +43,7 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         self.ui.labelDurataSpettacolo.setText(f"{spettacoloCliente.getDurata()} minuti")
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Posto:", "Prezzo Adulto:", "Prezzo Bambino"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Posto:", "Prezzo Adulto:", "Prezzo Ridotto:"])
 
         for biglietto in gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente):
             self.modelloTabella.appendRow([QStandardItem(str(biglietto.getPosto())), QStandardItem(f"{biglietto.getPrezzo()} €"), QStandardItem(f"{biglietto.getPrezzoPunti()} punti")])
@@ -52,9 +54,8 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
 
     def apriBiglietto(self):
 
-        gestoreBiglietti = GestoreBiglietti()
-
         spettacoloCliente = self.spettacoloCliente
+        gestoreBiglietti = GestoreBiglietti()
 
         riga = self.ui.tableViewBiglietti.selectionModel().currentIndex().row()
         bigliettoCliente = gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente)[riga]
@@ -62,4 +63,4 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         self.goVistaAcquistoBigliettoCliente(bigliettoCliente)
 
     def abilitaBottone(self):
-        self.ui.pushButtonAcquista.setEnabled(True)
+        self.ui.pushButtonApri.setEnabled(True)

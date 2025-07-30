@@ -32,8 +32,8 @@
     background: qlineargradient(
         x1: 0, y1: 1,
         x2: 0, y2: 0,
-        stop: 0 #320F00,
-        stop: 1 #641E00
+        stop: 0 #210A00,
+        stop: 1 #7D2100
     );
 }</string>
    </property>
@@ -80,7 +80,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: #C83C00;
+    color: #D7320C;
 }</string>
    </property>
    <property name="text">
@@ -112,8 +112,8 @@
   <widget class="QLabel" name="labelData">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>30</x>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -133,8 +133,8 @@
   <widget class="QLabel" name="labelDataRecensione">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>220</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -151,8 +151,8 @@
   <widget class="QLabel" name="labelStelle">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>240</y>
+     <x>30</x>
+     <y>260</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -172,9 +172,9 @@
   <widget class="QLabel" name="labelStelleRecensione">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>260</y>
-     <width>41</width>
+     <x>30</x>
+     <y>290</y>
+     <width>51</width>
      <height>20</height>
     </rect>
    </property>
@@ -191,7 +191,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>180</y>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -212,8 +212,8 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>200</y>
-     <width>51</width>
+     <y>220</y>
+     <width>91</width>
      <height>20</height>
     </rect>
    </property>
@@ -249,7 +249,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>50</y>
+     <y>40</y>
      <width>121</width>
      <height>121</height>
     </rect>
@@ -268,7 +268,7 @@
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>180</y>
+     <y>190</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -283,35 +283,6 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelTestoRecensione">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>200</y>
-     <width>401</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-	background-color: #EB7864;
-    color: #962D00;
-	border: 1px solid #8C463C;
-    border-radius: 4px;
-}
-
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
-   </property>
-   <property name="wordWrap">
-    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="labelCodiceFiscaleRecensione">
@@ -330,6 +301,47 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowserTesto">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>220</y>
+     <width>401</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTextBrowser {
+    background-color: #320F00;
+    color: #962D00;
+    border: 1px solid #190700;
+    border-radius: 4px;
+}
+
+QTextBrowser QScrollBar:vertical {
+	background: #B43700;
+	border: 2px solid #190700;
+    border-radius: 4px;
+    width: 21px;
+    margin: 5px;
+}
+
+QTextBrowser QScrollBar::handle:vertical {
+	background: #962D00;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QTextBrowser QScrollBar::handle:vertical:hover {
+    background: #C83200;
+}
+
+QTextBrowser QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	background: none;
+    border: none;
+}</string>
    </property>
   </widget>
  </widget>
