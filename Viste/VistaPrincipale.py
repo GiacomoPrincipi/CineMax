@@ -49,7 +49,7 @@ class VistaPrincipale(QMainWindow):
 
         self.setFixedSize(790, 499)
         self.setWindowTitle("Home - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaHome.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaHome.ico"))
 
         self.vistaHome = VistaHome(statoLogin, self.goVistaLoginAmministratore, self.goVistaLoginCliente)
 
@@ -142,209 +142,209 @@ class VistaPrincipale(QMainWindow):
     def goVistaHome(self):
         self.stack.setCurrentWidget(self.vistaHome)
         self.setWindowTitle("Home - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaHome.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaHome.ico"))
 
     def goVistaLoginAmministratore(self):
         self.stack.setCurrentWidget(self.vistaLoginAmministratore)
         self.setWindowTitle("Login Amministratore - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaHomeAmministratore(self):
         self.stack.setCurrentWidget(self.vistaHomeAmministratore)
         self.setWindowTitle("Area Riservata Amministratore - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaProfiloPersonaleAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaProfiloPersonaleAmministratore)
         self.setWindowTitle("Profilo Personale - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaModificaProfiloPersonaleAmministratore(self):
         self.stack.setCurrentWidget(self.vistaModificaProfiloPersonaleAmministratore)
         self.setWindowTitle("Modifica Profilo Personale - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaSpettacoliAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaSpettacoliAmministratore)
         self.setWindowTitle("Spettacoli - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaSpettacoloAmministratore(self, spettacoloAmministratore):
         self.vistaVisualizzaSpettacoloAmministratore.spettacoloAmministratore = spettacoloAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaSpettacoloAmministratore)
         self.setWindowTitle("Spettacolo - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaInserisciSpettacoloAmministratore(self):
         self.stack.setCurrentWidget(self.vistaInserisciSpettacoloAmministratore)
         self.setWindowTitle("Inserisci Spettacolo - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaModificaSpettacoloAmministratore(self, spettacoloAmministratore):
         self.vistaModificaSpettacoloAmministratore.spettacoloAmministratore = spettacoloAmministratore
         self.stack.setCurrentWidget(self.vistaModificaSpettacoloAmministratore)
         self.setWindowTitle("Modifica Spettacolo - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaProdottiAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaProdottiAmministratore)
         self.setWindowTitle("Prodotti - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaProdottoAmministratore(self, prodottoAmministratore):
         self.vistaVisualizzaProdottoAmministratore.prodottoAmministratore = prodottoAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaProdottoAmministratore)
         self.setWindowTitle("Prodotto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaInserisciProdottoAmministratore(self):
         self.stack.setCurrentWidget(self.vistaInserisciProdottoAmministratore)
         self.setWindowTitle("Inserisci Prodotto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaModificaProdottoAmministratore(self, prodottoAmministratore):
         self.vistaModificaProdottoAmministratore.prodottoAmministratore = prodottoAmministratore
         self.stack.setCurrentWidget(self.vistaModificaProdottoAmministratore)
         self.setWindowTitle("Modifica Prodotto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaRegistroCassaAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaRegistroCassaAmministratore)
         self.setWindowTitle("Registro Cassa - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaPagamentoAmministratore(self, pagamentoAmministratore):
         self.vistaVisualizzaPagamentoAmministratore.pagamentoAmministratore = pagamentoAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaPagamentoAmministratore)
         self.setWindowTitle("Pagamento - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaRecensioniAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaRecensioniAmministratore)
         self.setWindowTitle("Recensioni - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaRecensioneAmministratore(self, recensioneAmministratore):
         self.vistaVisualizzaRecensioneAmministratore.recensioneAmministratore = recensioneAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaRecensioneAmministratore)
         self.setWindowTitle("Recensione - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaAmministratoriAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaAmministratoriAmministratore)
         self.setWindowTitle("Amministratori - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaAmministratoreAmministratore(self, amministratoreAmministratore):
         self.vistaVisualizzaAmministratoreAmministratore.amministratoreAmministratore = amministratoreAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaAmministratoreAmministratore)
         self.setWindowTitle("Amministratore - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaInserisciAmministratoreAmministratore(self):
         self.stack.setCurrentWidget(self.vistaInserisciAmministratoreAmministratore)
         self.setWindowTitle("Inserisci Amministratore - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaClientiAmministratore(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaClientiAmministratore)
         self.setWindowTitle("Clienti - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaClienteAmministratore(self, clienteAmministratore):
         self.vistaVisualizzaClienteAmministratore.clienteAmministratore = clienteAmministratore
         self.stack.setCurrentWidget(self.vistaVisualizzaClienteAmministratore)
         self.setWindowTitle("Cliente - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaAmministratore.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaLoginCliente(self):
         self.stack.setCurrentWidget(self.vistaLoginCliente)
         self.setWindowTitle("Login Cliente - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaRegistrazioneCliente(self):
         self.stack.setCurrentWidget(self.vistaRegistrazioneCliente)
         self.setWindowTitle("Registrazione - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaHomeCliente(self):
         self.stack.setCurrentWidget(self.vistaHomeCliente)
         self.setWindowTitle("Area Riservata Cliente - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaProfiloPersonaleCliente(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaProfiloPersonaleCliente)
         self.setWindowTitle("Profilo Personale - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaModificaProfiloPersonaleCliente(self):
         self.stack.setCurrentWidget(self.vistaModificaProfiloPersonaleCliente)
         self.setWindowTitle("Modifica Profilo Personale - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaSpettacoliCliente(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaSpettacoliCliente)
         self.setWindowTitle("Spettacoli - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaSpettacoloCliente(self, spettacoloCliente):
         self.vistaVisualizzaSpettacoloCliente.spettacoloCliente = spettacoloCliente
         self.stack.setCurrentWidget(self.vistaVisualizzaSpettacoloCliente)
         self.setWindowTitle("Spettacolo - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaAcquistoBigliettoCliente(self, bigliettoCliente):
         self.vistaAcquistoBigliettoCliente.bigliettoCliente = bigliettoCliente
         self.stack.setCurrentWidget(self.vistaAcquistoBigliettoCliente)
         self.setWindowTitle("Acquisto Biglietto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaProdottiCliente(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaProdottiCliente)
         self.setWindowTitle("Prodotti - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaProdottoCliente(self, prodottoCliente):
         self.vistaVisualizzaProdottoCliente.prodottoCliente = prodottoCliente
         self.stack.setCurrentWidget(self.vistaVisualizzaProdottoCliente)
         self.setWindowTitle("Prodotto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaAcquistoProdottoCliente(self, prodottoCliente):
         self.vistaAcquistoProdottoCliente.prodottoCliente = prodottoCliente
         self.stack.setCurrentWidget(self.vistaAcquistoProdottoCliente)
         self.setWindowTitle("Acquisto Prodotto - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaPagamentiCliente(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaPagamentiCliente)
         self.setWindowTitle("Pagamenti - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaPagamentoCliente(self, pagamentoCliente):
         self.vistaVisualizzaPagamentoCliente.pagamentoCliente = pagamentoCliente
         self.stack.setCurrentWidget(self.vistaVisualizzaPagamentoCliente)
         self.setWindowTitle("Pagamento - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaRecensioniCliente(self):
         self.stack.setCurrentWidget(self.vistaVisualizzaRecensioniCliente)
         self.setWindowTitle("Recensioni Personali - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaVisualizzaRecensioneCliente(self, recensioneCliente):
         self.vistaVisualizzaRecensioneCliente.recensioneCliente = recensioneCliente
         self.stack.setCurrentWidget(self.vistaVisualizzaRecensioneCliente)
         self.setWindowTitle("Recensione - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaInserisciRecensioneCliente(self):
         self.stack.setCurrentWidget(self.vistaInserisciRecensioneCliente)
         self.setWindowTitle("Inserisci Recensione - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
 
     def goVistaModificaRecensioneCliente(self, recensioneCliente):
         self.vistaModificaRecensioneCliente.recensioneCliente = recensioneCliente
         self.stack.setCurrentWidget(self.vistaModificaRecensioneCliente)
         self.setWindowTitle("Modifica Recensione - CineMax")
-        self.setWindowIcon(QIcon("Immagini/IconaCliente.ico"))
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaCliente.ico"))
