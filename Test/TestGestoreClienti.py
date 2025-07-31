@@ -17,7 +17,3 @@ class TestGestoreClienti(unittest.TestCase) :
         self.assertEqual(gestoreClienti.getListaClienti(), ["cliente1", "cliente2"])
 
         mock_open_file.assert_called_once_with('Dati/DatiClienti.pickle', 'rb')
-
-if __name__ == '__main__':
-    unittest.main()
-    

@@ -23,6 +23,3 @@ class TestCliente(unittest.TestCase):
         self.assertEqual(cliente.getTelefono(), telefono)
         self.assertEqual(cliente.getPassword(), password)
         self.assertEqual(cliente.getCodiceFiscale(), codiceFiscale)
-
-if __name__ == "__main__":
-    unittest.main()

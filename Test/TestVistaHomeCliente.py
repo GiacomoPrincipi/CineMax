@@ -18,6 +18,3 @@ class TestVistaHomeCliente(unittest.TestCase):
 
         vistaHomeCliente = VistaHomeCliente(statoLogin, goVistaHome, goVistaVisualizzaProfiloPersonaleCliente, goVistaVisualizzaSpettacoliCliente, goVistaVisualizzaProdottiCliente, goVistaVisualizzaPagamentiCliente, goVistaVisualizzaRecensioniCliente)
         self.assertIsInstance(vistaHomeCliente, VistaHomeCliente)
-
-if __name__ == '__main__':
-    unittest.main()
