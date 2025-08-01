@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaHome import Ui_VistaHome
+from Viste.ui_VistaHome import Ui_VistaHome
 
 class VistaHome(QWidget):
     def __init__(self, statoLogin, goVistaLoginAmministratore, goVistaLoginCliente, parent = None):

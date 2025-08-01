@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate
-from ui_VistaInserisciAmministratoreAmministratore import Ui_VistaInserisciAmministratoreAmministratore
+from Viste.ui_VistaInserisciAmministratoreAmministratore import Ui_VistaInserisciAmministratoreAmministratore
 from Gestione.GestoreAmministratori import GestoreAmministratori
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 from Sistema.Amministratore import Amministratore

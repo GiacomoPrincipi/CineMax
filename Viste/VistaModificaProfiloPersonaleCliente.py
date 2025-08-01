@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate
-from ui_VistaModificaProfiloPersonaleCliente import Ui_VistaModificaProfiloPersonaleCliente
+from Viste.ui_VistaModificaProfiloPersonaleCliente import Ui_VistaModificaProfiloPersonaleCliente
 from Gestione.GestoreClienti import GestoreClienti
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 

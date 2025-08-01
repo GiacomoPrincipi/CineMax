@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
-from ui_VistaVisualizzaProdottiCliente import Ui_VistaVisualizzaProdottiCliente
+from Viste.ui_VistaVisualizzaProdottiCliente import Ui_VistaVisualizzaProdottiCliente
 from Gestione.GestoreProdotti import GestoreProdotti
 
 class VistaVisualizzaProdottiCliente(QWidget):

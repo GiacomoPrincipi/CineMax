@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaProfiloPersonaleCliente import Ui_VistaVisualizzaProfiloPersonaleCliente
+from Viste.ui_VistaVisualizzaProfiloPersonaleCliente import Ui_VistaVisualizzaProfiloPersonaleCliente
 from Gestione.GestoreClienti import GestoreClienti
 
 class VistaVisualizzaProfiloPersonaleCliente(QWidget):

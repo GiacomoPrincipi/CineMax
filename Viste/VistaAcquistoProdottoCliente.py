@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate, QTime
-from ui_VistaAcquistoProdottoCliente import Ui_VistaAcquistoProdottoCliente
+from Viste.ui_VistaAcquistoProdottoCliente import Ui_VistaAcquistoProdottoCliente
 from Gestione.GestorePagamenti import GestorePagamenti
 from Gestione.GestoreClienti import GestoreClienti
 from Gestione.GestorePunti import GestorePunti

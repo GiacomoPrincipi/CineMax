@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaRecensioneCliente import Ui_VistaVisualizzaRecensioneCliente
+from Viste.ui_VistaVisualizzaRecensioneCliente import Ui_VistaVisualizzaRecensioneCliente
 from Gestione.GestoreRecensioni import GestoreRecensioni
 
 class VistaVisualizzaRecensioneCliente(QWidget):

@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate, QTime
-from ui_VistaModificaRecensioneCliente import Ui_VistaModificaRecensioneCliente
+from Viste.ui_VistaModificaRecensioneCliente import Ui_VistaModificaRecensioneCliente
 from Gestione.GestoreRecensioni import GestoreRecensioni
 
 class VistaModificaRecensioneCliente(QWidget):

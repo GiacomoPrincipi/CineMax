@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QLabel, QPushButton, QSizePolicy,
     QTextBrowser, QWidget)
 
-from clickablelabel import ClickableLabel
+from Viste.clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaRecensioneCliente(object):
     def setupUi(self, VistaVisualizzaRecensioneCliente):

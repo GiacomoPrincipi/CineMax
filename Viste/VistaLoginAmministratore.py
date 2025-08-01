@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaLoginAmministratore import Ui_VistaLoginAmministratore
+from Viste.ui_VistaLoginAmministratore import Ui_VistaLoginAmministratore
 from Gestione.GestoreAmministratori import GestoreAmministratori
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 

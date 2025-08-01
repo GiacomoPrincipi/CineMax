@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaProdottoCliente import Ui_VistaVisualizzaProdottoCliente
+from Viste.ui_VistaVisualizzaProdottoCliente import Ui_VistaVisualizzaProdottoCliente
 
 class VistaVisualizzaProdottoCliente(QWidget):
     def __init__(self, statoLogin, goVistaHomeCliente, goVistaVisualizzaProdottiCliente, goVistaAcquistoProdottoCliente, parent = None):

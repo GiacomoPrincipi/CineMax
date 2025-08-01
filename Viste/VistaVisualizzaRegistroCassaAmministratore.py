@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
-from ui_VistaVisualizzaRegistroCassaAmministratore import Ui_VistaVisualizzaRegistroCassaAmministratore
+from Viste.ui_VistaVisualizzaRegistroCassaAmministratore import Ui_VistaVisualizzaRegistroCassaAmministratore
 from Gestione.GestorePagamenti import GestorePagamenti
 from Sistema.Biglietto import Biglietto
 from Sistema.Prodotto import Prodotto

@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate, QTime
-from ui_VistaInserisciRecensioneCliente import Ui_VistaInserisciRecensioneCliente
+from Viste.ui_VistaInserisciRecensioneCliente import Ui_VistaInserisciRecensioneCliente
 from Gestione.GestoreRecensioni import GestoreRecensioni
 from Sistema.Recensione import Recensione
 

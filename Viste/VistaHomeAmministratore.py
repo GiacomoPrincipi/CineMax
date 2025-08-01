@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaHomeAmministratore import Ui_VistaHomeAmministratore
+from Viste.ui_VistaHomeAmministratore import Ui_VistaHomeAmministratore
 from Gestione.GestoreBackup import GestoreBackup
 
 class VistaHomeAmministratore(QWidget):

@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate
-from ui_VistaRegistrazioneCliente import Ui_VistaRegistrazioneCliente
+from Viste.ui_VistaRegistrazioneCliente import Ui_VistaRegistrazioneCliente
 from Gestione.GestoreClienti import GestoreClienti
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 from Sistema.Cliente import Cliente

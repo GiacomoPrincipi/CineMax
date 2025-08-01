@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaSpettacoloAmministratore import Ui_VistaVisualizzaSpettacoloAmministratore
+from Viste.ui_VistaVisualizzaSpettacoloAmministratore import Ui_VistaVisualizzaSpettacoloAmministratore
 from Gestione.GestoreSpettacoli import GestoreSpettacoli
 from Gestione.GestoreBiglietti import GestoreBiglietti
 
@@ -34,8 +34,8 @@ class VistaVisualizzaSpettacoloAmministratore(QWidget):
         prezzo = gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloAmministratore)[0].getPrezzo()
         prezzoPunti = gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloAmministratore)[0].getPrezzoPunti()
         if gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloAmministratore) == []:
-                prezzo = gestoreBiglietti = getListaBigliettiSpettacolo(spettacoloAmministratore)[0].getPrezzo()
-                prezzoPunti = gestoreBiglietti = getListaBigliettiSpettacolo(spettacoloAmministratore).getPrezzoPunti()
+                prezzo = gestoreBiglietti.getListaBigliettiSpettacolo(spettacoloAmministratore)[0].getPrezzo()
+                prezzoPunti = gestoreBiglietti.getListaBigliettiSpettacolo(spettacoloAmministratore).getPrezzoPunti()
 
         self.ui.labelTitoloSpettacolo.setText(spettacoloAmministratore.getTitolo())
         self.ui.labelGenereSpettacolo.setText(spettacoloAmministratore.getGenere())

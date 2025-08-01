@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
-from ui_VistaVisualizzaSpettacoloCliente import Ui_VistaVisualizzaSpettacoloCliente
+from Viste.ui_VistaVisualizzaSpettacoloCliente import Ui_VistaVisualizzaSpettacoloCliente
 from Gestione.GestoreBiglietti import GestoreBiglietti
 
 class VistaVisualizzaSpettacoloCliente(QWidget):

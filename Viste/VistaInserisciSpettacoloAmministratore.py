@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate, QTime
-from ui_VistaInserisciSpettacoloAmministratore import Ui_VistaInserisciSpettacoloAmministratore
+from Viste.ui_VistaInserisciSpettacoloAmministratore import Ui_VistaInserisciSpettacoloAmministratore
 from Gestione.GestoreSpettacoli import GestoreSpettacoli
 from Gestione.GestoreBiglietti import GestoreBiglietti
 from Sistema.Spettacolo import Spettacolo

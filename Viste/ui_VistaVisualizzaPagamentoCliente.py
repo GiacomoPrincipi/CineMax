@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QWidget)
 
-from clickablelabel import ClickableLabel
+from Viste.clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaPagamentoCliente(object):
     def setupUi(self, VistaVisualizzaPagamentoCliente):

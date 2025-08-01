@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplicat
     QLabel, QPushButton, QSizePolicy, QTableView,
     QWidget)
 
-from clickablelabel import ClickableLabel
+from Viste.clickablelabel import ClickableLabel
 
 class Ui_VistaVisualizzaSpettacoliAmministratore(object):
     def setupUi(self, VistaVisualizzaSpettacoliAmministratore):

@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
-from ui_VistaVisualizzaRecensioniCliente import Ui_VistaVisualizzaRecensioniCliente
+from Viste.ui_VistaVisualizzaRecensioniCliente import Ui_VistaVisualizzaRecensioniCliente
 from Gestione.GestoreRecensioni import GestoreRecensioni
 
 class VistaVisualizzaRecensioniCliente(QWidget):

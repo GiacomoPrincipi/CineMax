@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QDate
-from ui_VistaModificaProfiloPersonaleAmministratore import Ui_VistaModificaProfiloPersonaleAmministratore
+from Viste.ui_VistaModificaProfiloPersonaleAmministratore import Ui_VistaModificaProfiloPersonaleAmministratore
 from Gestione.GestoreAmministratori import GestoreAmministratori
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 

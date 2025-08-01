@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaPagamentoCliente import Ui_VistaVisualizzaPagamentoCliente
+from Viste.ui_VistaVisualizzaPagamentoCliente import Ui_VistaVisualizzaPagamentoCliente
 from Sistema.Biglietto import Biglietto
 from Sistema.Prodotto import Prodotto
 

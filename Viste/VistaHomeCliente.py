@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaHomeCliente import Ui_VistaHomeCliente
+from Viste.ui_VistaHomeCliente import Ui_VistaHomeCliente
 
 class VistaHomeCliente(QWidget):
     def __init__(self, statoLogin, goVistaHome, goVistaVisualizzaProfiloPersonaleCliente, goVistaVisualizzaSpettacoliCliente, goVistaVisualizzaProdottiCliente, goVistaVisualizzaPagamentiCliente, goVistaVisualizzaRecensioniCliente, parent = None):

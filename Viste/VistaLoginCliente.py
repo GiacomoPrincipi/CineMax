@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaLoginCliente import Ui_VistaLoginCliente
+from Viste.ui_VistaLoginCliente import Ui_VistaLoginCliente
 from Gestione.GestoreClienti import GestoreClienti
 from Gestione.GestoreAutenticazione import GestoreAutenticazione
 

@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaProdottoAmministratore import Ui_VistaVisualizzaProdottoAmministratore
+from Viste.ui_VistaVisualizzaProdottoAmministratore import Ui_VistaVisualizzaProdottoAmministratore
 from Gestione.GestoreProdotti import GestoreProdotti
 
 class VistaVisualizzaProdottoAmministratore(QWidget):

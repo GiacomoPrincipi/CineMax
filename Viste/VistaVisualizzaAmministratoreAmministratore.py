@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaAmministratoreAmministratore import Ui_VistaVisualizzaAmministratoreAmministratore
+from Viste.ui_VistaVisualizzaAmministratoreAmministratore import Ui_VistaVisualizzaAmministratoreAmministratore
 
 class VistaVisualizzaAmministratoreAmministratore(QWidget):
     def __init__(self, statoLogin, goVistaHomeAmministratore, goVistaVisualizzaAmministratoriAmministratore, parent = None):

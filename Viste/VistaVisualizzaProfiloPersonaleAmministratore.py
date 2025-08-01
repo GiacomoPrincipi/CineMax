@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget
-from ui_VistaVisualizzaProfiloPersonaleAmministratore import Ui_VistaVisualizzaProfiloPersonaleAmministratore
+from Viste.ui_VistaVisualizzaProfiloPersonaleAmministratore import Ui_VistaVisualizzaProfiloPersonaleAmministratore
 from Gestione.GestoreAmministratori import GestoreAmministratori
 
 class VistaVisualizzaProfiloPersonaleAmministratore(QWidget):
