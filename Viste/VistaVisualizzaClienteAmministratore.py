@@ -48,14 +48,14 @@ class VistaVisualizzaClienteAmministratore(QWidget):
         self.ui.labelPuntiCliente.setText(str(clienteAmministratore.getPunti()))
 
         self.modelloTabellaPagamentiCliente = QStandardItemModel()
-        self.modelloTabellaPagamentiCliente.setHorizontalHeaderLabels(["Data:", "Ora:", "Articolo:", "Tipo:", "Importo", "ImportoPunti:"])
+        self.modelloTabellaPagamentiCliente.setHorizontalHeaderLabels(["Data:", "Ora:", "Articolo:", "Importo:", "Importo in Punti:"])
 
         for pagamento in gestorePagamenti.getListaPagamentiCliente(clienteAmministratore):
             if isinstance(pagamento.getArticolo(), Biglietto):
                 testo = pagamento.getArticolo().getSpettacolo().getTitolo()
             elif isinstance(pagamento.getArticolo(), Prodotto):
                 testo = pagamento.getArticolo().getNome()
-            self.modelloTabellaPagamentiCliente.appendRow([QStandardItem(pagamento.getData().toString("dd/MM/yyyy")), QStandardItem(pagamento.getOra().toString("HH:mm:ss")), QStandardItem(testo), QStandardItem(pagamento.getTipo()), QStandardItem(f"{pagamento.getImporto()} €"), QStandardItem(f"{pagamento.getImportoPunti()} punti")])
+            self.modelloTabellaPagamentiCliente.appendRow([QStandardItem(pagamento.getData().toString("dd/MM/yyyy")), QStandardItem(pagamento.getOra().toString("HH:mm:ss")), QStandardItem(testo), QStandardItem(f"{pagamento.getImporto()} €"), QStandardItem(f"{pagamento.getImportoPunti()} punti")])
 
         self.ui.tableViewPagamentiCliente.setModel(self.modelloTabellaPagamentiCliente)
 

@@ -253,7 +253,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/IndietroButtonCliente.png</pixmap>
+    <pixmap>Viste/Immagini/IndietroButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

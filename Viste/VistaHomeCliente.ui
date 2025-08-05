@@ -117,7 +117,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/ProfiloButtonCliente.png</pixmap>
+    <pixmap>Viste/Immagini/ProfiloButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -178,7 +178,7 @@ QPushButton:hover {
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/LogoutButtonCliente.png</pixmap>
+    <pixmap>Viste/Immagini/LogoutButtonCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

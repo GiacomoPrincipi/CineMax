@@ -82,6 +82,11 @@ class VistaInserisciProdottoAmministratore(QWidget):
         if self.ui.lineEditIngredienti.text() == "":
             self.ui.labelErroreIngredienti.setText("Inserisci gli ingredienti!")
             esito = True
+        else:
+            for ingrediente in ingredienti:
+                if ingrediente == "":
+                    self.ui.labelErroreIngredienti.setText("Formato non valido!")
+                    esito = True
         if prezzo == "":
             self.ui.labelErrorePrezzo.setText("Inserisci il prezzo!")
             esito = True
@@ -106,7 +111,7 @@ class VistaInserisciProdottoAmministratore(QWidget):
 
         if esito: return
 
-        prezzo = "{:.2f}".format(float(prezzo))
+        prezzo = float("{:.2f}".format(float(prezzo)))
         prezzoPunti = int(prezzoPunti)
 
         prodotto = Prodotto(id, prezzo, prezzoPunti, disponibile, nome, ingredienti, allergeni)

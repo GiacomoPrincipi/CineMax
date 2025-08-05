@@ -343,7 +343,7 @@ class Ui_VistaVisualizzaClienteAmministratore(object):
         self.labelEmailCliente.setText("")
         self.labelTelefono.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Telefono:", None))
         self.labelTelefonoCliente.setText("")
-        self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Punti:", None))
+        self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Saldo Punti:", None))
         self.labelPuntiCliente.setText("")
         self.labelIndietroButton.setText("")
         self.labelPagamenti.setText(QCoreApplication.translate("VistaVisualizzaClienteAmministratore", u"Pagamenti:", None))

@@ -43,7 +43,7 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         self.ui.labelDurataSpettacolo.setText(f"{spettacoloCliente.getDurata()} minuti")
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Posto:", "Prezzo Adulto:", "Prezzo Ridotto:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Posto:", "Prezzo Adulto:", "Prezzo in Punti:"])
 
         for biglietto in gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente):
             self.modelloTabella.appendRow([QStandardItem(str(biglietto.getPosto())), QStandardItem(f"{biglietto.getPrezzo()} €"), QStandardItem(f"{biglietto.getPrezzoPunti()} punti")])

@@ -65,7 +65,8 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         self.ui.labelErrorePrezzoPunti.setText("")
 
         titolo = self.ui.lineEditTitolo.text().title()
-        genere = self.ui.lineEditGenere.text().title()
+        genere = self.ui.lineEditGenere.text().split(",")
+        genere = [sottoGenere.strip().title() for sottoGenere in genere]
         sala = self.ui.comboBoxSala.currentText()
         data = self.ui.dateEditData.date()
         orarioInizio = self.ui.timeEditOrarioInizio.time()
@@ -98,6 +99,11 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         if genere == "":
             self.ui.labelErroreGenere.setText("Inserisci il genere!")
             esito = True
+        else:
+            for sottoGenere in genere:
+                if sottoGenere == "":
+                    self.ui.labelErroreGenere.setText("Formato non valido!")
+                    esito = True
         if self.ui.comboBoxSala.currentIndex() == 0:
             self.ui.labelErroreSala.setText("Inserisci la sala!")
             esito = True
@@ -129,6 +135,9 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         elif not durata.isdigit():
             self.ui.labelErroreDurata.setText("Durata non valida!")
             esito = True
+        elif durata > (((orarioFine.hour - orarioInizio.hour) * 60) + (orarioFine.minute - orarioInizio.minute)):
+            self.ui.labelErroreDurata.setText("Durata non valida!")
+            esito = True
         if prezzo == "":
             self.ui.labelErrorePrezzo.setText("Inserisci il prezzo!")
             esito = True
@@ -151,7 +160,7 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         if esito: return
 
         durata = int(durata)
-        prezzo = "{:.2f}".format(float(prezzo))
+        prezzo = float("{:.2f}".format(float(prezzo)))
         prezzoPunti = int(prezzoPunti)
 
         for spettacoloNellaLista in gestoreSpettacoli.getListaSpettacoli():

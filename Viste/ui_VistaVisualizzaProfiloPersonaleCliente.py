@@ -227,7 +227,7 @@ class Ui_VistaVisualizzaProfiloPersonaleCliente(object):
         self.pushButtonModifica.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Modifica", None))
         self.labelDataNascita.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Data di Nascita:", None))
         self.labelDataNascitaCliente.setText("")
-        self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Punti:", None))
+        self.labelPunti.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Saldo Punti:", None))
         self.labelPuntiCliente.setText("")
         self.pushButtonElimina.setText(QCoreApplication.translate("VistaVisualizzaProfiloPersonaleCliente", u"Elimia account", None))
     # retranslateUi

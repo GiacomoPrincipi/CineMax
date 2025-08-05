@@ -103,7 +103,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/HomeButtonAmministratore.png</pixmap>
+    <pixmap>Viste/Immagini/HomeButtonAmministratore.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -239,7 +239,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/IndietroButtonAmministratore.png</pixmap>
+    <pixmap>Viste/Immagini/IndietroButtonAmministratore.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -258,7 +258,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/RecensioneIconAmministratore.png</pixmap>
+    <pixmap>Viste/Immagini/RecensioneIconAmministratore.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

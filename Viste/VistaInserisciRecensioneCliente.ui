@@ -103,7 +103,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Immagini/RecensioneIconCliente.png</pixmap>
+    <pixmap>Viste/Immagini/RecensioneIconCliente.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
