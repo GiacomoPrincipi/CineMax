@@ -1,7 +1,5 @@
 # CineMax
 
-## Introduzione
-
 Il progetto consiste nella realizzazione di un software riguardante un cinema, dove si ha la possibilità di accedervi come amministratore o come cliente. Entrambi gli utenti sono dotati di un account e di una propria area riservata, in cui possono visualizzare, modificare o eventualmente eliminare il proprio profilo personale. Oltre a questo, gli utenti a seconda se sono amministratori o clienti, hanno la possibilità di svolgere determinate azioni.
 <br><br><img src="Altro/Screenshot/Showcase1.png" alt="Showcase1.png" style="display: block; margin: auto;"><br><br>
 Accedendovi come amministratore, si ha la possibilità di visualizzare, inserire, modificare o eliminare spettacoli e prodotti. Si ha anche la possibilità di visualizzare i pagamenti e le recensioni effettuate dai clienti. Si può visualizzare profili dei clienti e di amministratori. Come ultima cosa si ha anche la possibilità di effettuare il backup dei dati del sistema.
