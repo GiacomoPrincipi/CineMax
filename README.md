@@ -26,7 +26,7 @@ Ora bisogna scaricate la repository da `GitHub web` oppure da `cmd` con il segue
 ```
 git clone https://github.com/GiacomoPrincipi/CineMax
 ```
-<br><div align="center"><img src="Altro/Screenshot/Tutorial2.png" alt="Tutorial2.png" style="display: block; margin: auto;"></div><br><br>
+<div align="center"><img src="Altro/Screenshot/Tutorial2.png" alt="Tutorial2.png" style="display: block; margin: auto;"></div><br><br>
 Successivamente bisogna aprire la cartella su `vscode` andando, dal menù in alto, su:
 ```
 File > Open Folder
