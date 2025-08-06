@@ -4,6 +4,7 @@
 
 CineMax è un software progettato per la gestione di un cinema. Puo essere utilizzato da due tipi di utenti: L'Amministratore e il Cliente.
 
+<img src="Altro/Screenshot/Showcase1.png" alt="Showcase1.png">
 Accedendo come Amministratore, potrai occuparti della gestione del Sistema, potendo visualizzare tutti i pagamenti, le recensioni e gli utenti oppure controllando spettacoli e prodotti.
 
 Accedendo come Cliente, potrai usufruire dei servizi offerti, come l'acquisto di biglietti e di prodotti e la visualizzazione dei pagamenti effettuati, infine potra anche inserire recensioni.
@@ -36,3 +37,5 @@ oppure digitando il comando:
  Ctrl + K Ctrl + O
  ```
  infine bisogna andare sulla barra laterale e premenre Run and Debug e premere il dasto Run. Avete anche la possibilità di avviare i test premento il menu a tendina.
+
+ Per accedere come cliente, basta registrarsi, mentre se volete provare ad accedere come amministratore, le credenziali sono Email: paolorossi@gmail.com Password: PaoloRossi00@#
