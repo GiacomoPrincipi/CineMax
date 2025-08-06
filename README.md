@@ -23,7 +23,7 @@ Qua sotto c'è il link del sito ufficiale per scaricare `python 3.11.5` e ci son
 
 https://www.python.org/downloads/
 
-```bash
+```shell
 pip install dnspython
 pip install PySide6
 ```
@@ -37,7 +37,7 @@ https://code.visualstudio.com/
 
 Ora bisogna scaricate la repository da `GitHub web` oppure da `cmd` con il seguente comendo:
 
-```bash
+```shell
 git clone https://github.com/GiacomoPrincipi/CineMax
 ```
 <p align="center"><img src="Altro/Screenshot/Tutorial2.png" alt="Tutorial2.png" style="display: block; margin: auto;"></p>
@@ -59,7 +59,7 @@ oppure premendo il comando `Ctrl+K Ctrl+O`
    
 <p align="center"><img src="Altro/Screenshot/Tutorial4.png" alt="Tutorial4.png" style="display: block; margin: auto;"></p>
   
-  
+
  Per accedere come cliente basta registrarsi, invece se volete provare ad accedere come amministratore, all' interno sono già memorizzate delle credenziali che sono:
  ```
  Email: paolorossi@gmail.com
