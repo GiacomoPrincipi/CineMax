@@ -60,7 +60,7 @@ oppure premendo il comando `Ctrl+K Ctrl+O`
 <p align="center"><img src="Altro/Screenshot/Tutorial4.png" alt="Tutorial4.png" style="display: block; margin: auto;"></p>
   
 
- Per accedere come cliente basta registrarsi, invece se volete provare ad accedere come amministratore, all' interno sono già memorizzate delle credenziali che sono:
+ Per accedere come cliente basta registrarsi, invece se volete provare ad accedere come amministratore, all'interno sono già memorizzate delle credenziali che sono:
  ```
  Email: paolorossi@gmail.com
  Password: PaoloRossi00@#
