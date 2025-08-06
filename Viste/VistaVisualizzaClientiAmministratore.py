@@ -31,7 +31,7 @@ class VistaVisualizzaClientiAmministratore(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Codice Fiscale:", "Nome:", "Cognome:", "Data di Nascita:", "Email:", "Telefono:"])
 
-        for cliente in gestoreClienti.getListaClienti():
+        for cliente in sorted(gestoreClienti.getListaClienti(), key = lambda oggetto: (oggetto.getNome(), oggetto.getCognome()), reverse = False):
             self.modelloTabella.appendRow([QStandardItem(cliente.getCodiceFiscale()), QStandardItem(cliente.getNome()), QStandardItem(cliente.getCognome()), QStandardItem(cliente.getDataNascita().toString("dd/MM/yyyy")), QStandardItem(cliente.getEmail()), QStandardItem(cliente.getTelefono())])
 
         self.ui.tableViewClienti.setModel(self.modelloTabella)

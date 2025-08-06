@@ -32,7 +32,7 @@ class VistaVisualizzaProdottiAmministratore(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Nome:", "Ingredienti:", "Allergeni:", "Prezzo:", "Prezzo in Punti:", "Disponibilità:"])
 
-        for prodotto in gestoreProdotti.getListaProdotti():
+        for prodotto in sorted(gestoreProdotti.getListaProdotti(), key = lambda oggetto: oggetto.getNome(), reverse = False):
             self.modelloTabella.appendRow([QStandardItem(prodotto.getId()), QStandardItem(prodotto.getNome()), QStandardItem(", ".join(prodotto.getIngredienti())), QStandardItem(", ".join(prodotto.getAllergeni())), QStandardItem(f"{prodotto.getPrezzo()} €"), QStandardItem(f"{prodotto.getPrezzoPunti()} punti"), QStandardItem(prodotto.getTestoDisponibile())])
 
         self.ui.tableViewProdotti.setModel(self.modelloTabella)

@@ -84,7 +84,7 @@ class Ui_VistaVisualizzaSpettacoloCliente(object):
 "}")
         self.labelGenereSpettacolo = QLabel(VistaVisualizzaSpettacoloCliente)
         self.labelGenereSpettacolo.setObjectName(u"labelGenereSpettacolo")
-        self.labelGenereSpettacolo.setGeometry(QRect(460, 130, 131, 20))
+        self.labelGenereSpettacolo.setGeometry(QRect(460, 130, 251, 20))
         self.labelGenereSpettacolo.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")

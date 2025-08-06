@@ -34,8 +34,10 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         spettacoloCliente = self.spettacoloCliente
         gestoreBiglietti = GestoreBiglietti()
 
+        genere = ", ".join(spettacoloCliente.getGenere())
+
         self.ui.labelTitoloSpettacolo.setText(spettacoloCliente.getTitolo())
-        self.ui.labelGenereSpettacolo.setText(spettacoloCliente.getGenere())
+        self.ui.labelGenereSpettacolo.setText(genere)
         self.ui.labelSalaSpettacolo.setText(spettacoloCliente.getSala())
         self.ui.labelDataSpettacolo.setText(spettacoloCliente.getData().toString("dd/MM/yyyy"))
         self.ui.labelOrarioInizioSpettacolo.setText(spettacoloCliente.getOrarioInizio().toString("HH:mm:ss"))
@@ -45,7 +47,7 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Posto:", "Prezzo Adulto:", "Prezzo in Punti:"])
 
-        for biglietto in gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente):
+        for biglietto in sorted(gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente), key = lambda oggetto: oggetto.getPosto(), reverse = False):
             self.modelloTabella.appendRow([QStandardItem(str(biglietto.getPosto())), QStandardItem(f"{biglietto.getPrezzo()} €"), QStandardItem(f"{biglietto.getPrezzoPunti()} punti")])
 
         self.ui.tableViewBiglietti.setModel(self.modelloTabella)

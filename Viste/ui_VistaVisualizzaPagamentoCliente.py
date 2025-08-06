@@ -62,7 +62,7 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
         self.labelHomeButton.setScaledContents(True)
         self.labelNome = QLabel(VistaVisualizzaPagamentoCliente)
         self.labelNome.setObjectName(u"labelNome")
-        self.labelNome.setGeometry(QRect(320, 100, 141, 20))
+        self.labelNome.setGeometry(QRect(320, 100, 171, 20))
         self.labelNome.setStyleSheet(u"QLabel {\n"
 "    color: #C87800;\n"
 "}")
@@ -124,10 +124,10 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
         self.labelIndietroButton.setGeometry(QRect(620, 20, 63, 61))
         self.labelIndietroButton.setPixmap(QPixmap(u"Viste/Immagini/IndietroButtonCliente.png"))
         self.labelIndietroButton.setScaledContents(True)
-        self.labelNomePagamento = QLabel(VistaVisualizzaPagamentoCliente)
-        self.labelNomePagamento.setObjectName(u"labelNomePagamento")
-        self.labelNomePagamento.setGeometry(QRect(320, 130, 181, 20))
-        self.labelNomePagamento.setStyleSheet(u"QLabel {\n"
+        self.labelIdArticoloPagamento = QLabel(VistaVisualizzaPagamentoCliente)
+        self.labelIdArticoloPagamento.setObjectName(u"labelIdArticoloPagamento")
+        self.labelIdArticoloPagamento.setGeometry(QRect(320, 130, 181, 20))
+        self.labelIdArticoloPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #965A00;\n"
 "}")
         self.labelImportoPunti = QLabel(VistaVisualizzaPagamentoCliente)
@@ -168,7 +168,7 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
         self.labelIconaRicevuta.setText("")
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Pagamento", None))
         self.labelHomeButton.setText("")
-        self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Nome Articolo:", None))
+        self.labelNome.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Articolo:", None))
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Data:", None))
         self.labelDataPagamento.setText("")
         self.labelTipo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Tipo:", None))
@@ -178,7 +178,7 @@ class Ui_VistaVisualizzaPagamentoCliente(object):
         self.labelOra.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Ora:", None))
         self.labelOraPagamento.setText("")
         self.labelIndietroButton.setText("")
-        self.labelNomePagamento.setText("")
+        self.labelIdArticoloPagamento.setText("")
         self.labelImportoPunti.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Importo in Punti:", None))
         self.labelImportoPuntiPagamento.setText("")
         self.labelId.setText(QCoreApplication.translate("VistaVisualizzaPagamentoCliente", u"Identificativo:", None))

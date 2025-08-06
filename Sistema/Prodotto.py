@@ -26,6 +26,11 @@ class Prodotto(Articolo):
     def getDisponibile(self):
         return self.disponibile
     
+    def getTestoDisponibile(self):
+        if self.getDisponibile() == True:
+            return "Si"
+        else: return "No"
+    
     def getNome(self):
         return self.nome
 
@@ -76,8 +81,3 @@ class Prodotto(Articolo):
 
     def rimuoviAllergene(self, allergene):
         self.allergeni.remove(allergene)
-
-    def getTestoDisponibile(self):
-        if self.getDisponibile() == True:
-            return "Si"
-        else: return "No"

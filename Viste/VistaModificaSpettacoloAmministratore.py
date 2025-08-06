@@ -33,8 +33,10 @@ class VistaModificaSpettacoloAmministratore(QWidget):
                 prezzo = gestoreBiglietti.getListaBigliettiSpettacolo(spettacoloAmministratore)[0].getPrezzo()
                 prezzoPunti = gestoreBiglietti.getListaBigliettiSpettacolo(spettacoloAmministratore).getPrezzoPunti()
 
+        genere = ", ".join(spettacoloAmministratore.getGenere())
+
         self.ui.lineEditTitolo.setText(spettacoloAmministratore.getTitolo())
-        self.ui.lineEditGenere.setText(spettacoloAmministratore.getGenere())
+        self.ui.lineEditGenere.setText(genere)
         self.ui.comboBoxSala.setCurrentText(spettacoloAmministratore.getSala())
         self.ui.dateEditData.setDate(spettacoloAmministratore.getData())
         self.ui.timeEditOrarioInizio.setTime(spettacoloAmministratore.getOrarioInizio())
@@ -120,7 +122,7 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         if orarioFine == QTime(4, 0, 0):
             self.ui.labelErroreOrarioFine.setText("Inserisci l'orario di fine!")
             esito = True
-            sottoestiro2 = False
+            sottoesito2 = False
         if sottoesito1 and sottoesito2 and orarioFine <= orarioInizio:
             self.ui.labelErroreOrarioFine.setText("")
             self.ui.labelErroreOrarioInizio.setText("Orario non valido!")
@@ -135,7 +137,7 @@ class VistaModificaSpettacoloAmministratore(QWidget):
         elif not durata.isdigit():
             self.ui.labelErroreDurata.setText("Durata non valida!")
             esito = True
-        elif durata > (((orarioFine.hour - orarioInizio.hour) * 60) + (orarioFine.minute - orarioInizio.minute)):
+        elif int(durata) > (((orarioFine.hour() - orarioInizio.hour()) * 60) + (orarioFine.minute() - orarioInizio.minute())):
             self.ui.labelErroreDurata.setText("Durata non valida!")
             esito = True
         if prezzo == "":

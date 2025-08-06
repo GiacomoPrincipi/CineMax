@@ -31,7 +31,7 @@ class VistaVisualizzaRecensioniAmministratore(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Cliente:", "Data:", "Ora:", "Stelle:", "Testo:"])
 
-        for recensione in gestoreRecensioni.getListaRecensioni():
+        for recensione in sorted(gestoreRecensioni.getListaRecensioni(), key = lambda oggetto: (oggetto.getData(), oggetto.getOra()), reverse = True):
             self.modelloTabella.appendRow([QStandardItem(recensione.getId()), QStandardItem(recensione.getCliente().getCodiceFiscale()), QStandardItem(recensione.getData().toString("dd/MM/yyyy")), QStandardItem(recensione.getOra().toString("HH:mm:ss")), QStandardItem(f"{recensione.getStelle()}/5"), QStandardItem(recensione.getTesto())])
 
         self.ui.tableViewRecensioni.setModel(self.modelloTabella)

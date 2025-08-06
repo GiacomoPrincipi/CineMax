@@ -17,6 +17,7 @@ class VistaVisualizzaRecensioneAmministratore(QWidget):
 
         recensioneAmministratore = self.recensioneAmministratore
 
+        self.ui.labelIdRecensione.setText(recensioneAmministratore.getId())
         self.ui.labelCodiceFiscaleRecensione.setText(recensioneAmministratore.getCliente().getCodiceFiscale())
         self.ui.labelDataRecensione.setText(recensioneAmministratore.getData().toString("dd/MM/yyyy"))
         self.ui.labelOraRecensione.setText(recensioneAmministratore.getOra().toString("HH:mm:ss"))

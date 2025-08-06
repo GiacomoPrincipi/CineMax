@@ -1,6 +1,8 @@
 import os.path
 import pickle
 
+from Gestione.GestoreSpettacoli import GestoreSpettacoli
+
 class GestoreBiglietti():
 
     def __init__(self):
@@ -23,7 +25,7 @@ class GestoreBiglietti():
     def getListaBigliettiSpettacolo(self, spettacolo):
         listaBigliettiSpettacolo = []
         for biglietto in self.listaBiglietti:
-            if biglietto.getSpettacolo() == spettacolo:
+            if biglietto.getSpettacolo().getId() == spettacolo.getId():
                 listaBigliettiSpettacolo.append(biglietto)
         return listaBigliettiSpettacolo
     
@@ -53,10 +55,15 @@ class GestoreBiglietti():
                 if int(recensione.getId()[1:]) > idMassimo:
                     idMassimo = int(recensione.getId()[1:])
             return f"P{idMassimo + 1:05d}"
-        
-    def aggiornaDisponibileBiglietti(self):
-        for biglietto in self.getListaBiglietti():
-            if not biglietto.getSpettacolo().getStato():
-                biglietto.setDisponibile(False)
+
+    def aggiornaBiglietti(self):
+        gestoreSpettacoli = GestoreSpettacoli()
+        for spettacolo in gestoreSpettacoli.getListaSpettacoli():
+            for biglietto in self.getListaBigliettiSpettacolo(spettacolo):
+                if spettacolo.getStato() == False:
+                    biglietto.getSpettacolo().setStato(False)
+                if not spettacolo.getStato():
+                    biglietto.setDisponibile(False)
         self.salvaDatiBiglietti()
+    
 

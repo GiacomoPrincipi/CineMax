@@ -28,6 +28,7 @@ class VistaVisualizzaProdottoAmministratore(QWidget):
         allergeni = ", ".join(prodottoAmministratore.getAllergeni())
 
         self.ui.labelNomeProdotto.setText(prodottoAmministratore.getNome())
+        self.ui.labelIdProdotto.setText(prodottoAmministratore.getId())
         self.ui.labelIngredientiProdotto.setText(ingredienti)
         self.ui.labelAllergeniProdotto.setText(allergeni)
         self.ui.labelPrezzoProdotto.setText(f"{prodottoAmministratore.getPrezzo()} €")

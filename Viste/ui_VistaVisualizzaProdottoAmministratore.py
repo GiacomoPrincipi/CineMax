@@ -178,6 +178,19 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
 "QPushButton:hover {\n"
 "    background-color: #C83200;\n"
 "}")
+        self.labelId = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelId.setObjectName(u"labelId")
+        self.labelId.setGeometry(QRect(450, 100, 111, 20))
+        self.labelId.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelId.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelIdProdotto = QLabel(VistaVisualizzaProdottoAmministratore)
+        self.labelIdProdotto.setObjectName(u"labelIdProdotto")
+        self.labelIdProdotto.setGeometry(QRect(450, 130, 141, 20))
+        self.labelIdProdotto.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaProdottoAmministratore)
 
@@ -205,5 +218,7 @@ class Ui_VistaVisualizzaProdottoAmministratore(object):
         self.labelPrezzoPunti.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Prezzo in Punti:", None))
         self.labelPrezzoPuntiProdotto.setText("")
         self.pushButtonElimina.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Elimina", None))
+        self.labelId.setText(QCoreApplication.translate("VistaVisualizzaProdottoAmministratore", u"Identificativo:", None))
+        self.labelIdProdotto.setText("")
     # retranslateUi
 

@@ -99,7 +99,7 @@ class VistaInserisciSpettacoloAmministratore(QWidget):
         if data == QDate(1950, 1, 1):
             self.ui.labelErroreData.setText("Inserisci la data!")
             esito = True
-        elif data <= QDate.currentDate():
+        elif data < QDate.currentDate():
             self.ui.labelErroreData.setText("Data non valida!")
             esito = True
         if orarioInizio == QTime(4, 0, 0):
@@ -109,7 +109,7 @@ class VistaInserisciSpettacoloAmministratore(QWidget):
         if orarioFine == QTime(4, 0, 0):
             self.ui.labelErroreOrarioFine.setText("Inserisci l'orario di fine!")
             esito = True
-            sottoestiro2 = False
+            sottoesito2 = False
         if sottoesito1 and sottoesito2 and orarioFine <= orarioInizio:
             self.ui.labelErroreOrarioFine.setText("")
             self.ui.labelErroreOrarioInizio.setText("Orario non valido!")
@@ -124,7 +124,7 @@ class VistaInserisciSpettacoloAmministratore(QWidget):
         elif not durata.isdigit():
             self.ui.labelErroreDurata.setText("Durata non valida!")
             esito = True
-        elif durata > (((orarioFine.hour - orarioInizio.hour) * 60) + (orarioFine.minute - orarioInizio.minute)):
+        elif int(durata) > (((orarioFine.hour() - orarioInizio.hour()) * 60) + (orarioFine.minute() - orarioInizio.minute())):
             self.ui.labelErroreDurata.setText("Durata non valida!")
             esito = True
         if prezzo == "":
@@ -158,7 +158,7 @@ class VistaInserisciSpettacoloAmministratore(QWidget):
         gestoreBiglietti = GestoreBiglietti()
         for i in range(1, 71):
             id = gestoreBiglietti.generaIdBiglietto()
-            biglietto = Biglietto(id, prezzo, prezzoPunti, True, spettacolo, " ", i)
+            biglietto = Biglietto(id, prezzo, prezzoPunti, True, spettacolo, None, i)
             gestoreBiglietti.inserisciBiglietto(biglietto)
 
         self.goVistaVisualizzaSpettacoloAmministratore(spettacolo)

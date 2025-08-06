@@ -26,6 +26,11 @@ class Biglietto(Articolo):
 
     def getDisponibile(self):
         return self.disponibile
+    
+    def getTestoDisponibile(self):
+        if self.getDisponibile() == True:
+            return "Si"
+        else: return "No"
 
     def getSpettacolo(self):
         return self.spettacolo

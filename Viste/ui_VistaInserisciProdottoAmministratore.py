@@ -334,7 +334,7 @@ class Ui_VistaInserisciProdottoAmministratore(object):
         self.labelErroreNome.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelErroreIngredienti = QLabel(VistaInserisciProdottoAmministratore)
         self.labelErroreIngredienti.setObjectName(u"labelErroreIngredienti")
-        self.labelErroreIngredienti.setGeometry(QRect(500, 200, 161, 20))
+        self.labelErroreIngredienti.setGeometry(QRect(550, 220, 221, 20))
         self.labelErroreIngredienti.setStyleSheet(u"QLabel {\n"
 "    color: #FF0000\n"
 "}")

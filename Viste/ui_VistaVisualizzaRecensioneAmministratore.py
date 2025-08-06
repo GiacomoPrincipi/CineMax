@@ -166,7 +166,7 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
     def retranslateUi(self, VistaVisualizzaRecensioneAmministratore):
         VistaVisualizzaRecensioneAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione - CineMax", None))
         self.Sfondo.setText("")
-        self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Codice Fiscale Cliente:", None))
+        self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Cliente:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione", None))
         self.labelHomeButton.setText("")
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Data:", None))

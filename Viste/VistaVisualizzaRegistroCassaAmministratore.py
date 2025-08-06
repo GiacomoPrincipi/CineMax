@@ -33,11 +33,11 @@ class VistaVisualizzaRegistroCassaAmministratore(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Cliente:", "Data:", "Ora:", "Articolo:", "Importo:", "Importo in Punti:"])
 
-        for pagamento in gestorePagamenti.getListaPagamenti():
+        for pagamento in sorted(gestorePagamenti.getListaPagamenti(), key = lambda oggetto: (oggetto.getData(), oggetto.getOra), reverse = True):
             if isinstance(pagamento.getArticolo(), Biglietto):
-                testo = pagamento.getArticolo().getSpettacolo().getTitolo()
+                testo = pagamento.getArticolo().getSpettacolo().getId()
             elif isinstance(pagamento.getArticolo(), Prodotto):
-                testo = pagamento.getArticolo().getNome()
+                testo = pagamento.getArticolo().getId()
             self.modelloTabella.appendRow([QStandardItem(pagamento.getId()), QStandardItem(pagamento.getCliente().getCodiceFiscale()), QStandardItem(pagamento.getData().toString("dd/MM/yyyy")), QStandardItem(pagamento.getOra().toString("HH:mm:ss")), QStandardItem(testo), QStandardItem(f"{pagamento.getImporto()} €"), QStandardItem(f"{pagamento.getImportoPunti()} punti")])
 
         self.ui.tableViewPagamenti.setModel(self.modelloTabella)

@@ -2,7 +2,6 @@ import os.path
 import pickle
 from PySide6.QtCore import QDate, QTime
 
-
 class GestoreSpettacoli():
 
     def __init__(self):
@@ -49,7 +48,7 @@ class GestoreSpettacoli():
                     idMassimo = int(spettacolo.getId()[1:])
             return f"S{idMassimo + 1:05d}"
         
-    def aggiornaStatoSpettacoli(self):
+    def aggiornaSpettacoli(self):
         for spettacolo in self.getListaSpettacoli():
             if spettacolo.getData() < QDate.currentDate():
                 spettacolo.setStato(False)

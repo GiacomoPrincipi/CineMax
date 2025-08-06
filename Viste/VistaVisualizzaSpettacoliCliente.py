@@ -33,11 +33,11 @@ class VistaVisualizzaSpettacoliCliente(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Titolo:", "Genere:", "Sala:", "Data:", "Orario Inizio:", "Orario Fine:", "Durata:"])
 
-        gestoreSpettacoli.aggiornaStatoSpettacoli()
-        gestoreBiglietti.aggiornaDisponibileBiglietti()
+        gestoreSpettacoli.aggiornaSpettacoli()
+        gestoreBiglietti.aggiornaBiglietti()
 
-        for spettacolo in gestoreSpettacoli.getListaSpettacoliAttivi():
-            self.modelloTabella.appendRow([QStandardItem(spettacolo.getTitolo()), QStandardItem(spettacolo.getGenere()), QStandardItem(spettacolo.getSala()), QStandardItem(spettacolo.getData().toString("dd/MM/yyyy")), QStandardItem(spettacolo.getOrarioInizio().toString("HH:mm:ss")), QStandardItem(spettacolo.getOrarioFine().toString("HH:mm:ss")), QStandardItem(f"{spettacolo.getDurata()} minunti")])
+        for spettacolo in sorted(gestoreSpettacoli.getListaSpettacoliAttivi(), key = lambda oggetto: (oggetto.getData(), oggetto.getOrarioInizio()), reverse = False):
+            self.modelloTabella.appendRow([QStandardItem(spettacolo.getTitolo()), QStandardItem(", ".join(spettacolo.getGenere())), QStandardItem(spettacolo.getSala()), QStandardItem(spettacolo.getData().toString("dd/MM/yyyy")), QStandardItem(spettacolo.getOrarioInizio().toString("HH:mm:ss")), QStandardItem(spettacolo.getOrarioFine().toString("HH:mm:ss")), QStandardItem(f"{spettacolo.getDurata()} minunti")])
 
         self.ui.tableViewSpettacoli.setModel(self.modelloTabella)
         self.ui.tableViewSpettacoli.doubleClicked.connect(self.apriSpettacolo)

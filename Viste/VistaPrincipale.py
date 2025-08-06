@@ -11,6 +11,7 @@ from Viste.VistaVisualizzaSpettacoliAmministratore import VistaVisualizzaSpettac
 from Viste.VistaVisualizzaSpettacoloAmministratore import VistaVisualizzaSpettacoloAmministratore
 from Viste.VistaInserisciSpettacoloAmministratore import VistaInserisciSpettacoloAmministratore
 from Viste.VistaModificaSpettacoloAmministratore import VistaModificaSpettacoloAmministratore
+from Viste.VistaVisualizzaBigliettoAmministratore import VistaVisualizzaBigliettoAmministratore
 from Viste.VistaVisualizzaProdottiAmministratore import VistaVisualizzaProdottiAmministratore
 from Viste.VistaVisualizzaProdottoAmministratore import VistaVisualizzaProdottoAmministratore
 from Viste.VistaInserisciProdottoAmministratore import VistaInserisciProdottoAmministratore
@@ -58,9 +59,10 @@ class VistaPrincipale(QMainWindow):
         self.vistaVisualizzaProfiloPersonaleAmministratore = VistaVisualizzaProfiloPersonaleAmministratore(statoLogin, self.goVistaHome, self.goVistaHomeAmministratore, self.goVistaModificaProfiloPersonaleAmministratore)
         self.vistaModificaProfiloPersonaleAmministratore = VistaModificaProfiloPersonaleAmministratore(statoLogin, self.goVistaVisualizzaProfiloPersonaleAmministratore)
         self.vistaVisualizzaSpettacoliAmministratore = VistaVisualizzaSpettacoliAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaSpettacoloAmministratore, self.goVistaInserisciSpettacoloAmministratore)
-        self.vistaVisualizzaSpettacoloAmministratore = VistaVisualizzaSpettacoloAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaSpettacoliAmministratore, self.goVistaModificaSpettacoloAmministratore)
+        self.vistaVisualizzaSpettacoloAmministratore = VistaVisualizzaSpettacoloAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaSpettacoliAmministratore, self.goVistaModificaSpettacoloAmministratore, self.goVistaVisualizzaBigliettoAmministratore)
         self.vistaInserisciSpettacoloAmministratore = VistaInserisciSpettacoloAmministratore(statoLogin, self.goVistaVisualizzaSpettacoliAmministratore, self.goVistaVisualizzaSpettacoloAmministratore)
         self.vistaModificaSpettacoloAmministratore = VistaModificaSpettacoloAmministratore(statoLogin, self.goVistaVisualizzaSpettacoloAmministratore)
+        self.vistaVisualizzaBigliettoAmministratore = VistaVisualizzaBigliettoAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaSpettacoloAmministratore)
         self.vistaVisualizzaProdottiAmministratore = VistaVisualizzaProdottiAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaProdottoAmministratore, self.goVistaInserisciProdottoAmministratore)
         self.vistaVisualizzaProdottoAmministratore = VistaVisualizzaProdottoAmministratore(statoLogin, self.goVistaHomeAmministratore, self.goVistaVisualizzaProdottiAmministratore, self.goVistaModificaProdottoAmministratore)
         self.vistaInserisciProdottoAmministratore = VistaInserisciProdottoAmministratore(statoLogin, self.goVistaVisualizzaProdottiAmministratore, self.goVistaVisualizzaProdottoAmministratore)
@@ -104,6 +106,7 @@ class VistaPrincipale(QMainWindow):
         self.stack.addWidget(self.vistaVisualizzaSpettacoloAmministratore)
         self.stack.addWidget(self.vistaInserisciSpettacoloAmministratore)
         self.stack.addWidget(self.vistaModificaSpettacoloAmministratore)
+        self.stack.addWidget(self.vistaVisualizzaBigliettoAmministratore)
         self.stack.addWidget(self.vistaVisualizzaProdottiAmministratore)
         self.stack.addWidget(self.vistaVisualizzaProdottoAmministratore)
         self.stack.addWidget(self.vistaInserisciProdottoAmministratore)
@@ -184,6 +187,12 @@ class VistaPrincipale(QMainWindow):
         self.vistaModificaSpettacoloAmministratore.spettacoloAmministratore = spettacoloAmministratore
         self.stack.setCurrentWidget(self.vistaModificaSpettacoloAmministratore)
         self.setWindowTitle("Modifica Spettacolo - CineMax")
+        self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
+
+    def goVistaVisualizzaBigliettoAmministratore(self, bigliettoAmministratore):
+        self.vistaVisualizzaBigliettoAmministratore.bigliettoAmministratore = bigliettoAmministratore
+        self.stack.setCurrentWidget(self.vistaVisualizzaBigliettoAmministratore)
+        self.setWindowTitle("Biglietto - CineMax")
         self.setWindowIcon(QIcon("Viste/Immagini/IconaAmministratore.ico"))
 
     def goVistaVisualizzaProdottiAmministratore(self):

@@ -20,12 +20,12 @@ class VistaVisualizzaPagamentoAmministratore(QWidget):
         pagamentoAmministratore = self.pagamentoAmministratore
 
         if isinstance(pagamentoAmministratore.getArticolo(), Biglietto):
-            testo = pagamentoAmministratore.getArticolo().getSpettacolo().getTitolo()
+            testo = pagamentoAmministratore.getArticolo().getSpettacolo().getId()
         elif isinstance(pagamentoAmministratore.getArticolo(), Prodotto):
-            testo = pagamentoAmministratore.getArticolo().getNome()
+            testo = pagamentoAmministratore.getArticolo().getId()
 
         self.ui.labelCodiceFiscalePagamento.setText(pagamentoAmministratore.getCliente().getCodiceFiscale())
-        self.ui.labelNomePagamento.setText(testo)
+        self.ui.labelIdArticoloPagamento.setText(testo)
         self.ui.labelIdPagamento.setText(pagamentoAmministratore.getId())
         self.ui.labelDataPagamento.setText(pagamentoAmministratore.getData().toString("dd/MM/yyyy"))
         self.ui.labelOraPagamento.setText(pagamentoAmministratore.getOra().toString("HH:mm:ss"))

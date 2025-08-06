@@ -115,7 +115,7 @@ class Ui_VistaModificaSpettacoloAmministratore(object):
 "}")
         self.lineEditGenere = QLineEdit(VistaModificaSpettacoloAmministratore)
         self.lineEditGenere.setObjectName(u"lineEditGenere")
-        self.lineEditGenere.setGeometry(QRect(460, 130, 131, 26))
+        self.lineEditGenere.setGeometry(QRect(460, 130, 251, 26))
         self.lineEditGenere.setStyleSheet(u"QLineEdit {\n"
 "    background-color: #320F00;\n"
 "    color: #962D00;\n"

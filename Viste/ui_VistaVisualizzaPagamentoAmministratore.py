@@ -45,7 +45,7 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelRicevutaIcon.setScaledContents(True)
         self.labelCliente = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelCliente.setObjectName(u"labelCliente")
-        self.labelCliente.setGeometry(QRect(520, 100, 161, 20))
+        self.labelCliente.setGeometry(QRect(320, 100, 161, 20))
         self.labelCliente.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
@@ -69,7 +69,7 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelHomeButton.setScaledContents(True)
         self.labelArticolo = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelArticolo.setObjectName(u"labelArticolo")
-        self.labelArticolo.setGeometry(QRect(320, 100, 121, 20))
+        self.labelArticolo.setGeometry(QRect(520, 100, 171, 20))
         self.labelArticolo.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
@@ -133,14 +133,14 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelIndietroButton.setScaledContents(True)
         self.labelCodiceFiscalePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
         self.labelCodiceFiscalePagamento.setObjectName(u"labelCodiceFiscalePagamento")
-        self.labelCodiceFiscalePagamento.setGeometry(QRect(520, 130, 121, 20))
+        self.labelCodiceFiscalePagamento.setGeometry(QRect(320, 130, 151, 20))
         self.labelCodiceFiscalePagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
-        self.labelNomePagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
-        self.labelNomePagamento.setObjectName(u"labelNomePagamento")
-        self.labelNomePagamento.setGeometry(QRect(320, 130, 181, 20))
-        self.labelNomePagamento.setStyleSheet(u"QLabel {\n"
+        self.labelIdArticoloPagamento = QLabel(VistaVisualizzaPagamentoAmministratore)
+        self.labelIdArticoloPagamento.setObjectName(u"labelIdArticoloPagamento")
+        self.labelIdArticoloPagamento.setGeometry(QRect(520, 130, 181, 20))
+        self.labelIdArticoloPagamento.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.labelImportoPunti = QLabel(VistaVisualizzaPagamentoAmministratore)
@@ -179,10 +179,10 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         VistaVisualizzaPagamentoAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Pagamento - CineMax", None))
         self.Sfondo.setText("")
         self.labelRicevutaIcon.setText("")
-        self.labelCliente.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Codice Fiscale Cliente:", None))
+        self.labelCliente.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Cliente:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Pagamento", None))
         self.labelHomeButton.setText("")
-        self.labelArticolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Nome Articolo:", None))
+        self.labelArticolo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Articolo:", None))
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Data:", None))
         self.labelDataPagamento.setText("")
         self.labelTipo.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Tipo:", None))
@@ -193,7 +193,7 @@ class Ui_VistaVisualizzaPagamentoAmministratore(object):
         self.labelOraPagamento.setText("")
         self.labelIndietroButton.setText("")
         self.labelCodiceFiscalePagamento.setText("")
-        self.labelNomePagamento.setText("")
+        self.labelIdArticoloPagamento.setText("")
         self.labelImportoPunti.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Importo in Punti:", None))
         self.labelImportoPuntiPagamento.setText("")
         self.labelId.setText(QCoreApplication.translate("VistaVisualizzaPagamentoAmministratore", u"Identificativo:", None))

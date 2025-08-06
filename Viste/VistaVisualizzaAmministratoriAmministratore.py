@@ -32,7 +32,7 @@ class VistaVisualizzaAmministratoriAmministratore(QWidget):
         self.modelloTabella = QStandardItemModel()
         self.modelloTabella.setHorizontalHeaderLabels(["Matricola:", "Nome:", "Cognome:","Data di Nascita:", "Email:", "Telefono:"])
 
-        for amministratore in gestoreAmministratori.getListaAmministratori():
+        for amministratore in sorted(gestoreAmministratori.getListaAmministratori(), key = lambda oggetto: (oggetto.getNome(), oggetto.getCognome()), reverse = False):
             self.modelloTabella.appendRow([QStandardItem(amministratore.getMatricola()), QStandardItem(amministratore.getNome()), QStandardItem(amministratore.getCognome()), QStandardItem(amministratore.getDataNascita().toString("dd/MM/yyyy")), QStandardItem(amministratore.getEmail()), QStandardItem(amministratore.getTelefono())])
 
         self.ui.tableViewAmministratori.setModel(self.modelloTabella)
