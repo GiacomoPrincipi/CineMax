@@ -304,7 +304,7 @@ QPushButton:hover {
   <customwidget>
    <class>ClickableLabel</class>
    <extends>QLabel</extends>
-   <header>clickablelabel.h</header>
+   <header>Viste.clickablelabel.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

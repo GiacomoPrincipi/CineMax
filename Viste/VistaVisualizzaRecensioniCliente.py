@@ -43,7 +43,7 @@ class VistaVisualizzaRecensioniCliente(QWidget):
         gestoreRecensioni = GestoreRecensioni()
 
         riga = self.ui.tableViewRecensioni.selectionModel().currentIndex().row()
-        recensioneCliente = gestoreRecensioni.getListaRecensioniCliente(self.statoLogin.clienteAutenticato)[riga]
+        recensioneCliente = sorted(gestoreRecensioni.getListaRecensioniCliente(self.statoLogin.clienteAutenticato), key = lambda oggetto: (oggetto.getData(), oggetto.getOra()), reverse = True)[riga]
 
         self.goVistaVisualizzaRecensioneCliente(recensioneCliente)
 

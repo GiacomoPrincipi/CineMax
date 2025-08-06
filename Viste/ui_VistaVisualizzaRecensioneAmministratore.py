@@ -39,13 +39,13 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "        stop: 1 #7D2100\n"
 "    );\n"
 "}")
-        self.labelCodiceFiscale = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelCodiceFiscale.setObjectName(u"labelCodiceFiscale")
-        self.labelCodiceFiscale.setGeometry(QRect(180, 100, 161, 20))
-        self.labelCodiceFiscale.setStyleSheet(u"QLabel {\n"
+        self.labelId = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelId.setObjectName(u"labelId")
+        self.labelId.setGeometry(QRect(180, 100, 161, 20))
+        self.labelId.setStyleSheet(u"QLabel {\n"
 "    color: #C83C00;\n"
 "}")
-        self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelId.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
         self.labelTitolo = QLabel(VistaVisualizzaRecensioneAmministratore)
         self.labelTitolo.setObjectName(u"labelTitolo")
         self.labelTitolo.setGeometry(QRect(180, 30, 291, 71))
@@ -119,10 +119,10 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "    color: #C83C00;\n"
 "}")
         self.labelTesto.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
-        self.labelCodiceFiscaleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
-        self.labelCodiceFiscaleRecensione.setObjectName(u"labelCodiceFiscaleRecensione")
-        self.labelCodiceFiscaleRecensione.setGeometry(QRect(180, 130, 131, 20))
-        self.labelCodiceFiscaleRecensione.setStyleSheet(u"QLabel {\n"
+        self.labelIdRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelIdRecensione.setObjectName(u"labelIdRecensione")
+        self.labelIdRecensione.setGeometry(QRect(180, 130, 131, 20))
+        self.labelIdRecensione.setStyleSheet(u"QLabel {\n"
 "    color: #962D00;\n"
 "}")
         self.textBrowserTesto = QTextBrowser(VistaVisualizzaRecensioneAmministratore)
@@ -157,6 +157,19 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
 "	background: none;\n"
 "    border: none;\n"
 "}")
+        self.labelCodiceFiscale = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelCodiceFiscale.setObjectName(u"labelCodiceFiscale")
+        self.labelCodiceFiscale.setGeometry(QRect(390, 100, 161, 20))
+        self.labelCodiceFiscale.setStyleSheet(u"QLabel {\n"
+"    color: #C83C00;\n"
+"}")
+        self.labelCodiceFiscale.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.labelCodiceFiscaleRecensione = QLabel(VistaVisualizzaRecensioneAmministratore)
+        self.labelCodiceFiscaleRecensione.setObjectName(u"labelCodiceFiscaleRecensione")
+        self.labelCodiceFiscaleRecensione.setGeometry(QRect(390, 130, 131, 20))
+        self.labelCodiceFiscaleRecensione.setStyleSheet(u"QLabel {\n"
+"    color: #962D00;\n"
+"}")
 
         self.retranslateUi(VistaVisualizzaRecensioneAmministratore)
 
@@ -166,7 +179,7 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
     def retranslateUi(self, VistaVisualizzaRecensioneAmministratore):
         VistaVisualizzaRecensioneAmministratore.setWindowTitle(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione - CineMax", None))
         self.Sfondo.setText("")
-        self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Cliente:", None))
+        self.labelId.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Identificativo:", None))
         self.labelTitolo.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Recensione", None))
         self.labelHomeButton.setText("")
         self.labelData.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Data:", None))
@@ -178,6 +191,8 @@ class Ui_VistaVisualizzaRecensioneAmministratore(object):
         self.labelIndietroButton.setText("")
         self.labelRecensioneIcon.setText("")
         self.labelTesto.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Testo:", None))
+        self.labelIdRecensione.setText("")
+        self.labelCodiceFiscale.setText(QCoreApplication.translate("VistaVisualizzaRecensioneAmministratore", u"Cliente:", None))
         self.labelCodiceFiscaleRecensione.setText("")
     # retranslateUi
 

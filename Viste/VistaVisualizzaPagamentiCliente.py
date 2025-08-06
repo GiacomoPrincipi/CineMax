@@ -31,7 +31,7 @@ class VistaVisualizzaPagamentiCliente(QWidget):
         gestorePagamenti = GestorePagamenti()
 
         self.modelloTabella = QStandardItemModel()
-        self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Data:", "Ora:", "Articolo:", "Importo:", "Importo Punti:"])
+        self.modelloTabella.setHorizontalHeaderLabels(["Identificativo:", "Data:", "Ora:", "Articolo:", "Importo:", "Importo in Punti:"])
 
         for pagamento in sorted(gestorePagamenti.getListaPagamentiCliente(self.statoLogin.clienteAutenticato), key = lambda oggetto: (oggetto.getData(), oggetto.getOra()), reverse = True):
             if isinstance(pagamento.getArticolo(), Biglietto):
@@ -48,7 +48,7 @@ class VistaVisualizzaPagamentiCliente(QWidget):
         gestorePagamenti = GestorePagamenti()
 
         riga = self.ui.tableViewPagamenti.selectionModel().currentIndex().row()
-        pagamentoCliente = gestorePagamenti.getListaPagamentiCliente(self.statoLogin.clienteAutenticato)[riga]
+        pagamentoCliente = sorted(gestorePagamenti.getListaPagamentiCliente(self.statoLogin.clienteAutenticato), key = lambda oggetto: (oggetto.getData(), oggetto.getOra()), reverse = True)[riga]
 
         self.goVistaVisualizzaPagamentoCliente(pagamentoCliente)
 

@@ -43,6 +43,6 @@ class VistaVisualizzaAmministratoriAmministratore(QWidget):
         gestoreAmministratori = GestoreAmministratori()
 
         riga = self.ui.tableViewAmministratori.selectionModel().currentIndex().row()
-        amministratoreAmministratore = gestoreAmministratori.getListaAmministratori()[riga]
+        amministratoreAmministratore = sorted(gestoreAmministratori.getListaAmministratori(), key = lambda oggetto: (oggetto.getNome(), oggetto.getCognome()), reverse = False)[riga]
 
         self.goVistaVisualizzaAmministratoreAmministratore(amministratoreAmministratore)

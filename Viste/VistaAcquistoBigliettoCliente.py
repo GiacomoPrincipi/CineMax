@@ -58,7 +58,7 @@ class VistaAcquistoBigliettoCliente(QWidget):
         self.ui.labelErrorePuntiInsufficenti.setText("")
 
         bigliettoCliente = self.bigliettoCliente
-
+        
         prezzoRidotto = bigliettoCliente.getPrezzo() / 2
         prezzoPuntiRidotto = bigliettoCliente.getPrezzoPunti() / 2
 

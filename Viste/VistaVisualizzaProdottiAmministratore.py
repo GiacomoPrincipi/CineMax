@@ -43,6 +43,6 @@ class VistaVisualizzaProdottiAmministratore(QWidget):
         gestoreProdotti = GestoreProdotti()
 
         riga = self.ui.tableViewProdotti.selectionModel().currentIndex().row()
-        prodottoAmministratore = gestoreProdotti.getListaProdotti()[riga]
+        prodottoAmministratore = sorted(gestoreProdotti.getListaProdotti(), key = lambda oggetto: oggetto.getNome(), reverse = False)[riga]
 
         self.goVistaVisualizzaProdottoAmministratore(prodottoAmministratore)

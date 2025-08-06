@@ -60,7 +60,7 @@ class VistaVisualizzaSpettacoloCliente(QWidget):
         gestoreBiglietti = GestoreBiglietti()
 
         riga = self.ui.tableViewBiglietti.selectionModel().currentIndex().row()
-        bigliettoCliente = gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente)[riga]
+        bigliettoCliente = sorted(gestoreBiglietti.getListaBigliettiDisponibiliSpettacolo(spettacoloCliente), key = lambda oggetto: oggetto.getPosto(), reverse = False)[riga]
 
         self.goVistaAcquistoBigliettoCliente(bigliettoCliente)
 

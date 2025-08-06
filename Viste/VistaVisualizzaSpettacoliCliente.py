@@ -47,7 +47,7 @@ class VistaVisualizzaSpettacoliCliente(QWidget):
         gestoreSpettacoli = GestoreSpettacoli()
 
         riga = self.ui.tableViewSpettacoli.selectionModel().currentIndex().row()
-        spettacoloCliente = gestoreSpettacoli.getListaSpettacoliAttivi()[riga]
+        spettacoloCliente = sorted(gestoreSpettacoli.getListaSpettacoliAttivi(), key = lambda oggetto: (oggetto.getData(), oggetto.getOrarioInizio()), reverse = False)[riga]
 
         self.goVistaVisualizzaSpettacoloCliente(spettacoloCliente)
 

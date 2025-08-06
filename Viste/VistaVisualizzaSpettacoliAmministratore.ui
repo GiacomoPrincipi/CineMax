@@ -268,7 +268,7 @@ QTableView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
   <customwidget>
    <class>ClickableLabel</class>
    <extends>QLabel</extends>
-   <header>clickablelabel.h</header>
+   <header>Viste.clickablelabel.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

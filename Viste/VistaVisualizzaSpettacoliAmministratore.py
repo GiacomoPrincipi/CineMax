@@ -48,6 +48,6 @@ class VistaVisualizzaSpettacoliAmministratore(QWidget):
         gestoreSpettacoli = GestoreSpettacoli()
 
         riga = self.ui.tableViewSpettacoli.selectionModel().currentIndex().row()
-        spettacoloAmministratore = gestoreSpettacoli.getListaSpettacoli()[riga]
+        spettacoloAmministratore = sorted(gestoreSpettacoli.getListaSpettacoli(), key = lambda oggetto: (not oggetto.getStato(), oggetto.getData(), oggetto.getOrarioInizio()), reverse = False)[riga]
 
         self.goVistaVisualizzaSpettacoloAmministratore(spettacoloAmministratore)

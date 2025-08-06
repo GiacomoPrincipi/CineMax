@@ -99,17 +99,23 @@ class VistaInserisciProdottoAmministratore(QWidget):
         elif formatoPrezzo:
             self.ui.labelErrorePrezzo.setText("Prezzo non valido!")
             esito = True
+        elif float(prezzo) == 0:
+            self.ui.labelErrorePrezzo.setText("Prezzo non valido!")
+            esito = True
         if prezzoPunti == "":
             self.ui.labelErrorePrezzoPunti.setText("Inserisci il prezzo in punti!")
             esito = True
         elif not prezzoPunti.isdigit():
             self.ui.labelErrorePrezzoPunti.setText("Prezzo non valido!")
             esito = True
+        elif int(prezzoPunti) == 0:
+            self.ui.labelErrorePrezzoPunti.setText("Prezzo non valido!")
+            esito = True
         if self.ui.comboBoxDisponibile.currentIndex() == 0:
             self.ui.labelErroreDisponibile.setText("Inserisci la disponibilità!")
             esito = True
 
-        if esito: return
+        if esito: return 
 
         prezzo = float("{:.2f}".format(float(prezzo)))
         prezzoPunti = int(prezzoPunti)

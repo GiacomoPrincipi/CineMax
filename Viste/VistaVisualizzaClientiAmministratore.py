@@ -42,6 +42,6 @@ class VistaVisualizzaClientiAmministratore(QWidget):
         gestoreClienti = GestoreClienti()
 
         riga = self.ui.tableViewClienti.selectionModel().currentIndex().row()
-        clienteAmministratore = gestoreClienti.getListaClienti()[riga]
+        clienteAmministratore = sorted(gestoreClienti.getListaClienti(), key = lambda oggetto: (oggetto.getNome(), oggetto.getCognome()), reverse = False)[riga]
 
         self.goVistaVisualizzaClienteAmministratore(clienteAmministratore)
